@@ -1,77 +1,92 @@
 const mainMenu = [
   {
-    sectionTitle: "Profiles",
+    id: "01",
+    title: "Profiles",
+    icon: false,
+  },
+  {
+    id: "02",
+    title: "DashBoards",
+    icon: "RiDashboardHorizontalFill",
+    link: "./",
+  },
+  {
+    id: "03",
+    title: "Institute Profile",
+    icon: "HiOutlineBuildingStorefront",
+    link: "./",
+  },
+  {
+    id: "04",
+    title: "Apps & Pages",
+    icon: false,
+  },
+  {
+    id: "05",
+    title: "Academic Events",
+    icon: "MdOutlineEventAvailable",
     children: [
       {
-        title: "DashBoards",
-        icon: "Icon",
+        id: "05/01",
+        title: "Events",
         link: "./",
       },
       {
-        title: "Institute Profile",
-        icon: "Icon",
+        id: "05/02",
+        title: "Event List",
         link: "./",
       },
     ],
   },
   {
-    sectionTitle: "Apps & Pages",
+    id: "06",
+    title: "Communication",
+    icon: "CgCommunity",
     children: [
       {
-        title: "Academic Events",
-        icon: "Icon",
+        id: "06/01",
+        title: "SMS",
         children: [
           {
-            title: "Events",
+            id: "06/01/01",
+            title: "parents",
             link: "./",
           },
           {
-            title: "Event List",
+            id: "06/01/02",
+            title: "payment",
+            link: "./",
+          },
+          {
+            id: "06/01/03",
+            title: "notification",
             link: "./",
           },
         ],
       },
       {
-        title: "Communication",
-        icon: "Icon",
+        id: "06/02",
+        title: "Call",
         children: [
           {
-            title: "SMS",
-            children: [
-              {
-                title: "parents",
-                link: "./",
-              },
-              {
-                title: "payment",
-                link: "./",
-              },
-              {
-                title: "notification",
-                link: "./",
-              },
-            ],
+            id: "06/02/01",
+            title: "parents",
+            link: "./",
           },
           {
-            title: "Call",
-            children: [
-              {
-                title: "parents",
-                link: "./",
-              },
-              {
-                title: "events",
-                link: "./",
-              },
-              {
-                title: "exams",
-                link: "./",
-              },
-              {
-                title: "result",
-                link: "./",
-              },
-            ],
+            id: "06/02/02",
+            title: "events",
+            link: "./",
+          },
+          {
+            id: "06/02/03",
+            title: "exams",
+            link: "./",
+          },
+          {
+            id: "06/02/04",
+            title: "result",
+            link: "./",
           },
         ],
       },
