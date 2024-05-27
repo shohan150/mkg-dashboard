@@ -1,15 +1,17 @@
 import SidebarHeader from "./SidebarHeader";
 import SidebarMenu from "./SidebarMenu";
+import "./sidebar.css";
 
 export default function Sidebar() {
   return (
     <nav
       id="sidebar-menu"
-      className="fixed transition-all duration-500 ease-in-out h-screen bg-[#584475] bg-[linear-gradient(270deg,rgba(51,148,225,0.18),transparent)] shadow-sm w-0 sm:w-64 lg:w-72"
+      className="fixed transition-all duration-500 ease-in-out h-screen bg-[#584475] bg-[linear-gradient(270deg,rgba(51,148,225,0.18),transparent)] shadow-sm w-0 sm:w-64 lg:w-72 scrollbar"
     >
-      <div className="h-full overflow-y-auto scrollbars">
+      <div className="h-full overflow-y-auto">
         <SidebarHeader />
         <SidebarMenu />
+
         {/* 
         <!-- Sidebar menu -->
         <ul id="side-menu" x-data="{selected:1}" class="w-full float-none flex flex-col font-medium ltr:pl-1.5 rtl:pr-1.5">
