@@ -49,17 +49,17 @@ const mainMenu = [
         children: [
           {
             id: "06/01/01",
-            title: "parents",
+            title: "Parents",
             link: "./",
           },
           {
             id: "06/01/02",
-            title: "payment",
+            title: "Payment",
             link: "./",
           },
           {
             id: "06/01/03",
-            title: "notification",
+            title: "Notification",
             link: "./",
           },
         ],
@@ -70,22 +70,22 @@ const mainMenu = [
         children: [
           {
             id: "06/02/01",
-            title: "parents",
+            title: "Parents",
             link: "./",
           },
           {
             id: "06/02/02",
-            title: "events",
+            title: "Events",
             link: "./",
           },
           {
             id: "06/02/03",
-            title: "exams",
+            title: "Exams",
             link: "./",
           },
           {
             id: "06/02/04",
-            title: "result",
+            title: "Result",
             link: "./",
           },
         ],

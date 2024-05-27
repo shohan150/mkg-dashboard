@@ -5,9 +5,14 @@ import Icons from "./Icons";
 
 export default function SidebarMenuItem({ item, itemId, setItemId }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [ddId, setDDId] = useState(null);
+
+  //only one dropdown open at a time
+  isOpen && item.id !== itemId && setIsOpen(false);
 
   function handleMenuClick() {
     setIsOpen((state) => !state);
+    setItemId(item.id);
   }
 
   return (
@@ -36,7 +41,12 @@ export default function SidebarMenuItem({ item, itemId, setItemId }) {
       {isOpen && item?.children && (
         <ul className="py-2 before:content-[''] before:block before:absolute before:z-1 before:left-[30px] before:top-10 before:bottom-0 before:border-l before:border-solid before:border-[#614b82]">
           {item.children.map((dropdown) => (
-            <DropDown key={dropdown.id} data={dropdown} />
+            <DropDown
+              key={dropdown.id}
+              data={dropdown}
+              ddId={ddId}
+              setDDId={setDDId}
+            />
           ))}
         </ul>
       )}
