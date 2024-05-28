@@ -1,7 +1,11 @@
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen transition-all duration-500 ease-in-out ml-0 sm:ml-64 lg:ml-72">
-      <h3>my home</h3>
+    <div className="space-y-5">
+      <h3>my home page</h3>
     </div>
+    // <div className="grid grid-4 ........">
+    //   <The component1 />
+    //   <The component2 />
+    // </div>
   );
 }
