@@ -2,7 +2,7 @@ import { BsFillPeopleFill } from "react-icons/bs";
 import { FaUserTie } from "react-icons/fa";
 import { FaGoogleScholar } from "react-icons/fa6";
 import { RiUserSettingsFill } from "react-icons/ri";
-import SingleOverview from "./SingleOverview";
+import SingleOverview from "../cards/SingleOverview";
 
 export default function Overview() {
   const overview = [

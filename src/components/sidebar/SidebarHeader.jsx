@@ -26,7 +26,7 @@ export default function SidebarHeader() {
       ) : (
         <div className="relative">
           <div
-            className="group/angle absolute top-0 right-1/2 translate-x-1/2 px-2 pb-[2px] pt-0 rounded-b-full bg-black z-10 hover:bg-primary hover:shadow-[0_2px_6px_#5790b3] hover:border-primary duration-100"
+            className="group/angle absolute top-0 right-1/2 translate-x-1/2 px-2 pb-[2px] pt-0 rounded-b-full bg-primary z-10 hover:bg-tertiary hover:shadow-[0_2px_6px_#5790b3] hover:border-primary duration-100"
             onClick={() => {
               setShowSearchBar(true);
             }}

@@ -4,9 +4,6 @@ export default function SingleOverview({ data }) {
       <div
         className={`w-14 h-14 flex items-center justify-center rounded-full mr-3 bg-${data.iconBg}`}
       >
-        {/* <div
-        className={`w-14 h-14 flex items-center justify-center rounded-full mr-3 bg-green`}
-      > */}
         {data.icon}
       </div>
       <div className="border-l-2 border-red pl-3">
