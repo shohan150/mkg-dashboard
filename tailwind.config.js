@@ -14,6 +14,8 @@ export default {
         green: "#71dd37",
         red: "#ff3e1d",
         yellow: "#ffab00",
+        bgBlue: "#E1F1FF",
+        bgGreen: "#D2F2D4",
       },
       fontFamily: {
         roboto: ["Roboto", "Helvetica", "Arial", "sans-serif"],
