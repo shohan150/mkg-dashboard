@@ -1,7 +1,64 @@
+import { PiDotsThreeCircleFill } from "react-icons/pi";
 export default function AttendanceInfo() {
   return (
-    <div className="bg-white cols-span-1 sm:col-span-2 order-2 sm:order-3 lg:order-2">
-      <h3>attendance info</h3>
+    <div className="bg-white cols-span-1 sm:col-span-2 order-2 sm:order-3 lg:order-2 rounded-md">
+      {/* component title */}
+      <h3 className="bg-primary text-white text-xl p-4 leading-[33px] rounded-t-md shadow-lg">
+        Attendance Information
+      </h3>
+
+      {/* graph section */}
+      <div className="flex gap-2 p-2">
+        {/* students graph */}
+        <div className="relative p-2 bg-[#f0f0ff] rounded-md w-1/2">
+          {/* graph will be placed here */}
+
+          {/* graph title */}
+          <h5 className="text-center text-primary text-lg font-medium">
+            Students
+          </h5>
+
+          {/* graph info  */}
+          <div className="flex text-center divide-x-2 divide-blue">
+            <div className="w-1/2">
+              <h5 className="text-green font-medium">Present</h5>
+              <h5 className="text-textBlack font-medium">300</h5>
+            </div>
+            <div className="w-1/2">
+              <h5 className="text-red font-medium">Absent</h5>
+              <h5 className="text-textBlack font-medium">45</h5>
+            </div>
+          </div>
+
+          {/* link icon */}
+          <PiDotsThreeCircleFill className="absolute top-2 right-2 w-7 h-7 text-primary" />
+        </div>
+
+        {/* Teachers graph */}
+        <div className="relative p-2 bg-[#fcf8e8] rounded-md w-1/2">
+          {/* graph will be placed here */}
+
+          {/* graph title */}
+          <h5 className="text-center text-primary text-lg font-medium ">
+            Teachers
+          </h5>
+
+          {/* graph info  */}
+          <div className="flex text-center divide-x-2 divide-yellow">
+            <div className="w-1/2">
+              <h5 className="text-green font-medium">Present</h5>
+              <h5 className="text-textBlack font-medium">300</h5>
+            </div>
+            <div className="w-1/2">
+              <h5 className="text-red font-medium">Absent</h5>
+              <h5 className="text-textBlack font-medium">45</h5>
+            </div>
+          </div>
+
+          {/* link icon */}
+          <PiDotsThreeCircleFill className="absolute top-2 right-2 w-7 h-7 text-primary" />
+        </div>
+      </div>
     </div>
   );
 }
