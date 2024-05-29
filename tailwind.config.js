@@ -5,17 +5,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#425971",
-        secondary: "#1d1e4e",
+        primary: "#1d1e4e",
+        secondary: "#425971",
+        tertiary: "#6B6EFF",
         textBlack: "#212529",
         textGray: "#69796a",
-        textBlue: "#131f73",
-        skyblue: "#6b6eff",
-        skyblue2: "#3f7afc",
-        skyblue3: "#007bff",
+        blue: "#3F7AFC",
         green: "#71dd37",
         red: "#ff3e1d",
         orange: "#ffab00",
+      },
+      fontFamily: {
+        roboto: ["Roboto", "Helvetica", "Arial", "sans-serif"],
       },
     },
   },

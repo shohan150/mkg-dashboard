@@ -10,9 +10,10 @@ export default function DropDown({ data, ddId, setDDId }) {
     setIsOpen((state) => !state);
     setDDId(data.id);
   }
+
   return (
     <li
-      className={`text-[#bdafd1] group/dd  deuration-200 relative ${
+      className={`text-[#ffffffab] group/dd  deuration-200 relative ${
         isOpen && data?.children && "bg-[#00000010]"
       }`}
     >
@@ -21,12 +22,12 @@ export default function DropDown({ data, ddId, setDDId }) {
         onClick={handleMenuClick}
       >
         <span
-          className={`w-[5px] h-[5px] rounded-full group-hover/dd:w-[7px] group-hover/dd:h-[7px] duration-100 bg-[#876fab] absolute top-4 left-7 ${
-            isOpen && data?.children && "w-[7px] h-[7px]"
+          className={`w-[5px] h-[5px] rounded-full group-hover/dd:w-[7px] group-hover/dd:h-[7px] duration-100 bg-[#ffffff65] group-hover/dd:bg-[#ffffff90] absolute top-4 left-7 ${
+            isOpen && data?.children && "w-[7px] h-[7px] bg-[#ffffff90]"
           }`}
         ></span>
         <h5 className={`flex-1 ${isOpen && data?.children && "text-white"}`}>
-          {data.title}{" "}
+          {data.title}
         </h5>
         {data?.children && (
           <FaAngleDown

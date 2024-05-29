@@ -5,10 +5,10 @@ import Home from "./Home";
 export default function Root() {
   return (
     // sidebar and topNavbar common in all pages
-    <div className="font-sans text-base font-normal text-gray-600 dark:text-gray-400 dark:bg-gray-800">
+    <div className="font-roboto text-base font-normal text-gray-600 dark:text-gray-400 dark:bg-gray-800">
       <div className="wrapper bg-gray-100 dark:bg-gray-900 dark:bg-opacity-40">
         <Sidebar />
-        <div className="bg-primary text-textBlack flex flex-col min-h-screen transition-all duration-500 ease-in-out p-2 ml-0 sm:ml-64 lg:ml-72">
+        <div className="bg-secondary text-textBlack flex flex-col min-h-screen transition-all duration-500 ease-in-out p-2 ml-0 md:ml-64 lg:ml-72">
           <TopNavbar />
           <Home />
         </div>

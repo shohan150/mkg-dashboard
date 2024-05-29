@@ -8,6 +8,7 @@ export default function SidebarMenu() {
 
   return (
     <ul className="text-white py-6">
+      {/* if item has no icon then it a header item. directly print list element for the header. for actual menu items, pass the component. */}
       {mainMenu.map((item) => (
         <>
           {item.icon ? (
@@ -20,7 +21,7 @@ export default function SidebarMenu() {
           ) : (
             <li
               key={item.id}
-              className="text-[#8268a8] uppercase font-bold text-sm leading-10 pt-5 px-6"
+              className="text-[#ffffff70] uppercase font-bold text-sm leading-10 tracking-wide pt-5 px-6"
             >
               {item.title}
             </li>
