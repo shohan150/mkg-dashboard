@@ -13,7 +13,7 @@ export default {
         blue: "#3F7AFC",
         green: "#71dd37",
         red: "#ff3e1d",
-        orange: "#ffab00",
+        yellow: "#ffab00",
       },
       fontFamily: {
         roboto: ["Roboto", "Helvetica", "Arial", "sans-serif"],
