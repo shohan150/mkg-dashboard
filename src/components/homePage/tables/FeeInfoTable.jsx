@@ -65,9 +65,9 @@ export default function FeeInfoTable() {
         <thead>
           <tr className="bg-bgGreen text-textGray font-bold ">
             <td className="w-[40%] py-2">Name</td>
-            <td className="w-[20%]">class</td>
-            <td className="w-[20%]">amount</td>
-            <td className="w-[20%]">status</td>
+            <td className="w-[20%] py-2">class</td>
+            <td className="w-[20%] py-2">amount</td>
+            <td className="w-[20%] py-2">status</td>
           </tr>
         </thead>
       </table>
