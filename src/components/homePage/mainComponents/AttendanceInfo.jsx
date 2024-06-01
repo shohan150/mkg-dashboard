@@ -5,7 +5,7 @@ export default function AttendanceInfo() {
   return (
     <div className="bg-white cols-span-1 sm:col-span-2 order-2 sm:order-3 lg:order-2 rounded-md">
       {/* component title */}
-      <h3 className="bg-primary text-white text-xl p-4 leading-[33px] rounded-t-md shadow-lg">
+      <h3 className="bg-primary text-white text-xl p-4 leading-[33px] rounded-t-md shadow-md">
         Attendance Information
       </h3>
 
