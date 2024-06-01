@@ -1,4 +1,6 @@
 import { PiDotsThreeCircleFill } from "react-icons/pi";
+import StudentAttendance from "../graphs/StudentAttendance";
+import TeacherAttendance from "../graphs/TeacherAttendance";
 export default function AttendanceInfo() {
   return (
     <div className="bg-white cols-span-1 sm:col-span-2 order-2 sm:order-3 lg:order-2 rounded-md">
@@ -11,7 +13,7 @@ export default function AttendanceInfo() {
       <div className="flex gap-2 p-2">
         {/* students graph */}
         <div className="relative p-2 bg-[#f0f0ff] rounded-md w-1/2">
-          {/* graph will be placed here */}
+          <StudentAttendance />
 
           {/* graph title */}
           <h5 className="text-center text-primary text-lg font-medium">
@@ -36,7 +38,7 @@ export default function AttendanceInfo() {
 
         {/* Teachers graph */}
         <div className="relative p-2 bg-[#fcf8e8] rounded-md w-1/2">
-          {/* graph will be placed here */}
+          <TeacherAttendance />
 
           {/* graph title */}
           <h5 className="text-center text-primary text-lg font-medium ">
@@ -47,11 +49,11 @@ export default function AttendanceInfo() {
           <div className="flex text-center divide-x-2 divide-yellow">
             <div className="w-1/2">
               <h5 className="text-green font-medium">Present</h5>
-              <h5 className="text-textBlack font-medium">300</h5>
+              <h5 className="text-textBlack font-medium">30</h5>
             </div>
             <div className="w-1/2">
               <h5 className="text-red font-medium">Absent</h5>
-              <h5 className="text-textBlack font-medium">45</h5>
+              <h5 className="text-textBlack font-medium">2</h5>
             </div>
           </div>
 

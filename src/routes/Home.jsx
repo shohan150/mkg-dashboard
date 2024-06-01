@@ -1,6 +1,8 @@
 import AttendanceInfo from "../components/homePage/mainComponents/AttendanceInfo";
+import FeeInfo from "../components/homePage/mainComponents/FeeInfo";
 import Notices from "../components/homePage/mainComponents/Notices";
 import Overview from "../components/homePage/mainComponents/Overview";
+import PaymentStat from "../components/homePage/mainComponents/PaymentStat";
 import ProfileInfo from "../components/homePage/mainComponents/ProfileInfo";
 
 export default function Home() {
@@ -12,6 +14,10 @@ export default function Home() {
         <ProfileInfo />
         <AttendanceInfo />
         <Notices />
+      </div>
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
+        <FeeInfo />
+        <PaymentStat />
       </div>
     </div>
   );
