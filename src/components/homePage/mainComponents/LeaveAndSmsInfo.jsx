@@ -10,14 +10,14 @@ export default function LeaveAndSmsInfo() {
       {/* Leave Information */}
       <div className="rounded-md text-sm bg-white">
         <SectionHeader title="Leave Information" />
-        <div className="flex items-center gap-4 p-4">
+        <div className="flex items-center gap-3 p-3">
           {/* leave student */}
-          <div className="p-4 shadow-[2px_4px_14px_0_#000000a0] rounded-md flex items-center w-1/2">
+          <div className="p-3 shadow-[2px_4px_14px_0_#000000a0] rounded-md flex items-center w-1/2">
             <div className="w-14 h-14 flex items-center justify-center rounded-full mr-3 bg-bgBlue">
               <img src={leaveStudent} alt="" className="w-8 h-8" />
             </div>
             <div className="border-l-2 border-red pl-3">
-              <h4 className="text-textGray text-lg font-medium">
+              <h4 className="text-textGray text-[16px] font-medium">
                 Leave Students
               </h4>
               <h4 className="text-xl font-bold text-red">5</h4>
@@ -28,12 +28,12 @@ export default function LeaveAndSmsInfo() {
           </div>
 
           {/* leave teacher */}
-          <div className="p-4 shadow-[2px_4px_14px_0_#000000a0] rounded-md flex items-center w-1/2">
+          <div className="p-3 shadow-[2px_4px_14px_0_#000000a0] rounded-md flex items-center w-1/2">
             <div className="w-14 h-14 flex items-center justify-center rounded-full mr-3 bg-bgBlue">
               <img src={leaveTeacher} alt="" className="w-8 h-8" />
             </div>
             <div className="border-l-2 border-red pl-3">
-              <h4 className="text-textGray text-lg font-medium">
+              <h4 className="text-textGray text-[16px] font-medium">
                 Leave Teachers
               </h4>
               <h4 className="text-xl font-bold text-red">1</h4>
@@ -48,31 +48,35 @@ export default function LeaveAndSmsInfo() {
       {/* SMS Information */}
       <div className="rounded-md text-sm bg-white">
         <SectionHeader title="SMS Information" />
-        <div className="flex items-center gap-4 p-4">
+        <div className="flex items-center gap-3 p-3">
           {/* General SMS */}
-          <div className="p-4 shadow-[2px_4px_14px_0_#000000a0] rounded-md flex items-center w-1/2">
+          <div className="p-3 shadow-[2px_4px_14px_0_#000000a0] rounded-md flex items-center w-1/2">
             <div className="w-14 h-14 flex items-center justify-center rounded-full mr-3 bg-bgBlue">
               <img src={generalSMS} alt="" className="w-8 h-8" />
             </div>
             <div className="border-l-2 border-red pl-3">
-              <h4 className="text-textGray font-medium">General SMS</h4>
+              <h4 className="text-textGray text-[16px]  font-medium">
+                General SMS
+              </h4>
               <h4 className="text-xl font-bold text-textBlack">4339</h4>
-              <h4 className="text-xs font-medium text-red">
-                Expiry Date: 12 June 2025
+              <h4 className="text-[12px] font-medium text-red">
+                Expiry Date: 12.04.2025
               </h4>
             </div>
           </div>
 
           {/* Masking SMS */}
-          <div className="p-4 shadow-[2px_4px_14px_0_#000000a0] rounded-md flex items-center w-1/2">
+          <div className="p-3 shadow-[2px_4px_14px_0_#000000a0] rounded-md flex items-center w-1/2">
             <div className="w-14 h-14 flex items-center justify-center rounded-full mr-3 bg-bgBlue">
               <img src={maskingSMS} alt="" className="w-8 h-8" />
             </div>
             <div className="border-l-2 border-red pl-3">
-              <h4 className="text-textGray font-medium">Masking SMS</h4>
-              <h4 className="text-xl font-bold text-textBlack">17339</h4>
+              <h4 className="text-textGray text-[16px] font-medium">
+                Masking SMS
+              </h4>
+              <h4 className="text-xl font-bold  text-textBlack">17339</h4>
               <h4 className="text-xs font-medium text-red">
-                Expiry Date: 12 June 2025
+                Expiry Date: 12.04.2025
               </h4>
             </div>
           </div>

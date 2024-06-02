@@ -71,7 +71,7 @@ export default function FeeInfoTable() {
           </tr>
         </thead>
       </table>
-      <div className="h-40 overflow-y-auto bg-bgBlue">
+      <div className="h-52 overflow-y-auto bg-bgBlue">
         <table className="w-full text-center text-textGray divide-y">
           {feeInfo.map((student, index) => (
             <tr key={index}>
