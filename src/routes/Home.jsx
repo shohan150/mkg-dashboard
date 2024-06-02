@@ -1,5 +1,8 @@
 import AttendanceInfo from "../components/homePage/mainComponents/AttendanceInfo";
+import Events from "../components/homePage/mainComponents/Events";
 import FeeInfo from "../components/homePage/mainComponents/FeeInfo";
+import GenderWise from "../components/homePage/mainComponents/GenderWise";
+import LeaveAndSmsInfo from "../components/homePage/mainComponents/LeaveAndSmsInfo";
 import Notices from "../components/homePage/mainComponents/Notices";
 import Overview from "../components/homePage/mainComponents/Overview";
 import PaymentStat from "../components/homePage/mainComponents/PaymentStat";
@@ -15,9 +18,20 @@ export default function Home() {
         <AttendanceInfo />
         <Notices />
       </div>
+
+      {/* Fees Info and Payment Statistics */}
       <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
         <FeeInfo />
         <PaymentStat />
+      </div>
+
+      {/* Leave Info and SMS Info */}
+      <LeaveAndSmsInfo />
+
+      {/* Events and gender wise teacher and student info */}
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
+        <Events />
+        <GenderWise />
       </div>
     </div>
   );
