@@ -1,7 +1,7 @@
 export default function Year({ style }) {
   return (
     <div className={`space-y-1 ${style}`}>
-      <h5 className="font-bold ">Select Year</h5>
+      <h5 className="font-bold ">Year</h5>
       <select
         id="year"
         name="year"

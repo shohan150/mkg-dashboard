@@ -1,7 +1,7 @@
-export default function Class({ style }) {
+export default function Section({ style }) {
   return (
     <div className={`space-y-1 ${style}`}>
-      <h5 className="font-bold ">Class</h5>
+      <h5 className="font-bold ">Section</h5>
       <select
         id="class"
         name="class"
@@ -9,12 +9,12 @@ export default function Class({ style }) {
         className="bg-bgGray w-full rounded px-1 py-2 border-2 border-transparent focus:border-primary focus:outline-none"
       >
         <option value="default" disabled>
-          select class
+          select section
         </option>
-        <option value="Nursery">Nursery</option>
-        <option value="Class-1">Class 1</option>
-        <option value="Class-2">Class 2</option>
-        <option value="Class-3">Class 3</option>
+        <option value="Nursery">A</option>
+        <option value="Class-1">B</option>
+        <option value="Class-2">C</option>
+        <option value="Class-3">D</option>
       </select>
     </div>
   );
