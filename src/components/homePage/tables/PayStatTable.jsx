@@ -58,15 +58,17 @@ export default function PayStatTable() {
       </table>
       <div className="h-40 overflow-y-auto bg-bgBlue">
         <table className="w-full text-center text-textGray divide-y">
-          {payInfo.map((singleClass, index) => (
-            <tr key={index}>
-              <td className="w-[20%] py-1">{singleClass.name}</td>
-              <td className="w-[20%] py-1">{singleClass.section}</td>
-              <td className="w-[20%] py-1">{singleClass.totalStudents}</td>
-              <td className="w-[20%] py-1 text-green">{singleClass.paid}</td>
-              <td className="w-[20%] py-1 text-red">{singleClass.unpaid}</td>
-            </tr>
-          ))}
+          <tbody>
+            {payInfo.map((singleClass, index) => (
+              <tr key={index}>
+                <td className="w-[20%] py-1">{singleClass.name}</td>
+                <td className="w-[20%] py-1">{singleClass.section}</td>
+                <td className="w-[20%] py-1">{singleClass.totalStudents}</td>
+                <td className="w-[20%] py-1 text-green">{singleClass.paid}</td>
+                <td className="w-[20%] py-1 text-red">{singleClass.unpaid}</td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
     </div>

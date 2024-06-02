@@ -39,16 +39,18 @@ export default function ProfileInfo() {
 
       {/* user data table */}
       <table className="rounded bg-bgBlue w-full font-medium text-sm">
-        {profile.map((row, index) => (
-          <tr key={index}>
-            <td className="text-end px-2 py-[3px] border border-white text-primary ">
-              {row.title}
-            </td>
-            <td className="text-start px-2 py-[3px] border border-white text-textGray">
-              {row.data}
-            </td>
-          </tr>
-        ))}
+        <tbody>
+          {profile.map((row, index) => (
+            <tr key={index}>
+              <td className="text-end px-2 py-[3px] border border-white text-primary ">
+                {row.title}
+              </td>
+              <td className="text-start px-2 py-[3px] border border-white text-textGray">
+                {row.data}
+              </td>
+            </tr>
+          ))}
+        </tbody>
       </table>
 
       {/* edit icon */}

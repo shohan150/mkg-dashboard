@@ -73,22 +73,24 @@ export default function FeeInfoTable() {
       </table>
       <div className="h-52 overflow-y-auto bg-bgBlue">
         <table className="w-full text-center text-textGray divide-y">
-          {feeInfo.map((student, index) => (
-            <tr key={index}>
-              <td className="w-[40%] py-1">{student.name}</td>
-              <td className="w-[20%] py-1">{student.class}</td>
-              <td className="w-[20%] py-1">{student.amount} Tk</td>
-              <td className="w-[20%] py-1">
-                <span
-                  className={`text-white px-3 py-[2px] rounded-full text-xs ${
-                    student.status === "paid" ? "bg-green" : "bg-red"
-                  }`}
-                >
-                  {student.status}
-                </span>
-              </td>
-            </tr>
-          ))}
+          <tbody>
+            {feeInfo.map((student, index) => (
+              <tr key={index}>
+                <td className="w-[40%] py-1">{student.name}</td>
+                <td className="w-[20%] py-1">{student.class}</td>
+                <td className="w-[20%] py-1">{student.amount} Tk</td>
+                <td className="w-[20%] py-1">
+                  <span
+                    className={`text-white px-3 py-[2px] rounded-full text-xs ${
+                      student.status === "paid" ? "bg-green" : "bg-red"
+                    }`}
+                  >
+                    {student.status}
+                  </span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
     </div>
