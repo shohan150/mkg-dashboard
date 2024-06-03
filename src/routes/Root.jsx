@@ -1,4 +1,5 @@
 import Sidebar from "../components/sidebar/Sidebar";
+import Footer from "../components/topNavbar/Footer";
 import TopNavbar from "../components/topNavbar/TopNavbar";
 import Home from "./Home";
 
@@ -11,6 +12,7 @@ export default function Root() {
         <div className="bg-secondary text-textBlack flex flex-col min-h-screen transition-all duration-500 ease-in-out p-3 ml-0 lg:ml-64 xl:ml-72">
           <TopNavbar />
           <Home />
+          <Footer />
         </div>
       </div>
     </div>

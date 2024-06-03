@@ -1,7 +1,9 @@
 import AttendanceInfo from "../components/homePage/mainComponents/AttendanceInfo";
 import ClassRoutine from "../components/homePage/mainComponents/ClassRoutine";
 import Events from "../components/homePage/mainComponents/Events";
+import ExpenseInfo from "../components/homePage/mainComponents/ExpenseInfo";
 import FeeInfo from "../components/homePage/mainComponents/FeeInfo";
+import FundInfo from "../components/homePage/mainComponents/FundInfo";
 import GenderWise from "../components/homePage/mainComponents/GenderWise";
 import LeaveAndSmsInfo from "../components/homePage/mainComponents/LeaveAndSmsInfo";
 import Notices from "../components/homePage/mainComponents/Notices";
@@ -9,6 +11,7 @@ import Overview from "../components/homePage/mainComponents/Overview";
 import PaymentStat from "../components/homePage/mainComponents/PaymentStat";
 import ProfileInfo from "../components/homePage/mainComponents/ProfileInfo";
 import SearchPayslip from "../components/homePage/mainComponents/SearchPayslip";
+import SupportToken from "../components/homePage/mainComponents/SupportToken";
 
 export default function Home() {
   return (
@@ -41,6 +44,15 @@ export default function Home() {
         <Events />
         <GenderWise />
       </div>
+
+      {/* expense nad fund info */}
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
+        <ExpenseInfo />
+        <FundInfo />
+      </div>
+
+      {/* support token and ads */}
+      <SupportToken />
     </div>
   );
 }
