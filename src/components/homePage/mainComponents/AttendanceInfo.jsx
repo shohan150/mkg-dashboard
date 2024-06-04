@@ -10,9 +10,9 @@ export default function AttendanceInfo() {
       </h3>
 
       {/* graph section */}
-      <div className="flex gap-2 p-2">
+      <div className="sm:flex gap-2 p-2 space-y-2">
         {/* students graph */}
-        <div className="relative p-2 bg-[#f0f0ff] rounded-md w-1/2">
+        <div className="relative p-2 bg-[#f0f0ff] rounded-md sm:w-1/2">
           <StudentAttendance />
 
           {/* graph title */}
@@ -37,7 +37,7 @@ export default function AttendanceInfo() {
         </div>
 
         {/* Teachers graph */}
-        <div className="relative p-2 bg-[#fcf8e8] rounded-md w-1/2">
+        <div className="relative p-2 bg-[#fcf8e8] rounded-md sm:w-1/2">
           <TeacherAttendance />
 
           {/* graph title */}

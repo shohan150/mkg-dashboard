@@ -36,7 +36,7 @@ export default function Notices() {
       </div>
 
       {/* view more botton */}
-      <div className="flex justify-end p-2">
+      <div className="flex justify-end p-2 mt-4">
         <button className="bg-tertiary text-white text-sm font-medium shadow py-1 px-4 rounded absolute bottom-3 right-3">
           View All
         </button>

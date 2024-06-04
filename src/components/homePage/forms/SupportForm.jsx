@@ -1,6 +1,6 @@
 export default function SupportForm() {
   return (
-    <div className="p-4 space-y-2">
+    <div className="p-2 sm:p-4 space-y-2">
       <h4 className="text-primary font-medium">Title</h4>
       <input
         type="text"
@@ -16,7 +16,7 @@ export default function SupportForm() {
 
       <div className="flex justify-between items-center">
         <div>{/* input type file will be placed here. */}</div>
-        <button className="text-white font-medium bg-blue rounded px-6 leading-10">
+        <button className="text-white font-medium bg-blue rounded px-4 sm:px-6 leading-9 sm:leading-10">
           Submit Token
         </button>
       </div>

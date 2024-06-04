@@ -10,9 +10,9 @@ export default function LeaveAndSmsInfo() {
       {/* Leave Information */}
       <div className="rounded-md text-sm bg-white">
         <SectionHeader title="Leave Information" />
-        <div className="flex items-center gap-3 p-3">
+        <div className="sm:flex items-center gap-3 p-3 space-y-4">
           {/* leave student */}
-          <div className="p-3 shadow-[2px_4px_14px_0_#000000a0] rounded-md flex items-center w-1/2">
+          <div className="p-3 shadow-[2px_4px_14px_0_#000000a0] rounded-md flex items-center sm:w-1/2">
             <div className="w-14 h-14 flex items-center justify-center rounded-full mr-3 bg-bgBlue">
               <img src={leaveStudent} alt="" className="w-8 h-8" />
             </div>
@@ -28,7 +28,7 @@ export default function LeaveAndSmsInfo() {
           </div>
 
           {/* leave teacher */}
-          <div className="p-3 shadow-[2px_4px_14px_0_#000000a0] rounded-md flex items-center w-1/2">
+          <div className="p-3 shadow-[2px_4px_14px_0_#000000a0] rounded-md flex items-center sm:w-1/2">
             <div className="w-14 h-14 flex items-center justify-center rounded-full mr-3 bg-bgBlue">
               <img src={leaveTeacher} alt="" className="w-8 h-8" />
             </div>
@@ -48,9 +48,9 @@ export default function LeaveAndSmsInfo() {
       {/* SMS Information */}
       <div className="rounded-md text-sm bg-white">
         <SectionHeader title="SMS Information" />
-        <div className="flex items-center gap-3 p-3">
+        <div className="sm:flex items-center gap-3 p-3 space-y-4">
           {/* General SMS */}
-          <div className="p-3 shadow-[2px_4px_14px_0_#000000a0] rounded-md flex items-center w-1/2">
+          <div className="p-3 shadow-[2px_4px_14px_0_#000000a0] rounded-md flex items-center sm:w-1/2">
             <div className="w-14 h-14 flex items-center justify-center rounded-full mr-3 bg-bgBlue">
               <img src={generalSMS} alt="" className="w-8 h-8" />
             </div>
@@ -66,7 +66,7 @@ export default function LeaveAndSmsInfo() {
           </div>
 
           {/* Masking SMS */}
-          <div className="p-3 shadow-[2px_4px_14px_0_#000000a0] rounded-md flex items-center w-1/2">
+          <div className="p-3 shadow-[2px_4px_14px_0_#000000a0] rounded-md flex items-center sm:w-1/2">
             <div className="w-14 h-14 flex items-center justify-center rounded-full mr-3 bg-bgBlue">
               <img src={maskingSMS} alt="" className="w-8 h-8" />
             </div>

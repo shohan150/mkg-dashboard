@@ -6,7 +6,7 @@ export default function SearchPayslip() {
   return (
     <div className="rounded-md text-sm bg-white">
       <SectionHeader title="Search Online Payslip" />
-      <div className="p-4 space-y-4">
+      <div className="p-2 sm:p-4 space-y-4">
         <h5 className="text-primary font-medium tracking-wide text-lg leading-3 pt-2">
           Student ID
         </h5>

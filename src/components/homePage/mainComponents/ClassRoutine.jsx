@@ -40,7 +40,7 @@ export default function ClassRoutine() {
   return (
     <div className="rounded-md text-sm bg-white">
       <SectionHeader title="Class Routine" />
-      <div className="p-4">
+      <div className="p-2 sm:p-4">
         <ClassRoutineForm />
         <h4 className="text-textGray text-end text-xs mt-4 mb-1">
           Total Class Found: <span className="text-green">06</span>

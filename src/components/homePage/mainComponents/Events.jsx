@@ -40,7 +40,7 @@ export default function Events() {
       </div>
 
       {/* view more botton */}
-      <div className="flex justify-end p-2">
+      <div className="flex justify-end p-2 mt-4">
         <button className="bg-tertiary text-white text-sm font-medium shadow py-1 px-4 rounded absolute bottom-4 right-4">
           View All
         </button>

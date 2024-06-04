@@ -7,7 +7,7 @@ export default function PaymentStat() {
   return (
     <div className="rounded-md text-sm bg-white">
       <SectionHeader title="Payment Statistics" />
-      <div className="p-4 rounded-b-md">
+      <div className="p-2 sm:p-4 rounded-b-md">
         <FeeInfoForm />
 
         <h5 className="text-textGray text-end text-xs mt-4 mb-2">
@@ -21,9 +21,9 @@ export default function PaymentStat() {
             Payment Due Summary
           </h4>
 
-          <div className="flex items-center gap-2 pr-2 pb-2">
+          <div className="sm:flex items-center gap-2 sm:pr-2 pb-2">
             {/* chart */}
-            <div className="w-1/3">
+            <div className="sm:w-1/3">
               <PaymentStatGraph />
               <h3 className="text-center text-lg text-textBlack font-medium">
                 Total Students
@@ -31,7 +31,7 @@ export default function PaymentStat() {
             </div>
 
             {/* main table */}
-            <div className="w-2/3">
+            <div className="sm:w-2/3">
               <PayStatTable />
             </div>
           </div>

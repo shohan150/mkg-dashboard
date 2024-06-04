@@ -22,7 +22,7 @@ export default function ProfileInfo() {
   ];
 
   return (
-    <div className="bg-white col-span-1 order-1 rounded-md px-4 py-6 space-y-2 relative">
+    <div className="bg-white col-span-1 order-1 rounded-md px-2 sm:px-4 py-3 sm:py-6 space-y-2 relative">
       {/* user image */}
       <div className="flex justify-center">
         <img

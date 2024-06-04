@@ -2,8 +2,8 @@ import books from "/icons/books.png";
 export default function RoutineCard({ routine }) {
   const { name, time } = routine;
   return (
-    <div className="flex items-center justify-between bg-bgGray p-2 rounded">
-      <div className="flex items-center gap-3">
+    <div className="sm:flex items-center justify-between bg-bgGray p-2 rounded space-y-3">
+      <div className="flex items-center justify-center gap-3">
         <div className="w-10 h-10 bg-white rounded-full items-center justify-center flex">
           <img src={books} alt="" className="w-6 h-6" />
         </div>
@@ -13,7 +13,7 @@ export default function RoutineCard({ routine }) {
         </div>
       </div>
 
-      <div className="flex">
+      <div className="flex justify-center ">
         <h3 className="text-tertiary font-medium pr-2">Room: 301</h3>
         <div>
           <h4 className="text-textGray font-medium border-l-2 border-[#00000045] pl-2">

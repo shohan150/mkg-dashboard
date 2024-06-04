@@ -6,7 +6,7 @@ export default function FeeInfo() {
   return (
     <div className="rounded-md text-sm bg-white">
       <SectionHeader title="Fees Information" />
-      <div className="p-4 rounded-b-md">
+      <div className="p-2 sm:p-4 rounded-b-md">
         <FeeInfoForm />
         <FeeInfoTable />
       </div>
