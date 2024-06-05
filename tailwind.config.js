@@ -23,5 +23,41 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        // // for mozilla browser only
+        // ".scrollbar-thin": {
+        //   scrollbarWidth: "thin",
+        //   scrollbarColor: "#ffffffcc transparent",
+        // },
+        // for chrome and other browsers
+        ".scrollbar-webkit": {
+          "&::-webkit-scrollbar": {
+            width: "8px",
+          },
+          "&::-webkit-scrollbar-track": {
+            background: "transparent",
+          },
+          "&::-webkit-scrollbar-thumb": {
+            backgroundColor: "#ffffff40",
+            borderRadius: "20px",
+          },
+        },
+        ".scrollbar-table": {
+          "&::-webkit-scrollbar": {
+            width: "6px",
+          },
+          "&::-webkit-scrollbar-track": {
+            background: "transparent",
+          },
+          "&::-webkit-scrollbar-thumb": {
+            backgroundColor: "#71dd37",
+            borderRadius: "20px",
+          },
+        },
+      };
+      addUtilities(newUtilities, ["responsive", "hover"]);
+    },
+  ],
 };

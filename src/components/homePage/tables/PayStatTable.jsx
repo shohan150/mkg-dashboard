@@ -56,7 +56,7 @@ export default function PayStatTable() {
           </tr>
         </thead>
       </table>
-      <div className="h-40 overflow-y-auto bg-bgBlue">
+      <div className="h-40 overflow-y-auto bg-bgBlue scrollbar-table">
         <table className="w-full text-center text-textGray divide-y">
           <tbody>
             {payInfo.map((singleClass, index) => (

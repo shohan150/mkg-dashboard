@@ -10,7 +10,7 @@ export default function Sidebar({ showSidebar, setShowSidebar }) {
         showSidebar && "w-72"
       } z-50`}
     >
-      <div className="h-full overflow-y-auto relative ">
+      <div className="h-full overflow-y-auto relative scrollbar-webkit">
         <SidebarHeader />
         <SidebarMenu />
         <MdHighlightOff

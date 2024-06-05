@@ -49,7 +49,7 @@ export default function ClassRoutine() {
           <h3 className="rounded-t p-2 font-medium bg-[#6b6eff80]">
             12 July 2024 | Class: Nine | Section: A
           </h3>
-          <div className="p-2 space-y-2 h-80 overflow-y-scroll">
+          <div className="p-2 space-y-2 h-80 overflow-y-scroll scrollbar-table">
             {routines.map((routine, index) => (
               <RoutineCard key={index} routine={routine} />
             ))}

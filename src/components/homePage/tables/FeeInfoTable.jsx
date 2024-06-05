@@ -71,7 +71,7 @@ export default function FeeInfoTable() {
           </tr>
         </thead>
       </table>
-      <div className="h-52 overflow-y-auto bg-bgBlue">
+      <div className="h-52 overflow-y-auto bg-bgBlue scrollbar-table">
         <table className="w-full text-center text-textGray divide-y">
           <tbody>
             {feeInfo.map((student, index) => (
