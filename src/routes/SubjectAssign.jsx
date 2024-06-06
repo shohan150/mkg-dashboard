@@ -2,7 +2,7 @@ import academicSetupList from "../data/academicSetupList";
 
 export default function SubjectAssign() {
   return (
-    <div className="bg-white p-4 rounded my-4">
+    <div className="bg-white px-4 py-6 rounded mt-4">
       {/* select a particular class */}
       <div className="flex items-center">
         <label className="w-24 sm:w-28 md:w-32">Class Name: </label>
@@ -20,9 +20,9 @@ export default function SubjectAssign() {
       </div>
 
       {/* show all subjects */}
-      <div className="grid grid-cols-3 sm:grid-cols-5 my-8 gap-2">
+      <div className="grid grid-cols-3 sm:grid-cols-5 my-6">
         {academicSetupList[2].content.map((singleSubject, index) => (
-          <div key={index} className="space-x-2">
+          <div key={index} className="space-x-2 border-b-2 py-3">
             <input
               type="checkbox"
               id=""

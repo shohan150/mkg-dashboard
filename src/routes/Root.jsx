@@ -12,9 +12,11 @@ export default function Root() {
     <div className="font-roboto text-base font-normal text-gray-600 dark:text-gray-400 dark:bg-gray-800">
       <div className="wrapper bg-gray-100 dark:bg-gray-900 dark:bg-opacity-40">
         <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
-        <div className="bg-secondary text-textBlack flex flex-col min-h-screen transition-all duration-500 ease-in-out p-3 ml-0 xl:ml-72">
-          <TopNavbar setShowSidebar={setShowSidebar} />
-          <Outlet />
+        <div className="bg-secondary text-textBlack flex flex-col justify-between min-h-screen transition-all duration-500 ease-in-out p-3 ml-0 xl:ml-72">
+          <div>
+            <TopNavbar setShowSidebar={setShowSidebar} />
+            <Outlet />
+          </div>
           <Footer />
         </div>
       </div>
