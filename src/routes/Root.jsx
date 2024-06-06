@@ -1,12 +1,11 @@
 import { useState } from "react";
+import { Outlet } from "react-router-dom";
 import Sidebar from "../components/sidebar/Sidebar";
 import Footer from "../components/topNavbar/Footer";
 import TopNavbar from "../components/topNavbar/TopNavbar";
-import Home from "./Home";
 
 export default function Root() {
   const [showSidebar, setShowSidebar] = useState(false);
-  console.log(showSidebar);
 
   return (
     // sidebar and topNavbar common in all pages
@@ -15,7 +14,7 @@ export default function Root() {
         <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
         <div className="bg-secondary text-textBlack flex flex-col min-h-screen transition-all duration-500 ease-in-out p-3 ml-0 xl:ml-72">
           <TopNavbar setShowSidebar={setShowSidebar} />
-          <Home />
+          <Outlet />
           <Footer />
         </div>
       </div>
