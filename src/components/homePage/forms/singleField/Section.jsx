@@ -11,10 +11,10 @@ export default function Section({ style }) {
         <option value="default" disabled>
           select section
         </option>
-        <option value="Nursery">A</option>
-        <option value="Class-1">B</option>
-        <option value="Class-2">C</option>
-        <option value="Class-3">D</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
       </select>
     </div>
   );

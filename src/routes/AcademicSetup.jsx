@@ -1,11 +1,39 @@
+import { useState } from "react";
 import AcademicSetupForm from "../components/settings/academic-setup/AcademicSetupForm";
 import AcademicSetupTable from "../components/settings/academic-setup/AcademicSetupTable";
+import EditPopup from "../components/settings/academic-setup/EditPopup";
+import academicList from "../data/academicSetup";
 
 export default function AcademicSetup() {
+  const [isEdit, setIsEdit] = useState(false);
+  const [editContent, setEditContent] = useState(null);
+
+  function handleEdit(row, title) {
+    setIsEdit(true);
+    setEditContent({ title, row });
+  }
+
+  console.log(isEdit, editContent);
   return (
-    <div>
+    <div className="relative">
       <AcademicSetupForm />
-      <AcademicSetupTable />
+      <div className="space-y-4">
+        {academicList.map((item, index) => (
+          <AcademicSetupTable
+            key={index}
+            title={item.title}
+            content={item.content}
+            handleEdit={handleEdit}
+          />
+        ))}
+      </div>
+      {isEdit && (
+        <EditPopup
+          editContent={editContent}
+          isEdit={isEdit}
+          setIsEdit={setIsEdit}
+        />
+      )}
     </div>
   );
 }
