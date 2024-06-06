@@ -1,4 +1,4 @@
-const academicList = [
+const academicSetupList = [
   {
     title: "Class",
     content: [
@@ -99,4 +99,4 @@ const academicList = [
   },
 ];
 
-export default academicList;
+export default academicSetupList;

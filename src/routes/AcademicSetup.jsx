@@ -2,7 +2,7 @@ import { useState } from "react";
 import AcademicSetupForm from "../components/settings/academic-setup/AcademicSetupForm";
 import AcademicSetupTable from "../components/settings/academic-setup/AcademicSetupTable";
 import EditPopup from "../components/settings/academic-setup/EditPopup";
-import academicList from "../data/academicSetup";
+import academicSetupList from "../data/academicSetupList";
 
 export default function AcademicSetup() {
   const [isEdit, setIsEdit] = useState(false);
@@ -18,7 +18,7 @@ export default function AcademicSetup() {
     <div className="relative">
       <AcademicSetupForm />
       <div className="space-y-4">
-        {academicList.map((item, index) => (
+        {academicSetupList.map((item, index) => (
           <AcademicSetupTable
             key={index}
             title={item.title}

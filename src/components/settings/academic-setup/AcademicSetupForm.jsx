@@ -6,8 +6,8 @@ export default function AcademicSetupForm() {
         <div className="flex items-center gap-2 md:w-5/12 my-2">
           <label className="w-28 md:max-lg:w-32">Select Type</label>
           <select
-            id="class"
-            name="class"
+            id=""
+            name=""
             defaultValue="Class"
             className="bg-bgGray w-full rounded px-1 py-2 border-2 border-transparent focus:border-primary focus:outline-none"
           >

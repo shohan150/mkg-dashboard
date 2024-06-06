@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AcademicSetup from "./routes/AcademicSetup";
 import Home from "./routes/Home";
 import Root from "./routes/Root";
+import SubjectAssign from "./routes/SubjectAssign";
 
 function App() {
   const router = createBrowserRouter([
@@ -30,7 +31,7 @@ function App() {
             },
             {
               path: "subject_assign",
-              element: <Home />,
+              element: <SubjectAssign />,
             },
             {
               path: "chooseable_subject",
