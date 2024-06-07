@@ -1,14 +1,11 @@
+import SectionHeader from "../../common/SectionHeader";
+
 export default function AcademicSetupTable({ title, content, handleEdit }) {
   function handleDelete() {
     confirm("Do you want to delete?");
   }
   return (
-    <div className="bg-white col-span-1 order-3 sm:order-2 lg:order-3 rounded-md relative pb-2">
-      {/* section heading */}
-      <h3 className="bg-primary text-white text-xl text-center p-4 leading-[33px] rounded-t-md shadow-md">
-        {title} List
-      </h3>
-
+    <SectionHeader title={`${title} List`} headerStyle="text-center">
       {/* section content */}
       <table className="w-full text-textGray text-lg leading-10 mt-2">
         <thead className="border-b-2">
@@ -39,6 +36,6 @@ export default function AcademicSetupTable({ title, content, handleEdit }) {
           ))}
         </tbody>
       </table>
-    </div>
+    </SectionHeader>
   );
 }
