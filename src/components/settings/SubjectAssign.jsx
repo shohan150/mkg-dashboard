@@ -1,4 +1,4 @@
-import academicSetupList from "../data/academicSetupList";
+import academicSetupList from "../../data/academicSetupList";
 
 export default function SubjectAssign() {
   return (

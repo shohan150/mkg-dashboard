@@ -1,17 +1,17 @@
-import AttendanceInfo from "../components/homePage/mainComponents/AttendanceInfo";
-import ClassRoutine from "../components/homePage/mainComponents/ClassRoutine";
-import Events from "../components/homePage/mainComponents/Events";
-import ExpenseInfo from "../components/homePage/mainComponents/ExpenseInfo";
-import FeeInfo from "../components/homePage/mainComponents/FeeInfo";
-import FundInfo from "../components/homePage/mainComponents/FundInfo";
-import GenderWise from "../components/homePage/mainComponents/GenderWise";
-import LeaveAndSmsInfo from "../components/homePage/mainComponents/LeaveAndSmsInfo";
-import Notices from "../components/homePage/mainComponents/Notices";
-import Overview from "../components/homePage/mainComponents/Overview";
-import PaymentStat from "../components/homePage/mainComponents/PaymentStat";
-import ProfileInfo from "../components/homePage/mainComponents/ProfileInfo";
-import SearchPayslip from "../components/homePage/mainComponents/SearchPayslip";
-import SupportToken from "../components/homePage/mainComponents/SupportToken";
+import AttendanceInfo from "./mainComponents/AttendanceInfo";
+import ClassRoutine from "./mainComponents/ClassRoutine";
+import Events from "./mainComponents/Events";
+import ExpenseInfo from "./mainComponents/ExpenseInfo";
+import FeeInfo from "./mainComponents/FeeInfo";
+import FundInfo from "./mainComponents/FundInfo";
+import GenderWise from "./mainComponents/GenderWise";
+import LeaveAndSmsInfo from "./mainComponents/LeaveAndSmsInfo";
+import Notices from "./mainComponents/Notices";
+import Overview from "./mainComponents/Overview";
+import PaymentStat from "./mainComponents/PaymentStat";
+import ProfileInfo from "./mainComponents/ProfileInfo";
+import SearchPayslip from "./mainComponents/SearchPayslip";
+import SupportToken from "./mainComponents/SupportToken";
 
 export default function Home() {
   return (

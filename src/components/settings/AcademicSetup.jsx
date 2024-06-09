@@ -1,8 +1,8 @@
 import { useState } from "react";
-import AcademicSetupForm from "../components/settings/academic-setup/AcademicSetupForm";
-import AcademicSetupTable from "../components/settings/academic-setup/AcademicSetupTable";
-import EditPopup from "../components/settings/academic-setup/EditPopup";
-import academicSetupList from "../data/academicSetupList";
+import academicSetupList from "../../data/academicSetupList";
+import AcademicSetupForm from "./academic-setup/AcademicSetupForm";
+import AcademicSetupTable from "./academic-setup/AcademicSetupTable";
+import EditPopup from "./academic-setup/EditPopup";
 
 export default function AcademicSetup() {
   const [isEdit, setIsEdit] = useState(false);
