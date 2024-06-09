@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Home from "./components/homePage/Home";
 import AcademicSetup from "./components/settings/AcademicSetup";
+import ChooseableSubject from "./components/settings/ChooseableSubject";
 import SubjectAssign from "./components/settings/SubjectAssign";
 
 function Root() {
@@ -35,7 +36,7 @@ function Root() {
             },
             {
               path: "chooseable_subject",
-              element: <Home />,
+              element: <ChooseableSubject />,
             },
           ],
         },

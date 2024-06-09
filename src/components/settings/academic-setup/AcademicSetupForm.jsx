@@ -27,9 +27,7 @@ export default function AcademicSetupForm() {
             name="type name"
             className="peer bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none placeholder-transparent"
           >
-            <option value="Class" disabled>
-              Class
-            </option>
+            <option value="Class">Class</option>
             <option value="Subject">Subject</option>
             <option value="Section">Section</option>
             <option value="Shift">Shift</option>

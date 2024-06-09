@@ -13,7 +13,7 @@ export default function AcademicSetup() {
     setEditContent({ title, row });
   }
 
-  console.log(isEdit, editContent);
+  // console.log(isEdit, editContent);
   return (
     <div className="relative">
       <AcademicSetupForm />

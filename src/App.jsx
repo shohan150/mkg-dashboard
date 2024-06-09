@@ -7,8 +7,6 @@ import TopNavbar from "./components/topNavbar/TopNavbar";
 export default function App() {
   const [showSidebar, setShowSidebar] = useState(false);
 
-  // at first I thought to keep all of the routes in the routes folder. But there are too many pages. The routes folder will be a huge list of files. But I am already maintaing different folders for each module and the sub-modules will be placed inside the module folder. So, why even keep such a big folder!
-
   return (
     // sidebar and topNavbar common in all pages
     <div className="font-roboto text-base font-normal text-gray-600 dark:text-gray-400 dark:bg-gray-800">

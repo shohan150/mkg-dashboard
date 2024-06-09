@@ -9,9 +9,11 @@ export default function AcademicSetupTable({ title, content, handleEdit }) {
       {/* section content */}
       <table className="w-full text-textGray text-lg leading-10 mt-2">
         <thead className="border-b-2">
-          <th className="w-2/12">ID</th>
-          <th className="w-7/12">{title} Name</th>
-          <th className="w-3/12">Actions</th>
+          <tr>
+            <th className="w-2/12">ID</th>
+            <th className="w-7/12">{title} Name</th>
+            <th className="w-3/12">Actions</th>
+          </tr>
         </thead>
         <tbody className="divide-y-2">
           {content.map((row, index) => (

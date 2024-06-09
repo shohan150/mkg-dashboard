@@ -8,7 +8,19 @@ const academicSetupList = [
       },
       {
         id: 2,
-        info: "One",
+        info: "Class One",
+      },
+      {
+        id: 3,
+        info: "Class Two",
+      },
+      {
+        id: 4,
+        info: "Class Three",
+      },
+      {
+        id: 5,
+        info: "Class Four",
       },
     ],
   },
@@ -22,6 +34,10 @@ const academicSetupList = [
       {
         id: 2,
         info: "B",
+      },
+      {
+        id: 3,
+        info: "C",
       },
     ],
   },
@@ -42,11 +58,15 @@ const academicSetupList = [
       },
       {
         id: 4,
-        info: "History",
+        info: "Science",
       },
       {
         id: 5,
         info: "ICT",
+      },
+      {
+        id: 6,
+        info: "History",
       },
     ],
   },
@@ -86,6 +106,10 @@ const academicSetupList = [
         id: 5,
         info: "5th",
       },
+      {
+        id: 6,
+        info: "6th",
+      },
     ],
   },
   {
@@ -93,6 +117,10 @@ const academicSetupList = [
     content: [
       {
         id: 1,
+        info: "2023",
+      },
+      {
+        id: 2,
         info: "2024",
       },
     ],
