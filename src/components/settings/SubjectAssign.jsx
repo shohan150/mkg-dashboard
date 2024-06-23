@@ -36,7 +36,7 @@ export default function SubjectAssign() {
       </div>
 
       {/* save button */}
-      <button className="bg-primary px-6 py-2 rounded shadow text-white hover:-translate-y-[2px] duration-200">
+      <button className="bg-primary hover:bg-buttonHover px-6 py-2 rounded shadow text-white hover:-translate-y-[2px] duration-200">
         Save
       </button>
     </div>

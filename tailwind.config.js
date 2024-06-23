@@ -8,6 +8,7 @@ export default {
         primary: "#1d1e4e",
         secondary: "#425971",
         tertiary: "#6B6EFF",
+        buttonHover: "#131a42",
         textBlack: "#212529",
         textGray: "#69796a",
         blue: "#3F7AFC",

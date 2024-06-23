@@ -75,7 +75,7 @@ export default function AcademicSetupForm() {
         <div className="flex items-center gap-2 md:w-2/12 justify-end my-4">
           <button
             type="submit"
-            className="rounded w-full p-3 bg-primary text-white shadow-md hover:bg- hover:-translate-y-[2px] duration-200"
+            className="rounded w-full p-3 bg-primary hover:bg-buttonHover text-white shadow-md  hover:-translate-y-[2px] duration-200"
           >
             Create
           </button>

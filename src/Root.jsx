@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Home from "./components/homePage/Home";
+import InstituteProfile from "./components/instituteProfile/InstituteProfile";
 import AcademicSetup from "./components/settings/AcademicSetup";
 import ChooseableSubject from "./components/settings/ChooseableSubject";
 import SubjectAssign from "./components/settings/SubjectAssign";
@@ -18,6 +19,10 @@ function Root() {
         {
           path: "dashboard",
           element: <Home />,
+        },
+        {
+          path: "institute_profile",
+          element: <InstituteProfile />,
         },
         {
           path: "settings",
