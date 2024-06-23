@@ -18,9 +18,9 @@ export default function AcademicSetupTable({ title, content, handleEdit }) {
         <tbody className="divide-y-2">
           {content.map((row, index) => (
             <tr key={index} className="text-center">
-              <td className="w-1/12">{row.id}</td>
-              <td className="w-8/12">{row.info}</td>
-              <td className="w-3/12">
+              <td className="w-2/12">{row.id}</td>
+              <td className="w-7/12">{row.info}</td>
+              <td className="w-3/12 pb-1">
                 <button
                   className="bg-blue px-3 py-1 rounded shadow text-white hover:-translate-y-[2px] duration-200 text-sm m-1"
                   onClick={() => handleEdit(row, title)}
