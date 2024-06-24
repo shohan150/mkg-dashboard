@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Home from "./components/homePage/Home";
+import EditInstituteInfo from "./components/instituteProfile/EditInstituteInfo";
 import InstituteProfile from "./components/instituteProfile/InstituteProfile";
 import AcademicSetup from "./components/settings/AcademicSetup";
 import ChooseableSubject from "./components/settings/ChooseableSubject";
@@ -23,6 +24,10 @@ function Root() {
         {
           path: "institute_profile",
           element: <InstituteProfile />,
+        },
+        {
+          path: "institute_profile/edit_info",
+          element: <EditInstituteInfo />,
         },
         {
           path: "settings",

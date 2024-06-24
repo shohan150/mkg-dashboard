@@ -3,3 +3,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  input[type="file"]::-webkit-file-upload-button,
+  input[type="file"]::file-selector-button {
+    color: #69796a;
+    background-color: bgGray;
+    font-size: medium;
+    cursor: pointer;
+    padding: 10px;
+    padding-right: 30px;
+    margin-right: 15px;
+    border: none;
+  }
+}
