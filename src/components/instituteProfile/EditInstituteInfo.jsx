@@ -3,8 +3,8 @@ import InstInfoForm from "./InstInfoForm";
 
 export default function EditInstituteInfo() {
     return (
-        <div className="bg-white p-6 rounded-md my-4">
-         <h5 className=" text-textGray font-medium text-lg">Institute Information</h5>
+        <div className="bg-white p-6 md:py-7 md:px-10 rounded-md my-4">
+         <h5 className=" text-textGray font-medium text-xl">Institute Information</h5>
 
          {/* main form */}
          <InstInfoForm />
