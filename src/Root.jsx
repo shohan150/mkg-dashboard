@@ -56,9 +56,7 @@ function Root() {
 
   return (
     <>
-      <div>
         <RouterProvider router={router} />
-      </div>
     </>
   );
 }
