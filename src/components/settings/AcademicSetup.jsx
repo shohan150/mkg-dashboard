@@ -12,7 +12,7 @@ export default function AcademicSetup() {
     setIsEdit(true);
     setEditContent({ title, row });
   }
-
+  
   // console.log(isEdit, editContent);
   return (
     <div className="relative">
@@ -30,8 +30,8 @@ export default function AcademicSetup() {
       {isEdit && (
         <EditPopup
           editContent={editContent}
-          isEdit={isEdit}
-          setIsEdit={setIsEdit}
+          isEdit={isEdit} 
+          onClose={()=>setIsEdit(false)}
         />
       )}
     </div>

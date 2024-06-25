@@ -1,11 +1,17 @@
-import { useState } from "react";
-import { Outlet } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Outlet, useLocation } from "react-router-dom";
 import Sidebar from "./components/sidebar/Sidebar";
 import Footer from "./components/topNavbar/Footer";
 import TopNavbar from "./components/topNavbar/TopNavbar";
 
 export default function App() {
   const [showSidebar, setShowSidebar] = useState(false);
+
+  //take at the top of the page whenever route is changed.
+  const { pathname } = useLocation();
+  useEffect(() => {
+      window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     // sidebar and topNavbar common in all pages
