@@ -2,7 +2,7 @@ export default function TemplateAndBody({setCharacterCount}) {
     return (
         <>
          <div className="space-y-2">
-            <label className="w-28 md:max-lg:w-32">Select Template</label>
+            <label className="">Select Template</label>
             <select
             id=""
             name=""
@@ -16,8 +16,11 @@ export default function TemplateAndBody({setCharacterCount}) {
          </div>
 
          <div className="space-y-2">
-            <label className="w-28 md:max-lg:w-32">SMS Body</label>
-            <textarea className="bg-bgGray w-full rounded px-1 py-2 border-2 border-transparent focus:border-primary focus:outline-none" onChange={(e)=> setCharacterCount(e.target.value.length)}></textarea>
+            <label className="">SMS Body</label>
+            <textarea 
+            rows="4"
+            className="bg-bgGray w-full rounded px-1 py-2 border-2 border-transparent focus:border-primary focus:outline-none"
+            onChange={(e)=> setCharacterCount(e.target.value.length)}></textarea>
          </div>
         </>
     );

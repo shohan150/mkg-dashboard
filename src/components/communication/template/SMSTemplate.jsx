@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function SMSTemplate() {
 
   const templates= [
@@ -19,18 +21,20 @@ export default function SMSTemplate() {
 
     return (
       <div className="bg-white p-4 md:p-6 rounded-md my-4">
-        <h3 className="text-xl font-medium">SMS Template List</h3>
+        <h3 className="text-lg md:text-xl font-medium">SMS Template List</h3>
 
         <div className="flex justify-end mt-2 mb-4">
-          <button
-          type="submit"
-          className="rounded w-52 p-2 bg-primary hover:bg-buttonHover text-white shadow-md  hover:-translate-y-[2px] duration-200"
-          >
-          Add New Template
-          </button>
+          <Link to="/communication/add-sms-template">
+            <button
+            type="submit"
+            className="rounded w-52 p-2 bg-primary hover:bg-buttonHover text-white shadow-md  hover:-translate-y-[2px] duration-200"
+            >
+            Add New Template
+            </button> 
+          </Link>
         </div>
 
-         <table className="w-full text-textGray text-sm leading-10 mb-4">
+         <table className="w-full text-textGray leading-10 mb-4">
           <thead className="bg-bgBlue">
             <tr>
               <th className="w-2/12">ID</th>
@@ -50,7 +54,7 @@ export default function SMSTemplate() {
                     className="bg-red px-3 py-1 rounded shadow text-white hover:-translate-y-[2px] duration-200 text-sm m-1"
                     onClick={handleDelete}
                   >
-                    delete
+                    Delete
                   </button>
                 </td>
               </tr>

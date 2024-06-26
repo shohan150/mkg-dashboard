@@ -11,6 +11,7 @@ export default function GeneralSMS() {
    const handleChange = (event) => {
      setSelectedValue(event.target.value);
    };
+   
     return (
         <div className="bg-white rounded-md px-4 py-4 md:px-6 sm:py-6 my-4 space-y-4">
          <SelectWise selectedValue={selectedValue} handleChange={handleChange}/>
