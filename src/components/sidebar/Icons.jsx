@@ -1,6 +1,7 @@
 import { CgCommunity } from "react-icons/cg";
 import { HiOutlineBuildingStorefront } from "react-icons/hi2";
 import { IoMdSettings } from "react-icons/io";
+import { LiaSmsSolid } from "react-icons/lia";
 import { MdOutlineEventAvailable } from "react-icons/md";
 import { RiDashboardHorizontalFill } from "react-icons/ri";
 
@@ -20,5 +21,8 @@ export default function Icons({ name }) {
 
     case "IoMdSettings":
       return <IoMdSettings />;
+
+    case "LiaSmsSolid":
+      return <LiaSmsSolid />
   }
 }

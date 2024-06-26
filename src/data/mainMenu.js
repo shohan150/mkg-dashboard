@@ -48,6 +48,28 @@ const mainMenu = [
       },
     ],
   },
+  {
+    id: "06",
+    title: "Communication",
+    icon: "LiaSmsSolid",
+    children: [
+      {
+        id: "06/01",
+        title: "General SMS",
+        link: "communication/general-sms",
+      },
+      {
+        id: "06/02",
+        title: "Notifications",
+        link: "communication/notifications",
+      },
+      {
+        id: "06/03",
+        title: "SMS Template",
+        link: "communication/sms-template",
+      },
+    ],
+  },
   //nested menu item pattern
   // {
   //   id: "05",

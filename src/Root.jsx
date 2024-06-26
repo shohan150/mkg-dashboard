@@ -58,7 +58,7 @@ function Root() {
               element: <AcademicSetup />,
             },
             {
-              path: "notification-sms",
+              path: "notifications",
               element: <Home />,
             },
             {
