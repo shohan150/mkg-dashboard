@@ -1,5 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
+import GeneralSMS from "./components/communication/general/GeneralSMS";
+import Notifications from "./components/communication/notification/Notifications";
+import NewSMSTemplate from "./components/communication/template/NewSMSTemplate";
+import SMSTemplate from "./components/communication/template/SMSTemplate";
 import Home from "./components/homePage/Home";
 import EditInstituteInfo from "./components/instituteProfile/EditInstituteInfo";
 import InstituteProfile from "./components/instituteProfile/InstituteProfile";
@@ -55,20 +59,20 @@ function Root() {
           children: [
             {
               path: "general-sms",
-              element: <AcademicSetup />,
+              element: <GeneralSMS />
             },
             {
               path: "notifications",
-              element: <Home />,
+              element: <Notifications />,
             },
             {
               path: "sms-template",
-              element: <SubjectAssign />,
+              element: <SMSTemplate />,
             },
             {
               path: "add-sms-template",
-              element: <ChooseableSubject />,
-            },
+              element: <NewSMSTemplate />,
+            }
           ],
         },
       ],
