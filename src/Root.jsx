@@ -22,30 +22,51 @@ function Root() {
           element: <Home />,
         },
         {
-          path: "institute_profile",
+          path: "institute-profile",
           element: <InstituteProfile />,
         },
         {
-          path: "institute_profile/edit_info",
+          path: "institute-profile/edit-info",
           element: <EditInstituteInfo />,
         },
         {
           path: "settings",
           children: [
             {
-              path: "academic_setup",
+              path: "academic-setup",
               element: <AcademicSetup />,
             },
             {
-              path: "class_config",
+              path: "class-config",
               element: <Home />,
             },
             {
-              path: "subject_assign",
+              path: "subject-assign",
               element: <SubjectAssign />,
             },
             {
-              path: "chooseable_subject",
+              path: "chooseable-subject",
+              element: <ChooseableSubject />,
+            },
+          ],
+        },
+        {
+          path: "communication",
+          children: [
+            {
+              path: "general-sms",
+              element: <AcademicSetup />,
+            },
+            {
+              path: "notification-sms",
+              element: <Home />,
+            },
+            {
+              path: "sms-template",
+              element: <SubjectAssign />,
+            },
+            {
+              path: "add-sms-template",
               element: <ChooseableSubject />,
             },
           ],

@@ -14,7 +14,7 @@ const mainMenu = [
     id: "03",
     title: "Institute Profile",
     icon: "HiOutlineBuildingStorefront",
-    link: "/institute_profile",
+    link: "/institute-profile",
   },
   {
     id: "04",
@@ -29,22 +29,22 @@ const mainMenu = [
       {
         id: "05/01",
         title: "Academic Setup",
-        link: "settings/academic_setup",
+        link: "settings/academic-setup",
       },
       {
         id: "05/02",
         title: "Class Config",
-        link: "settings/class_config",
+        link: "settings/class-config",
       },
       {
         id: "05/03",
         title: "Subject Assign",
-        link: "settings/subject_assign",
+        link: "settings/subject-assign",
       },
       {
         id: "05/04",
         title: "Chooseable Subject",
-        link: "settings/chooseable_subject",
+        link: "settings/chooseable-subject",
       },
     ],
   },

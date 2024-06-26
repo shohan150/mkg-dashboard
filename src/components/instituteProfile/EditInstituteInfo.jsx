@@ -11,13 +11,13 @@ export default function EditInstituteInfo() {
 
          {/* action buttons */}
          <div className="flex justify-end items-center gap-4">
-            <Link to="/institute_profile">
+            <Link to="/institute-profile">
                <button className="bg-blue w-24 py-2 rounded shadow text-white hover:-translate-y-[2px] duration-200">
                   Save
                 </button>
             </Link>
 
-            <Link to="/institute_profile">
+            <Link to="/institute-profile">
                <button className="bg-red w-24 py-2 rounded shadow text-white hover:-translate-y-[2px] duration-200">
                   Close
                </button>

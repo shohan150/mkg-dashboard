@@ -12,7 +12,7 @@ export default function InstituteProfile() {
          <InstituteContact />
          <InstituteInfo />
       </div>
-      <Link to="./edit_info">
+      <Link to="./edit-info">
          <button className="bg-primary hover:bg-buttonHover w-full py-2 rounded shadow text-white hover:-translate-y-[2px] duration-200 my-4 tracking-wide">
             EDIT
          </button>
