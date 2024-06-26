@@ -1,7 +1,7 @@
 export default function NewSMSTemplate() {
     return (
       <div>
-         <h3>hi</h3>
+         <h3>Add SMS Template</h3>
       </div>
     );
 }
