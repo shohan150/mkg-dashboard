@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function ChooseSubTable() {
   const [allChecked, setAllChecked] = useState(false);
   const [checkedState, setCheckedState] = useState({});
-  console.log(checkedState);
+  //console.log(checkedState);
 
   const students = [
     {

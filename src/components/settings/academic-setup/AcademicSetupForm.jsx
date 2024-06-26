@@ -3,8 +3,8 @@ export default function AcademicSetupForm() {
     <div className="bg-white rounded-md px-4 py-2 my-2 sm:my-4">
       <form className="md:flex gap-7 items-center justify-between">
         {/* select what type of data to entry */}
-        {/* previous select field */}
-        {/* <div className="flex items-center gap-2 md:w-5/12 my-2">
+        {/* select field */}
+        <div className="flex items-center gap-2 md:w-5/12 my-2">
           <label className="w-28 md:max-lg:w-32">Select Type</label>
           <select
             id=""
@@ -19,10 +19,10 @@ export default function AcademicSetupForm() {
             <option value="Period">Period</option>
             <option value="Session">Session</option>
           </select>
-        </div> */}
+        </div>
 
-        {/* new select field */}
-        <div className="relative md:w-5/12 my-2">
+        {/* select field with floating label*/}
+        {/* <div className="relative md:w-5/12 my-2">
           <select
             name="type name"
             className="peer bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none placeholder-transparent"
@@ -41,21 +41,20 @@ export default function AcademicSetupForm() {
           >
             Type Name
           </label>
-        </div>
+        </div> */}
 
-        {/* enter the value */}
-        {/* previous form with static label and input field.  */}
-        {/* <div className="flex items-center gap-2 md:w-5/12 my-2">
+
+        <div className="flex items-center gap-2 md:w-5/12 my-2">
           <label className="w-28 md:max-lg:w-32">Type Name</label>
           <input
             type="text"
             placeholder="Enter Item Name"
             className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
           />
-        </div> */}
+        </div>
 
-        {/* New input field with floating label*/}
-        <div className="relative md:w-5/12 my-4">
+        {/* input field with floating label*/}
+        {/* <div className="relative md:w-5/12 my-4">
           <input
             type="text"
             name="type name"
@@ -69,7 +68,7 @@ export default function AcademicSetupForm() {
           >
             Type Name
           </label>
-        </div>
+        </div> */}
 
         {/* create button */}
         <div className="flex items-center gap-2 md:w-2/12 justify-end my-4">
