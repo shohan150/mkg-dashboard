@@ -19,6 +19,6 @@ export default function SMSReceipents({selectedValue}) {
       case "Selected Employee":
          return <SelectedEmployee />
       case "Institute":
-            break;
+         break;
    }
 }
