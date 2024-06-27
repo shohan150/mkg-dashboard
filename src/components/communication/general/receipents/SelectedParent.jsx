@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
-import PersonInfoTable from "./PersonInfoTable";
+import LargeTable from "./LargeTable";
+import MediumTable from "./MediumTable";
+import ReceipentsHeader from "./ReceipentsHeader";
+import SmallTable from "./SmallTable";
 import people from "./dummyDB";
 
 export default function SelectedParent() {
@@ -20,6 +23,8 @@ export default function SelectedParent() {
         setDevice('large');
       }else if(window.innerWidth >= 768){
         setDevice('medium');
+      } else {
+        setDevice("small");
       }
     };
 
@@ -53,20 +58,17 @@ export default function SelectedParent() {
   }
     return (
       <div className="space-y-2 border-2 rounded-md">
+        {/* Header Section */}
+        <ReceipentsHeader />
+
+        {/* Table Section based on device width*/}
         {(device==="small") ?
-        <PersonInfoTable persons={data} checkedState={checkedState} handleCheckboxChange={handleCheckboxChange}/>
+        <SmallTable persons={data} checkedState={checkedState} handleCheckboxChange={handleCheckboxChange}/>
         :
         (device==="medium") ?
-        <div className="grid grid-cols-2 divide-x-2">
-          <PersonInfoTable persons={tableData1} checkedState={checkedState} handleCheckboxChange={handleCheckboxChange}/>
-          <PersonInfoTable persons={tableData2} checkedState={checkedState} handleCheckboxChange={handleCheckboxChange}/>
-        </div>
+        <MediumTable tableData1={tableData1} tableData2={tableData2} checkedState={checkedState} handleCheckboxChange={handleCheckboxChange} />
         :
-        <div className="grid grid-cols-3 divide-x-2">
-        <PersonInfoTable persons={tableData1} checkedState={checkedState} handleCheckboxChange={handleCheckboxChange}/>
-        <PersonInfoTable persons={tableData2} checkedState={checkedState} handleCheckboxChange={handleCheckboxChange}/>
-        <PersonInfoTable persons={tableData3} checkedState={checkedState} handleCheckboxChange={handleCheckboxChange}/>
-        </div>
+        <LargeTable tableData1={tableData1} tableData2={tableData2} tableData3={tableData3} checkedState={checkedState} handleCheckboxChange={handleCheckboxChange} />
         }
       </div>
     );

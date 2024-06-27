@@ -1,17 +1,9 @@
-export default function PersonInfoTable({persons, checkedState, handleCheckboxChange}) {
+export default function PersonInfoTable({persons, checkedState, handleCheckboxChange, borderStyle=""}) {
     return (
       <table className="w-full text-textGray text-sm leading-8">
-      <thead className="border-b-2 bg-bgBlue">
-        <tr>
-          <th className="w-2/12">
-          </th>
-          <th className="w-3/12">ID No</th>
-          <th className="w-7/12">NAME</th>
-        </tr>
-      </thead>
-      <tbody className="divide-y-2 font-medium">
+      <tbody className="font-medium">
         {persons.map((row) => (
-          <tr key={row.id} className="text-center">
+          <tr key={row.id} className={`border-b-2 text-center ${borderStyle}`}>
             <td className="w-2/12">
             {/* if this id does not exist in the checkedState object then give a value of false.*/}
               <input
