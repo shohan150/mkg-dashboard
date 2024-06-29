@@ -1,9 +1,7 @@
 import SectionHeader from "../../common/SectionHeader";
 
-export default function AcademicSetupTable({ title, content, handleEdit }) {
-  function handleDelete() {
-    confirm("Do you want to delete?");
-  }
+export default function AcademicSetupTable({ title, content, handleEdit, handleDelete }) {
+
   return (
     <SectionHeader title={`${title} List`} headerStyle="text-center">
       {/* section content */}
@@ -29,7 +27,7 @@ export default function AcademicSetupTable({ title, content, handleEdit }) {
                 </button>
                 <button
                   className="bg-red px-3 py-1 rounded shadow text-white hover:-translate-y-[2px] duration-200 text-sm m-1"
-                  onClick={handleDelete}
+                  onClick={()=>handleDelete(title)}
                 >
                   Delete
                 </button>

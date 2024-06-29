@@ -1,6 +1,13 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import DeleteModal from "../../common/DeleleModal";
 
 export default function SMSTemplate() {
+  const [isDelete, setIsDelete] = useState(false);
+
+  function handleDelete() {
+    setIsDelete(true);
+  }
 
   const templates= [
     {
@@ -14,10 +21,6 @@ export default function SMSTemplate() {
       body: 'Lorem ipsum elit. Voluptas, temporibus. Totam animi aliquid exercitationem, deleniti sequi obcaecati?',
     }
   ]
-
-  function handleDelete() {
-    confirm("Do you want to delete?");
-  }
 
     return (
       <div className="bg-white p-4 md:p-6 rounded-md my-4">
@@ -61,6 +64,10 @@ export default function SMSTemplate() {
             ))}
           </tbody>
       </table>
+
+      {/* show only when isDelete is true */}
+      <DeleteModal title="SMS Template" isOpen={isDelete} onClose={()=>setIsDelete(false)} handleDelete={handleDelete} />
+
       </div>
     );
 }
