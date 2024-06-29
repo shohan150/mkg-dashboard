@@ -66,8 +66,7 @@ export default function SMSTemplate() {
       </table>
 
       {/* show only when isDelete is true */}
-      <DeleteModal title="SMS Template" isOpen={isDelete} onClose={()=>setIsDelete(false)} handleDelete={handleDelete} />
-
+      <DeleteModal title="SMS template" isOpen={isDelete} onClose={()=>setIsDelete(false)} handleDelete={handleDelete} />
       </div>
     );
 }
