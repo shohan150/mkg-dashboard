@@ -1,6 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import StudentAttendance from "./components/attendance/student-attendance/StudentAttendance";
+import StuffAttendance from "./components/attendance/teacher-stuff-attendance/StuffAttendance";
+import TeacherAttendance from "./components/attendance/teacher-stuff-attendance/TeacherAttendance";
 import GeneralSMS from "./components/communication/general/GeneralSMS";
 import Notifications from "./components/communication/notification/Notifications";
 import NewSMSTemplate from "./components/communication/template/NewSMSTemplate";
@@ -87,11 +89,11 @@ function Root() {
             },
             {
               path: "teacher-attendance",
-              element: <Dummy />,
+              element: <TeacherAttendance />,
             },
             {
               path: "stuff-attendance",
-              element: <Dummy />,
+              element: <StuffAttendance />,
             },
             {
               path: "leave-type",

@@ -1,38 +1,33 @@
 import PrevAttendHistory from "../PrevAttendHistory";
 import RadioAttendance from "../RadioAttendance";
 
-export default function StudentAttendTable() {
+export default function TeacherAttendTable() {
    const students = [
       {
-         id:'000001',
+         id:'0001',
          image: 'https://xsgames.co/randomusers/assets/avatars/male/74.jpg',
-         name: 'Shohanur Rahman',
-         roll: "01",
+         name: 'Shahinur Alom',
          prevDays:[true, true, false, true, false, true]
       },
       {
-         id:'000002',
+         id:'0002',
          image: 'https://xsgames.co/randomusers/assets/avatars/male/74.jpg',
-         name: 'Shohanur Rahman',
-         roll: "01",
+         name: 'Shahinur Alom',
          prevDays:[true, true, false, true, false, true]
       },
       {
-         id:'000003',
+         id:'0003',
          image: 'https://xsgames.co/randomusers/assets/avatars/male/74.jpg',
-         name: 'Shohanur Rahman',
-         roll: "01",
+         name: 'Shahinur Alom',
          prevDays:[true, true, false, true, false, true]
       },
       {
-         id:'000004',
+         id:'0004',
          image: 'https://xsgames.co/randomusers/assets/avatars/male/74.jpg',
-         name: 'Shohanur Rahman',
-         roll: "01",
+         name: 'Shahinur Alom',
          prevDays:[true, true, false, true, false, true]
       },
    ]
-
     return (
       <div className="border my-6 rounded shadow-md">
       <table className="w-full text-textGray text-sm leading-8 ">
@@ -40,8 +35,7 @@ export default function StudentAttendTable() {
         <tr>
           <th className="w-1/12">ID</th>
           <th className="w-1/12">IMAGE</th>
-          <th className="w-3/12">NAME</th>
-          <th className="w-1/12">ROLL</th>
+          <th className="w-4/12">NAME</th>
           <th className="w-2/12">STATUS</th>
           <th className="w-4/12">PREVIOUS 7 DAYS STATUS</th>
         </tr>
@@ -51,8 +45,7 @@ export default function StudentAttendTable() {
           <tr key={row.id} className="text-center">
             <td className="w-1/12">{row.id}</td>
             <td className="w-1/12"><img src={row.image} className="w-7 h-7 rounded-full m-auto" /></td>
-            <td className="w-3/12">{row.name}</td>
-            <td className="w-1/12">{row.roll}</td>
+            <td className="w-4/12">{row.name}</td>
             <td className="w-2/12"><RadioAttendance /></td>
             <td className="w-4/12"><PrevAttendHistory history={row.prevDays} /></td>
           </tr>
