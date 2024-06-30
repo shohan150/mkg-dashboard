@@ -1,4 +1,7 @@
-export default function StudentAttendForm({setChosenClass}) {
+import { useState } from "react";
+
+export default function StudentAttendForm({setIsSubmit}) {
+   const [chosenClass, setChosenClass] = useState("");
     return (
    <div className="space-y-2 my-4">
       <label className="">Select Class</label>
@@ -19,6 +22,7 @@ export default function StudentAttendForm({setChosenClass}) {
          <button
             type="submit"
             className="rounded w-36 p-2 bg-primary hover:bg-buttonHover text-white shadow-md  hover:-translate-y-[2px] duration-200"
+            onClick={()=> chosenClass && setIsSubmit(true)}
             >
             Submit
          </button>

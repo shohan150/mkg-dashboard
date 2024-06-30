@@ -8,28 +8,28 @@ export default function StudentAttendTable() {
          image: 'https://xsgames.co/randomusers/assets/avatars/male/74.jpg',
          name: 'Shohanur Rahman',
          roll: "01",
-         prevDays:[true, true, false, true]
+         prevDays:[true, true, false, true, false, true]
       },
       {
          id:'000002',
          image: 'https://xsgames.co/randomusers/assets/avatars/male/74.jpg',
          name: 'Shohanur Rahman',
          roll: "01",
-         prevDays:[true, true, false, true]
+         prevDays:[true, true, false, true, false, true]
       },
       {
          id:'000003',
          image: 'https://xsgames.co/randomusers/assets/avatars/male/74.jpg',
          name: 'Shohanur Rahman',
          roll: "01",
-         prevDays:[true, true, false, true]
+         prevDays:[true, true, false, true, false, true]
       },
       {
          id:'000004',
          image: 'https://xsgames.co/randomusers/assets/avatars/male/74.jpg',
          name: 'Shohanur Rahman',
          roll: "01",
-         prevDays:[true, true, false, true]
+         prevDays:[true, true, false, true, false, true]
       },
    ]
 
