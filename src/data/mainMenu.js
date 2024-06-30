@@ -70,6 +70,43 @@ const mainMenu = [
       },
     ],
   },
+  {
+    id: "07",
+    title: "Attendance",
+    icon: "FaRegCheckSquare",
+    children: [
+      {
+        id: "07/01",
+        title: "Student Attendance",
+        link: "attendance/student-attendance",
+      },
+      {
+        id: "07/02",
+        title: "Teacher Attendance",
+        link: "attendance/teacher-attendance",
+      },
+      {
+        id: "07/03",
+        title: "Stuff Attendance",
+        link: "attendance/stuff-attendance",
+      },
+      {
+        id: "07/04",
+        title: "Leave Type",
+        link: "attendance/leave-type",
+      },
+      {
+        id: "07/05",
+        title: "Leave Request",
+        link: "attendance/leave-request",
+      },
+      {
+        id: "07/06",
+        title: "Holiday",
+        link: "attendance/holiday",
+      },
+    ],
+  },
   //nested menu item pattern
   // {
   //   id: "05",

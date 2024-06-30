@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
+import StudentAttendance from "./components/attendance/student-attendance/StudentAttendance";
 import GeneralSMS from "./components/communication/general/GeneralSMS";
 import Notifications from "./components/communication/notification/Notifications";
 import NewSMSTemplate from "./components/communication/template/NewSMSTemplate";
@@ -10,12 +11,14 @@ import InstituteProfile from "./components/instituteProfile/InstituteProfile";
 import AcademicSetup from "./components/settings/AcademicSetup";
 import ChooseableSubject from "./components/settings/ChooseableSubject";
 import SubjectAssign from "./components/settings/SubjectAssign";
+import Dummy from "./components/to-be-deleted (trash templates)/Dummy";
 
 function Root() {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <App />,
+      errorElement: <Dummy />,
       children: [
         {
           path: "/",
@@ -73,6 +76,35 @@ function Root() {
               path: "add-sms-template",
               element: <NewSMSTemplate />,
             }
+          ],
+        },
+        {
+          path: "attendance",
+          children: [
+            {
+              path: "student-attendance",
+              element: <StudentAttendance />
+            },
+            {
+              path: "teacher-attendance",
+              element: <Dummy />,
+            },
+            {
+              path: "stuff-attendance",
+              element: <Dummy />,
+            },
+            {
+              path: "leave-type",
+              element: <Dummy />,
+            },
+            {
+              path: "leave-request",
+              element: <Dummy />,
+            },
+            {
+              path: "holiday",
+              element: <Dummy />,
+            },
           ],
         },
       ],
