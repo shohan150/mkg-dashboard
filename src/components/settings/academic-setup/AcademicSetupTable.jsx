@@ -9,16 +9,16 @@ export default function AcademicSetupTable({ title, content, handleEdit, handleD
         <thead className="border-b-2">
           <tr>
             <th className="w-2/12">ID</th>
-            <th className="w-7/12">{title} Name</th>
-            <th className="w-3/12">Actions</th>
+            <th className="w-6/12">{title} Name</th>
+            <th className="w-4/12">Actions</th>
           </tr>
         </thead>
         <tbody className="divide-y-2">
           {content.map((row, index) => (
             <tr key={index} className="text-center">
               <td className="w-2/12">{row.id}</td>
-              <td className="w-7/12">{row.info}</td>
-              <td className="w-3/12 pb-1">
+              <td className="w-6/12">{row.info}</td>
+              <td className="w-4/12 pb-1">
                 <button
                   className="bg-blue px-3 py-1 rounded shadow text-white hover:-translate-y-[2px] duration-200 text-sm m-1"
                   onClick={() => handleEdit(row, title)}

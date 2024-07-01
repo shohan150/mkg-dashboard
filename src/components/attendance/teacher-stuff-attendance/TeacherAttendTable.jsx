@@ -1,5 +1,5 @@
-import PrevAttendHistory from "../PrevAttendHistory";
-import RadioAttendance from "../RadioAttendance";
+import PrevAttendHistory from "../sub-components/PrevAttendHistory";
+import RadioAttendance from "../sub-components/RadioAttendance";
 
 export default function TeacherAttendTable() {
    const students = [

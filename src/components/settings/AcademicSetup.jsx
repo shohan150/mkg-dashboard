@@ -45,7 +45,7 @@ export default function AcademicSetup() {
       />
 
       {/* show only when isDelete is true */}
-      <DeleteModal title={toDelete.toLowerCase()} isOpen={isDelete} onClose={()=>setIsDelete(false)} handleDelete={handleDelete} />
+      <DeleteModal title={toDelete.toLowerCase()} isOpen={isDelete} onClose={()=>setIsDelete(false)} />
 
     </div>
   );
