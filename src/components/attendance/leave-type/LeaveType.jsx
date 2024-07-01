@@ -28,6 +28,7 @@ export default function LeaveType() {
          <LTypeTable handleEdit={handleEdit} handleDelete={handleDelete} />
 
          {/* The 3 modals: Add, Edit, Delete */}
+         {/* show only when isAdd is true */}
          <AddLTypeModal isAdd={isAdd} onClose={()=>setIsAdd(false)} />
          {/* show only when isEdit is true */}
          <LTypeModal

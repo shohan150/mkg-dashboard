@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
+import LeaveRequest from "./components/attendance/leave-request/LeaveRequest";
 import LeaveType from "./components/attendance/leave-type/LeaveType";
 import StudentAttendance from "./components/attendance/student-attendance/StudentAttendance";
 import StuffAttendance from "./components/attendance/teacher-stuff-attendance/StuffAttendance";
@@ -102,7 +103,7 @@ function Root() {
             },
             {
               path: "leave-request",
-              element: <Dummy />,
+              element: <LeaveRequest />,
             },
             {
               path: "holiday",
