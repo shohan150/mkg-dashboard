@@ -1,10 +1,12 @@
 import { useState } from "react";
 import DeleteModal from "../../common/DeleleModal";
+import AddLTypeModal from "./AddLTypeModal";
 import AddLeaveType from "./AddLeaveType";
 import LTypeModal from "./LTypeModal";
 import LTypeTable from "./LTypeTable";
 
 export default function LeaveType() {
+   const [isAdd, setIsAdd] = useState(false);
    const [isEdit, setIsEdit] = useState(false);
    const [isDelete, setIsDelete] = useState(false);
    const [toDelete, setToDelete] = useState("");
@@ -22,9 +24,11 @@ export default function LeaveType() {
 
     return (
       <div className="bg-white rounded-md p-4 md:p-6  my-4">
-         <AddLeaveType />
+         <AddLeaveType setIsAdd={setIsAdd} />
          <LTypeTable handleEdit={handleEdit} handleDelete={handleDelete} />
 
+         {/* The 3 modals: Add, Edit, Delete */}
+         <AddLTypeModal isAdd={isAdd} onClose={()=>setIsAdd(false)} />
          {/* show only when isEdit is true */}
          <LTypeModal
          editContent={editContent}
