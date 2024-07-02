@@ -26,8 +26,6 @@ export default function App() {
         </div>
         <Footer />
       </div>
-      {/* an empty div to contain modals and popups */}
-      <div id="portal-root"></div>
     </div>
   );
 }

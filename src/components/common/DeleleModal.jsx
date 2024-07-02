@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import Portal from "../technicalComponents/Portal";
 
 export default function DeleteModal({ title="this entry", isOpen, onClose, handleConfirmDlt}) {
 
@@ -23,7 +22,6 @@ export default function DeleteModal({ title="this entry", isOpen, onClose, handl
    if (!isOpen) return null;
 
     return (
-      <Portal>
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-500/50 transition duration-300 ease-in-out">
           <div ref={modalRef} className={`bg-white rounded-lg shadow-lg p-4 w-2/3 sm:w-1/2 lg:w-1/3`}>
 
@@ -47,6 +45,5 @@ export default function DeleteModal({ title="this entry", isOpen, onClose, handl
             </div>
           </div>
         </div>
-    </Portal>
     );
 }

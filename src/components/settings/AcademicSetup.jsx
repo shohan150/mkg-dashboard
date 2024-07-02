@@ -40,6 +40,7 @@ export default function AcademicSetup() {
       {/* show only when isEdit is true */}
       <EditPopup
         editContent={editContent}
+        setEditContent={setEditContent}
         isEdit={isEdit} 
         onClose={()=>setIsEdit(false)}
       />
