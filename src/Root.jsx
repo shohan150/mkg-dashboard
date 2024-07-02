@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
+import Holiday from "./components/attendance/holiday/Holiday";
 import LeaveRequest from "./components/attendance/leave-request/LeaveRequest";
 import LeaveType from "./components/attendance/leave-type/LeaveType";
 import StudentAttendance from "./components/attendance/student-attendance/StudentAttendance";
@@ -107,7 +108,7 @@ function Root() {
             },
             {
               path: "holiday",
-              element: <Dummy />,
+              element: <Holiday />,
             },
           ],
         },

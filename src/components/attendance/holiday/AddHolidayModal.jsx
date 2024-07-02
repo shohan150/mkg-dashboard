@@ -1,36 +1,23 @@
 import Modal from "../../common/Modal";
 
-export default function AddLRequestModal({isAdd, onClose}) {
+export default function AddHolidayModal({isAdd, onClose}) {
     return (
    <Modal isOpen={isAdd} onClose={onClose} width="w-2/3 md:w-1/2">
       {/* modal content */}
-      <h2 className="text-2xl">New Leave Request</h2>
+      <h2 className="text-2xl">Add Holiday</h2>
       <div className="my-8 space-y-3">
          <div className="space-y-2">
-            <label className="">Employee Name</label>
+            <label className="">Holiday Name</label>
             <input
                type="text"
-               placeholder="Employee Name"
+               placeholder="Holiday Name"
                className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
             />
          </div>
 
-         <div className="space-y-2">
-            <label className="">Leave Type</label>
-            <select
-            id=""
-            name=""
-            defaultValue="Sick Leave"
-            className="bg-bgGray w-full rounded px-1 py-2 border-2 border-transparent focus:border-primary focus:outline-none"
-            >
-               <option value="Sick Leave">Sick Leave</option>
-               <option value="Special Leave">Special Leave</option>
-               <option value="Paid Leave">Paid Leave</option>
-            </select>
-         </div>
 
          <div className="space-y-2">
-            <label className="">Start Date</label>
+            <label className="">Date</label>
             <input
                type="date"
                className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
@@ -38,9 +25,10 @@ export default function AddLRequestModal({isAdd, onClose}) {
          </div>
 
          <div className="space-y-2">
-            <label className="">End Date</label>
+            <label className="">Session Year</label>
             <input
-               type="date"
+               type="text"
+               placeholder="Session Year"
                className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
             />
          </div>
