@@ -13,6 +13,7 @@ import SMSTemplate from "./components/communication/template/SMSTemplate";
 import Home from "./components/homePage/Home";
 import EditInstituteInfo from "./components/instituteProfile/EditInstituteInfo";
 import InstituteProfile from "./components/instituteProfile/InstituteProfile";
+import AddParents from "./components/parent-info/add-parents/AddParents";
 import AcademicSetup from "./components/settings/AcademicSetup";
 import ChooseableSubject from "./components/settings/ChooseableSubject";
 import SubjectAssign from "./components/settings/SubjectAssign";
@@ -109,6 +110,19 @@ function Root() {
             {
               path: "holiday",
               element: <Holiday />,
+            },
+          ],
+        },
+        {
+          path: "parent-info",
+          children: [
+            {
+              path: "add-parent",
+              element: <AddParents />
+            },
+            {
+              path: "parents-list",
+              element: <TeacherAttendance />,
             },
           ],
         },

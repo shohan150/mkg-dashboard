@@ -107,6 +107,23 @@ const mainMenu = [
       },
     ],
   },
+  {
+    id: "08",
+    title: "Parent Info",
+    icon: "RiParentFill",
+    children: [
+      {
+        id: "08/01",
+        title: "Add Parent",
+        link: "parent-info/add-parent",
+      },
+      {
+        id: "08/02",
+        title: "Parents List",
+        link: "parent-info/parents-list",
+      },
+    ],
+  },
   //nested menu item pattern
   // {
   //   id: "05",
