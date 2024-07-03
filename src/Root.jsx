@@ -13,10 +13,11 @@ import SMSTemplate from "./components/communication/template/SMSTemplate";
 import Home from "./components/homePage/Home";
 import EditInstituteInfo from "./components/instituteProfile/EditInstituteInfo";
 import InstituteProfile from "./components/instituteProfile/InstituteProfile";
-import AddParents from "./components/parent-info/add-parents/AddParents";
 import AcademicSetup from "./components/settings/AcademicSetup";
 import ChooseableSubject from "./components/settings/ChooseableSubject";
 import SubjectAssign from "./components/settings/SubjectAssign";
+import AddParents from "./components/STSP-info/parent-info/add-parents/AddParents";
+import ParentsList from "./components/STSP-info/parent-info/parents-list/ParentsList";
 import Dummy from "./components/to-be-deleted (trash templates)/Dummy";
 
 function Root() {
@@ -122,7 +123,7 @@ function Root() {
             },
             {
               path: "parents-list",
-              element: <TeacherAttendance />,
+              element: <ParentsList />,
             },
           ],
         },
