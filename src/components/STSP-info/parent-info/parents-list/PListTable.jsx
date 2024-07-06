@@ -1,22 +1,27 @@
-export default function PListTable({handleEdit, handleDelete}) {
-   const parents = [
-      {
-         parentName : "Ayman Hasin Sikdar",
-         parentMobile : "01234567890",
-         gender: "Male",
-         relation: "Father",
-         motherName : "Mrs. Halima Khatun",
-         motherMobile: "01234567890",
-      },
-      {
-         parentName : "Salman Khan",
-         parentMobile : "01234567890",
-         gender: "Male",
-         relation: "Father",
-         motherName : "Salma Jahan",
-         motherMobile: "01234567890",
-      },
-   ]
+import { Link } from "react-router-dom";
+
+export const parents = [
+  {
+     id:"001",
+     parentName : "Ayman Hasin Sikdar",
+     parentMobile : "01234567890",
+     gender: "Male",
+     relation: "Father",
+     motherName : "Mrs. Halima Khatun",
+     motherMobile: "01234567890",
+  },
+  {
+     id: "002",
+     parentName : "Salman Khan",
+     parentMobile : "01234567890",
+     gender: "Male",
+     relation: "Father",
+     motherName : "Salma Jahan",
+     motherMobile: "01234567890",
+  },
+]
+
+export default function PListTable({handleDelete}) {
     return (
         <div className="overflow-x-scroll border mt-6 rounded shadow-md">
         <table className="w-full text-textGray text-sm">
@@ -47,12 +52,14 @@ export default function PListTable({handleEdit, handleDelete}) {
             <td className="min-w-36">{item.motherName}</td>
             <td className="min-w-[115px]">{item.motherMobile}</td>
             <td className="min-w-40 pb-1 text-center">
-               <button
-                  className="bg-blue px-3 py-1 rounded shadow text-white hover:-translate-y-[2px] duration-200 text-sm m-1"
-                  onClick={() => handleEdit(item)}
-                >
-                  Edit
-                </button>
+               <Link to={`/parent-info/edit-parent/${item.id}`}>
+                  <button
+                     className="bg-blue px-3 py-1 rounded shadow text-white hover:-translate-y-[2px] duration-200 text-sm m-1"
+                     onClick={() => handleEdit(item)}
+                  >
+                     Edit
+                  </button>
+                </Link>
                 <button
                   className="bg-red px-3 py-1 rounded shadow text-white hover:-translate-y-[2px] duration-200 text-sm m-1"
                   onClick={()=>handleDelete(item.parentName)}
@@ -67,3 +74,6 @@ export default function PListTable({handleEdit, handleDelete}) {
         </div>
     );
 }
+
+
+
