@@ -1,5 +1,6 @@
 import { CgCommunity } from "react-icons/cg";
 import { FaRegCheckSquare } from "react-icons/fa";
+import { FaPeopleGroup } from "react-icons/fa6";
 import { HiOutlineBuildingStorefront } from "react-icons/hi2";
 import { IoMdSettings } from "react-icons/io";
 import { LiaSmsSolid } from "react-icons/lia";
@@ -31,5 +32,8 @@ export default function Icons({ name }) {
 
     case "RiParentFill":
       return <RiParentFill />
+
+    case "FaPeopleGroup":
+      return <FaPeopleGroup />
   }
 }

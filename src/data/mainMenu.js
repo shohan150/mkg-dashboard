@@ -124,6 +124,28 @@ const mainMenu = [
       },
     ],
   },
+  {
+    id: "09",
+    title: "Staff Info",
+    icon: "FaPeopleGroup",
+    children: [
+      {
+        id: "09/01",
+        title: "Add staff",
+        link: "staff-info/add-staff",
+      },
+      {
+        id: "09/02",
+        title: "staff List",
+        link: "staff-info/staff-list",
+      },
+      {
+        id: "09/03",
+        title: "staff ID Card",
+        link: "staff-info/staff-id-card",
+      },
+    ],
+  },
   //nested menu item pattern
   // {
   //   id: "05",

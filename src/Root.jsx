@@ -134,6 +134,28 @@ function Root() {
             },
           ],
         },
+        {
+          path: "staff-info",
+          children: [
+            {
+              path: "add-staff",
+              element: <Dummy />
+            },
+            {
+              path: "staff-list",
+              element: <Dummy />,
+            },
+            {
+              path: "staff-id-card",
+              element: <Dummy />,
+            },
+            {
+              path: "edit-staff/:id",
+              element: <Dummy />,
+              loader: getParent,
+            },
+          ],
+        },
       ],
     },
   ]);
