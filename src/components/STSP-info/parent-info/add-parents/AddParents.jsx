@@ -1,32 +1,23 @@
-import { Link } from "react-router-dom";
 import AddPForm from "./AddPForm";
+import AddPHeader from "./AddPHeader";
 
 export default function AddParents() {
     return (
       <div className="my-4 bg-white rounded-md p-4 md:p-6">
-         <div className="flex justify-between items-end">
-            <h3 className="text-xl font-medium">Parent Registration</h3>
-            <Link to="/parent-info/parents-list">
-               <button
-               type="submit"
-               className="rounded w-36 p-2 bg-yellow text-white shadow-md  hover:-translate-y-[2px] duration-200"
-               >
-               Submit
-               </button>
-            </Link>
-         </div>
+
+         <AddPHeader />
 
          <AddPForm />
 
-         <div className="flex justify-end items-center gap-4 my-4">
-            <button className="bg-blue w-24 py-2 rounded shadow text-white hover:-translate-y-[2px] duration-200">
-               Save
-               </button>
-
-            <button className="bg-red w-24 py-2 rounded shadow text-white hover:-translate-y-[2px] duration-200">
-               Close
+         <div className="flex justify-end mt-4 mb-2 md:mb-0">
+            <button
+               type="submit"
+               className="rounded w-40 p-3 bg-primary hover:bg-buttonHover text-white shadow-md  hover:-translate-y-[2px] duration-200"
+               >
+               Submit
             </button>
          </div>
+
       </div>
     );
 }
