@@ -55,7 +55,6 @@ export default function PListTable({handleDelete}) {
                <Link to={`/parent-info/edit-parent/${item.id}`}>
                   <button
                      className="bg-blue px-3 py-1 rounded shadow text-white hover:-translate-y-[2px] duration-200 text-sm m-1"
-                     onClick={() => handleEdit(item)}
                   >
                      Edit
                   </button>

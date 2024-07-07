@@ -20,7 +20,7 @@ export default function ParentsList() {
 
 
         {/* show only when isDelete is true */}
-        <DeleteModal title={toDelete.toLowerCase()} isOpen={isDelete} onClose={()=>setIsDelete(false)} />
+        <DeleteModal title={toDelete} isOpen={isDelete} onClose={()=>setIsDelete(false)} />
 
       </div>
     );

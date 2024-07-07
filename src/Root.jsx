@@ -20,6 +20,7 @@ import AddParents from "./components/STSP-info/parent-info/add-parents/AddParent
 import EditParent from "./components/STSP-info/parent-info/parents-list/EditParent";
 import ParentsList from "./components/STSP-info/parent-info/parents-list/ParentsList";
 import AddStaff from "./components/STSP-info/staff-info/add-staff/AddStaff";
+import StaffList from "./components/STSP-info/staff-info/staff-list/StaffList";
 import Dummy from "./components/to-be-deleted (trash templates)/Dummy";
 import { getParent } from "./loaders/getParent";
 
@@ -144,7 +145,7 @@ function Root() {
             },
             {
               path: "staff-list",
-              element: <Dummy />,
+              element: <StaffList />,
             },
             {
               path: "staff-id-card",
