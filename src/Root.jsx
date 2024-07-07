@@ -19,6 +19,7 @@ import SubjectAssign from "./components/settings/SubjectAssign";
 import AddParents from "./components/STSP-info/parent-info/add-parents/AddParents";
 import EditParent from "./components/STSP-info/parent-info/parents-list/EditParent";
 import ParentsList from "./components/STSP-info/parent-info/parents-list/ParentsList";
+import AddStaff from "./components/STSP-info/staff-info/add-staff/AddStaff";
 import Dummy from "./components/to-be-deleted (trash templates)/Dummy";
 import { getParent } from "./loaders/getParent";
 
@@ -139,7 +140,7 @@ function Root() {
           children: [
             {
               path: "add-staff",
-              element: <Dummy />
+              element: <AddStaff />
             },
             {
               path: "staff-list",

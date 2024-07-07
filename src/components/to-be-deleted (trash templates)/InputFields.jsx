@@ -69,7 +69,7 @@ export default function InputFields() {
       <div className="flex justify-end items-center gap-4 my-4">
          <button className="bg-blue w-24 py-2 rounded shadow text-white hover:-translate-y-[2px] duration-200">
             Save
-            </button>
+         </button>
 
          <button className="bg-red w-24 py-2 rounded shadow text-white hover:-translate-y-[2px] duration-200">
             Close
