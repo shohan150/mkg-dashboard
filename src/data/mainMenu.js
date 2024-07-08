@@ -125,27 +125,50 @@ const mainMenu = [
     ],
   },
   {
+    id: "10",
+    title: "Teacher Info",
+    icon: "PiChalkboardTeacherFill",
+    children: [
+      {
+        id: "10/01",
+        title: "Add Teacher",
+        link: "teacher-info/add-teacher",
+      },
+      {
+        id: "09/02",
+        title: "Teacher List",
+        link: "teacher-info/teacher-list",
+      },
+      {
+        id: "09/03",
+        title: "Teacher ID Card",
+        link: "teacher-info/teacher-id-card",
+      },
+    ],
+  },
+  {
     id: "09",
     title: "Staff Info",
     icon: "FaPeopleGroup",
     children: [
       {
         id: "09/01",
-        title: "Add staff",
+        title: "Add Staff",
         link: "staff-info/add-staff",
       },
       {
         id: "09/02",
-        title: "staff List",
+        title: "Staff List",
         link: "staff-info/staff-list",
       },
       {
         id: "09/03",
-        title: "staff ID Card",
+        title: "Staff ID Card",
         link: "staff-info/staff-id-card",
       },
     ],
   },
+
   //nested menu item pattern
   // {
   //   id: "05",

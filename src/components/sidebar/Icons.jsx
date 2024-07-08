@@ -5,6 +5,7 @@ import { HiOutlineBuildingStorefront } from "react-icons/hi2";
 import { IoMdSettings } from "react-icons/io";
 import { LiaSmsSolid } from "react-icons/lia";
 import { MdOutlineEventAvailable } from "react-icons/md";
+import { PiChalkboardTeacherFill } from "react-icons/pi";
 import { RiDashboardHorizontalFill, RiParentFill } from "react-icons/ri";
 
 export default function Icons({ name }) {
@@ -35,5 +36,8 @@ export default function Icons({ name }) {
 
     case "FaPeopleGroup":
       return <FaPeopleGroup />
+
+    case "PiChalkboardTeacherFill":
+      return <PiChalkboardTeacherFill />
   }
 }

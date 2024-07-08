@@ -22,8 +22,11 @@ import ParentsList from "./components/STSP-info/parent-info/parents-list/Parents
 import AddStaff from "./components/STSP-info/staff-info/add-staff/AddStaff";
 import EditStaff from "./components/STSP-info/staff-info/edit-staff/EditStaff";
 import StaffList from "./components/STSP-info/staff-info/staff-list/StaffList";
+import AddTeacher from "./components/STSP-info/teacher-info/add-teacher/AddTeacher";
+import EditTeacher from "./components/STSP-info/teacher-info/edit-teacher/EditTeacher";
+import TeacherList from "./components/STSP-info/teacher-info/teacher-list/TeacherList";
 import Dummy from "./components/to-be-deleted (trash templates)/Dummy";
-import { getParent, getStaff } from "./loaders";
+import { getParent, getStaff, getTeacher } from "./loaders";
 
 function Root() {
   const router = createBrowserRouter([
@@ -156,6 +159,28 @@ function Root() {
               path: "edit-staff/:id",
               element: <EditStaff />,
               loader: getStaff,
+            },
+          ],
+        },
+        {
+          path: "teacher-info",
+          children: [
+            {
+              path: "add-teacher",
+              element: <AddTeacher />
+            },
+            {
+              path: "teacher-list",
+              element: <TeacherList />,
+            },
+            {
+              path: "teacher-id-card",
+              element: <Dummy />,
+            },
+            {
+              path: "edit-teacher/:id",
+              element: <EditTeacher />,
+              loader: getTeacher,
             },
           ],
         },
