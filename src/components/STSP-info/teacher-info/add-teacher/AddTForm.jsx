@@ -183,6 +183,16 @@ export default function AddTForm() {
             className="bg-bgGray text-textGray w-full rounded px-2 py-[6px] border-2 border-transparent focus:border-primary focus:outline-none"
          />
       </div>
+
+      {/* Number of Children */}
+      <div className="space-y-1">
+         <label className="text-textGray">Number of Children :</label>
+         <input
+            type="text"
+            placeholder="Enter Number of Children"
+            className="bg-bgGray text-textGray w-full rounded px-2 py-[6px] border-2 border-transparent focus:border-primary focus:outline-none"
+         />
+      </div>
    </>
 }
 

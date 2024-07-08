@@ -189,6 +189,8 @@ export default function EditTForm({teacherData, handleChange}) {
          <input
             type="text"
             placeholder="Enter Spouse Name"
+            value={teacherData.spouseName}
+            onChange={(event)=> {handleChange("spouseName", event)}}
             className="bg-bgGray text-textGray w-full rounded px-2 py-[6px] border-2 border-transparent focus:border-primary focus:outline-none"
          />
       </div>
@@ -199,6 +201,20 @@ export default function EditTForm({teacherData, handleChange}) {
          <input
             type="text"
             placeholder="Enter Spouse Phone Number"
+            value={teacherData.spouseMobile}
+            onChange={(event)=> {handleChange("spouseMobile", event)}}
+            className="bg-bgGray text-textGray w-full rounded px-2 py-[6px] border-2 border-transparent focus:border-primary focus:outline-none"
+         />
+      </div>
+
+      {/* Spouse Phone Number */}
+      <div className="space-y-1">
+         <label className="text-textGray">Spouse Phone Number :</label>
+         <input
+            type="text"
+            placeholder="Enter Spouse Phone Number"
+            value={teacherData.children}
+            onChange={(event)=> {handleChange("children", event)}}
             className="bg-bgGray text-textGray w-full rounded px-2 py-[6px] border-2 border-transparent focus:border-primary focus:outline-none"
          />
       </div>

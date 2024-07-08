@@ -189,6 +189,8 @@ export default function EditSForm({staffData, handleChange}) {
          <input
             type="text"
             placeholder="Enter Spouse Name"
+            value={staffData.spouseName}
+            onChange={(event)=> {handleChange("spouseName", event)}}
             className="bg-bgGray text-textGray w-full rounded px-2 py-[6px] border-2 border-transparent focus:border-primary focus:outline-none"
          />
       </div>
@@ -199,6 +201,20 @@ export default function EditSForm({staffData, handleChange}) {
          <input
             type="text"
             placeholder="Enter Spouse Phone Number"
+            value={staffData.spouseMobile}
+            onChange={(event)=> {handleChange("spouseMobile", event)}}
+            className="bg-bgGray text-textGray w-full rounded px-2 py-[6px] border-2 border-transparent focus:border-primary focus:outline-none"
+         />
+      </div>
+
+      {/* Number of Children */}
+      <div className="space-y-1">
+         <label className="text-textGray">Number of Children :</label>
+         <input
+            type="number"
+            placeholder="Enter Number of Children"
+            value={staffData.children}
+            onChange={(event)=> {handleChange("children", event)}}
             className="bg-bgGray text-textGray w-full rounded px-2 py-[6px] border-2 border-transparent focus:border-primary focus:outline-none"
          />
       </div>
