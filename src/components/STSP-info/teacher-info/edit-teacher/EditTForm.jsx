@@ -255,18 +255,6 @@ export default function EditTForm({teacherData, handleChange}) {
          </select>
       </div>
 
-      {/* Designation */}
-      <div className="space-y-1">
-         <label className="text-textGray">Designation :</label>
-         <input
-            type="text"
-            placeholder="Enter Designation"
-            value={teacherData.designation}
-            onChange={(event)=> {handleChange("designation", event)}}
-            className="bg-bgGray text-textGray w-full rounded px-2 py-[6px] border-2 border-transparent focus:border-primary focus:outline-none"
-         />
-      </div>
-      
       <div className="space-y-2">
          <label className="text-textGray">Employee Type</label>
          <select
@@ -282,6 +270,31 @@ export default function EditTForm({teacherData, handleChange}) {
             <option value="Contractual">Contractual</option>
          </select>
       </div>
+
+      {/* Role */}
+      <div className="space-y-1">
+         <label className="text-textGray">Role :</label>
+         <input
+            type="text"
+            placeholder="Enter Role"
+            value={teacherData.role}
+            onChange={(event)=> {handleChange("role", event)}}
+            className="bg-bgGray text-textGray w-full rounded px-2 py-[6px] border-2 border-transparent focus:border-primary focus:outline-none"
+         />
+      </div>
+
+      {/* Designation */}
+      <div className="space-y-1">
+         <label className="text-textGray">Designation :</label>
+         <input
+            type="text"
+            placeholder="Enter Designation"
+            value={teacherData.designation}
+            onChange={(event)=> {handleChange("designation", event)}}
+            className="bg-bgGray text-textGray w-full rounded px-2 py-[6px] border-2 border-transparent focus:border-primary focus:outline-none"
+         />
+      </div>
+
    </div>
 
    <h5 className="text-textGray font-medium mt-6 mb-2">Contact Information</h5>
