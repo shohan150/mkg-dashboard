@@ -65,7 +65,7 @@ export default function SListTable({handleDelete}) {
           <td className="min-w-20">{item.jobType}</td>
           <td className="min-w-20">{item.mobile}</td>
           <td className="min-w-40 pb-1 text-center">
-             <Link to={`/staff-info/edit-parent/${item.id}`}>
+             <Link to={`/staff-info/edit-staff/${item.id}`}>
                 <button
                    className="bg-blue px-3 py-1 rounded shadow text-white hover:-translate-y-[2px] duration-200 text-sm m-1"
                 >
