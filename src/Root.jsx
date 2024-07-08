@@ -123,6 +123,39 @@ function Root() {
           ],
         },
         {
+          path: "student-info",
+          children: [
+            {
+              path: "add-student",
+              element: <Dummy />
+            },
+            {
+              path: "student-list",
+              element: <Dummy />,
+            },
+            {
+              path: "edit-student/:id",
+              element: <Dummy />,
+            },
+            {
+              path: "student-testimonial",
+              element: <Dummy />,
+            },
+            {
+              path: "student-waiver",
+              element: <Dummy />,
+            },
+            {
+              path: "student-id-card",
+              element: <Dummy />,
+            },
+            {
+              path: "student-migration",
+              element: <Dummy />,
+            },
+          ],
+        },
+        {
           path: "parent-info",
           children: [
             {
@@ -130,35 +163,13 @@ function Root() {
               element: <AddParents />
             },
             {
-              path: "parents-list",
+              path: "parent-list",
               element: <ParentsList />,
             },
             {
               path: "edit-parent/:id",
               element: <EditParent />,
               loader: getParent,
-            },
-          ],
-        },
-        {
-          path: "staff-info",
-          children: [
-            {
-              path: "add-staff",
-              element: <AddStaff />
-            },
-            {
-              path: "staff-list",
-              element: <StaffList />,
-            },
-            {
-              path: "staff-id-card",
-              element: <Dummy />,
-            },
-            {
-              path: "edit-staff/:id",
-              element: <EditStaff />,
-              loader: getStaff,
             },
           ],
         },
@@ -181,6 +192,28 @@ function Root() {
               path: "edit-teacher/:id",
               element: <EditTeacher />,
               loader: getTeacher,
+            },
+          ],
+        },
+        {
+          path: "staff-info",
+          children: [
+            {
+              path: "add-staff",
+              element: <AddStaff />
+            },
+            {
+              path: "staff-list",
+              element: <StaffList />,
+            },
+            {
+              path: "staff-id-card",
+              element: <Dummy />,
+            },
+            {
+              path: "edit-staff/:id",
+              element: <EditStaff />,
+              loader: getStaff,
             },
           ],
         },

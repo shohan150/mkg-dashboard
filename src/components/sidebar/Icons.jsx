@@ -5,8 +5,9 @@ import { HiOutlineBuildingStorefront } from "react-icons/hi2";
 import { IoMdSettings } from "react-icons/io";
 import { LiaSmsSolid } from "react-icons/lia";
 import { MdOutlineEventAvailable } from "react-icons/md";
-import { PiChalkboardTeacherFill } from "react-icons/pi";
+import { PiChalkboardTeacherFill, PiShapesFill, PiStudentBold } from "react-icons/pi";
 import { RiDashboardHorizontalFill, RiParentFill } from "react-icons/ri";
+
 
 export default function Icons({ name }) {
   switch (name) {
@@ -39,5 +40,11 @@ export default function Icons({ name }) {
 
     case "PiChalkboardTeacherFill":
       return <PiChalkboardTeacherFill />
+
+    case "PiStudentBold":
+      return <PiStudentBold />
+
+    default:
+      return <PiShapesFill />
   }
 }

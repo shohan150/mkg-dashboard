@@ -109,18 +109,55 @@ const mainMenu = [
   },
   {
     id: "08",
+    title: "Student Info",
+    icon: "PiStudentBold",
+    children: [
+      {
+        id: "08/01",
+        title: "Add Student",
+        link: "student-info/add-student",
+      },
+      {
+        id: "08/02",
+        title: "Student List",
+        link: "student-info/student-list",
+      },
+      {
+        id: "08/03",
+        title: "Student Testimonial",
+        link: "student-info/student-testimonial",
+      },
+      {
+        id: "08/04",
+        title: "Student Waiver",
+        link: "student-info/student-waiver",
+      },
+      {
+        id: "08/05",
+        title: "Student ID Card",
+        link: "student-info/student-id-card",
+      },
+      {
+        id: "08/06",
+        title: "Student Migration",
+        link: "student-info/student-migration",
+      },
+    ],
+  },
+  {
+    id: "09",
     title: "Parent Info",
     icon: "RiParentFill",
     children: [
       {
-        id: "08/01",
+        id: "09/01",
         title: "Add Parent",
         link: "parent-info/add-parent",
       },
       {
-        id: "08/02",
-        title: "Parents List",
-        link: "parent-info/parents-list",
+        id: "09/02",
+        title: "Parent List",
+        link: "parent-info/parent-list",
       },
     ],
   },
@@ -135,34 +172,34 @@ const mainMenu = [
         link: "teacher-info/add-teacher",
       },
       {
-        id: "09/02",
+        id: "10/02",
         title: "Teacher List",
         link: "teacher-info/teacher-list",
       },
       {
-        id: "09/03",
+        id: "10/03",
         title: "Teacher ID Card",
         link: "teacher-info/teacher-id-card",
       },
     ],
   },
   {
-    id: "09",
+    id: "11",
     title: "Staff Info",
     icon: "FaPeopleGroup",
     children: [
       {
-        id: "09/01",
+        id: "11/01",
         title: "Add Staff",
         link: "staff-info/add-staff",
       },
       {
-        id: "09/02",
+        id: "11/02",
         title: "Staff List",
         link: "staff-info/staff-list",
       },
       {
-        id: "09/03",
+        id: "11/03",
         title: "Staff ID Card",
         link: "staff-info/staff-id-card",
       },

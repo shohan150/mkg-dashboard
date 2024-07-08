@@ -207,12 +207,12 @@ export default function EditTForm({teacherData, handleChange}) {
          />
       </div>
 
-      {/* Spouse Phone Number */}
+      {/* Number of Children */}
       <div className="space-y-1">
-         <label className="text-textGray">Spouse Phone Number :</label>
+         <label className="text-textGray">Number of Children :</label>
          <input
             type="text"
-            placeholder="Enter Spouse Phone Number"
+            placeholder="Enter Number of Children"
             value={teacherData.children}
             onChange={(event)=> {handleChange("children", event)}}
             className="bg-bgGray text-textGray w-full rounded px-2 py-[6px] border-2 border-transparent focus:border-primary focus:outline-none"
