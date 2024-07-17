@@ -22,6 +22,7 @@ import ParentsList from "./components/STSP-info/parent-info/parents-list/Parents
 import AddStaff from "./components/STSP-info/staff-info/add-staff/AddStaff";
 import EditStaff from "./components/STSP-info/staff-info/edit-staff/EditStaff";
 import StaffList from "./components/STSP-info/staff-info/staff-list/StaffList";
+import AddStudent from "./components/STSP-info/student-info/add-student/AddStudent";
 import TestTable from "./components/STSP-info/student-info/student-list/TestTable";
 import AddTeacher from "./components/STSP-info/teacher-info/add-teacher/AddTeacher";
 import EditTeacher from "./components/STSP-info/teacher-info/edit-teacher/EditTeacher";
@@ -128,7 +129,7 @@ function Root() {
           children: [
             {
               path: "add-student",
-              element: <Dummy />
+              element: <AddStudent />
             },
             {
               path: "student-list",
