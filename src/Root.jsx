@@ -23,12 +23,13 @@ import AddStaff from "./components/STSP-info/staff-info/add-staff/AddStaff";
 import EditStaff from "./components/STSP-info/staff-info/edit-staff/EditStaff";
 import StaffList from "./components/STSP-info/staff-info/staff-list/StaffList";
 import AddStudent from "./components/STSP-info/student-info/add-student/AddStudent";
-import TestTable from "./components/STSP-info/student-info/student-list/TestTable";
+import EditStudent from "./components/STSP-info/student-info/edit-student/EditStudent";
+import StudentList from "./components/STSP-info/student-info/student-list/StudentList";
 import AddTeacher from "./components/STSP-info/teacher-info/add-teacher/AddTeacher";
 import EditTeacher from "./components/STSP-info/teacher-info/edit-teacher/EditTeacher";
 import TeacherList from "./components/STSP-info/teacher-info/teacher-list/TeacherList";
 import Dummy from "./components/to-be-deleted (trash templates)/Dummy";
-import { getParent, getStaff, getTeacher } from "./loaders";
+import { getParent, getStaff, getStudent, getTeacher } from "./loaders";
 
 function Root() {
   const router = createBrowserRouter([
@@ -133,11 +134,12 @@ function Root() {
             },
             {
               path: "student-list",
-              element: <TestTable />,
+              element: <StudentList />,
             },
             {
               path: "edit-student/:id",
-              element: <Dummy />,
+              element: <EditStudent />,
+              loader: getStudent,
             },
             {
               path: "student-testimonial",

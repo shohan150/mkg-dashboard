@@ -1,5 +1,5 @@
-export default function AddSForm() {
 
+export default function EditSForm({studentData, handleChange}) {
     return (
 <>
    <h5 className="text-textGray font-medium mt-6 mb-2">Personal Information</h5>
@@ -7,7 +7,10 @@ export default function AddSForm() {
       {/* Avatar */}
       <div className="space-y-1">
          <label className="text-textGray" htmlFor="">Avatar :</label>
-         <input className="block w-full cursor-pointer rounded bg-gray-100 text-textGray border-transparent focus:border-primary focus:outline-none" aria-describedby="" id="" type="file"/>
+         <input className="block w-full cursor-pointer rounded bg-gray-100 text-textGray border-transparent focus:border-primary focus:outline-none"
+         value={studentData.avatar}
+         onChange={(event)=> {handleChange("avatar", event)}}
+         aria-describedby="" id="" type="file"/>
       </div>
 
       {/* Name */}
@@ -16,6 +19,8 @@ export default function AddSForm() {
          <input
             type="text"
             placeholder="Enter Name"
+            value={studentData.name}
+            onChange={(event)=> {handleChange("name", event)}}
             className="bg-bgGray text-textGray w-full rounded px-2 py-[6px] border-2 border-transparent focus:border-primary focus:outline-none"
          />
       </div>
@@ -26,6 +31,8 @@ export default function AddSForm() {
          <input
             type="text"
             placeholder="Enter Phone Number"
+            value={studentData.mobile}
+            onChange={(event)=> {handleChange("mobile", event)}}
             className="bg-bgGray text-textGray w-full rounded px-2 py-[6px] border-2 border-transparent focus:border-primary focus:outline-none"
          />
       </div>
@@ -36,6 +43,8 @@ export default function AddSForm() {
          id=""
          name=""
          defaultValue="Male"
+         value={studentData.gender}
+         onChange={(event)=> {handleChange("gender", event)}}
          className="bg-bgGray w-full rounded px-1 py-2 border-2 text-textGray border-transparent focus:border-primary focus:outline-none"
          >
             <option value="Male">Male</option>
@@ -134,6 +143,8 @@ export default function AddSForm() {
          id=""
          name=""
          defaultValue="Nursery"
+         value={studentData.class}
+         onChange={(event)=> {handleChange("class", event)}}
          className="bg-bgGray w-full rounded px-1 py-2 border-2 text-textGray border-transparent focus:border-primary focus:outline-none"
          >
             <option value="Nursery">Nursery</option>
@@ -158,6 +169,8 @@ export default function AddSForm() {
          <input
             type="number"
             placeholder="Enter Student ID"
+            value={studentData.id}
+            onChange={(event)=> {handleChange("id", event)}}
             className="bg-bgGray text-textGray w-full rounded px-2 py-[6px] border-2 border-transparent focus:border-primary focus:outline-none"
          />
       </div>
@@ -334,15 +347,6 @@ export default function AddSForm() {
          />
       </div>
 
-   </div>
-
-   <div className="flex justify-end mt-4 mb-2 md:mb-0">
-      <button
-         type="submit"
-         className="rounded w-40 p-3 bg-primary hover:bg-buttonHover text-white shadow-md  hover:-translate-y-[2px] duration-200"
-         >
-         Submit
-      </button>
    </div>
 </>
     );
