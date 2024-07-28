@@ -4,8 +4,9 @@ import { FaPeopleGroup } from "react-icons/fa6";
 import { HiOutlineBuildingStorefront } from "react-icons/hi2";
 import { IoMdSettings } from "react-icons/io";
 import { LiaSmsSolid } from "react-icons/lia";
+import { LuFileText } from "react-icons/lu";
 import { MdOutlineEventAvailable } from "react-icons/md";
-import { PiChalkboardTeacherFill, PiShapesFill, PiStudentBold } from "react-icons/pi";
+import { PiChalkboardTeacherFill, PiExamBold, PiShapesFill, PiStudentBold } from "react-icons/pi";
 import { RiDashboardHorizontalFill, RiParentFill } from "react-icons/ri";
 
 
@@ -43,6 +44,12 @@ export default function Icons({ name }) {
 
     case "PiStudentBold":
       return <PiStudentBold />
+
+    case "LuFileText":
+      return <LuFileText />
+
+    case "PiExamBold":
+      return <PiExamBold />
 
     default:
       return <PiShapesFill />

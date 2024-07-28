@@ -205,6 +205,50 @@ const mainMenu = [
       },
     ],
   },
+  {
+    id: "12",
+    title: "Exam",
+    icon: "LuFileText",
+    children: [
+      {
+        id: "12/01",
+        title: "Exam Name",
+        link: "exam",
+      },
+      {
+        id: "12/02",
+        title: "Exam Syllabus",
+        link: "exam",
+      },
+    ],
+  },
+  {
+    id: "13",
+    title: "Result",
+    icon: "PiExamBold",
+    children: [
+      {
+        id: "13/01",
+        title: "Mark Input",
+        link: "result/mark-input",
+      },
+      {
+        id: "13/02",
+        title: "Tabulation Sheet",
+        link: "result/tabulation-sheet",
+      },
+      {
+        id: "13/03",
+        title: "Progress Report",
+        link: "result/progress-report",
+      },
+      {
+        id: "13/04",
+        title: "Certificate",
+        link: "result/certificate",
+      },
+    ],
+  },
 
   //nested menu item pattern
   // {

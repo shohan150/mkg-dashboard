@@ -13,6 +13,7 @@ import SMSTemplate from "./components/communication/template/SMSTemplate";
 import Home from "./components/homePage/Home";
 import EditInstituteInfo from "./components/instituteProfile/EditInstituteInfo";
 import InstituteProfile from "./components/instituteProfile/InstituteProfile";
+import MarkInput from "./components/result/mark-input/MarkInput";
 import AcademicSetup from "./components/settings/AcademicSetup";
 import ChooseableSubject from "./components/settings/ChooseableSubject";
 import SubjectAssign from "./components/settings/SubjectAssign";
@@ -218,6 +219,27 @@ function Root() {
               path: "edit-staff/:id",
               element: <EditStaff />,
               loader: getStaff,
+            },
+          ],
+        },
+        {
+          path: "result",
+          children: [
+            {
+              path: "mark-input",
+              element: <MarkInput />
+            },
+            {
+              path: "tabulation-sheet",
+              element: <Dummy />,
+            },
+            {
+              path: "progress-report",
+              element: <Dummy />,
+            },
+            {
+              path: "certificate",
+              element: <Dummy />,
             },
           ],
         },
