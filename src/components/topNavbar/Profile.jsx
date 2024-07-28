@@ -5,7 +5,7 @@ export default function Profile() {
     <div className="flex items-center gap-1 pl-2 sm:pl-3">
       <img
         src={profileImage}
-        className="w-8 sm:w-10 h-8 sm:h-10 rounded-full"
+        className="w-8 sm:w-9 h-8 sm:h-9 rounded-full"
       />
       <GoTriangleDown className="text-white w-4 sm:w-5 h-4 sm:h-5" />
     </div>
