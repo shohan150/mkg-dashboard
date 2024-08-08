@@ -3,7 +3,7 @@ import { FaAngleDown } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import ExportPdfCsv from "./ExportPdfCsv";
 
-export default function InfoAction() {
+export default function InfoAction({amountToShow, handleAmountToShow}) {
    const [isExport, setIsExport] = useState(false);
    function handleOutsideClick (){
       setIsExport(false);
@@ -34,7 +34,8 @@ export default function InfoAction() {
                <select
                id=""
                name=""
-               defaultValue="25"
+               value={amountToShow}
+               onChange={(e)=>handleAmountToShow(e.target.value)}
                className="bg-bgGray w-16 rounded px-1 py-2 border-2 border-transparent focus:border-primary focus:outline-none"
                >
                   <option value="10">10</option>

@@ -23,7 +23,7 @@ export default function EditStudent() {
             Save
          </button>
 
-         <Link to="/staff-info/staff-list">
+         <Link to="/student-info/student-list">
             <button className="bg-red w-24 py-2 rounded shadow text-white hover:-translate-y-[2px] duration-200">
                Cancel
             </button>

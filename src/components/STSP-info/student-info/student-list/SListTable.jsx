@@ -1,39 +1,12 @@
 import { Link } from "react-router-dom";
 
-export const students = [
-   {
-      id : "001",
-      name : "Md. Hafijur Rahman",
-      rfid : "0001",
-      gender : "Male",
-      class : "One",
-      section : "Jaba",
-      shift : "Morning",
-      mobile : "01234567890",
-   },
-   {
-      id : "001",
-      name : "Md. Hafijur Rahman",
-      rfid : "0001",
-      gender : "Male",
-      class : "One",
-      section : "Jaba",
-      shift : "Morning",
-      mobile : "01234567890",
-   },
-   {
-      id : "001",
-      name : "Md. Hafijur Rahman",
-      rfid : "0001",
-      gender : "Male",
-      class : "One",
-      section : "Jaba",
-      shift : "Morning",
-      mobile : "01234567890",
-   },
- ]
+export default function SListTable({studentsData, amountToShow, index, handleDelete}) {
 
-export default function SListTable({handleDelete}) {
+  const showItems = studentsData.slice(index*Math.floor(amountToShow), index*Math.floor(amountToShow) + Math.floor(amountToShow));
+
+  console.log(index, amountToShow, index*amountToShow, index*amountToShow + amountToShow);
+  
+
     return (
       <div className="overflow-x-scroll border mt-6 rounded shadow-md">
       <table className="w-full text-textGray text-sm">
@@ -53,7 +26,7 @@ export default function SListTable({handleDelete}) {
         </tr>
       </thead>
       <tbody className="divide-y-2 font-medium">
-        {students.map((item, index) => (
+        {showItems.map((item, index) => (
           <tr key={index} className="text-start leading-8">
           <td className="min-w-10 pl-2">{index+1}</td>
           <td className="min-w-12">{item.id}</td>

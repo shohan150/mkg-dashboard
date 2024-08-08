@@ -1,8 +1,8 @@
-import { students } from "../components/STSP-info/student-info/student-list/SListTable.jsx";
+import { studentsData } from "../data/studentList";
 
 export default async function getStudent({params}) {
    
-const student = students.find(p => p.id === params.id);
+const student = studentsData.find(p => p.id === params.id);
 
    return student;
  }
