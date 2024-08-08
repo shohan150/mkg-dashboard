@@ -1,7 +1,7 @@
 export default function RadioAttendance() {
     return (
-      <form className="flex justify-center">
-         <div>
+      <form>
+         <div className="flex items-center justify-center gap-3">
             <div className="flex gap-1 justify-start items-stretch">
                <input type="radio" id="Present" name="fav_language" value="Present" className="accent-blue"/>
                <label htmlFor="Present">Present</label>
