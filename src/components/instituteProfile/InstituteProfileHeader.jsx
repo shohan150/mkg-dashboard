@@ -2,7 +2,7 @@ import { AiOutlineRise } from "react-icons/ai";
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { MdOutlineLocationOn } from "react-icons/md";
 import instituteCover from "/images/institute-cover.png";
-import instituteLogo from "/images/institute-logo.png";
+import instituteLogo from "/images/Urban School.png";
 
 export default function InstituteProfileHeader() {
     return (
