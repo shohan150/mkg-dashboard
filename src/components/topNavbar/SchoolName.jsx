@@ -6,7 +6,7 @@ export default function SchoolName() {
         <FaSchool className="w-5 sm:w-7 h-5 sm:h-7" />
       </div>
       <h3 className="text-white text-lg hidden sm:block">
-        MKG International School and College
+        Urban International International School and College
       </h3>
     </div>
   );

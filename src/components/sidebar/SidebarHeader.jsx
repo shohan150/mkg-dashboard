@@ -7,7 +7,7 @@ export default function SidebarHeader() {
 
   return (
     <div className="text-center">
-      <h2 className="text-2xl font-semibold text-white p-4">MKG Dashboard</h2>
+      <h2 className="text-2xl font-semibold text-white p-4">Dashboard</h2>
       {/* show cover image or searchbar */}
       {showSearchBar ? (
         <div className="flex gap-2 items-center justify-center bg-[#00000065] px-3 py-[9px] mx-6 rounded-md border border-transparent has-[:focus]:border-tertiary has-[:focus]:shadow-md duration-200">

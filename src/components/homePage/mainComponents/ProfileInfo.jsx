@@ -34,7 +34,7 @@ export default function ProfileInfo() {
 
       {/* user name */}
       <h4 className="bg-primary text-white text-center rounded p-1">
-        Abdur Kadir Khan
+        Salauddin Ahmed
       </h4>
 
       {/* user data table */}

@@ -17,7 +17,7 @@ export default function InstituteProfileHeader() {
             {/* header info */}
             <div className="flex-1 md:flex items-end justify-between">
                <div className="space-y-2 md:space-y-4">
-                  <h4 className="text-xl md:text-2xl text-primary font-medium">MKG International</h4>
+                  <h4 className="text-xl md:text-2xl text-primary font-medium">Urban International School</h4>
                   <div className="flex gap-4">
                      <div className="text-secondary flex items-center gap-1">
                      <IoPersonCircleOutline/>
