@@ -113,6 +113,23 @@ const academicSetupList = [
     ],
   },
   {
+    title: "Group",
+    content: [
+      {
+        id: 1,
+        info: "Science",
+      },
+      {
+        id: 2,
+        info: "Commerce",
+      },
+      {
+        id: 3,
+        info: "Arts",
+      },
+    ],
+  },
+  {
     title: "Session",
     content: [
       {
