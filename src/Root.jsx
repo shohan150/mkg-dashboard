@@ -16,6 +16,8 @@ import InstituteProfile from "./components/instituteProfile/InstituteProfile";
 import MarkInput from "./components/result/mark-input/MarkInput";
 import AcademicSetup from "./components/settings/AcademicSetup";
 import ChooseableSubject from "./components/settings/ChooseableSubject";
+import SectionConfig from "./components/settings/class-config/SectionConfig";
+import ClassConfig from "./components/settings/ClassConfig";
 import SubjectAssign from "./components/settings/SubjectAssign";
 import AddParents from "./components/STSP-info/parent-info/add-parents/AddParents";
 import EditParent from "./components/STSP-info/parent-info/edit-parents/EditParent";
@@ -30,7 +32,7 @@ import AddTeacher from "./components/STSP-info/teacher-info/add-teacher/AddTeach
 import EditTeacher from "./components/STSP-info/teacher-info/edit-teacher/EditTeacher";
 import TeacherList from "./components/STSP-info/teacher-info/teacher-list/TeacherList";
 import Dummy from "./components/to-be-deleted (trash templates)/Dummy";
-import { getParent, getStaff, getStudent, getTeacher } from "./loaders";
+import { getParent, getSection, getStaff, getStudent, getTeacher } from "./loaders";
 
 function Root() {
   const router = createBrowserRouter([
@@ -64,7 +66,12 @@ function Root() {
             },
             {
               path: "class-config",
-              element: <Home />,
+              element: <ClassConfig />,
+            },
+            {
+              path: "section-config/:id",
+              element: <SectionConfig />,
+              loader: getSection
             },
             {
               path: "subject-assign",

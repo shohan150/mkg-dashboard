@@ -27,7 +27,7 @@ export default function SListTable({studentsData, amountToShow, index, handleDel
       </thead>
       <tbody className="divide-y-2 font-medium">
         {showItems.map((item, index) => (
-          <tr key={index} className="text-start leading-8">
+          <tr key={index} className="text-start leading-8 even:bg-slate-200">
           <td className="min-w-10 pl-2">{index+1}</td>
           <td className="min-w-12">{item.id}</td>
           <td className="min-w-[72px]">

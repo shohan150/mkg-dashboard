@@ -50,7 +50,7 @@ export default function SListTable({handleDelete}) {
       </thead>
       <tbody className="divide-y-2 font-medium">
         {staffs.map((item, index) => (
-          <tr key={index} className="text-start leading-8">
+          <tr key={index} className="text-start leading-8 even:bg-slate-200">
           <td className="min-w-10 pl-2">#</td>
           <td className="min-w-12">ID</td>
           <td className="min-w-[72px]">

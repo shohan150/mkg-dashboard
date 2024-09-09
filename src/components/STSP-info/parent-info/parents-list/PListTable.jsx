@@ -41,7 +41,7 @@ export default function PListTable({handleDelete}) {
         </thead>
         <tbody className="divide-y-2 font-medium">
           {parents.map((item, index) => (
-            <tr key={index} className="text-start leading-8">
+            <tr key={index} className="text-start leading-8 even:bg-slate-200">
             <td className="min-w-10 pl-2">{index+1}</td>
             <td className="min-w-36">{item.parentName}</td>
             <td className="min-w-28">{item.parentMobile}</td>

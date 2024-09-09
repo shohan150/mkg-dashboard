@@ -48,7 +48,7 @@ export default function SMSTemplate() {
           </thead>
           <tbody>
             {templates.map((row, index) => (
-              <tr key={index} className="text-center border-b-2">
+              <tr key={index} className="text-center border-b-2 even:bg-slate-200">
                 <td className="w-2/12">{row.id}</td>
                 <td className="w-3/12">{row.name}</td>
                 <td className="w-5/12">{row.body.length > 35 ? row.body.slice(0, 35) + "..." : row.body}</td>
