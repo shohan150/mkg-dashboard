@@ -1,6 +1,6 @@
-import academicSetupList from "../../data/academicSetupList";
+import academicSetupList from "../../../data/academicSetupList";
 
-export default function SubjectAssign() {
+export default function ClassSubjectAssign() {
   return (
     <div className="bg-white px-4 py-6 rounded mt-4">
       {/* select a particular class */}

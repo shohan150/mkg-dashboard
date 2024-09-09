@@ -18,7 +18,8 @@ import AcademicSetup from "./components/settings/AcademicSetup";
 import ChooseableSubject from "./components/settings/ChooseableSubject";
 import SectionConfig from "./components/settings/class-config/SectionConfig";
 import ClassConfig from "./components/settings/ClassConfig";
-import SubjectAssign from "./components/settings/SubjectAssign";
+import ClassSubjectAssign from "./components/settings/subject-assign/ClassSubjectAssign";
+import TeacherSubjectAssign from "./components/settings/subject-assign/TeacherSubjectAssign";
 import AddParents from "./components/STSP-info/parent-info/add-parents/AddParents";
 import EditParent from "./components/STSP-info/parent-info/edit-parents/EditParent";
 import ParentsList from "./components/STSP-info/parent-info/parents-list/ParentsList";
@@ -74,8 +75,12 @@ function Root() {
               loader: getSection
             },
             {
-              path: "subject-assign",
-              element: <SubjectAssign />,
+              path: "class-subject-assign",
+              element: <ClassSubjectAssign />,
+            },
+            {
+              path: "teacher-subject-assign",
+              element: <TeacherSubjectAssign />,
             },
             {
               path: "chooseable-subject",

@@ -38,11 +38,16 @@ const mainMenu = [
       },
       {
         id: "05/03",
-        title: "Subject Assign",
-        link: "settings/subject-assign",
+        title: "Class Subject Assign",
+        link: "settings/class-subject-assign",
       },
       {
         id: "05/04",
+        title: "Teacher Subject Assign",
+        link: "settings/teacher-subject-assign",
+      },
+      {
+        id: "05/05",
         title: "Chooseable Subject",
         link: "settings/chooseable-subject",
       },

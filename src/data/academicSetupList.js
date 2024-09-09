@@ -22,6 +22,18 @@ const academicSetupList = [
         id: 5,
         info: "Class Four",
       },
+      {
+        id: 6,
+        info: "Class Five",
+      },
+      {
+        id: 7,
+        info: "Class Six",
+      },
+      {
+        id: 8,
+        info: "Class Seven",
+      },
     ],
   },
   {
@@ -139,6 +151,23 @@ const academicSetupList = [
       {
         id: 2,
         info: "2024",
+      },
+    ],
+  },
+  {
+    title: "Teacher",
+    content: [
+      {
+        id: 1,
+        info: "Md. Rashidul Miah",
+      },
+      {
+        id: 2,
+        info: "Jalal Ali",
+      },
+      {
+        id: 3,
+        info: "Abdul Kader",
       },
     ],
   },

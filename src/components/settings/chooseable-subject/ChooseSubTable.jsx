@@ -67,20 +67,20 @@ export default function ChooseSubTable() {
 
   return (
     <table className="w-full text-textGray text-sm leading-8 my-6">
-      <thead className="border-b-2">
+      <thead className="border-b-2 bg-bgBlue">
         <tr>
-          <th className="w-1/12">
+          <th className="w-1/12 pt-2">
             <input
               type="checkbox"
               checked={allChecked}
               onChange={handleAllCheckboxChange}
             />
           </th>
-          <th className="w-2/12">STUDENT ID</th>
-          <th className="w-3/12">NAME</th>
-          <th className="w-2/12">ROLL</th>
-          <th className="w-2/12">CLASS</th>
-          <th className="w-2/12">SECTION</th>
+          <th className="w-2/12 pt-1">STUDENT ID</th>
+          <th className="w-3/12 pt-1">NAME</th>
+          <th className="w-2/12 pt-1">ROLL</th>
+          <th className="w-2/12 pt-1">CLASS</th>
+          <th className="w-2/12 pt-1">SECTION</th>
         </tr>
       </thead>
       <tbody className="divide-y-2 font-medium">
