@@ -1,4 +1,4 @@
-export default function SecConfigSingleForm({section}) {
+export default function SecConfigSingleForm({section, handleChange, handleDeleteField}) {
     return (
       <div className="sm:flex items-center justify-between gap-4">
       <div className="sm:flex gap-4 flex-1">
@@ -8,6 +8,7 @@ export default function SecConfigSingleForm({section}) {
                id=""
                name=""
                value={section.name}
+               onChange={(e) => handleChange(section.id, "name", e)}
                defaultValue="select"
                className="bg-bgGray w-full rounded px-1 py-2 border-2 border-transparent focus:border-primary focus:outline-none"
             >
@@ -24,6 +25,7 @@ export default function SecConfigSingleForm({section}) {
             id=""
             name=""
             value={section.group}
+            onChange={(e) => handleChange(section.id, "group", e)}
             defaultValue="select"
             className="bg-bgGray w-full rounded px-1 py-2 border-2 border-transparent focus:border-primary focus:outline-none"
          >
@@ -39,6 +41,7 @@ export default function SecConfigSingleForm({section}) {
       justify-end">
          <button
             type="submit"
+            onClick={() => handleDeleteField(section.id)}
             className="rounded w-28 p-2 bg-red text-white shadow-md  hover:-translate-y-[2px] duration-200"
          >
             Delete

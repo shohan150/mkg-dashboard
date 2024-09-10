@@ -5,14 +5,35 @@ import SecConfigSingleForm from "./SecConfigSingleForm";
 export default function SecConfigForm({section}) {
    const [sections, setSections] = useState(section);
 
+
    function handleAddField (){
-      setSections([...sections, {name:"", group:""}]);
+      const maxId = sections.reduce((acc, cur) => Math.max(acc, Number(cur.id)), 0);
+
+      setSections([...sections, {id:maxId+1, name:"", group:""}]);
+   }
+
+   function handleChange (sectionId, property, event) {
+      const desiredObject = sections.map(item => {
+         if(item.id === sectionId){
+            return {...item, [property]:event.target.value}
+         } else {
+            return item
+         }
+      });
+
+      setSections(desiredObject)
+   }
+
+   function handleDeleteField(sectionId){
+      const existingSections = sections.filter (item => item.id !== sectionId);
+
+      setSections(existingSections);
    }
 
     return (
       <div className="mt-2 space-y-4 sm:space-y-1">
          {
-            sections.map((section, index) => <SecConfigSingleForm key={index} section={section} />)
+            sections.map((section, index) => <SecConfigSingleForm key={index} section={section} handleDeleteField={handleDeleteField} handleChange={handleChange} />)
          }
 
          <div className="flex items-center gap-4 pt-6 pb-4">
