@@ -48,9 +48,20 @@ const mainMenu = [
       },
       {
         id: "05/05",
+        title: "Mark Config",
+        link: "settings/mark-config",
+      },
+      {
+        id: "05/06",
+        title: "Mark Divide",
+        link: "settings/mark-divide",
+      },
+      {
+        id: "05/07",
         title: "Chooseable Subject",
         link: "settings/chooseable-subject",
       },
+
     ],
   },
   {

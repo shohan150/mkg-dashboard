@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function SecConfigHeader({section}) {
     return (
       <div className="flex gap-4 items-center justify-between bg-bgGreen px-2 py-3 my-2">
-      <div className="text-primary font-bold space-y-1">
+      <div className="text-primary font-bold sm:flex gap-4">
          <h3 className="">Class : {section.class}</h3>
          <h3 className="">Shift : {section.shift}</h3>
       </div>

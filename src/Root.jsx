@@ -79,6 +79,22 @@ function Root() {
               element: <ClassSubjectAssign />,
             },
             {
+              path: "mark-config",
+              element: <ClassConfig />,
+            },
+            {
+              path: "class-mark-config",
+              element: <ClassConfig />,
+            },
+            {
+              path: "mark-divide",
+              element: <ClassConfig />,
+            },
+            {
+              path: "class-mark-divide",
+              element: <ClassConfig />,
+            },
+            {
               path: "teacher-subject-assign",
               element: <TeacherSubjectAssign />,
             },
