@@ -18,6 +18,10 @@ import AcademicSetup from "./components/settings/AcademicSetup";
 import ChooseableSubject from "./components/settings/ChooseableSubject";
 import SectionConfig from "./components/settings/class-config/SectionConfig";
 import ClassConfig from "./components/settings/ClassConfig";
+import ClassMarkConfig from "./components/settings/mark-config/ClassMarkConfig";
+import SubjectMarkDivide from "./components/settings/mark-divide/SubjectMarkDivide";
+import MarkConfig from "./components/settings/MarkConfig";
+import MarkDivide from "./components/settings/MarkDivide";
 import ClassSubjectAssign from "./components/settings/subject-assign/ClassSubjectAssign";
 import TeacherSubjectAssign from "./components/settings/subject-assign/TeacherSubjectAssign";
 import AddParents from "./components/STSP-info/parent-info/add-parents/AddParents";
@@ -80,19 +84,19 @@ function Root() {
             },
             {
               path: "mark-config",
-              element: <ClassConfig />,
+              element: <MarkConfig />,
             },
             {
-              path: "class-mark-config",
-              element: <ClassConfig />,
+              path: "class-mark-config/:id",
+              element: <ClassMarkConfig />,
             },
             {
               path: "mark-divide",
-              element: <ClassConfig />,
+              element: <MarkDivide />,
             },
             {
-              path: "class-mark-divide",
-              element: <ClassConfig />,
+              path: "subject-mark-divide/:id",
+              element: <SubjectMarkDivide />,
             },
             {
               path: "teacher-subject-assign",

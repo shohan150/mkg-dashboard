@@ -30,7 +30,7 @@ export const classConfig = [
 export default function ClassConfigTable() {
     return (
       <div className="overflow-x-scroll">
-               <table className="w-full text-textGray leading-10 mb-4">
+      <table className="w-full text-textGray leading-10 mb-4">
       <thead className="bg-bgBlue">
         <tr>
           <th className="w-1/12">Serial</th>
