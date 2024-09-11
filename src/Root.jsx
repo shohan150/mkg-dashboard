@@ -15,6 +15,7 @@ import EditInstituteInfo from "./components/instituteProfile/EditInstituteInfo";
 import InstituteProfile from "./components/instituteProfile/InstituteProfile";
 import MarkInput from "./components/result/mark-input/MarkInput";
 import CreateRoutine from "./components/routine/create-routine/CreateRoutine";
+import RoutineList from "./components/routine/routine-list/RoutineList";
 import AcademicSetup from "./components/settings/AcademicSetup";
 import ChooseableSubject from "./components/settings/ChooseableSubject";
 import SectionConfig from "./components/settings/class-config/SectionConfig";
@@ -260,7 +261,7 @@ function Root() {
           children: [
             {
               path: "routine-list",
-              element: <MarkInput />
+              element: <RoutineList />
             },
             {
               path: "create-routine",

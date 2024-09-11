@@ -6,12 +6,7 @@ import "./style.css";
 
 
 const CreateRoutine = () => {
-  const [numPeriods, setNumPeriods] = useState(6); 
-  const [schedule, setSchedule] = useState([]);
-  const [copiedDay, setCopiedDay] = useState(null);
   
-  console.log( schedule);
-
   const days = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"];
 
   const subjectAndTeachers = [
@@ -33,6 +28,11 @@ const CreateRoutine = () => {
     },
   ]
 
+  const [numPeriods, setNumPeriods] = useState(6); 
+  const [schedule, setSchedule] = useState(days.map(() => Array(6).fill(null)));
+  const [copiedDay, setCopiedDay] = useState(null);
+
+
   // Handle form submission to create the schedule
   const createSchedule = (e) => {
     e.preventDefault();
@@ -52,7 +52,6 @@ const CreateRoutine = () => {
     e.preventDefault();
     const droppedItem = JSON.parse(e.dataTransfer.getData("application/json"));
     const newSchedule = [...schedule];
-    console.log(droppedItem, newSchedule, schedule);
     newSchedule[dayIndex][periodIndex] = droppedItem;
     setSchedule(newSchedule);
 
@@ -62,6 +61,7 @@ const CreateRoutine = () => {
   // Save routine to JSON format (console log)
   const saveRoutine = () => {
     const routineData = days.reduce((acc, day, index) => {
+      // console.log(acc, day, index, acc[day], schedule[index]);
       acc[day] = schedule[index];
       return acc;
     }, {});
@@ -129,11 +129,13 @@ const CreateRoutine = () => {
           {/* Days and Periods */}
           {days.map((day, dayIndex) => (
             <React.Fragment key={day}>
+              {/* the copy paste button */}
               <div className="day-label">
                 {day}
                 <FaRegCopy className="icon copy-row" onClick={() => copyDay(dayIndex)}/>
                 <MdOutlineContentPaste className="icon paste-row" onClick={() => pasteDay(dayIndex)} />
               </div>
+              {/* for each day, take a dummy array of numPeriods elements and use it for looping. then use the two index of row and column to show data from state.  */}
               {Array.from({ length: numPeriods }, (_, periodIndex) => (
                 <div
                   key={periodIndex}
@@ -143,8 +145,8 @@ const CreateRoutine = () => {
                 >
                   {schedule[dayIndex] && schedule[dayIndex][periodIndex] && (
                     <div className="subject">
-                      <p>{schedule[dayIndex][periodIndex].subject}</p>
-                      <p>({schedule[dayIndex][periodIndex].teacher})</p>
+                      <p>{schedule[dayIndex][periodIndex]?.subject}</p>
+                      <p>({schedule[dayIndex][periodIndex]?.teacher})</p>
                     </div>
                   )}
                   <RxCrossCircled
