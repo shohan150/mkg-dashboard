@@ -14,6 +14,7 @@ import Home from "./components/homePage/Home";
 import EditInstituteInfo from "./components/instituteProfile/EditInstituteInfo";
 import InstituteProfile from "./components/instituteProfile/InstituteProfile";
 import MarkInput from "./components/result/mark-input/MarkInput";
+import CreateRoutine from "./components/routine/create-routine/CreateRoutine";
 import AcademicSetup from "./components/settings/AcademicSetup";
 import ChooseableSubject from "./components/settings/ChooseableSubject";
 import SectionConfig from "./components/settings/class-config/SectionConfig";
@@ -251,6 +252,27 @@ function Root() {
               path: "edit-staff/:id",
               element: <EditStaff />,
               loader: getStaff,
+            },
+          ],
+        },
+        {
+          path: "routine",
+          children: [
+            {
+              path: "routine-list",
+              element: <MarkInput />
+            },
+            {
+              path: "create-routine",
+              element: <CreateRoutine />,
+            },
+            {
+              path: "class-routine",
+              element: <Dummy />,
+            },
+            {
+              path: "teacher-schedule",
+              element: <Dummy />,
             },
           ],
         },

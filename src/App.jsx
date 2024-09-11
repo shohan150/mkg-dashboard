@@ -10,8 +10,9 @@ export default function App() {
 
   //take at the top of the page whenever route is changed.
   const { pathname } = useLocation();
-  const moduleName = pathname.split('/')[1].replace(/-/g, " ");
-  const routeName = pathname.split('/')[2].replace(/-/g, " ");
+
+  const moduleName = pathname?.split('/')[1]?.replace(/-/g, " ");
+  const routeName = pathname?.split('/')[2]?.replace(/-/g, " ");
 
   
   useEffect(() => {
@@ -27,7 +28,9 @@ export default function App() {
       <div className={`bg-secondary text-textBlack flex flex-col justify-between min-h-screen transition-all duration-500 ease-in-out p-3 ml-0 xl:ml-72 ${showSidebar && "max-xl:opacity-65"}`}>
         <div>
           <TopNavbar setShowSidebar={setShowSidebar} />
-          <Breadcrumb module={moduleName} route={routeName} />
+          {
+            pathname.length > 1 && <Breadcrumb module={moduleName} route={routeName} />
+          }
           <Outlet />
         </div>
         <Footer />

@@ -265,6 +265,28 @@ const mainMenu = [
       },
     ],
   },
+  {
+    id: "14",
+    title: "Routine",
+    icon: "PiExamBold",
+    children: [
+      {
+        id: "14/01",
+        title: "Routines",
+        link: "routine/routine-list",
+      },
+      {
+        id: "14/02",
+        title: "Class Routine",
+        link: "routine/class-routine",
+      },
+      {
+        id: "14/03",
+        title: "Teacher Schedule",
+        link: "routine/teacher-schedule",
+      },
+    ],
+  },
 
   //nested menu item pattern
   // {
