@@ -23,7 +23,7 @@ export default function LRequestTable({handleEdit, handleDelete}) {
 
     return (
       <div className="border my-6 rounded shadow-md">
-      <table className="w-full text-textGray text-sm leading-8">
+      <table className="w-full text-textGray text-sm leading-6 sm:leading-8">
       <thead className="border-b-2 bg-bgBlue">
         <tr>
           <th className="w-1/12">#</th>
