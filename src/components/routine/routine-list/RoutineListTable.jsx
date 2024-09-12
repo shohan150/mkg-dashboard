@@ -43,7 +43,7 @@ export default function RoutineListTable() {
             <td className="w-2/12">{row.shift}</td>
             <td className="w-3/12">{row.section}</td>
             <td className="w-4/12 min-w-40">
-            <Link to={`../class-mark-config/${row.id}`}>
+            <Link to={`../create-routine`}>
                <button
                   className="bg-primary px-2 sm:px-3 py-1 sm:py-2 rounded shadow text-white hover:-translate-y-[2px] duration-200 text-sm my-1 sm:my-[6px]"
                >

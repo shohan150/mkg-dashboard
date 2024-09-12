@@ -14,8 +14,10 @@ import Home from "./components/homePage/Home";
 import EditInstituteInfo from "./components/instituteProfile/EditInstituteInfo";
 import InstituteProfile from "./components/instituteProfile/InstituteProfile";
 import MarkInput from "./components/result/mark-input/MarkInput";
+import ClassRoutine from "./components/routine/class-routine/ClassRoutine";
 import CreateRoutine from "./components/routine/create-routine/CreateRoutine";
 import RoutineList from "./components/routine/routine-list/RoutineList";
+import TeacherSchedule from "./components/routine/teacher-schedule/TeacherSchedule";
 import AcademicSetup from "./components/settings/AcademicSetup";
 import ChooseableSubject from "./components/settings/ChooseableSubject";
 import SectionConfig from "./components/settings/class-config/SectionConfig";
@@ -269,11 +271,11 @@ function Root() {
             },
             {
               path: "class-routine",
-              element: <Dummy />,
+              element: <ClassRoutine />,
             },
             {
               path: "teacher-schedule",
-              element: <Dummy />,
+              element: <TeacherSchedule />,
             },
           ],
         },
