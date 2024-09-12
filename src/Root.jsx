@@ -10,14 +10,12 @@ import GeneralSMS from "./components/communication/general/GeneralSMS";
 import Notifications from "./components/communication/notification/Notifications";
 import NewSMSTemplate from "./components/communication/template/NewSMSTemplate";
 import SMSTemplate from "./components/communication/template/SMSTemplate";
+import { ExamName } from "./components/exam/exam-index";
 import Home from "./components/homePage/Home";
 import EditInstituteInfo from "./components/instituteProfile/EditInstituteInfo";
 import InstituteProfile from "./components/instituteProfile/InstituteProfile";
 import MarkInput from "./components/result/mark-input/MarkInput";
-import ClassRoutine from "./components/routine/class-routine/ClassRoutine";
-import CreateRoutine from "./components/routine/create-routine/CreateRoutine";
-import RoutineList from "./components/routine/routine-list/RoutineList";
-import TeacherSchedule from "./components/routine/teacher-schedule/TeacherSchedule";
+import { ClassRoutine, CreateRoutine, RoutineList, TeacherSchedule } from "./components/routine/routine-index";
 import AcademicSetup from "./components/settings/AcademicSetup";
 import ChooseableSubject from "./components/settings/ChooseableSubject";
 import SectionConfig from "./components/settings/class-config/SectionConfig";
@@ -276,6 +274,59 @@ function Root() {
             {
               path: "teacher-schedule",
               element: <TeacherSchedule />,
+            },
+          ],
+        },
+        {
+          path: "exam",
+          children: [
+            {
+              path: "exam-name",
+              element: <ExamName />
+            },
+            {
+              path: "exam-syllabus",
+              element: <Dummy />,
+            },
+            {
+              path: "exam-schedule",
+              element: <Dummy />,
+            },
+            {
+              path: "schedule-download",
+              element: <Dummy />,
+            },
+            {
+              path: "admit-card-download",
+              element: <Dummy />,
+            },
+            {
+              path: "seat-plan",
+              element: <ExamName />
+            },
+            {
+              path: "grade-rule",
+              element: <Dummy />,
+            },
+            {
+              path: "mark-blank-sheet",
+              element: <Dummy />,
+            },
+            {
+              path: "schedule-download",
+              element: <Dummy />,
+            },
+            {
+              path: "oral-mark-sheet",
+              element: <Dummy />,
+            },
+            {
+              path: "exam-signature-sheet",
+              element: <Dummy />,
+            },
+            {
+              path: "exam-fee-sheet",
+              element: <Dummy />,
             },
           ],
         },

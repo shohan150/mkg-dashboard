@@ -229,12 +229,57 @@ const mainMenu = [
       {
         id: "12/01",
         title: "Exam Name",
-        link: "exam",
+        link: "exam/exam-name",
       },
       {
         id: "12/02",
         title: "Exam Syllabus",
-        link: "exam",
+        link: "exam/exam-syllabus",
+      },
+      {
+        id: "12/03",
+        title: "Exam Schedule",
+        link: "exam/exam-schedule",
+      },
+      {
+        id: "12/04",
+        title: "Schedule Download",
+        link: "exam/schedule-download",
+      },
+      {
+        id: "12/05",
+        title: "Admit Card Download",
+        link: "exam/admit-card-download",
+      },
+      {
+        id: "12/06",
+        title: "Seat Plan",
+        link: "exam/seat-plan",
+      },
+      {
+        id: "12/07",
+        title: "Grade Rule",
+        link: "exam/grade-rule",
+      },
+      {
+        id: "12/08",
+        title: "Mark Blank Sheet",
+        link: "exam/mark-blank-sheet",
+      },
+      {
+        id: "12/09",
+        title: "Oral Mark Sheet",
+        link: "exam/oral-mark-sheet",
+      },
+      {
+        id: "12/10",
+        title: "Exam Signature Sheet",
+        link: "exam/exam-signature-sheet",
+      },
+      {
+        id: "12/11",
+        title: "Exam Fee Sheet",
+        link: "exam/exam-fee-sheet",
       },
     ],
   },
