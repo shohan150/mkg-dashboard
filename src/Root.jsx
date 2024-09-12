@@ -10,7 +10,7 @@ import GeneralSMS from "./components/communication/general/GeneralSMS";
 import Notifications from "./components/communication/notification/Notifications";
 import NewSMSTemplate from "./components/communication/template/NewSMSTemplate";
 import SMSTemplate from "./components/communication/template/SMSTemplate";
-import { ExamName } from "./components/exam/exam-index";
+import { ExamName, ExamSyllabus } from "./components/exam/exam-index";
 import Home from "./components/homePage/Home";
 import EditInstituteInfo from "./components/instituteProfile/EditInstituteInfo";
 import InstituteProfile from "./components/instituteProfile/InstituteProfile";
@@ -286,7 +286,7 @@ function Root() {
             },
             {
               path: "exam-syllabus",
-              element: <Dummy />,
+              element: <ExamSyllabus />,
             },
             {
               path: "exam-schedule",

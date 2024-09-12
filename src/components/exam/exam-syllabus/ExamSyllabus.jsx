@@ -1,11 +1,11 @@
 import { useState } from "react";
 import DeleteModal from "../../common/DeleleModal";
-import AddExamName from "./AddExamName";
-import ExNmAddModal from "./ExNmAddModal";
-import ExNmEditModal from "./ExNmEditModal";
-import ExNmTable from "./ExNmTable";
+import AddExamSyllabus from "./AddExamSyllabus";
+import ExSyAddModal from "./ExSyAddModal";
+import ExSyEditModal from "./ExSyEditModal";
+import ExSyTable from "./ExSyTable";
 
-export default function ExamName() {
+export default function ExamSyllabus() {
    const [isAdd, setIsAdd] = useState(false);
    const [isEdit, setIsEdit] = useState(false);
    const [isDelete, setIsDelete] = useState(false);
@@ -27,17 +27,18 @@ export default function ExamName() {
      setToDelete(title);
    }
 
+
     return (
       <div className="bg-white rounded-md p-4 md:p-6  my-4">
-         <AddExamName setIsAdd={setIsAdd} />
-         <ExNmTable handleEdit={handleEdit} handleDelete={handleDelete} />
+         <AddExamSyllabus setIsAdd={setIsAdd} />
+         <ExSyTable handleEdit={handleEdit} handleDelete={handleDelete} />
 
          {/* The 3 modals: Add, Edit, Delete */}
          {/* show only when isAdd is true */}
-         <ExNmAddModal isAdd={isAdd} onClose={()=>setIsAdd(false)} />
+         <ExSyAddModal isAdd={isAdd} onClose={()=>setIsAdd(false)} />
 
          {/* show only when isEdit is true */}
-         <ExNmEditModal
+         <ExSyEditModal
          editContent={editContent}
          setEditContent={setEditContent}
          isEdit={isEdit} 
