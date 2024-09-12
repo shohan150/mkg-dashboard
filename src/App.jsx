@@ -14,8 +14,6 @@ export default function App() {
   const moduleName = pathname?.split('/')[1]?.replace(/-/g, " ");
   const routeName = pathname?.split('/')[2]?.replace(/-/g, " ");
   
-  // testing
- 
   useEffect(() => {
       window.scrollTo(0, 0);
       //also close sidebar on mobile on route change.
