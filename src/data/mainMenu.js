@@ -248,8 +248,8 @@ const mainMenu = [
       },
       {
         id: "12/05",
-        title: "Admit Card Download",
-        link: "exam/admit-card-download",
+        title: "Admit Card",
+        link: "exam/admit-card",
       },
       {
         id: "12/06",
