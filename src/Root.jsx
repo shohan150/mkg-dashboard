@@ -10,7 +10,7 @@ import GeneralSMS from "./components/communication/general/GeneralSMS";
 import Notifications from "./components/communication/notification/Notifications";
 import NewSMSTemplate from "./components/communication/template/NewSMSTemplate";
 import SMSTemplate from "./components/communication/template/SMSTemplate";
-import { AdmitCard, ExamName, ExamSchedule, ExamSyllabus, ScheduleDownload } from "./components/exam/exam-index";
+import { AdmitCard, ExamName, ExamSchedule, ExamSyllabus, ScheduleDownload, SeatPlan } from "./components/exam/exam-index";
 import AddExamRoutine from "./components/exam/exam-schedule/AddExamRoutine";
 import Home from "./components/homePage/Home";
 import EditInstituteInfo from "./components/instituteProfile/EditInstituteInfo";
@@ -307,7 +307,7 @@ function Root() {
             },
             {
               path: "seat-plan",
-              element: <ExamName />
+              element: <SeatPlan />
             },
             {
               path: "grade-rule",

@@ -12,11 +12,11 @@ export default function SingleAdmitCard({student}) {
                <div className="flex w-full my-2">
                   <div className="w-1/2">
                      <h3><span className="text-bold">ID : </span>{student.id}</h3>
+                     <h3><span className="text-bold">Roll : </span>{student.id}</h3>
                      <h3><span className="text-bold">Class : </span>{student.class}</h3>
-                     <h3><span className="text-bold">Section : </span>{student.section}</h3>
                   </div>
                   <div className="w-1/2">
-                     <h3><span className="text-bold">Gender : </span>{student.gender}</h3>
+                     <h3><span className="text-bold">Section : </span>{student.section}</h3>
                      <h3><span className="text-bold">Shift : </span>{student.shift}</h3>
                      <h3><span className="text-bold">Session : </span>2024</h3>
                   </div>
