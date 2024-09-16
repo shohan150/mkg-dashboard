@@ -327,6 +327,12 @@ const mainMenu = [
       },
     ],
   },
+  {
+    id: "15",
+    title: "Download",
+    icon: "RiDashboardHorizontalFill",
+    link: "/download",
+  },
 
   //nested menu item pattern
   // {
