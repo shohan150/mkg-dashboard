@@ -268,16 +268,11 @@ const mainMenu = [
       },
       {
         id: "12/09",
-        title: "Oral Mark Sheet",
-        link: "exam/oral-mark-sheet",
-      },
-      {
-        id: "12/10",
         title: "Exam Signature Sheet",
         link: "exam/exam-signature-sheet",
       },
       {
-        id: "12/11",
+        id: "12/10",
         title: "Exam Fee Sheet",
         link: "exam/exam-fee-sheet",
       },
