@@ -300,8 +300,8 @@ const mainMenu = [
       },
       {
         id: "13/04",
-        title: "Certificate",
-        link: "result/certificate",
+        title: "Merit List",
+        link: "result/merit-list",
       },
     ],
   },

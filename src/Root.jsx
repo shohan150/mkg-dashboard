@@ -345,7 +345,7 @@ function Root() {
               element: <Dummy />,
             },
             {
-              path: "certificate",
+              path: "merit-list",
               element: <Dummy />,
             },
           ],
