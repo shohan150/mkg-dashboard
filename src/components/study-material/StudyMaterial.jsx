@@ -5,7 +5,7 @@ import DownloadAddModal from "./DownloadAddModal";
 import DownloadEditModal from "./DownloadEditModal";
 import DownloadTable from "./DownloadTable";
 
-export default function Download() {
+export default function StudyMaterial() {
    const [isAdd, setIsAdd] = useState(false);
    const [isEdit, setIsEdit] = useState(false);
    const [isDelete, setIsDelete] = useState(false);

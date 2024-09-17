@@ -1,7 +1,8 @@
 import { CgCommunity } from "react-icons/cg";
-import { FaRegCheckSquare } from "react-icons/fa";
+import { FaCloudDownloadAlt, FaRegCheckSquare } from "react-icons/fa";
 import { FaPeopleGroup } from "react-icons/fa6";
-import { HiOutlineBuildingStorefront } from "react-icons/hi2";
+import { GrTableAdd } from "react-icons/gr";
+import { HiOutlineBuildingStorefront, HiOutlineTableCells } from "react-icons/hi2";
 import { IoMdSettings } from "react-icons/io";
 import { LiaSmsSolid } from "react-icons/lia";
 import { LuFileText } from "react-icons/lu";
@@ -50,6 +51,15 @@ export default function Icons({ name }) {
 
     case "PiExamBold":
       return <PiExamBold />
+
+    case "GrTableAdd":
+      return <GrTableAdd />
+
+    case "HiOutlineTableCells":
+      return <HiOutlineTableCells />
+
+    case "FaCloudDownloadAlt":
+      return <FaCloudDownloadAlt />
 
     default:
       return <PiShapesFill />

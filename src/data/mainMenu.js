@@ -308,7 +308,7 @@ const mainMenu = [
   {
     id: "14",
     title: "Routine",
-    icon: "PiExamBold",
+    icon: "HiOutlineTableCells",
     children: [
       {
         id: "14/01",
@@ -329,14 +329,14 @@ const mainMenu = [
   },
   {
     id: "15",
-    title: "Download",
-    icon: "RiDashboardHorizontalFill",
-    link: "/download",
+    title: "Study Material",
+    icon: "FaCloudDownloadAlt",
+    link: "/study-material",
   },
   {
     id: "16",
     title: "Event",
-    icon: "PiExamBold",
+    icon: "GrTableAdd",
     children: [
       {
         id: "16/01",

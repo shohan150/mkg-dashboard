@@ -10,7 +10,6 @@ import GeneralSMS from "./components/communication/general/GeneralSMS";
 import Notifications from "./components/communication/notification/Notifications";
 import NewSMSTemplate from "./components/communication/template/NewSMSTemplate";
 import SMSTemplate from "./components/communication/template/SMSTemplate";
-import Download from "./components/download/Download";
 import EventList from "./components/events/event-list/EventList";
 import { AdmitCard, ExamFeeSheet, ExamName, ExamSchedule, ExamSignSheet, ExamSyllabus, GradeRule, MarkBlankSheet, ScheduleDownload, SeatPlan } from "./components/exam/exam-index";
 import AddExamRoutine from "./components/exam/exam-schedule/AddExamRoutine";
@@ -41,6 +40,7 @@ import StudentList from "./components/STSP-info/student-info/student-list/Studen
 import AddTeacher from "./components/STSP-info/teacher-info/add-teacher/AddTeacher";
 import EditTeacher from "./components/STSP-info/teacher-info/edit-teacher/EditTeacher";
 import TeacherList from "./components/STSP-info/teacher-info/teacher-list/TeacherList";
+import StudyMaterial from "./components/study-material/StudyMaterial";
 import Dummy from "./components/to-be-deleted (trash templates)/Dummy";
 import { getParent, getSection, getStaff, getStudent, getTeacher } from "./loaders";
 
@@ -351,8 +351,8 @@ function Root() {
           ],
         },
         {
-          path: "download",
-          element: <Download />
+          path: "study-material",
+          element: <StudyMaterial />
         },
         {
           path: "event",
