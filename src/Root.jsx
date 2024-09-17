@@ -16,7 +16,7 @@ import AddExamRoutine from "./components/exam/exam-schedule/AddExamRoutine";
 import Home from "./components/homePage/Home";
 import EditInstituteInfo from "./components/instituteProfile/EditInstituteInfo";
 import InstituteProfile from "./components/instituteProfile/InstituteProfile";
-import MarkInput from "./components/result/mark-input/MarkInput";
+import { MarkInput, TabulationSheet } from "./components/result/result-index";
 import { ClassRoutine, CreateRoutine, RoutineList, TeacherSchedule } from "./components/routine/routine-index";
 import AcademicSetup from "./components/settings/AcademicSetup";
 import ChooseableSubject from "./components/settings/ChooseableSubject";
@@ -338,7 +338,7 @@ function Root() {
             },
             {
               path: "tabulation-sheet",
-              element: <Dummy />,
+              element: <TabulationSheet />,
             },
             {
               path: "progress-report",
