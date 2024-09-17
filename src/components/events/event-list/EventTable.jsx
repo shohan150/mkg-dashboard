@@ -41,7 +41,7 @@ export default function EventTable({handleEdit, handleDelete}) {
                 </button>
                 <button
                   className="bg-red px-3 py-1 rounded shadow text-white hover:-translate-y-[2px] duration-200 text-sm m-1"
-                  onClick={()=>handleDelete(`class ${item.class} ${item.subject} syllabus`)}
+                  onClick={()=>handleDelete(item.name)}
                 >
                   Delete
                 </button>

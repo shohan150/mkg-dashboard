@@ -333,6 +333,18 @@ const mainMenu = [
     icon: "RiDashboardHorizontalFill",
     link: "/download",
   },
+  {
+    id: "16",
+    title: "Event",
+    icon: "PiExamBold",
+    children: [
+      {
+        id: "16/01",
+        title: "Event List",
+        link: "event/event-list",
+      },
+    ],
+  },
 
   //nested menu item pattern
   // {

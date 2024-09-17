@@ -11,6 +11,7 @@ import Notifications from "./components/communication/notification/Notifications
 import NewSMSTemplate from "./components/communication/template/NewSMSTemplate";
 import SMSTemplate from "./components/communication/template/SMSTemplate";
 import Download from "./components/download/Download";
+import EventList from "./components/events/event-list/EventList";
 import { AdmitCard, ExamFeeSheet, ExamName, ExamSchedule, ExamSignSheet, ExamSyllabus, GradeRule, MarkBlankSheet, ScheduleDownload, SeatPlan } from "./components/exam/exam-index";
 import AddExamRoutine from "./components/exam/exam-schedule/AddExamRoutine";
 import Home from "./components/homePage/Home";
@@ -352,7 +353,16 @@ function Root() {
         {
           path: "download",
           element: <Download />
-        }
+        },
+        {
+          path: "event",
+          children: [
+            {
+              path: "event-list",
+              element: <EventList />
+            },
+          ],
+        },
       ],
     },
   ]);

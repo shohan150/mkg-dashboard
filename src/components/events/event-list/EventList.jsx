@@ -1,19 +1,19 @@
 import { useState } from "react";
-import DeleteModal from "../common/DeleleModal";
+import DeleteModal from "../../common/DeleleModal";
 import AddEvent from "./AddEvent";
-import DownloadAddModal from "./DownloadAddModal";
-import DownloadEditModal from "./DownloadEditModal";
+import EventAddModal from "./EventAddModal";
+import EventEditModal from "./EventEditModal";
 import EventTable from "./EventTable";
 
-export default function Download() {
+export default function EventList() {
    const [isAdd, setIsAdd] = useState(false);
    const [isEdit, setIsEdit] = useState(false);
    const [isDelete, setIsDelete] = useState(false);
    const [toDelete, setToDelete] = useState("");
    const [editContent, setEditContent] = useState({
     name: "",
-    type:"",
-    class: "",
+    start:"",
+    end: "",
  });
  
    function handleEdit(item) {
@@ -34,10 +34,10 @@ export default function Download() {
 
          {/* The 3 modals: Add, Edit, Delete */}
          {/* show only when isAdd is true */}
-         <DownloadAddModal isAdd={isAdd} onClose={()=>setIsAdd(false)} />
+         <EventAddModal isAdd={isAdd} onClose={()=>setIsAdd(false)} />
 
          {/* show only when isEdit is true */}
-         <DownloadEditModal
+         <EventEditModal
          editContent={editContent}
          setEditContent={setEditContent}
          isEdit={isEdit} 
