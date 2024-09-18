@@ -345,6 +345,28 @@ const mainMenu = [
       },
     ],
   },
+  {
+    id: "17",
+    title: "Fees",
+    icon: "CiDollar",
+    children: [
+      {
+        id: "17/01",
+        title: "Fees Type",
+        link: "fees/fees-type",
+      },
+      {
+        id: "17/02",
+        title: "Fees Amount",
+        link: "fees/fees-amount",
+      },
+      {
+        id: "17/02",
+        title: "Delete Fee",
+        link: "fees/delete-fee",
+      },
+    ],
+  },
 
   //nested menu item pattern
   // {

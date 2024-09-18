@@ -43,6 +43,9 @@ import TeacherList from "./components/STSP-info/teacher-info/teacher-list/Teache
 import StudyMaterial from "./components/study-material/StudyMaterial";
 import Dummy from "./components/to-be-deleted (trash templates)/Dummy";
 import { getParent, getSection, getStaff, getStudent, getTeacher } from "./loaders";
+import FeesType from "./components/fees/FeesType";
+import FeesAmount from "./components/fees/FeesAmount";
+import DeleteFee from "./components/fees/DeleteFee";
 
 function Root() {
   const router = createBrowserRouter([
@@ -360,6 +363,23 @@ function Root() {
             {
               path: "event-list",
               element: <EventList />
+            },
+          ],
+        },
+        {
+          path: "fees",
+          children: [
+            {
+              path: "fees-type",
+              element: <FeesType />
+            },
+            {
+              path: "fees-amount",
+              element: <FeesAmount />
+            },
+            {
+              path: "delete-fee",
+              element: <DeleteFee />
             },
           ],
         },

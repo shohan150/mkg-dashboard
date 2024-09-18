@@ -9,6 +9,7 @@ import { LuFileText } from "react-icons/lu";
 import { MdOutlineEventAvailable } from "react-icons/md";
 import { PiChalkboardTeacherFill, PiExamBold, PiShapesFill, PiStudentBold } from "react-icons/pi";
 import { RiDashboardHorizontalFill, RiParentFill } from "react-icons/ri";
+import { CiDollar } from "react-icons/ci";
 
 
 export default function Icons({ name }) {
@@ -60,6 +61,9 @@ export default function Icons({ name }) {
 
     case "FaCloudDownloadAlt":
       return <FaCloudDownloadAlt />
+
+    case "CiDollar":
+      return <CiDollar />
 
     default:
       return <PiShapesFill />
