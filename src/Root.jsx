@@ -13,6 +13,9 @@ import SMSTemplate from "./components/communication/template/SMSTemplate";
 import EventList from "./components/events/event-list/EventList";
 import { AdmitCard, ExamFeeSheet, ExamName, ExamSchedule, ExamSignSheet, ExamSyllabus, GradeRule, MarkBlankSheet, ScheduleDownload, SeatPlan } from "./components/exam/exam-index";
 import AddExamRoutine from "./components/exam/exam-schedule/AddExamRoutine";
+import DeleteFee from "./components/fees/DeleteFee";
+import FeesAmount from "./components/fees/FeesAmount";
+import FeesType from "./components/fees/FeesType";
 import Home from "./components/homePage/Home";
 import EditInstituteInfo from "./components/instituteProfile/EditInstituteInfo";
 import InstituteProfile from "./components/instituteProfile/InstituteProfile";
@@ -42,10 +45,8 @@ import EditTeacher from "./components/STSP-info/teacher-info/edit-teacher/EditTe
 import TeacherList from "./components/STSP-info/teacher-info/teacher-list/TeacherList";
 import StudyMaterial from "./components/study-material/StudyMaterial";
 import Dummy from "./components/to-be-deleted (trash templates)/Dummy";
+import Test from "./components/to-be-deleted (trash templates)/Test";
 import { getParent, getSection, getStaff, getStudent, getTeacher } from "./loaders";
-import FeesType from "./components/fees/FeesType";
-import FeesAmount from "./components/fees/FeesAmount";
-import DeleteFee from "./components/fees/DeleteFee";
 
 function Root() {
   const router = createBrowserRouter([
@@ -383,6 +384,11 @@ function Root() {
             },
           ],
         },
+
+        {
+          path: "test",
+          element: <Test />
+        }
       ],
     },
   ]);
