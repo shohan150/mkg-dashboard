@@ -16,7 +16,7 @@ import AddExamRoutine from "./components/exam/exam-schedule/AddExamRoutine";
 import Home from "./components/homePage/Home";
 import EditInstituteInfo from "./components/instituteProfile/EditInstituteInfo";
 import InstituteProfile from "./components/instituteProfile/InstituteProfile";
-import { MarkInput, MeritList, TabulationSheet } from "./components/result/result-index";
+import { MarkInput, MeritList, ProgressReport, TabulationSheet } from "./components/result/result-index";
 import { ClassRoutine, CreateRoutine, RoutineList, TeacherSchedule } from "./components/routine/routine-index";
 import AcademicSetup from "./components/settings/AcademicSetup";
 import ChooseableSubject from "./components/settings/ChooseableSubject";
@@ -345,7 +345,7 @@ function Root() {
             },
             {
               path: "progress-report",
-              element: <Dummy />,
+              element: <ProgressReport />,
             },
             {
               path: "merit-list",

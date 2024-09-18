@@ -1,4 +1,4 @@
-export default function MeritForm() {
+export default function ProRepForm() {
    return (
   <form className="sm:flex space-y-2 gap-2 sm:gap-3 md:gap-5 lg:gap-7 items-end mt-2 sm:mt-0 mb-2">
 
@@ -55,7 +55,7 @@ export default function MeritForm() {
       type="submit"
       className="rounded w-full sm:w-1/4 p-2 bg-primary hover:bg-buttonHover text-white shadow-md  hover:-translate-y-[2px] duration-200"
       >
-         Get Merit List
+         Get Progress Report
       </button>
    </form>
    );

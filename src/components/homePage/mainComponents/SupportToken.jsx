@@ -1,7 +1,6 @@
 import SectionHeader from "../common/SectionHeader";
 import SupportForm from "../forms/SupportForm";
-import ad1 from "/images/ad1.jpg";
-import ad2 from "/images/ad2.jpg";
+
 
 export default function SupportToken() {
   return (
@@ -14,8 +13,8 @@ export default function SupportToken() {
 
       {/* ads */}
       <div>
-        <img src={ad1} alt="" className="w-full" />
-        <img src={ad2} alt="" className="w-full" />
+        <img src="/images/ad1.jpg" alt="" className="w-full" />
+        <img src="/images/ad2.jpg" alt="" className="w-full" />
       </div>
     </div>
   );
