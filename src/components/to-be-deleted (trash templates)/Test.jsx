@@ -111,7 +111,12 @@ import * as XLSX from "xlsx";
    };
  };
  
- 
+ function testing(){
+  const doc = new jsPDF();
+
+  doc.text("Hello world!", 10, 10);
+  doc.save("a4.pdf");
+ }
 
   return (
     <div className="p-4">
@@ -123,7 +128,13 @@ import * as XLSX from "xlsx";
       </button>
       <button
         onClick={generatePrint}
-        className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700"
+        className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
+      >
+        Print PDF
+      </button>
+      <button
+        onClick={testing}
+        className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
       >
         Print PDF
       </button>
