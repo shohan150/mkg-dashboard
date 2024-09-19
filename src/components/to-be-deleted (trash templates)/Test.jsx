@@ -136,7 +136,7 @@ import * as XLSX from "xlsx";
         onClick={testing}
         className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
       >
-        Print PDF
+        Print Test
       </button>
     </div>
   );
