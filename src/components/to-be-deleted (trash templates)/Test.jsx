@@ -49,7 +49,11 @@ import * as XLSX from "xlsx";
 
     
   const generatePDF = () => {
-    const doc = new jsPDF();
+    const doc = new jsPDF({
+      orientation: 'l',
+      unit: 'mm',
+      format: 'a4'
+    });
     const tableColumn = ["ID", "Name", "Age", "Grade"];
     const tableRows = [];
 
@@ -74,13 +78,27 @@ import * as XLSX from "xlsx";
   };
 
   const generatePrint = () => {
-   const doc = new jsPDF();
- 
-   // Title
-   doc.text("Student Data", 20, 10);
- 
+   const doc = new jsPDF({
+    orientation: 'p',
+    unit: 'mm',
+    format: 'a4'
+  });
+
+  const pageWidth = doc.internal.pageSize.getWidth();
+
+  // Set font styles for title and metadata
+  doc.setFontSize(16);
+  doc.setFont("helvetica", "bold");
+  doc.text("XYZ High School & College", pageWidth / 2 , 20, { align: "center" }); // Center-aligned
+  doc.setFontSize(12);
+  doc.setFont("helvetica", "normal");
+  doc.text("Class: 10 | Session: 2024 | Topic: Mathematics", 105, 30, { align: "center" });
+  doc.text("Section: A | Teacher: Mr. Smith", 105, 36, { align: "center" });
+
+
    // Generate table
    doc.autoTable({
+    startY: 45,
      head: [["ID", "Name", "Age", "Grade", "Email", "Address"]],
      body: students.map(student => [
        student.id,
@@ -92,23 +110,27 @@ import * as XLSX from "xlsx";
      ]),
    });
  
-   // Create a blob from the PDF
+   // This line uses the jsPDF method output("blob") to create a Blob object from the PDF document. A Blob is a binary data object that can be used to represent the PDF content.
    const pdfBlob = doc.output("blob");
+   
  
-   // Create an iframe element
+   // Create an iframe element in the dom. An iframe (inline frame) can embed another HTML document or resource within the current page.
    const iframe = document.createElement('iframe');
-   iframe.style.display = 'none'; // Hide the iframe
+
+  //   appends the created iframe element to the body of the HTML document.
    document.body.appendChild(iframe);
  
-   // Create a Blob URL for the PDF and set it as iframe's src
+   // create a temporary URL (Blob URL) that points to the PDF data stored in the pdfBlob object.
    const blobUrl = URL.createObjectURL(pdfBlob);
+   //sets the src attribute of the iframe to the newly created Blob URL. This tells the iframe to load the PDF data from the Blob object.
    iframe.src = blobUrl;
  
    // Wait for iframe to load and trigger print
    iframe.onload = function () {
-     iframe.contentWindow.focus();
      iframe.contentWindow.print();
    };
+
+// This approach separates the PDF generation from the user interface manipulation. The user experience is improved by hiding the iframe during the process, making it seamless for the user. The Blob URL created is temporary and can be revoked once the print action is complete, ensuring proper memory management.
  };
  
  function testing(){
