@@ -25,11 +25,15 @@ import {
 } from "./components/exam/exam-index";
 import AddExamRoutine from "./components/exam/exam-schedule/AddExamRoutine";
 import DeleteFee from "./components/fees/DeleteFee";
+import FeesAllocation from "./components/fees/FeesAllocation";
 import FeesAmount from "./components/fees/FeesAmount";
+import FeesMaster from "./components/fees/FeesMaster";
 import FeesType from "./components/fees/FeesType";
+import ReturnFee from "./components/fees/ReturnFee";
 import Home from "./components/homePage/Home";
 import EditInstituteInfo from "./components/instituteProfile/EditInstituteInfo";
 import InstituteProfile from "./components/instituteProfile/InstituteProfile";
+import { Addition, SalaryAssign } from "./components/payroll/payroll-index";
 import {
   MarkInput,
   MeritList,
@@ -66,13 +70,6 @@ import EditTeacher from "./components/STSP-info/teacher-info/edit-teacher/EditTe
 import TeacherList from "./components/STSP-info/teacher-info/teacher-list/TeacherList";
 import StudyMaterial from "./components/study-material/StudyMaterial";
 import Dummy from "./components/to-be-deleted (trash templates)/Dummy";
-import FeesType from "./components/fees/FeesType";
-import FeesAmount from "./components/fees/FeesAmount";
-import DeleteFee from "./components/fees/DeleteFee";
-import ReturnFee from "./components/fees/ReturnFee";
-import FeesAllocation from "./components/fees/FeesAllocation";
-import FeesMaster from "./components/fees/FeesMaster";
-import { Addition, SalaryAssign } from "./components/payroll/payroll-index";
 import Test from "./components/to-be-deleted (trash templates)/Test";
 import { getParent, getSection, getStaff, getStudent, getTeacher } from "./loaders";
 

@@ -1,4 +1,3 @@
-import "react-datepicker/dist/react-datepicker.css";
 import AssignFeeByMonth from "./AssignFeeByMonth";
 import AssignedFees from "./AssignedFees";
 const FeesMasterForm = () => {
