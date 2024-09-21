@@ -71,6 +71,7 @@ import EditTeacher from "./components/STSP-info/teacher-info/edit-teacher/EditTe
 import TeacherList from "./components/STSP-info/teacher-info/teacher-list/TeacherList";
 import StudyMaterial from "./components/study-material/StudyMaterial";
 import Dummy from "./components/to-be-deleted (trash templates)/Dummy";
+import Test from "./components/to-be-deleted (trash templates)/Test";
 import {
   getParent,
   getSection,
