@@ -361,9 +361,46 @@ const mainMenu = [
         link: "fees/fees-amount",
       },
       {
-        id: "17/02",
+        id: "17/03",
+        title: "Fees Master",
+        link: "fees/fees-master",
+      },
+      {
+        id: "17/04",
+        title: "Fees Allocation",
+        link: "fees/fees-allocation",
+      },
+      {
+        id: "17/05",
+        title: "Return Fee",
+        link: "fees/return-fee",
+      },
+      {
+        id: "17/06",
         title: "Delete Fee",
         link: "fees/delete-fee",
+      },
+    ],
+  },
+  {
+    id: "18",
+    title: "Payroll",
+    icon: "FaMoneyCheckAlt",
+    children: [
+      {
+        id: "18/01",
+        title: "Addition",
+        link: "payroll/addition",
+      },
+      {
+        id: "18/02",
+        title: "Deduction",
+        link: "payroll/deduction",
+      },
+      {
+        id: "18/03",
+        title: "Salary Assign",
+        link: "payroll/salary-assign",
       },
     ],
   },

@@ -11,13 +11,34 @@ import Notifications from "./components/communication/notification/Notifications
 import NewSMSTemplate from "./components/communication/template/NewSMSTemplate";
 import SMSTemplate from "./components/communication/template/SMSTemplate";
 import EventList from "./components/events/event-list/EventList";
-import { AdmitCard, ExamFeeSheet, ExamName, ExamSchedule, ExamSignSheet, ExamSyllabus, GradeRule, MarkBlankSheet, ScheduleDownload, SeatPlan } from "./components/exam/exam-index";
+import {
+  AdmitCard,
+  ExamFeeSheet,
+  ExamName,
+  ExamSchedule,
+  ExamSignSheet,
+  ExamSyllabus,
+  GradeRule,
+  MarkBlankSheet,
+  ScheduleDownload,
+  SeatPlan,
+} from "./components/exam/exam-index";
 import AddExamRoutine from "./components/exam/exam-schedule/AddExamRoutine";
 import Home from "./components/homePage/Home";
 import EditInstituteInfo from "./components/instituteProfile/EditInstituteInfo";
 import InstituteProfile from "./components/instituteProfile/InstituteProfile";
-import { MarkInput, MeritList, ProgressReport, TabulationSheet } from "./components/result/result-index";
-import { ClassRoutine, CreateRoutine, RoutineList, TeacherSchedule } from "./components/routine/routine-index";
+import {
+  MarkInput,
+  MeritList,
+  ProgressReport,
+  TabulationSheet,
+} from "./components/result/result-index";
+import {
+  ClassRoutine,
+  CreateRoutine,
+  RoutineList,
+  TeacherSchedule,
+} from "./components/routine/routine-index";
 import AcademicSetup from "./components/settings/AcademicSetup";
 import ChooseableSubject from "./components/settings/ChooseableSubject";
 import SectionConfig from "./components/settings/class-config/SectionConfig";
@@ -42,10 +63,20 @@ import EditTeacher from "./components/STSP-info/teacher-info/edit-teacher/EditTe
 import TeacherList from "./components/STSP-info/teacher-info/teacher-list/TeacherList";
 import StudyMaterial from "./components/study-material/StudyMaterial";
 import Dummy from "./components/to-be-deleted (trash templates)/Dummy";
-import { getParent, getSection, getStaff, getStudent, getTeacher } from "./loaders";
+import {
+  getParent,
+  getSection,
+  getStaff,
+  getStudent,
+  getTeacher,
+} from "./loaders";
 import FeesType from "./components/fees/FeesType";
 import FeesAmount from "./components/fees/FeesAmount";
 import DeleteFee from "./components/fees/DeleteFee";
+import ReturnFee from "./components/fees/ReturnFee";
+import FeesAllocation from "./components/fees/FeesAllocation";
+import FeesMaster from "./components/fees/FeesMaster";
+import { Addition, SalaryAssign } from "./components/payroll/payroll-index";
 
 function Root() {
   const router = createBrowserRouter([
@@ -84,7 +115,7 @@ function Root() {
             {
               path: "section-config/:id",
               element: <SectionConfig />,
-              loader: getSection
+              loader: getSection,
             },
             {
               path: "class-subject-assign",
@@ -121,7 +152,7 @@ function Root() {
           children: [
             {
               path: "general-sms",
-              element: <GeneralSMS />
+              element: <GeneralSMS />,
             },
             {
               path: "notifications",
@@ -134,7 +165,7 @@ function Root() {
             {
               path: "add-sms-template",
               element: <NewSMSTemplate />,
-            }
+            },
           ],
         },
         {
@@ -142,7 +173,7 @@ function Root() {
           children: [
             {
               path: "student-attendance",
-              element: <StudentAttendance />
+              element: <StudentAttendance />,
             },
             {
               path: "teacher-attendance",
@@ -171,7 +202,7 @@ function Root() {
           children: [
             {
               path: "add-student",
-              element: <AddStudent />
+              element: <AddStudent />,
             },
             {
               path: "student-list",
@@ -205,7 +236,7 @@ function Root() {
           children: [
             {
               path: "add-parent",
-              element: <AddParents />
+              element: <AddParents />,
             },
             {
               path: "parent-list",
@@ -223,7 +254,7 @@ function Root() {
           children: [
             {
               path: "add-teacher",
-              element: <AddTeacher />
+              element: <AddTeacher />,
             },
             {
               path: "teacher-list",
@@ -245,7 +276,7 @@ function Root() {
           children: [
             {
               path: "add-staff",
-              element: <AddStaff />
+              element: <AddStaff />,
             },
             {
               path: "staff-list",
@@ -267,7 +298,7 @@ function Root() {
           children: [
             {
               path: "routine-list",
-              element: <RoutineList />
+              element: <RoutineList />,
             },
             {
               path: "create-routine",
@@ -288,7 +319,7 @@ function Root() {
           children: [
             {
               path: "exam-name",
-              element: <ExamName />
+              element: <ExamName />,
             },
             {
               path: "exam-syllabus",
@@ -312,7 +343,7 @@ function Root() {
             },
             {
               path: "seat-plan",
-              element: <SeatPlan />
+              element: <SeatPlan />,
             },
             {
               path: "grade-rule",
@@ -337,7 +368,7 @@ function Root() {
           children: [
             {
               path: "mark-input",
-              element: <MarkInput />
+              element: <MarkInput />,
             },
             {
               path: "tabulation-sheet",
@@ -355,14 +386,14 @@ function Root() {
         },
         {
           path: "study-material",
-          element: <StudyMaterial />
+          element: <StudyMaterial />,
         },
         {
           path: "event",
           children: [
             {
               path: "event-list",
-              element: <EventList />
+              element: <EventList />,
             },
           ],
         },
@@ -371,15 +402,40 @@ function Root() {
           children: [
             {
               path: "fees-type",
-              element: <FeesType />
+              element: <FeesType />,
             },
             {
               path: "fees-amount",
-              element: <FeesAmount />
+              element: <FeesAmount />,
+            },
+            {
+              path: "fees-master",
+              element: <FeesMaster />,
+            },
+            {
+              path: "fees-allocation",
+              element: <FeesAllocation />,
             },
             {
               path: "delete-fee",
-              element: <DeleteFee />
+              element: <DeleteFee />,
+            },
+            {
+              path: "return-fee",
+              element: <ReturnFee />,
+            },
+          ],
+        },
+        {
+          path: "payroll",
+          children: [
+            {
+              path: "addition",
+              element: <Addition />,
+            },
+            {
+              path: "salary-assign",
+              element: <SalaryAssign />,
             },
           ],
         },
@@ -389,7 +445,7 @@ function Root() {
 
   return (
     <>
-        <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </>
   );
 }
