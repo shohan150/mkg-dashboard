@@ -1,5 +1,5 @@
 import { CgCommunity } from "react-icons/cg";
-import { FaCloudDownloadAlt, FaRegCheckSquare } from "react-icons/fa";
+import { FaCloudDownloadAlt, FaMoneyCheckAlt, FaRegCheckSquare } from "react-icons/fa";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { GrTableAdd } from "react-icons/gr";
 import { HiOutlineBuildingStorefront, HiOutlineTableCells } from "react-icons/hi2";
@@ -64,6 +64,9 @@ export default function Icons({ name }) {
 
     case "CiDollar":
       return <CiDollar />
+
+    case "FaMoneyCheckAlt":
+      return <FaMoneyCheckAlt />
 
     default:
       return <PiShapesFill />

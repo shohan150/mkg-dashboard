@@ -1,4 +1,4 @@
-export default function DeleteFeeTable({  handleDelete }) {
+export default function ReturnFeeTable({  handleDelete }) {
     const data = [
       {
         fee_name: "September Month Fee",
@@ -10,7 +10,7 @@ export default function DeleteFeeTable({  handleDelete }) {
         fee_name: "September Month Fee",
         amount: 500,
         discount: 100,
-        status: "unpaid",
+        status: "paid",
       },
     ];
   
@@ -40,10 +40,10 @@ export default function DeleteFeeTable({  handleDelete }) {
                 <td className="w-2/12 pb-1">
                   
                   <button
-                    className="bg-red px-3 py-1 rounded shadow text-white hover:-translate-y-[2px] duration-200 text-sm m-1"
+                    className="bg-white border-red px-3 py-1 rounded shadow text-red border hover:-translate-y-[2px] duration-200 text-sm m-1"
                     onClick={() => handleDelete(item.fee_name)}
                   >
-                    Delete
+                    Mark as Unpaid
                   </button>
                 </td>
               </tr>
