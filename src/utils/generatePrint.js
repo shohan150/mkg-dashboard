@@ -2,7 +2,7 @@ import jsPDF from "jspdf";
 import "jspdf-autotable";
 
 
-const generatePrint = (data, 
+const generatePrint = (data,
    {
       schoolName = "XYZ High School & College",
       documentName = "School Document",
