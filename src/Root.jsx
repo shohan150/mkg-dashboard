@@ -33,6 +33,7 @@ import ReturnFee from "./components/fees/ReturnFee";
 import Home from "./components/homePage/Home";
 import EditInstituteInfo from "./components/instituteProfile/EditInstituteInfo";
 import InstituteProfile from "./components/instituteProfile/InstituteProfile";
+import Deduction from "./components/payroll/deduction/Deduction";
 import { Addition, SalaryAssign } from "./components/payroll/payroll-index";
 import {
   MarkInput,
@@ -70,8 +71,13 @@ import EditTeacher from "./components/STSP-info/teacher-info/edit-teacher/EditTe
 import TeacherList from "./components/STSP-info/teacher-info/teacher-list/TeacherList";
 import StudyMaterial from "./components/study-material/StudyMaterial";
 import Dummy from "./components/to-be-deleted (trash templates)/Dummy";
-import Test from "./components/to-be-deleted (trash templates)/Test";
-import { getParent, getSection, getStaff, getStudent, getTeacher } from "./loaders";
+import {
+  getParent,
+  getSection,
+  getStaff,
+  getStudent,
+  getTeacher,
+} from "./loaders";
 
 function Root() {
   const router = createBrowserRouter([
@@ -427,6 +433,10 @@ function Root() {
             {
               path: "addition",
               element: <Addition />,
+            },
+            {
+              path: "deduction",
+              element: <Deduction />,
             },
             {
               path: "salary-assign",
