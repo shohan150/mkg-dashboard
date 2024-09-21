@@ -133,12 +133,6 @@ import * as XLSX from "xlsx";
 // This approach separates the PDF generation from the user interface manipulation. The user experience is improved by hiding the iframe during the process, making it seamless for the user. The Blob URL created is temporary and can be revoked once the print action is complete, ensuring proper memory management.
  };
  
- function testing(){
-  const doc = new jsPDF();
-
-  doc.text("Hello world!", 10, 10);
-  doc.save("a4.pdf");
- }
 
   return (
     <div className="p-4">
@@ -153,12 +147,6 @@ import * as XLSX from "xlsx";
         className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
       >
         Print PDF
-      </button>
-      <button
-        onClick={testing}
-        className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
-      >
-        Print Test
       </button>
     </div>
   );
