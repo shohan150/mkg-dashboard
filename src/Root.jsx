@@ -77,6 +77,7 @@ import ReturnFee from "./components/fees/ReturnFee";
 import FeesAllocation from "./components/fees/FeesAllocation";
 import FeesMaster from "./components/fees/FeesMaster";
 import { Addition, SalaryAssign } from "./components/payroll/payroll-index";
+import Deduction from "./components/payroll/deduction/Deduction";
 
 function Root() {
   const router = createBrowserRouter([
@@ -432,6 +433,10 @@ function Root() {
             {
               path: "addition",
               element: <Addition />,
+            },
+            {
+              path: "deduction",
+              element: <Deduction />,
             },
             {
               path: "salary-assign",
