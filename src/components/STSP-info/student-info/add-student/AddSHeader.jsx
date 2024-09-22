@@ -16,7 +16,7 @@ export default function AddSHeader() {
             <button
             className="rounded px-6 py-2 md:py-3 bg-yellow  text-white shadow-md hover:-translate-y-[2px] duration-200"
             >
-            Staff List
+            Student List
             </button>
          </div>
         </div>

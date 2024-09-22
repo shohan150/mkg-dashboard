@@ -67,6 +67,9 @@ import AddStudent from "./components/STSP-info/student-info/add-student/AddStude
 import EditStudent from "./components/STSP-info/student-info/edit-student/EditStudent";
 import StudentIdCard from "./components/STSP-info/student-info/student-id-card/StudentIdCard";
 import StudentList from "./components/STSP-info/student-info/student-list/StudentList";
+import TesData from "./components/STSP-info/student-info/testimonial-student/TesData";
+import TesSettings from "./components/STSP-info/student-info/testimonial-student/TesSettings";
+import Testimonial from "./components/STSP-info/student-info/testimonial-student/Testimonial";
 import AddTeacher from "./components/STSP-info/teacher-info/add-teacher/AddTeacher";
 import EditTeacher from "./components/STSP-info/teacher-info/edit-teacher/EditTeacher";
 import TeacherList from "./components/STSP-info/teacher-info/teacher-list/TeacherList";
@@ -218,7 +221,16 @@ function Root() {
             },
             {
               path: "student-testimonial",
-              element: <Dummy />,
+              element: <Testimonial />,
+            },
+            {
+              path: "testimonial-settings",
+              element: <TesSettings />,
+            },
+            {
+              path: "testimonial-data/:id",
+              element: <TesData />,
+              loader: getStudent,
             },
             {
               path: "student-waiver",
