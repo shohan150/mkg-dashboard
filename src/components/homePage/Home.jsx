@@ -53,6 +53,6 @@ export default function Home() {
 
       {/* support token and ads */}
       <SupportToken />
-    </div>
+    </div> 
   );
 }
