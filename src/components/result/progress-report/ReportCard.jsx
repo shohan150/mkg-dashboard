@@ -1,5 +1,6 @@
 import GradeChart from "./GradeChart";
 import ObtainedMarks from "./ObtainedMarks";
+import ReportClosing from "./ReportClosing";
 import StudentInfo from "./StudentInfo";
 
 export default function ReportCard({result}) {
@@ -17,6 +18,8 @@ export default function ReportCard({result}) {
          </div>
 
          <ObtainedMarks />
+
+         <ReportClosing />
       </div>
     );
 }
