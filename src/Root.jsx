@@ -65,6 +65,7 @@ import EditStaff from "./components/STSP-info/staff-info/edit-staff/EditStaff";
 import StaffList from "./components/STSP-info/staff-info/staff-list/StaffList";
 import AddStudent from "./components/STSP-info/student-info/add-student/AddStudent";
 import EditStudent from "./components/STSP-info/student-info/edit-student/EditStudent";
+import StudentIdCard from "./components/STSP-info/student-info/student-id-card/StudentIdCard";
 import StudentList from "./components/STSP-info/student-info/student-list/StudentList";
 import AddTeacher from "./components/STSP-info/teacher-info/add-teacher/AddTeacher";
 import EditTeacher from "./components/STSP-info/teacher-info/edit-teacher/EditTeacher";
@@ -225,7 +226,7 @@ function Root() {
             },
             {
               path: "student-id-card",
-              element: <Dummy />,
+              element: <StudentIdCard />,
             },
             {
               path: "student-migration",
