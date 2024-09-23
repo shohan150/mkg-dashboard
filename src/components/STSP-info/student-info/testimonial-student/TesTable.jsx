@@ -1,7 +1,11 @@
+
 import { Link } from "react-router-dom";
 import { studentsData } from "../../../../data/studentList";
 
-export default function TesTable() {
+
+export default function TesTable({handleViewClick}) {
+
+
     return (
    <div className="border border-black rounded mt-6 sm:mt-8">
       <table className="w-full text-center text-textGray">
@@ -23,6 +27,7 @@ export default function TesTable() {
                <td className="w-2/12">{item.section}</td>
                <td className="w-3/12">
                   <button
+                  onClick={() => handleViewClick(item)}
                   className="bg-green px-3 py-1 rounded shadow text-white hover:-translate-y-[2px] duration-200 leading-6 m-1"
                   >
                      View
