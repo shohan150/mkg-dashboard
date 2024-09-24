@@ -67,6 +67,7 @@ import {
   EditStudent,
   EditTeacher,
   ParentsList,
+  RfidUpdate,
   StaffList,
   StudentIdCard,
   StudentList,
@@ -246,6 +247,10 @@ function Root() {
             {
               path: "student-migration",
               element: <Dummy />,
+            },
+            {
+              path: "rfid-update",
+              element: <RfidUpdate />,
             },
           ],
         },

@@ -6,6 +6,7 @@ import EditStaff from "./staff-info/edit-staff/EditStaff";
 import StaffList from "./staff-info/staff-list/StaffList";
 import AddStudent from "./student-info/add-student/AddStudent";
 import EditStudent from "./student-info/edit-student/EditStudent";
+import RfidUpdate from "./student-info/rfid-update/RfidUpdate";
 import StudentIdCard from "./student-info/student-id-card/StudentIdCard";
 import StudentList from "./student-info/student-list/StudentList";
 import StWaiver from "./student-info/student-waiver/StWaiver";
@@ -16,7 +17,6 @@ import AddTeacher from "./teacher-info/add-teacher/AddTeacher";
 import EditTeacher from "./teacher-info/edit-teacher/EditTeacher";
 import TeacherList from "./teacher-info/teacher-list/TeacherList";
 
-
 export {
    AddParents,
    AddStaff,
@@ -26,7 +26,7 @@ export {
    EditStaff,
    EditStudent,
    EditTeacher,
-   ParentsList, StWaiver, StaffList, StudentIdCard, StudentList,
+   ParentsList, RfidUpdate, StWaiver, StaffList, StudentIdCard, StudentList,
    TeacherList, TesData,
    TesSettings,
    Testimonial

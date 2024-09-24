@@ -155,6 +155,11 @@ const mainMenu = [
       },
       {
         id: "08/06",
+        title: "RFID Update",
+        link: "student-info/rfid-update",
+      },
+      {
+        id: "08/07",
         title: "Student Migration",
         link: "student-info/student-migration",
       },
