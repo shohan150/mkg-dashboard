@@ -69,6 +69,7 @@ import {
   ParentsList,
   RfidUpdate,
   StaffList,
+  StMigration,
   StudentIdCard,
   StudentList,
   StWaiver,
@@ -246,7 +247,7 @@ function Root() {
             },
             {
               path: "student-migration",
-              element: <Dummy />,
+              element: <StMigration />,
             },
             {
               path: "rfid-update",
