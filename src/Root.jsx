@@ -57,22 +57,24 @@ import MarkConfig from "./components/settings/MarkConfig";
 import MarkDivide from "./components/settings/MarkDivide";
 import ClassSubjectAssign from "./components/settings/subject-assign/ClassSubjectAssign";
 import TeacherSubjectAssign from "./components/settings/subject-assign/TeacherSubjectAssign";
-import AddParents from "./components/STSP-info/parent-info/add-parents/AddParents";
-import EditParent from "./components/STSP-info/parent-info/edit-parents/EditParent";
-import ParentsList from "./components/STSP-info/parent-info/parents-list/ParentsList";
-import AddStaff from "./components/STSP-info/staff-info/add-staff/AddStaff";
-import EditStaff from "./components/STSP-info/staff-info/edit-staff/EditStaff";
-import StaffList from "./components/STSP-info/staff-info/staff-list/StaffList";
-import AddStudent from "./components/STSP-info/student-info/add-student/AddStudent";
-import EditStudent from "./components/STSP-info/student-info/edit-student/EditStudent";
-import StudentIdCard from "./components/STSP-info/student-info/student-id-card/StudentIdCard";
-import StudentList from "./components/STSP-info/student-info/student-list/StudentList";
-import TesData from "./components/STSP-info/student-info/testimonial-student/TesData";
-import TesSettings from "./components/STSP-info/student-info/testimonial-student/TesSettings";
-import Testimonial from "./components/STSP-info/student-info/testimonial-student/Testimonial";
-import AddTeacher from "./components/STSP-info/teacher-info/add-teacher/AddTeacher";
-import EditTeacher from "./components/STSP-info/teacher-info/edit-teacher/EditTeacher";
-import TeacherList from "./components/STSP-info/teacher-info/teacher-list/TeacherList";
+import {
+  AddParents,
+  AddStaff,
+  AddStudent,
+  AddTeacher,
+  EditParent,
+  EditStaff,
+  EditStudent,
+  EditTeacher,
+  ParentsList,
+  StaffList,
+  StudentIdCard,
+  StudentList,
+  TeacherList,
+  TesData,
+  TesSettings,
+  Testimonial
+} from "./components/STSP-info/stsp-index";
 import StudyMaterial from "./components/study-material/StudyMaterial";
 import Dummy from "./components/to-be-deleted (trash templates)/Dummy";
 import Test from "./components/to-be-deleted (trash templates)/Test";
