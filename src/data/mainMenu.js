@@ -409,6 +409,61 @@ const mainMenu = [
       },
     ],
   },
+  {
+    id: "19",
+    title: "Services",
+    icon: "RiServiceLine",
+    children: [
+      {
+        id: "19/01",
+        title: "Hostel",
+        children: [
+          {
+            id: "19/01/01",
+            title: "Hostel Package",
+            link: "services/hostel-package",
+          },
+          {
+            id: "19/01/02",
+            title: "Hostel Allocation",
+            link: "services/hostel-allocation",
+          },
+        ],
+      },
+      {
+        id: "19/02",
+        title: "Coaching",
+        children: [
+          {
+            id: "19/02/01",
+            title: "Coaching Package",
+            link: "services/coaching-package",
+          },
+          {
+            id: "19/02/02",
+            title: "Coaching Allocation",
+            link: "services/coaching-allocation",
+          },
+        ],
+      },
+      {
+        id: "19/03",
+        title: "Transport",
+        children: [
+          {
+            id: "19/03/01",
+            title: "Transport Package",
+            link: "services/transport-package",
+          },
+          {
+            id: "19/03/02",
+            title: "Transport Allocation",
+            link: "services/transport-allocation",
+          },
+        ],
+      },
+    ],
+  },
 
   //nested menu item pattern
   // {

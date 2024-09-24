@@ -1,4 +1,5 @@
 import { CgCommunity } from "react-icons/cg";
+import { CiDollar } from "react-icons/ci";
 import { FaCloudDownloadAlt, FaMoneyCheckAlt, FaRegCheckSquare } from "react-icons/fa";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { GrTableAdd } from "react-icons/gr";
@@ -8,8 +9,7 @@ import { LiaSmsSolid } from "react-icons/lia";
 import { LuFileText } from "react-icons/lu";
 import { MdOutlineEventAvailable } from "react-icons/md";
 import { PiChalkboardTeacherFill, PiExamBold, PiShapesFill, PiStudentBold } from "react-icons/pi";
-import { RiDashboardHorizontalFill, RiParentFill } from "react-icons/ri";
-import { CiDollar } from "react-icons/ci";
+import { RiDashboardHorizontalFill, RiParentFill, RiServiceLine } from "react-icons/ri";
 
 
 export default function Icons({ name }) {
@@ -67,6 +67,9 @@ export default function Icons({ name }) {
 
     case "FaMoneyCheckAlt":
       return <FaMoneyCheckAlt />
+
+    case "RiServiceLine":
+      return <RiServiceLine />
 
     default:
       return <PiShapesFill />

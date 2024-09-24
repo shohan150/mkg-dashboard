@@ -467,6 +467,35 @@ function Root() {
             },
           ],
         },
+        {
+          path: "services",
+          children: [
+            {
+              path: "hostel-package",
+              element: <Dummy />,
+            },
+            {
+              path: "hostel-allocation",
+              element: <Dummy />,
+            },
+            {
+              path: "coaching-package",
+              element: <Dummy />,
+            },
+            {
+              path: "coaching-allocation",
+              element: <Dummy />,
+            },
+            {
+              path: "transport-package",
+              element: <Dummy />,
+            },
+            {
+              path: "transport-allocation",
+              element: <Dummy />,
+            },
+          ],
+        },
 
         {
           path: "test",
