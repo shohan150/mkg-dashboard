@@ -8,6 +8,7 @@ import AddStudent from "./student-info/add-student/AddStudent";
 import EditStudent from "./student-info/edit-student/EditStudent";
 import StudentIdCard from "./student-info/student-id-card/StudentIdCard";
 import StudentList from "./student-info/student-list/StudentList";
+import StWaiver from "./student-info/student-waiver/StWaiver";
 import TesData from "./student-info/testimonial-student/TesData";
 import TesSettings from "./student-info/testimonial-student/TesSettings";
 import Testimonial from "./student-info/testimonial-student/Testimonial";
@@ -25,8 +26,7 @@ export {
    EditStaff,
    EditStudent,
    EditTeacher,
-   ParentsList,
-   StaffList, StudentIdCard, StudentList,
+   ParentsList, StWaiver, StaffList, StudentIdCard, StudentList,
    TeacherList, TesData,
    TesSettings,
    Testimonial

@@ -70,6 +70,7 @@ import {
   StaffList,
   StudentIdCard,
   StudentList,
+  StWaiver,
   TeacherList,
   TesData,
   TesSettings,
@@ -236,7 +237,7 @@ function Root() {
             },
             {
               path: "student-waiver",
-              element: <Dummy />,
+              element: <StWaiver />,
             },
             {
               path: "student-id-card",
