@@ -47,6 +47,7 @@ import {
   RoutineList,
   TeacherSchedule,
 } from "./components/routine/routine-index";
+import { CoachingAllocation, CoachingPackage, HostelAllocation, HostelPackage, TransportAllocation, TransportPackage } from "./components/services/services-index";
 import AcademicSetup from "./components/settings/AcademicSetup";
 import ChooseableSubject from "./components/settings/ChooseableSubject";
 import SectionConfig from "./components/settings/class-config/SectionConfig";
@@ -472,27 +473,27 @@ function Root() {
           children: [
             {
               path: "hostel-package",
-              element: <Dummy />,
+              element: <HostelPackage />,
             },
             {
               path: "hostel-allocation",
-              element: <Dummy />,
+              element: <HostelAllocation />,
             },
             {
               path: "coaching-package",
-              element: <Dummy />,
+              element: <CoachingPackage />,
             },
             {
               path: "coaching-allocation",
-              element: <Dummy />,
+              element: <CoachingAllocation />,
             },
             {
               path: "transport-package",
-              element: <Dummy />,
+              element: <TransportPackage />,
             },
             {
               path: "transport-allocation",
-              element: <Dummy />,
+              element: <TransportAllocation />,
             },
           ],
         },
