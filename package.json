@@ -38,8 +38,5 @@
   },
   "engines": {
     "node": "16.x"
-  },
-  "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "4.22.4"
   }
 }
