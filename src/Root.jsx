@@ -497,6 +497,49 @@ function Root() {
             },
           ],
         },
+        {
+          path: "income",
+          children: [
+            {
+              path: "income",
+              element: <Dummy />,
+            },
+            {
+              path: "entry-date-search",
+              element: <Dummy />,
+            },
+            {
+              path: "income-head",
+              element: <Dummy />,
+            },
+          ],
+        },
+        {
+          path: "expense",
+          children: [
+            {
+              path: "expense",
+              element: <Dummy />,
+            },
+            {
+              path: "entry-date-search",
+              element: <Dummy />,
+            },
+            {
+              path: "expense-head",
+              element: <Dummy />,
+            },
+          ],
+        },
+        {
+          path: "withdraw",
+          children: [
+            {
+              path: "withdraw",
+              element: <Dummy />,
+            },
+          ],
+        },
 
         {
           path: "test",

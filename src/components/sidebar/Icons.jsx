@@ -2,6 +2,7 @@ import { CgCommunity } from "react-icons/cg";
 import { CiDollar } from "react-icons/ci";
 import { FaCloudDownloadAlt, FaMoneyCheckAlt, FaRegCheckSquare } from "react-icons/fa";
 import { FaPeopleGroup } from "react-icons/fa6";
+import { GiPayMoney, GiReceiveMoney, GiTakeMyMoney } from "react-icons/gi";
 import { GrTableAdd } from "react-icons/gr";
 import { HiOutlineBuildingStorefront, HiOutlineTableCells } from "react-icons/hi2";
 import { IoMdSettings } from "react-icons/io";
@@ -70,6 +71,15 @@ export default function Icons({ name }) {
 
     case "RiServiceLine":
       return <RiServiceLine />
+
+    case "GiReceiveMoney":
+      return <GiReceiveMoney />
+
+    case "GiPayMoney":
+      return <GiPayMoney />
+
+    case "GiTakeMyMoney":
+      return <GiTakeMyMoney />
 
     default:
       return <PiShapesFill />

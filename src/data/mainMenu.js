@@ -464,6 +464,62 @@ const mainMenu = [
       },
     ],
   },
+  {
+    id: "20",
+    title: "Income",
+    icon: "GiReceiveMoney",
+    children: [
+      {
+        id: "20/01",
+        title: "Income",
+        link: "income/income",
+      },
+      {
+        id: "20/02",
+        title: "Entry Date Search",
+        link: "income/entry-date-search",
+      },
+      {
+        id: "20/03",
+        title: "Income Head",
+        link: "income/income-head",
+      },
+    ],
+  },
+  {
+    id: "21",
+    title: "Expense",
+    icon: "GiPayMoney",
+    children: [
+      {
+        id: "21/01",
+        title: "Expense",
+        link: "expense/expense",
+      },
+      {
+        id: "21/02",
+        title: "Entry Date Search",
+        link: "expense/entry-date-search",
+      },
+      {
+        id: "21/03",
+        title: "Expense Head",
+        link: "expense/expense-head",
+      },
+    ],
+  },
+  {
+    id: "21",
+    title: "Withdraw",
+    icon: "GiTakeMyMoney",
+    children: [
+      {
+        id: "21/01",
+        title: "Withdraw",
+        link: "withdraw/withdraw",
+      },
+    ],
+  },
 
   //nested menu item pattern
   // {
