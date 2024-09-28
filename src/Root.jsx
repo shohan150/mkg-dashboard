@@ -31,7 +31,7 @@ import FeesMaster from "./components/fees/FeesMaster";
 import FeesType from "./components/fees/FeesType";
 import ReturnFee from "./components/fees/ReturnFee";
 import Home from "./components/homePage/Home";
-import { AddIncome, Income } from "./components/income/income-index";
+import { AddIncome, Income, IncomeEntryDate } from "./components/income/income-index";
 import EditInstituteInfo from "./components/instituteProfile/EditInstituteInfo";
 import InstituteProfile from "./components/instituteProfile/InstituteProfile";
 import Deduction from "./components/payroll/deduction/Deduction";
@@ -511,7 +511,7 @@ function Root() {
             },
             {
               path: "entry-date-search",
-              element: <Dummy />,
+              element: <IncomeEntryDate />,
             },
             {
               path: "income-head",
