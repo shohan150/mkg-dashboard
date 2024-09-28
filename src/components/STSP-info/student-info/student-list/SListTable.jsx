@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 export default function SListTable({studentsData, amountToShow, index, handleDelete}) {
 
   const showItems = studentsData.slice(index*Math.floor(amountToShow), index*Math.floor(amountToShow) + Math.floor(amountToShow));
-
-  console.log(index, amountToShow, index*amountToShow, index*amountToShow + amountToShow);
   
 
     return (
