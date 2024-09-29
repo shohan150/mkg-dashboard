@@ -10,7 +10,7 @@ export default function TopNavbar({ setShowSidebar }) {
       {/* school name */}
       <div className="flex gap-3 sm:gap-4 items-center ">
         <FaBars
-          className="text-white border border-white rounded w-6 sm:w-7 h-6 sm:h-7 p-1 xl:hidden"
+          className="text-white border border-white rounded w-6 sm:w-7 h-6 sm:h-7 p-1 xl:hidden cursor-pointer"
           onClick={() => setShowSidebar((state) => !state)}
         />
         <SchoolName />

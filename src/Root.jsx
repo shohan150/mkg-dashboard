@@ -473,28 +473,44 @@ function Root() {
           path: "services",
           children: [
             {
-              path: "hostel-package",
-              element: <HostelPackage />,
+              path: "hostel",
+              children: [
+                {
+                  path: "hostel-package",
+                  element: <HostelPackage />,
+                },
+                {
+                  path: "hostel-allocation",
+                  element: <HostelAllocation />,
+                }
+              ]
             },
             {
-              path: "hostel-allocation",
-              element: <HostelAllocation />,
+              path: "coaching",
+              children: [
+                {
+                  path: "coaching-package",
+                  element: <CoachingPackage />,
+                },
+                {
+                  path: "coaching-allocation",
+                  element: <CoachingAllocation />,
+                }
+              ]
             },
+
             {
-              path: "coaching-package",
-              element: <CoachingPackage />,
-            },
-            {
-              path: "coaching-allocation",
-              element: <CoachingAllocation />,
-            },
-            {
-              path: "transport-package",
-              element: <TransportPackage />,
-            },
-            {
-              path: "transport-allocation",
-              element: <TransportAllocation />,
+              path: "transport",
+              children: [
+                {
+                  path: "transport-package",
+                  element: <TransportPackage />,
+                },
+                {
+                  path: "transport-allocation",
+                  element: <TransportAllocation />,
+                }
+              ]
             },
           ],
         },
@@ -541,6 +557,117 @@ function Root() {
           children: [
             {
               path: "withdraw",
+              element: <Dummy />,
+            },
+          ],
+        },
+        {
+          path: "accounting-report",
+          children: [
+            {
+              path: "account-statement",
+              element: <Dummy />,
+            },
+            {
+              path: "date-wise-income",
+              element: <Dummy />,
+            },
+            {
+              path: "head-wise-income",
+              element: <Dummy />,
+            },
+            {
+              path: "date-wise-expense",
+              element: <Dummy />,
+            },
+            {
+              path: "head-wise-expense",
+              element: <Dummy />,
+            },
+            {
+              path: "date-wise-withdraw",
+              element: <Dummy />,
+            },
+          ],
+        },
+        {
+          path: "fees-report",
+          children: [
+            {
+              path: "date-wise-paid-fee",
+              element: <Dummy />,
+            },
+            {
+              path: "student-wise-paid-fee",
+              element: <Dummy />,
+            },
+            {
+              path: "due-fee",
+              element: <Dummy />,
+            },
+          ],
+        },
+        {
+          path: "attendance-report",
+          children: [
+            {
+              path: "student-report",
+              children: [
+                {
+                  path: "month-wise-report",
+                  element: <Dummy />,
+                },
+                {
+                  path: "day-wise-report",
+                  element: <Dummy />,
+                },
+                {
+                  path: "time-wise-report",
+                  element: <Dummy />,
+                },
+              ],
+            },
+            {
+              path: "teacher-report",
+              children: [
+                {
+                  path: "month-wise-report",
+                  element: <Dummy />,
+                },
+                {
+                  path: "time-wise-report",
+                  element: <Dummy />,
+                },
+              ],
+            },
+            {
+              path: "staff-report",
+              children: [
+                {
+                  path: "month-wise-report",
+                  element: <Dummy />,
+                },
+                {
+                  path: "time-wise-report",
+                  element: <Dummy />,
+                },
+              ],
+            },
+          ],
+        },
+        {
+          path: "sms-report",
+          children: [
+            {
+              path: "purchase-history",
+              element: <Dummy />,
+            },
+            {
+              path: "sms-send-summary",
+              element: <Dummy />,
+            },
+            {
+              path: "sms-delivery",
               element: <Dummy />,
             },
           ],

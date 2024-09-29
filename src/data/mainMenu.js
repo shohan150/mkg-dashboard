@@ -421,12 +421,12 @@ const mainMenu = [
           {
             id: "19/01/01",
             title: "Hostel Package",
-            link: "services/hostel-package",
+            link: "services/hostel/hostel-package",
           },
           {
             id: "19/01/02",
             title: "Hostel Allocation",
-            link: "services/hostel-allocation",
+            link: "services/hostel/hostel-allocation",
           },
         ],
       },
@@ -437,12 +437,12 @@ const mainMenu = [
           {
             id: "19/02/01",
             title: "Coaching Package",
-            link: "services/coaching-package",
+            link: "services/coaching/coaching-package",
           },
           {
             id: "19/02/02",
             title: "Coaching Allocation",
-            link: "services/coaching-allocation",
+            link: "services/coaching/coaching-allocation",
           },
         ],
       },
@@ -453,12 +453,12 @@ const mainMenu = [
           {
             id: "19/03/01",
             title: "Transport Package",
-            link: "services/transport-package",
+            link: "services/transport/transport-package",
           },
           {
             id: "19/03/02",
             title: "Transport Allocation",
-            link: "services/transport-allocation",
+            link: "services/transport/transport-allocation",
           },
         ],
       },
@@ -509,14 +509,160 @@ const mainMenu = [
     ],
   },
   {
-    id: "21",
+    id: "22",
     title: "Withdraw",
     icon: "GiTakeMyMoney",
     children: [
       {
-        id: "21/01",
+        id: "22/01",
         title: "Withdraw",
         link: "withdraw/withdraw",
+      },
+    ],
+  },
+  {
+    id: "23",
+    title: "attendance-report",
+    icon: false,
+  },
+  {
+    id: "24",
+    title: "Accounting Report",
+    icon: "MdAccountBalance",
+    children: [
+      {
+        id: "24/01",
+        title: "Account Statement",
+        link: "accounting-report/account-statement",
+      },
+      {
+        id: "24/02",
+        title: "Date Wise Income",
+        link: "accounting-report/date-wise-income",
+      },
+      {
+        id: "24/03",
+        title: "Head Wise Income",
+        link: "accounting-report/head-wise-income",
+      },
+      {
+        id: "24/04",
+        title: "Date Wise Expense",
+        link: "accounting-report/date-wise-expense",
+      },
+      {
+        id: "24/05",
+        title: "Head Wise Expense",
+        link: "accounting-report/head-wise-expense",
+      },
+      {
+        id: "24/06",
+        title: "Date Wise Withdraw",
+        link: "accounting-report/date-wise-withdraw",
+      },
+    ],
+  },
+  {
+    id: "25",
+    title: "Fees Report",
+    icon: "TbReportMoney",
+    children: [
+      {
+        id: "25/01",
+        title: "Date Wise Paid Fee",
+        link: "fees-report/date-wise-paid-fee",
+      },
+      {
+        id: "25/02",
+        title: "Student Wise paid Fee",
+        link: "fees-report/student-wise-paid-fee",
+      },
+      {
+        id: "25/03",
+        title: "Due Fee",
+        link: "fees-report/due-fee",
+      },
+    ],
+  },
+  {
+    id: "26",
+    title: "Attendance Report",
+    icon: "PiPresentationChartBold",
+    children: [
+      {
+        id: "26/01",
+        title: "Student Report",
+        children: [
+          {
+            id: "26/01/01",
+            title: "Month Wise Report",
+            link: "attendance-report/student-report/month-wise-report",
+          },
+          {
+            id: "26/01/02",
+            title: "Day View Report",
+            link: "attendance-report/student-report/day-wise-report",
+          },
+          {
+            id: "26/01/03",
+            title: "Time Wise Report",
+            link: "attendance-report/student-report/time-wise-report",
+          },
+        ],
+      },
+      {
+        id: "26/02",
+        title: "Teacher Report",
+        children: [
+          {
+            id: "26/02/01",
+            title: "Month Wise Report",
+            link: "attendance-report/teacher-report/month-wise-report",
+          },
+          {
+            id: "26/02/03",
+            title: "Time Wise Report",
+            link: "attendance-report/teacher-report/time-wise-report",
+          },
+        ],
+      },
+      {
+        id: "26/03",
+        title: "Staff Report",
+        children: [
+          {
+            id: "26/03/01",
+            title: "Month Wise Report",
+            link: "attendance-report/staff-report/month-wise-report",
+          },
+          {
+            id: "26/03/02",
+            title: "Time Wise Report",
+            link: "attendance-report/staff-report/time-wise-report",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "27",
+    title: "SMS Report",
+    icon: "MdOutlineTextsms",
+    children: [
+      {
+        id: "27/01",
+        title: "Purchase History",
+        link: "sms-report/purchase-history",
+      },
+      {
+        id: "27/02",
+        title: "SMS Send Summary",
+        link: "sms-report/sms-send-summary",
+      },
+      {
+        id: "27/03",
+        title: "SMS Delivery",
+        link: "sms-report/sms-delivery",
       },
     ],
   },

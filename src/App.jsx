@@ -13,6 +13,7 @@ export default function App() {
 
   const moduleName = pathname?.split('/')[1]?.replace(/-/g, " ");
   const routeName = pathname?.split('/')[2]?.replace(/-/g, " ");
+  const nestedRouteName = pathname?.split('/')[3]?.replace(/-/g, " ");
   
   useEffect(() => {
       window.scrollTo(0, 0);
@@ -28,7 +29,7 @@ export default function App() {
         <div>
           <TopNavbar setShowSidebar={setShowSidebar} />
           {
-            pathname.length > 1 && <Breadcrumb module={moduleName} route={routeName} />
+            pathname.length > 1 && <Breadcrumb module={moduleName} route={routeName} nestedRoute={nestedRouteName} />
           }
           <Outlet />
         </div>
