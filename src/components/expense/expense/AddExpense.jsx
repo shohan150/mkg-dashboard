@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-export default function AddIncome() {
+export default function AddExpense() {
   return (
    <div className="my-4 bg-white rounded-md p-4 md:p-6">
-      <h3 className="text-2xl font-medium">Add / Edit Expense Entry</h3>
+      <h3 className="text-2xl font-medium">Add / Edit Income Entry</h3>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 mb-6">
          <div className="space-y-1">
@@ -34,15 +34,15 @@ export default function AddIncome() {
          </div>
 
          <div className="space-y-2">
-            <label className="text-textGray">Income Head :</label>
+            <label className="text-textGray">Expense Head :</label>
             <select
             id=""
             name=""
             className="bg-bgGray w-full rounded px-1 py-2 border-2 text-textGray border-transparent focus:border-primary focus:outline-none"
             >
-               <option value="Tution Fee">Tution Fee</option>
-               <option value="Maintenance Fee">Maintenance Fee</option>
-               <option value="Cultural Fee">Cultural Fee</option>
+               <option value="Maintenance">Maintenance</option>
+               <option value="Salary">Salary</option>
+               <option value="Medical">Medical</option>
                <option value="Other">Other</option>
             </select>
          </div>

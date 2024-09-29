@@ -24,6 +24,7 @@ import {
   SeatPlan,
 } from "./components/exam/exam-index";
 import AddExamRoutine from "./components/exam/exam-schedule/AddExamRoutine";
+import { AddExpense, Expense, ExpenseEntryDate, ExpenseHead } from "./components/expense/expense-index";
 import DeleteFee from "./components/fees/DeleteFee";
 import FeesAllocation from "./components/fees/FeesAllocation";
 import FeesAmount from "./components/fees/FeesAmount";
@@ -31,7 +32,7 @@ import FeesMaster from "./components/fees/FeesMaster";
 import FeesType from "./components/fees/FeesType";
 import ReturnFee from "./components/fees/ReturnFee";
 import Home from "./components/homePage/Home";
-import { AddIncome, Income, IncomeEntryDate } from "./components/income/income-index";
+import { AddIncome, Income, IncomeEntryDate, IncomeHead } from "./components/income/income-index";
 import EditInstituteInfo from "./components/instituteProfile/EditInstituteInfo";
 import InstituteProfile from "./components/instituteProfile/InstituteProfile";
 import Deduction from "./components/payroll/deduction/Deduction";
@@ -531,7 +532,7 @@ function Root() {
             },
             {
               path: "income-head",
-              element: <Dummy />,
+              element: <IncomeHead />,
             },
           ],
         },
@@ -540,15 +541,19 @@ function Root() {
           children: [
             {
               path: "expense",
-              element: <Dummy />,
+              element: <Expense />,
+            },
+            {
+              path: "add-expense",
+              element: <AddExpense />,
             },
             {
               path: "entry-date-search",
-              element: <Dummy />,
+              element: <ExpenseEntryDate />,
             },
             {
               path: "expense-head",
-              element: <Dummy />,
+              element: <ExpenseHead />,
             },
           ],
         },
