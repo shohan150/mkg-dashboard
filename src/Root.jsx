@@ -84,6 +84,7 @@ import {
 import StudyMaterial from "./components/study-material/StudyMaterial";
 import Dummy from "./components/to-be-deleted (trash templates)/Dummy";
 import Test from "./components/to-be-deleted (trash templates)/Test";
+import Withdraw from "./components/withdraw/Withdraw";
 import {
   getParent,
   getSection,
@@ -562,7 +563,7 @@ function Root() {
           children: [
             {
               path: "withdraw",
-              element: <Dummy />,
+              element: <Withdraw />,
             },
           ],
         },
