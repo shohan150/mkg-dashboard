@@ -8,7 +8,7 @@ import { HiOutlineBuildingStorefront, HiOutlineTableCells } from "react-icons/hi
 import { IoMdSettings } from "react-icons/io";
 import { LiaSmsSolid } from "react-icons/lia";
 import { LuFileText } from "react-icons/lu";
-import { MdAccountBalance, MdAccountBalanceWallet, MdOutlineEventAvailable, MdOutlineTextsms } from "react-icons/md";
+import { MdAccountBalance, MdAccountBalanceWallet, MdOutlineEventAvailable, MdOutlineTextsms, MdVideoSettings } from "react-icons/md";
 import { PiChalkboardTeacherFill, PiExamBold, PiPresentationChartBold, PiShapesFill, PiStudentBold } from "react-icons/pi";
 import { RiDashboardHorizontalFill, RiParentFill, RiServiceLine } from "react-icons/ri";
 import { TbReportMoney } from "react-icons/tb";
@@ -96,6 +96,9 @@ export default function Icons({ name }) {
 
     case "MdOutlineTextsms":
       return <MdOutlineTextsms />
+
+    case "MdVideoSettings":
+      return <MdVideoSettings />
 
     default:
       return <PiShapesFill />

@@ -522,7 +522,7 @@ const mainMenu = [
   },
   {
     id: "23",
-    title: "attendance-report",
+    title: "Reports",
     icon: false,
   },
   {
@@ -663,6 +663,58 @@ const mainMenu = [
         id: "27/03",
         title: "SMS Delivery",
         link: "sms-report/sms-delivery",
+      },
+    ],
+  },
+  {
+    id: "28",
+    title: "Site Settings",
+    icon: false,
+  },
+  {
+    id: "29",
+    title: "Site Settings",
+    icon: "MdVideoSettings",
+    children: [
+      {
+        id: "29/01",
+        title: "Banner",
+        link: "site-settings/banner",
+      },
+      {
+        id: "29/02",
+        title: "Notice",
+        link: "site-settings/notice",
+      },
+      {
+        id: "29/03",
+        title: "School Service",
+        link: "site-settings/school-service",
+      },
+      {
+        id: "29/04",
+        title: "Page Content",
+        link: "site-settings/page-content",
+      },
+      {
+        id: "29/05",
+        title: "Picture Gallery",
+        link: "site-settings/picture-gallery",
+      },
+      {
+        id: "29/06",
+        title: "Video Gallery",
+        link: "site-settings/video-gallery",
+      },
+      {
+        id: "29/07",
+        title: "Testimonial",
+        link: "site-settings/testimonial",
+      },
+      {
+        id: "29/08",
+        title: "Contact",
+        link: "site-settings/contact",
       },
     ],
   },

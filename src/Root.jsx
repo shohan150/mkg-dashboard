@@ -678,6 +678,43 @@ function Root() {
             },
           ],
         },
+        {
+          path: "site-settings",
+          children: [
+            {
+              path: "banner",
+              element: <Dummy />,
+            },
+            {
+              path: "notice",
+              element: <Dummy />,
+            },
+            {
+              path: "school-service",
+              element: <Dummy />,
+            },
+            {
+              path: "page-content",
+              element: <Dummy />,
+            },
+            {
+              path: "picture-gallery",
+              element: <Dummy />,
+            },
+            {
+              path: "video-gallery",
+              element: <Dummy />,
+            },
+            {
+              path: "testimonial",
+              element: <Dummy />,
+            },
+            {
+              path: "contact",
+              element: <Dummy />,
+            },
+          ],
+        },
 
         {
           path: "test",
