@@ -37,7 +37,7 @@ import EditInstituteInfo from "./components/instituteProfile/EditInstituteInfo";
 import InstituteProfile from "./components/instituteProfile/InstituteProfile";
 import Deduction from "./components/payroll/deduction/Deduction";
 import { Addition, SalaryAssign } from "./components/payroll/payroll-index";
-import { StuMonthReport } from "./components/reports/reports-index";
+import { StuMonthReport, StuTimeReport } from "./components/reports/reports-index";
 import {
   MarkInput,
   MeritList,
@@ -630,7 +630,7 @@ function Root() {
                 },
                 {
                   path: "time-wise-report",
-                  element: <Dummy />,
+                  element: <StuTimeReport />,
                 },
               ],
             },

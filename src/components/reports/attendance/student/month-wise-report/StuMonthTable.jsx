@@ -36,26 +36,26 @@ export default function StuMonthTable() {
       <table className="w-full text-textGray text-sm text-center leading-6 sm:leading-7">
          <thead className="bg-bgBlue border-b-2 border-bgGray">
          <tr>
-            <th className="px-1 min-w-10">Roll</th>
-            <th className="px-1 min-w-40">Name</th>
+            <th className="px-1 min-w-10 w-1/12">Roll</th>
+            <th className="px-1 min-w-40 w-3/12">Name</th>
             <th className="border-x-2 border-bgGray"><p>Present Information</p>
-               <div className="flex border-t-2 border-bgGray">
-                  {
-                     studentsAttendance[0].attendance.map((_, index) => (
-                        <div key={index} className={`w-7 leading-7 border-x border-bgGray ${index === 0 ? "border-l-0" : ""} ${index === studentsAttendance[0].attendance.length - 1 ? "border-r-0" : ""}`}>
-                           {index + 1}
-                        </div>
-                     ))
-                  }
-               </div>
+            <div className="flex border-t-2 border-bgGray">
+               {
+                  studentsAttendance[0].attendance.map((_, index) => (
+                     <div key={index} className={`min-w-6 grow leading-7 border-x border-bgGray ${index === 0 ? "border-l-0" : ""} ${index === studentsAttendance[0].attendance.length - 1 ? "border-r-0" : ""}`}>
+                        {index + 1}
+                     </div>
+                  ))
+               }
+            </div>
             </th>
          </tr>
          </thead>
          <tbody className="divide-y font-medium">
          {studentsAttendance.map((row) => (
             <tr key={row.roll} className="text-center">
-               <td>{row.roll}</td>
-               <td>{row.name}</td>
+               <td className="w-1/12">{row.roll}</td>
+               <td className="w-3/12">{row.name}</td>
                <td className="flex border-x">
                   {
                      row.attendance.map((status, index2) => <SinglePresentField key={index2} index={index2} status={status} />)
