@@ -37,7 +37,7 @@ import EditInstituteInfo from "./components/instituteProfile/EditInstituteInfo";
 import InstituteProfile from "./components/instituteProfile/InstituteProfile";
 import Deduction from "./components/payroll/deduction/Deduction";
 import { Addition, SalaryAssign } from "./components/payroll/payroll-index";
-import { StuMonthReport, StuTimeReport } from "./components/reports/reports-index";
+import { StaMonthReport, StaTimeReport, StuMonthReport, StuTimeReport, TMonthReport, TTimeReport } from "./components/reports/reports-index";
 import {
   MarkInput,
   MeritList,
@@ -639,11 +639,11 @@ function Root() {
               children: [
                 {
                   path: "month-wise-report",
-                  element: <Dummy />,
+                  element: <TMonthReport />,
                 },
                 {
                   path: "time-wise-report",
-                  element: <Dummy />,
+                  element: <TTimeReport />,
                 },
               ],
             },
@@ -652,11 +652,11 @@ function Root() {
               children: [
                 {
                   path: "month-wise-report",
-                  element: <Dummy />,
+                  element: <StaMonthReport />,
                 },
                 {
                   path: "time-wise-report",
-                  element: <Dummy />,
+                  element: <StaTimeReport />,
                 },
               ],
             },
