@@ -37,7 +37,7 @@ import EditInstituteInfo from "./components/instituteProfile/EditInstituteInfo";
 import InstituteProfile from "./components/instituteProfile/InstituteProfile";
 import Deduction from "./components/payroll/deduction/Deduction";
 import { Addition, SalaryAssign } from "./components/payroll/payroll-index";
-import { StaMonthReport, StaTimeReport, StuDateReport, StuMonthReport, StuTimeReport, TMonthReport, TTimeReport } from "./components/reports/reports-index";
+import { SmsDelivery, SmsPurchaseHistory, SmsSendSummary, StaMonthReport, StaTimeReport, StuDateReport, StuMonthReport, StuTimeReport, TMonthReport, TTimeReport } from "./components/reports/reports-index";
 import {
   MarkInput,
   MeritList,
@@ -667,15 +667,15 @@ function Root() {
           children: [
             {
               path: "purchase-history",
-              element: <Dummy />,
+              element: <SmsPurchaseHistory />,
             },
             {
               path: "sms-send-summary",
-              element: <Dummy />,
+              element: <SmsSendSummary />,
             },
             {
               path: "sms-delivery",
-              element: <Dummy />,
+              element: <SmsDelivery />,
             },
           ],
         },
