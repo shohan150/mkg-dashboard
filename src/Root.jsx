@@ -37,12 +37,7 @@ import EditInstituteInfo from "./components/instituteProfile/EditInstituteInfo";
 import InstituteProfile from "./components/instituteProfile/InstituteProfile";
 import Deduction from "./components/payroll/deduction/Deduction";
 import { Addition, SalaryAssign } from "./components/payroll/payroll-index";
-<<<<<<< HEAD
-import { StaMonthReport, StaTimeReport, StuDateReport, StuMonthReport, StuTimeReport, TMonthReport, TTimeReport } from "./components/reports/reports-index";
-import { PurchaseHistory } from "./components/reports/sms/sms-index";
-=======
 import { DateWisePaidFee, DueFee, SmsDelivery, SmsPurchaseHistory, SmsSendSummary, StaMonthReport, StaTimeReport, StuDateReport, StudentWisePaidFee, StuMonthReport, StuTimeReport, TMonthReport, TTimeReport } from "./components/reports/reports-index";
->>>>>>> shohan
 import {
   MarkInput,
   MeritList,
@@ -672,11 +667,7 @@ function Root() {
           children: [
             {
               path: "purchase-history",
-<<<<<<< HEAD
-              element: <PurchaseHistory />,
-=======
               element: <SmsPurchaseHistory />,
->>>>>>> shohan
             },
             {
               path: "sms-send-summary",
