@@ -5,7 +5,7 @@ import AddTypeModal from "./AddTypeModal";
 import EditTypeModal from "./EditTypeModal";
 import TypeTable from "./TypeTable";
 
-export default function IncomeHead() {
+export default function PageContent() {
    const [isAdd, setIsAdd] = useState(false);
    const [isEdit, setIsEdit] = useState(false);
    const [isDelete, setIsDelete] = useState(false);
@@ -24,7 +24,8 @@ export default function IncomeHead() {
 
     return (
       <div className="bg-white rounded-md p-4 md:p-6  my-4">
-         <AddType setIsAdd={setIsAdd} title="Banner" />
+         <AddType setIsAdd={setIsAdd} title="Page Content" />
+         
          <TypeTable handleEdit={handleEdit} handleDelete={handleDelete} />
 
          {/* The 3 modals: Add, Edit, Delete */}

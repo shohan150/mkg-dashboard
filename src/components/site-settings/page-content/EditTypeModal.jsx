@@ -9,55 +9,60 @@ export default function EditTypeModal({ editContent, setEditContent, isEdit, onC
 
       <div className="mt-2 mb-4 space-y-1">
         <div className="space-y-1">
-          <label className="text-textGray">Banner Image</label>
-          <input 
-          value={editContent?.image}
-          onChange={(e)=> setEditContent({...editContent, image:e.target.value}) }
-          className="block w-full cursor-pointer rounded bg-gray-100 text-textGray border-transparent focus:border-primary focus:outline-none" aria-describedby="" id="" type="file" />
+          <label className="text-textGray">Page Name</label>
+          <input
+          type="text"
+          placeholder="Enter Page Name"
+          value={editContent?.pageName}
+          onChange={(e)=> setEditContent({...editContent, pageName:e.target.value}) }
+          className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
+          />
+        </div>
+
+        <div className="space-y-1">
+          <label className="text-textGray">Heading</label>
+          <input
+          type="text"
+          placeholder="Enter Heading"
+          value={editContent?.heading}
+          onChange={(e)=> setEditContent({...editContent, heading:e.target.value}) }
+          className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
+          />
         </div>
 
         <div className="space-y-1">
           <label className="text-textGray">Sub-Heading</label>
           <input
           type="text"
+          placeholder="Enter Sub-Heading"
           value={editContent?.subHeading}
           onChange={(e)=> setEditContent({...editContent, subHeading:e.target.value}) }
-          placeholder="Enter Sub-Heading"
           className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
           />
         </div>
 
         <div className="space-y-1">
-          <label className="text-textGray">Main Heading</label>
+          <label className="text-textGray">Image</label>
           <input
-          type="text"
-          value={editContent?.mainHeading}
-          onChange={(e)=> setEditContent({...editContent, mainHeading:e.target.value}) }
-          placeholder="Enter Main Heading"
-          className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
+          aria-describedby=""
+          id=""
+          type="file"
+          value={editContent?.image}
+          onChange={(e)=> setEditContent({...editContent, image:e.target.value}) }
+          className="block w-full cursor-pointer rounded bg-gray-100 text-textGray border-transparent focus:border-primary focus:outline-none"
           />
         </div>
 
         <div className="space-y-1">
-          <label className="text-textGray">Banner Text</label>
-          <input
-          type="text"
-          value={editContent?.bannerText}
-          onChange={(e)=> setEditContent({...editContent, bannerText:e.target.value}) }
-          placeholder="Enter Banner Text"
+          <label className="text-textGray">Content</label>
+          <textarea
+          name=""
+          id=""
+          rows="3"
+          value={editContent?.content}
+          onChange={(e)=> setEditContent({...editContent, content:e.target.value}) }
           className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
-          />
-        </div>
-
-        <div className="space-y-1">
-          <label className="text-textGray">Read More Link</label>
-          <input
-          type="text"
-          value={editContent?.readMoreLink}
-          onChange={(e)=> setEditContent({...editContent, readMoreLink:e.target.value}) }
-          placeholder="Enter Read More Link"
-          className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
-          />
+          ></textarea>
         </div>
         
         <div className="space-y-1">
@@ -74,6 +79,7 @@ export default function EditTypeModal({ editContent, setEditContent, isEdit, onC
           </select>
         </div>
       </div>
+
    </Modal>
     );
 }

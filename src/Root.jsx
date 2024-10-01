@@ -61,7 +61,7 @@ import MarkConfig from "./components/settings/MarkConfig";
 import MarkDivide from "./components/settings/MarkDivide";
 import ClassSubjectAssign from "./components/settings/subject-assign/ClassSubjectAssign";
 import TeacherSubjectAssign from "./components/settings/subject-assign/TeacherSubjectAssign";
-import { Banner, Notice } from "./components/site-settings/siteSettingsIndex";
+import { Banner, Contact, Notice, PageContent, PictureGallery, SSTestimonial, VideoGallery } from "./components/site-settings/siteSettingsIndex";
 import {
   AddParents,
   AddStaff,
@@ -697,23 +697,23 @@ function Root() {
             },
             {
               path: "page-content",
-              element: <Dummy />,
+              element: <PageContent />,
             },
             {
               path: "picture-gallery",
-              element: <Dummy />,
+              element: <PictureGallery />,
             },
             {
               path: "video-gallery",
-              element: <Dummy />,
+              element: <VideoGallery />,
             },
             {
               path: "testimonial",
-              element: <Dummy />,
+              element: <SSTestimonial />,
             },
             {
               path: "contact",
-              element: <Dummy />,
+              element: <Contact />,
             },
           ],
         },

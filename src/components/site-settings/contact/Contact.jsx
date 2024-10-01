@@ -5,7 +5,7 @@ import AddTypeModal from "./AddTypeModal";
 import EditTypeModal from "./EditTypeModal";
 import TypeTable from "./TypeTable";
 
-export default function IncomeHead() {
+export default function Contact() {
    const [isAdd, setIsAdd] = useState(false);
    const [isEdit, setIsEdit] = useState(false);
    const [isDelete, setIsDelete] = useState(false);
