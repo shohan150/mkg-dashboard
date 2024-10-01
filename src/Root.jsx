@@ -61,6 +61,7 @@ import MarkConfig from "./components/settings/MarkConfig";
 import MarkDivide from "./components/settings/MarkDivide";
 import ClassSubjectAssign from "./components/settings/subject-assign/ClassSubjectAssign";
 import TeacherSubjectAssign from "./components/settings/subject-assign/TeacherSubjectAssign";
+import { Banner, Notice } from "./components/site-settings/siteSettingsIndex";
 import {
   AddParents,
   AddStaff,
@@ -684,11 +685,11 @@ function Root() {
           children: [
             {
               path: "banner",
-              element: <Dummy />,
+              element: <Banner />,
             },
             {
               path: "notice",
-              element: <Dummy />,
+              element: <Notice />,
             },
             {
               path: "school-service",
