@@ -37,7 +37,7 @@ import EditInstituteInfo from "./components/instituteProfile/EditInstituteInfo";
 import InstituteProfile from "./components/instituteProfile/InstituteProfile";
 import Deduction from "./components/payroll/deduction/Deduction";
 import { Addition, SalaryAssign } from "./components/payroll/payroll-index";
-import { DateWisePaidFee, DueFee, SmsDelivery, SmsPurchaseHistory, SmsSendSummary, StaMonthReport, StaTimeReport, StuDateReport, StudentWisePaidFee, StuMonthReport, StuTimeReport, TMonthReport, TTimeReport } from "./components/reports/reports-index";
+import { AccountingStatement, DateWisePaidFee, DueFee, ExpenseDateWise, ExpenseHeadWise, IncomeDateWise, IncomeHeadWise, SmsDelivery, SmsPurchaseHistory, SmsSendSummary, StaMonthReport, StaTimeReport, StuDateReport, StudentWisePaidFee, StuMonthReport, StuTimeReport, TMonthReport, TTimeReport, WithdrawDateWise } from "./components/reports/reports-index";
 import {
   MarkInput,
   MeritList,
@@ -573,27 +573,27 @@ function Root() {
           children: [
             {
               path: "account-statement",
-              element: <Dummy />,
+              element: <AccountingStatement />,
             },
             {
               path: "date-wise-income",
-              element: <Dummy />,
+              element: <IncomeDateWise />,
             },
             {
               path: "head-wise-income",
-              element: <Dummy />,
+              element: <IncomeHeadWise />,
             },
             {
               path: "date-wise-expense",
-              element: <Dummy />,
+              element: <ExpenseDateWise />,
             },
             {
               path: "head-wise-expense",
-              element: <Dummy />,
+              element: <ExpenseHeadWise />,
             },
             {
               path: "date-wise-withdraw",
-              element: <Dummy />,
+              element: <WithdrawDateWise />,
             },
           ],
         },

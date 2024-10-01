@@ -34,10 +34,10 @@ export default function FeeTable() {
          <tr>
             <th className="w-1/12">#</th>
             <th className="w-3/12">Name</th>
-            <th className="w-2/12 min-w-32">Roll</th>
+            <th className="w-1/12 min-w-32">Roll</th>
             <th className="w-2/12">Class</th>
-            <th className="w-2/12 min-w-16">Due Amount</th>
-            <th className="w-2/12 min-w-20">Due Details</th>
+            <th className="w-2/12 min-w-20">Due Amount</th>
+            <th className="w-3/12 min-w-20">Due Details</th>
          </tr>
          </thead>
          <tbody className="divide-y font-medium">
@@ -45,10 +45,10 @@ export default function FeeTable() {
             <tr key={index} className="text-center">
                <td className="w-1/12">{index + 1}</td>
                <td className="w-3/12">{row.name}</td>
-               <td className="w-2/12">{row.roll}</td>
+               <td className="w-1/12">{row.roll}</td>
                <td className="w-2/12">{row.class}</td>
                <td className="w-2/12">{row.dueAmount}</td>
-               <td className="w-2/12">{row.dueDetails}</td>
+               <td className="w-3/12">{row.dueDetails}</td>
             </tr>
          ))}
          </tbody>
