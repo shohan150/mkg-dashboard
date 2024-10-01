@@ -5,18 +5,20 @@ import StuMonthReport from "./attendance/student/month-wise-report/StuMonthRepor
 import StuTimeReport from "./attendance/student/time-wise-report/StuTimeReport";
 import TMonthReport from "./attendance/teacher/month-wise-report/TMonthReport";
 import TTimeReport from "./attendance/teacher/time-wise-report/TTimeReport";
+import DateWisePaidFee from "./fees/date-wise-paid-fee/DateWisePaidFee";
+import DueFee from "./fees/due-fee/DueFee";
+import StudentWisePaidFee from "./fees/student-wise-paid-fee/StudentWisePaidFee";
 import SmsDelivery from "./sms/delivery/SmsDelivery";
 import SmsPurchaseHistory from "./sms/purchase-history/SmsPurchaseHistory";
 import SmsSendSummary from "./sms/send-summary/SmsSendSummary";
 
 export {
-   SmsDelivery,
+   DateWisePaidFee, DueFee, SmsDelivery,
    SmsPurchaseHistory, SmsSendSummary, StaMonthReport,
    StaTimeReport,
    StuDateReport,
    StuMonthReport,
-   StuTimeReport,
-   TMonthReport,
+   StuTimeReport, StudentWisePaidFee, TMonthReport,
    TTimeReport
 };
 
