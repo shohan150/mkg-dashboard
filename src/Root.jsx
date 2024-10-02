@@ -62,6 +62,7 @@ import MarkDivide from "./components/settings/MarkDivide";
 import ClassSubjectAssign from "./components/settings/subject-assign/ClassSubjectAssign";
 import TeacherSubjectAssign from "./components/settings/subject-assign/TeacherSubjectAssign";
 import { Banner, Contact, Notice, PageContent, PictureGallery, SchoolService, SSTestimonial, VideoGallery } from "./components/site-settings/siteSettingsIndex";
+import StaffIdCard from "./components/STSP-info/staff-info/staff-id-card/StaffIdCard";
 import {
   AddParents,
   AddStaff,
@@ -83,6 +84,7 @@ import {
   TesSettings,
   Testimonial
 } from "./components/STSP-info/stsp-index";
+import TeacherIdCard from "./components/STSP-info/teacher-info/teacher-id-card/TeacherIdCard";
 import StudyMaterial from "./components/study-material/StudyMaterial";
 import Dummy from "./components/to-be-deleted (trash templates)/Dummy";
 import Test from "./components/to-be-deleted (trash templates)/Test";
@@ -292,7 +294,7 @@ function Root() {
             },
             {
               path: "teacher-id-card",
-              element: <Dummy />,
+              element: <TeacherIdCard />,
             },
             {
               path: "edit-teacher/:id",
@@ -314,7 +316,7 @@ function Root() {
             },
             {
               path: "staff-id-card",
-              element: <Dummy />,
+              element: <StaffIdCard />,
             },
             {
               path: "edit-staff/:id",
