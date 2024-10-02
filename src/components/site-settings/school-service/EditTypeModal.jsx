@@ -5,57 +5,48 @@ export default function EditTypeModal({ editContent, setEditContent, isEdit, onC
     return (
    <Modal isOpen={isEdit} onClose={onClose} width="w-2/3 md:w-1/2">
       {/* modal content */}
-      <h2 className="text-2xl">Edit Leave Type</h2>
+      <h2 className="text-2xl">Edit School Service</h2>
 
       <div className="mt-2 mb-4 space-y-1">
         <div className="space-y-1">
-          <label className="text-textGray">Banner Image</label>
-          <input 
-          value={editContent?.image}
-          onChange={(e)=> setEditContent({...editContent, image:e.target.value}) }
-          className="block w-full cursor-pointer rounded bg-gray-100 text-textGray border-transparent focus:border-primary focus:outline-none" aria-describedby="" id="" type="file" />
-        </div>
-
-        <div className="space-y-1">
-          <label className="text-textGray">Sub-Heading</label>
+          <label className="text-textGray">Service</label>
           <input
           type="text"
-          value={editContent?.subHeading}
-          onChange={(e)=> setEditContent({...editContent, subHeading:e.target.value}) }
-          placeholder="Enter Sub-Heading"
+          placeholder="Enter Service"
+          value={editContent?.service}
+          onChange={(e)=> setEditContent({...editContent, service:e.target.value}) }
           className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
           />
         </div>
 
         <div className="space-y-1">
-          <label className="text-textGray">Main Heading</label>
+          <label className="text-textGray">Package</label>
           <input
           type="text"
-          value={editContent?.mainHeading}
-          onChange={(e)=> setEditContent({...editContent, mainHeading:e.target.value}) }
-          placeholder="Enter Main Heading"
+          placeholder="Enter Package"
+          value={editContent?.package}
+          onChange={(e)=> setEditContent({...editContent, package:e.target.value}) }
           className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
           />
         </div>
 
         <div className="space-y-1">
-          <label className="text-textGray">Banner Text</label>
+          <label className="text-textGray">Price</label>
           <input
-          type="text"
-          value={editContent?.bannerText}
-          onChange={(e)=> setEditContent({...editContent, bannerText:e.target.value}) }
-          placeholder="Enter Banner Text"
+          type="number"
+          placeholder="Enter Price"
+          value={editContent?.price}
+          onChange={(e)=> setEditContent({...editContent, price:e.target.value}) }
           className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
           />
         </div>
 
         <div className="space-y-1">
-          <label className="text-textGray">Read More Link</label>
-          <input
-          type="text"
-          value={editContent?.readMoreLink}
-          onChange={(e)=> setEditContent({...editContent, readMoreLink:e.target.value}) }
-          placeholder="Enter Read More Link"
+          <label className="text-textGray">Description</label>
+          <textarea
+          placeholder="Enter Description"
+          value={editContent?.description}
+          onChange={(e)=> setEditContent({...editContent, description:e.target.value}) }
           className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
           />
         </div>
