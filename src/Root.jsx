@@ -51,16 +51,7 @@ import {
   TeacherSchedule,
 } from "./components/routine/routine-index";
 import { CoachingAllocation, CoachingPackage, HostelAllocation, HostelPackage, TransportAllocation, TransportPackage } from "./components/services/services-index";
-import AcademicSetup from "./components/settings/AcademicSetup";
-import ChooseableSubject from "./components/settings/ChooseableSubject";
-import SectionConfig from "./components/settings/class-config/SectionConfig";
-import ClassConfig from "./components/settings/ClassConfig";
-import ClassMarkConfig from "./components/settings/mark-config/ClassMarkConfig";
-import SubjectMarkDivide from "./components/settings/mark-divide/SubjectMarkDivide";
-import MarkConfig from "./components/settings/MarkConfig";
-import MarkDivide from "./components/settings/MarkDivide";
-import ClassSubjectAssign from "./components/settings/subject-assign/ClassSubjectAssign";
-import TeacherSubjectAssign from "./components/settings/subject-assign/TeacherSubjectAssign";
+import { AcademicSetup, ChooseableSubject, ClassConfig, ClassMarkConfig, ClassSubjectAssign, MarkConfig, MarkDivide, SectionConfig, SubjectMarkDivide, TeacherSubjectAssign } from "./components/settings/settings-index.js";
 import { Banner, Contact, Notice, PageContent, PictureGallery, SchoolService, SSTestimonial, VideoGallery } from "./components/site-settings/siteSettingsIndex";
 import StaffIdCard from "./components/STSP-info/staff-info/staff-id-card/StaffIdCard";
 import {
