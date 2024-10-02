@@ -4,45 +4,50 @@ export default function AddTypeModal({ isAdd, onClose }) {
     return (
     <Modal isOpen={isAdd} onClose={onClose} width="w-2/3 md:w-1/2">
       {/* modal content */}
-      <h2 className="text-2xl">Add Leave Type</h2>
+      <h2 className="text-2xl">Add Contact</h2>
       <div className="mt-2 mb-4 space-y-1">
-        <div className="space-y-1">
-          <label className="text-textGray">Banner Image</label>
-          <input className="block w-full cursor-pointer rounded bg-gray-100 text-textGray border-transparent focus:border-primary focus:outline-none" aria-describedby="" id="" type="file" />
-        </div>
 
         <div className="space-y-1">
-          <label className="text-textGray">Sub-Heading</label>
+          <label className="text-textGray">Text</label>
           <input
           type="text"
-          placeholder="Enter Sub-Heading"
+          placeholder="Enter Text"
           className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
           />
         </div>
 
         <div className="space-y-1">
-          <label className="text-textGray">Main Heading</label>
+          <label className="text-textGray">Office Address</label>
           <input
           type="text"
-          placeholder="Enter Main Heading"
+          placeholder="Enter Office Address"
           className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
           />
         </div>
 
         <div className="space-y-1">
-          <label className="text-textGray">Banner Text</label>
+          <label className="text-textGray">Mobile</label>
           <input
           type="text"
-          placeholder="Enter Banner Text"
+          placeholder="Enter Mobile"
           className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
           />
         </div>
 
         <div className="space-y-1">
-          <label className="text-textGray">Read More Link</label>
+          <label className="text-textGray">Email</label>
+          <input
+          type="email"
+          placeholder="Enter Email"
+          className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
+          />
+        </div>
+
+        <div className="space-y-1">
+          <label className="text-textGray">Google Map Link</label>
           <input
           type="text"
-          placeholder="Enter Read More Link"
+          placeholder="Enter Google Map Link"
           className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
           />
         </div>

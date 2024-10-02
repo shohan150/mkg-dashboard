@@ -9,57 +9,60 @@ export default function EditTypeModal({ editContent, setEditContent, isEdit, onC
 
       <div className="mt-2 mb-4 space-y-1">
         <div className="space-y-1">
-          <label className="text-textGray">Banner Image</label>
-          <input 
-          value={editContent?.image}
-          onChange={(e)=> setEditContent({...editContent, image:e.target.value}) }
-          className="block w-full cursor-pointer rounded bg-gray-100 text-textGray border-transparent focus:border-primary focus:outline-none" aria-describedby="" id="" type="file" />
-        </div>
-
-        <div className="space-y-1">
-          <label className="text-textGray">Sub-Heading</label>
+          <label className="text-textGray">Text</label>
           <input
           type="text"
-          value={editContent?.subHeading}
-          onChange={(e)=> setEditContent({...editContent, subHeading:e.target.value}) }
-          placeholder="Enter Sub-Heading"
+          placeholder="Enter Text"
+          value={editContent?.text}
+          onChange={(e)=> setEditContent({...editContent, text:e.target.value}) }
           className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
           />
         </div>
 
         <div className="space-y-1">
-          <label className="text-textGray">Main Heading</label>
+          <label className="text-textGray">Office Address</label>
           <input
           type="text"
-          value={editContent?.mainHeading}
-          onChange={(e)=> setEditContent({...editContent, mainHeading:e.target.value}) }
-          placeholder="Enter Main Heading"
+          placeholder="Enter Office Address"
+          value={editContent?.officeAddress}
+          onChange={(e)=> setEditContent({...editContent, officeAddress:e.target.value}) }
           className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
           />
         </div>
 
         <div className="space-y-1">
-          <label className="text-textGray">Banner Text</label>
+          <label className="text-textGray">Mobile</label>
           <input
           type="text"
-          value={editContent?.bannerText}
-          onChange={(e)=> setEditContent({...editContent, bannerText:e.target.value}) }
-          placeholder="Enter Banner Text"
+          placeholder="Enter Mobile"
+          value={editContent?.mobile}
+          onChange={(e)=> setEditContent({...editContent, mobile:e.target.value}) }
           className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
           />
         </div>
 
         <div className="space-y-1">
-          <label className="text-textGray">Read More Link</label>
+          <label className="text-textGray">Email</label>
           <input
-          type="text"
-          value={editContent?.readMoreLink}
-          onChange={(e)=> setEditContent({...editContent, readMoreLink:e.target.value}) }
-          placeholder="Enter Read More Link"
+          type="email"
+          placeholder="Enter Email"
+          value={editContent?.email}
+          onChange={(e)=> setEditContent({...editContent, email:e.target.value}) }
           className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
           />
         </div>
         
+        <div className="space-y-1">
+          <label className="text-textGray">Google Map Link</label>
+          <input
+          type="text"
+          placeholder="Enter Google Map Link"
+          value={editContent?.map}
+          onChange={(e)=> setEditContent({...editContent, map:e.target.value}) }
+          className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
+          />
+        </div>
+
         <div className="space-y-1">
           <label className="text-textGray">Status</label>
           <select

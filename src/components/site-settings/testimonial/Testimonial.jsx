@@ -24,7 +24,7 @@ export default function Testimonial() {
 
     return (
       <div className="bg-white rounded-md p-4 md:p-6  my-4">
-         <AddType setIsAdd={setIsAdd} title="Banner" />
+         <AddType setIsAdd={setIsAdd} title="Testimonial" />
          <TypeTable handleEdit={handleEdit} handleDelete={handleDelete} />
 
          {/* The 3 modals: Add, Edit, Delete */}
