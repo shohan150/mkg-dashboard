@@ -1,10 +1,13 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import mainMenu from "../../data/mainMenu";
 import SidebarMenuItem from "./SidebarMenuItem";
 
 export default function SidebarMenu() {
   //make sure only one dropdown is open at a time
   const [itemId, setItemId] = useState(null);
+
+  const {t} = useTranslation();
 
   return (
     <ul className="text-white py-6">
@@ -23,7 +26,7 @@ export default function SidebarMenu() {
               key={item.id}
               className="text-[#ffffff70] uppercase font-bold text-sm leading-10 tracking-wide pt-5 px-6"
             >
-              {item.title}
+              {t(item.title)}
             </li>
           )}
         </>

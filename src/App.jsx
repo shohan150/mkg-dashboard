@@ -4,6 +4,9 @@ import Breadcrumb from "./components/common/Breadcrumb";
 import Sidebar from "./components/sidebar/Sidebar";
 import Footer from "./components/topNavbar/Footer";
 import TopNavbar from "./components/topNavbar/TopNavbar";
+//to support multi-language
+import "./i18n/i18n.js";
+
 
 export default function App() {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -28,10 +31,13 @@ export default function App() {
       <div className={`bg-secondary text-textBlack flex flex-col justify-between min-h-screen transition-all duration-500 ease-in-out p-3 ml-0 xl:ml-72 ${showSidebar && "max-xl:opacity-65"}`}>
         <div>
           <TopNavbar setShowSidebar={setShowSidebar} />
+
           {
             pathname.length > 1 && <Breadcrumb module={moduleName} route={routeName} nestedRoute={nestedRouteName} />
           }
+
           <Outlet />
+          
         </div>
         <Footer />
       </div>
