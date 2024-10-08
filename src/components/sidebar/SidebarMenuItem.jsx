@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { FaAngleDown } from "react-icons/fa6";
 import { Link, useLocation } from "react-router-dom";
 import DropDown from "./DropDown";
@@ -7,6 +8,8 @@ import Icons from "./Icons";
 export default function SidebarMenuItem({ item, itemId, setItemId }) {
   const [isOpen, setIsOpen] = useState(false);
   const [ddId, setDDId] = useState(null);
+
+  const {t} = useTranslation();
 
   //only one dropdown open at a time
   isOpen && item.id !== itemId && setIsOpen(false);
@@ -31,7 +34,7 @@ export default function SidebarMenuItem({ item, itemId, setItemId }) {
               isOpen && "text-[#fff]"
             }`}
           >
-            {item.title}
+            {t(item.title)}
           </h4>
           {item?.children && (
             <FaAngleDown

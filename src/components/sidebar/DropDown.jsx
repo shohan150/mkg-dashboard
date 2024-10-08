@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { FaAngleDown } from "react-icons/fa6";
 import { Link, useLocation } from "react-router-dom";
 
 export default function DropDown({ data, ddId, setDDId }) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const {t} = useTranslation();
 
   isOpen && data.id !== ddId && setIsOpen(false);
 
@@ -30,7 +33,7 @@ export default function DropDown({ data, ddId, setDDId }) {
             }`}
           ></span>
           <h5 className={`flex-1 ${isOpen && data?.children && "text-white"}`}>
-            {data.title}
+            {t(data.title)}
           </h5>
           {data?.children && (
             <FaAngleDown
@@ -45,7 +48,7 @@ export default function DropDown({ data, ddId, setDDId }) {
             {data.children.map((innerDD) => (
               <Link to={innerDD.link} key={innerDD.id}>
                 <li className="hover:bg-[#00000010] hover:text-white duration-200 pl-12 pr-6">
-                  {innerDD.title}
+                  {t(innerDD.title)}
                 </li>
               </Link>
             ))}
