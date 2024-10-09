@@ -666,7 +666,7 @@ const mainMenu = [
   },  
   {
     id: "28",
-    title: "siteSettings,title",
+    title: "siteSettings.title",
     icon: false,
   },
   {

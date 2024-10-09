@@ -92,9 +92,9 @@ const banglaWords = {
     "deleteFee": "ফি মুছুন"
   },
   "payroll": {
-    "title": "ফি",
-    "addition": "ফি সংযোজন",
-    "deduction": "ফি কর্তন",
+    "title": "বেতন",
+    "addition": "বেতন সংযোজন",
+    "deduction": "বেতন কর্তন",
     "salaryAssign": "বেতন বরাদ্দ",
   },
   "services": {
@@ -185,3 +185,4 @@ const banglaWords = {
  }
 
 export default banglaWords;
+
