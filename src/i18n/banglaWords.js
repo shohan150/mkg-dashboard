@@ -1,9 +1,28 @@
+import dashboard from "./modules/dashboard";
+
 const banglaWords = {
-  "dashboard": "ড্যাশবোর্ড",
-  "profile": "প্রোফাইল",
-  "insProfile": "প্রতিষ্ঠানের তথ্য",
-  "appsAndPages": "অ্যাপস এবং পেজ",
-  "reports": "রিপোর্ট",
+  "general":{
+    "name": "Name",
+    "email": "Email",
+    "student": "Student",
+    "teacher": "Teacher",
+    "staff": "Staff",
+    "parent": "Parent",
+    "class": "Class",
+    "section": "Section",
+    "subject": "Subject",
+    "total": "Total",
+  },
+  "module": {
+    "dashboard": dashboard
+  },
+  "sidebarSingle": {
+    "dashboard": "ড্যাশবোর্ড",
+    "profile": "প্রোফাইল",
+    "insProfile": "প্রতিষ্ঠানের তথ্য",
+    "appsAndPages": "অ্যাপস এবং পেজ",
+    "reports": "রিপোর্ট",
+  },
   "settings": {
     "title": "সেটিংস",
     "academicSetup": "একাডেমিক সেটআপ",

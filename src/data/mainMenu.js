@@ -1,24 +1,24 @@
 const mainMenu = [
   {
     id: "01",
-    title: "profile",
+    title: "sidebarSingle.profile",
     icon: false,
   },
   {
     id: "02",
-    title: "dashboard",
+    title: "sidebarSingle.dashboard",
     icon: "RiDashboardHorizontalFill",
     link: "/dashboard",
   },
   {
     id: "03",
-    title: "insProfile",
+    title: "sidebarSingle.insProfile",
     icon: "HiOutlineBuildingStorefront",
     link: "/institute-profile",
   },
   {
     id: "04",
-    title: "appsAndPages",
+    title: "sidebarSingle.appsAndPages",
     icon: false,
   },  
   {
@@ -520,7 +520,7 @@ const mainMenu = [
   },  
   {
     id: "23",
-    title: "reports",
+    title: "sidebarSingle.reports",
     icon: false,
   },
   {

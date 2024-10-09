@@ -1,9 +1,28 @@
+import dashboard from "./modules/dashboard";
+
 const englishWords = {
-  "profile": "Profiles",
-  "dashboard": "Dashboard",
-  "insProfile": "Institute Profile",
-  "appsAndPages": "Apps & Pages",
-  "reports": "Reports",
+  "general":{
+    "name": "Name",
+    "email": "Email",
+    "student": "Student",
+    "teacher": "Teacher",
+    "staff": "Staff",
+    "parent": "Parent",
+    "class": "Class",
+    "section": "Section",
+    "subject": "Subject",
+    "total": "Total",
+  },
+  "module": {
+    "dashboard": dashboard
+  },
+  "sidebarSingle": {
+    "profile": "Profiles",
+    "dashboard": "Dashboard",
+    "insProfile": "Institute Profile",
+    "appsAndPages": "Apps & Pages",
+    "reports": "Reports",
+  },
   "settings": {
     "title": "Settings",
     "academicSetup" : "Academic Setup",
