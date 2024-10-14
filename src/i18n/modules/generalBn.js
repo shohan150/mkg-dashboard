@@ -43,6 +43,7 @@ const generalBn = {
    "active": "সক্রিয়",
    "inactive": "নিষ্ক্রিয়",
    "link": "লিংক",
+   
  };
 
  export default generalBn

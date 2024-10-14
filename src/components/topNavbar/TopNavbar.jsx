@@ -1,4 +1,5 @@
 import { FaBars } from "react-icons/fa6";
+import LangSwitcher from "./LangSwitcher";
 import Mail from "./Mail";
 import Notifications from "./Notifications";
 import Profile from "./Profile";
@@ -17,6 +18,7 @@ export default function TopNavbar({ setShowSidebar }) {
       </div>
       {/* actions */}
       <div className="flex items-center">
+        <LangSwitcher />
         <Mail />
         <Notifications />
         <Profile />
