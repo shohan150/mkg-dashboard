@@ -1,19 +1,22 @@
+import { useTranslation } from "react-i18next";
+
 export default function InstInfoForm() {
+   const { t } = useTranslation();
     return (
         <div className="my-2">
          <form className="my-4" action="">
             {/* basic info form */}
-            <h5 className="font-medium bg-bgBlue rounded py-1 px-2 text-xs tracking-wide inline text-blue">BASIC INFORMATION</h5>
+            <h5 className="font-medium bg-bgBlue rounded py-1 px-2 text-xs tracking-wide inline text-blue">{t("module.instituteInfo.basic")} {t("general.information")}</h5>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3 mb-6">
                {/* institution logo */}
                <div className="space-y-1">
-                  <label className="text-textGray" htmlFor="">Institution Logo</label>
+                  <label className="text-textGray" htmlFor="">{t("module.instituteInfo.logo")}</label>
                   <input className="block w-full cursor-pointer rounded bg-gray-100 text-textGray border-transparent focus:border-primary focus:outline-none" aria-describedby="" id="" type="file"/>
                </div>
 
                {/* institute id */}
                <div className="space-y-1">
-                  <label className="text-textGray">Institute ID</label>
+                  <label className="text-textGray">{t("general.institute")} {t("general.id")}</label>
                   <input
                      type="text"
                      placeholder="Enter Institute ID"
@@ -23,7 +26,7 @@ export default function InstInfoForm() {
 
                {/* institute Name */}
                <div className="space-y-1">
-                  <label className="text-textGray">Institute Name</label>
+                  <label className="text-textGray">{t("general.institute")} {t("general.name")}</label>
                   <input
                      type="text"
                      placeholder="Enter Institute Name"
@@ -33,22 +36,22 @@ export default function InstInfoForm() {
 
                {/* Gender Type */}
                <div className="space-y-1">
-                  <label className="text-textGray">Institute Gender Type</label>
+                  <label className="text-textGray">{t("general.institute")} {t("module.instituteInfo.genderType")}</label>
                   <select
                      id=""
                      name=""
                      defaultValue="Combined"
                      className="bg-bgGray w-full rounded px-1 py-2 border-2 text-textGray border-transparent focus:border-primary focus:outline-none"
                   >
-                     <option value="Combined">Combined</option>
-                     <option value="Boys">Boys</option>
-                     <option value="Girls">Girls</option>
+                     <option value="Combined">{t("general.combined")}</option>
+                     <option value="Boys">{t("general.boys")}</option>
+                     <option value="Girls">{t("general.girls")}</option>
                   </select>
                </div>
                
                {/* Institute Email */}
                <div className="space-y-1">
-                  <label className="text-textGray">Institute Email</label>
+                  <label className="text-textGray">{t("general.institute")} {t("general.email")}</label>
                   <input
                      type="text"
                      placeholder="Enter Institute Email"
@@ -58,21 +61,21 @@ export default function InstInfoForm() {
                
                {/* Status */}
                <div className="space-y-1">
-                  <label className="text-textGray">Status</label>
+                  <label className="text-textGray">{t("general.status")}</label>
                   <select
                      id=""
                      name=""
                      defaultValue="Active"
                      className="bg-bgGray w-full rounded px-1 py-2 border-2 text-textGray border-transparent focus:border-primary focus:outline-none"
                   >
-                     <option value="Active">Active</option>
-                     <option value="Deactive">Deactive</option>
+                     <option value="Active">{t("general.active")}</option>
+                     <option value="Deactive">{t("general.deactive")}</option>
                   </select>
                </div>
                               
                {/* Headmaster Name */}
                <div className="space-y-1">
-                  <label className="text-textGray">Headmaster Name</label>
+                  <label className="text-textGray">{t("module.instituteInfo.principal")}</label>
                   <input
                      type="text"
                      placeholder="Enter Headmaster Name"
@@ -82,7 +85,7 @@ export default function InstInfoForm() {
                               
                {/* Headmaster Mobile */}
                <div className="space-y-1">
-                  <label className="text-textGray">Headmaster Mobile</label>
+                  <label className="text-textGray">{t("module.instituteInfo.principal")} {t("general.mobile")}</label>
                   <input
                      type="text"
                      placeholder="Enter Headmaster Mobile"
@@ -92,7 +95,7 @@ export default function InstInfoForm() {
                               
                {/* Education Board */}
                <div className="space-y-1">
-                  <label className="text-textGray">Education Board</label>
+                  <label className="text-textGray">{t("general.education")} {t("module.instituteInfo.board")}</label>
                   <select
                      id=""
                      name=""
@@ -110,7 +113,7 @@ export default function InstInfoForm() {
                               
                {/* Education Division */}
                <div className="space-y-1">
-                  <label className="text-textGray">Education Division</label>
+                  <label className="text-textGray">{t("module.instituteInfo.division")}</label>
                   <select
                      id=""
                      name=""
@@ -128,7 +131,7 @@ export default function InstInfoForm() {
                               
                {/* Education District */}
                <div className="space-y-1">
-                  <label className="text-textGray">Education District</label>
+                  <label className="text-textGray">{t("module.instituteInfo.district")}</label>
                   <select
                      id=""
                      name=""
@@ -142,7 +145,7 @@ export default function InstInfoForm() {
                               
                {/* Institute Upzilla/Thana */}
                <div className="space-y-1">
-                  <label className="text-textGray">Institute Upzilla/Thana</label>
+                  <label className="text-textGray">{t("module.instituteInfo.thana")}</label>
                   <select
                      id=""
                      name=""
@@ -158,7 +161,7 @@ export default function InstInfoForm() {
                                              
                {/* Facebook Link */}
                <div className="space-y-1">
-                  <label className="text-textGray">Facebook Link</label>
+                  <label className="text-textGray">{t("module.instituteInfo.facebook")} {t("general.link")}</label>
                   <input
                      type="text"
                      placeholder="Enter Facebook Link"
@@ -168,7 +171,7 @@ export default function InstInfoForm() {
                                              
                {/* Youtube Link */}
                <div className="space-y-1">
-                  <label className="text-textGray">Youtube Link</label>
+                  <label className="text-textGray">{t("module.instituteInfo.youtube")} {t("general.link")}</label>
                   <input
                      type="text"
                      placeholder="Enter Youtube Link"
@@ -179,12 +182,12 @@ export default function InstInfoForm() {
 
 
             {/* contact info form */}
-            <h5 className="font-medium bg-bgBlue rounded py-1 px-2 text-xs tracking-wide inline text-blue">CONTACT INFORMATION</h5>
+            <h5 className="font-medium bg-bgBlue rounded py-1 px-2 text-xs tracking-wide inline text-blue">{t("general.contact02")} {t("general.information")}</h5>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3 mb-6">
                
                {/* Institute EIIN No */}
                <div className="space-y-1">
-                  <label className="text-textGray">Institute EIIN No</label>
+                  <label className="text-textGray">{t("general.institute")} {t("module.instituteInfo.eiin")}</label>
                   <input
                      type="text"
                      placeholder="Enter Institute EIIN No"
@@ -194,17 +197,17 @@ export default function InstInfoForm() {
                
                {/* ICT Teacher / Incharge */}
                <div className="space-y-1">
-                  <label className="text-textGray">ICT Teacher / Incharge</label>
+                  <label className="text-textGray">{t("module.instituteInfo.ict")} {t("module.instituteInfo.incharge")}</label>
                   <input
                      type="text"
-                     placeholder="Enter ICT Teacher / Incharge"
+                     placeholder="Enter ICT Incharge"
                      className="bg-bgGray text-textGray w-full rounded px-2 py-[6px] border-2 border-transparent focus:border-primary focus:outline-none"
                   />
                </div>
                
                {/* Incharge Mobile Number */}
                <div className="space-y-1">
-                  <label className="text-textGray">Incharge Mobile Number</label>
+                  <label className="text-textGray">{t("module.instituteInfo.incharge")} {t("general.mobile")}</label>
                   <input
                      type="text"
                      placeholder="Enter Incharge Mobile Number"
@@ -214,7 +217,7 @@ export default function InstInfoForm() {
                
                {/* Incharge Email Address */}
                <div className="space-y-1">
-                  <label className="text-textGray">Incharge Email Address</label>
+                  <label className="text-textGray">{t("module.instituteInfo.incharge")} {t("general.email")}</label>
                   <input
                      type="text"
                      placeholder="Enter Incharge Email Address"

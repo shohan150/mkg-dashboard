@@ -1,19 +1,11 @@
 import dashboard from "./modules/dashboard";
+import generalEn from "./modules/generalEn";
+import { insInfoEn } from "./modules/instituteInfo";
 
 const englishWords = {
-  "general":{
-    "name": "Name",
-    "email": "Email",
-    "student": "Student",
-    "teacher": "Teacher",
-    "staff": "Staff",
-    "parent": "Parent",
-    "class": "Class",
-    "section": "Section",
-    "subject": "Subject",
-    "total": "Total",
-  },
+  "general": generalEn,
   "module": {
+    "instituteInfo" : insInfoEn,
     "dashboard": dashboard
   },
   "sidebarSingle": {

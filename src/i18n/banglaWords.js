@@ -1,19 +1,11 @@
 import dashboard from "./modules/dashboard";
+import generalBn from "./modules/generalBn";
+import { insInfoBn } from "./modules/instituteInfo";
 
 const banglaWords = {
-  "general":{
-    "name": "Name",
-    "email": "Email",
-    "student": "Student",
-    "teacher": "Teacher",
-    "staff": "Staff",
-    "parent": "Parent",
-    "class": "Class",
-    "section": "Section",
-    "subject": "Subject",
-    "total": "Total",
-  },
+  "general": generalBn,
   "module": {
+    "instituteInfo" : insInfoBn,
     "dashboard": dashboard
   },
   "sidebarSingle": {
