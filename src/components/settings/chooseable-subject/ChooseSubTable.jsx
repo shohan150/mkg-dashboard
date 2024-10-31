@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function ChooseSubTable() {
   const [allChecked, setAllChecked] = useState(false);
@@ -65,6 +66,8 @@ export default function ChooseSubTable() {
     }
   };
 
+  const { t } = useTranslation();
+
   return (
     <table className="w-full text-textGray text-sm leading-8 my-6">
       <thead className="border-b-2 bg-bgBlue">
@@ -76,11 +79,11 @@ export default function ChooseSubTable() {
               onChange={handleAllCheckboxChange}
             />
           </th>
-          <th className="w-2/12 pt-1">STUDENT ID</th>
-          <th className="w-3/12 pt-1">NAME</th>
-          <th className="w-2/12 pt-1">ROLL</th>
-          <th className="w-2/12 pt-1">CLASS</th>
-          <th className="w-2/12 pt-1">SECTION</th>
+          <th className="w-2/12 pt-1">{t('module.dashboard.students')}</th>
+          <th className="w-3/12 pt-1">{t('module.settings.name')}</th>
+          <th className="w-2/12 pt-1">{t('module.settings.roll')}</th>
+          <th className="w-2/12 pt-1">{t('module.settings.class')}</th>
+          <th className="w-2/12 pt-1">{t('module.settings.section')}</th>
         </tr>
       </thead>
       <tbody className="divide-y-2 font-medium">

@@ -1,4 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 export default function PayStatTable() {
+  const {t} = useTranslation();
   const payInfo = [
     {
       name: "Nursery",
@@ -48,11 +51,13 @@ export default function PayStatTable() {
       <table className="w-full text-center">
         <thead>
           <tr className="bg-blue text-white font-medium">
-            <td className="w-[20%] py-2">Class</td>
-            <td className="w-[20%] py-2">Section</td>
-            <td className="w-[20%] py-2">T.Student</td>
-            <td className="w-[20%] py-2">Paid</td>
-            <td className="w-[20%] py-2">Unpaid</td>
+            <td className="w-[20%] py-2">{t('module.dashboard.class')}</td>
+            <td className="w-[20%] py-2">
+              
+            </td>
+            <td className="w-[20%] py-2">{t('module.dashboard.total_student')}</td>
+            <td className="w-[20%] py-2">{t('module.dashboard.paid')}</td>
+            <td className="w-[20%] py-2">{t('module.dashboard.unpaid')}</td>
           </tr>
         </thead>
       </table>

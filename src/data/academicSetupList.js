@@ -1,6 +1,7 @@
+
 const academicSetupList = [
   {
-    title: "Class",
+    title: "Class List",
     content: [
       {
         id: 1,
@@ -37,7 +38,7 @@ const academicSetupList = [
     ],
   },
   {
-    title: "Section",
+    title: "Section List",
     content: [
       {
         id: 1,
@@ -54,7 +55,7 @@ const academicSetupList = [
     ],
   },
   {
-    title: "Subject",
+    title: "Subject List",
     content: [
       {
         id: 1,
@@ -83,7 +84,7 @@ const academicSetupList = [
     ],
   },
   {
-    title: "Shift",
+    title: "Shift List",
     content: [
       {
         id: 1,
@@ -96,7 +97,7 @@ const academicSetupList = [
     ],
   },
   {
-    title: "Period",
+    title: "Period List",
     content: [
       {
         id: 1,
@@ -125,7 +126,7 @@ const academicSetupList = [
     ],
   },
   {
-    title: "Group",
+    title: "Group List",
     content: [
       {
         id: 1,
@@ -142,7 +143,7 @@ const academicSetupList = [
     ],
   },
   {
-    title: "Session",
+    title: "Session List",
     content: [
       {
         id: 1,
@@ -155,7 +156,7 @@ const academicSetupList = [
     ],
   },
   {
-    title: "Teacher",
+    title: "Teacher List",
     content: [
       {
         id: 1,

@@ -1,4 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 export default function FeeInfoTable() {
+  const {t} = useTranslation();
   const feeInfo = [
     {
       name: "Shadman Shamim",
@@ -59,15 +62,15 @@ export default function FeeInfoTable() {
   return (
     <div className="mt-4">
       <h5 className="text-textGray text-end text-xs mb-2">
-        Total Students Found: <span className="text-green">40</span>
+      {t('module.dashboard.total_students_found')}: <span className="text-green">40</span>
       </h5>
       <table className="w-full text-center">
         <thead>
           <tr className="bg-bgGreen text-textGray font-bold ">
-            <td className="w-[40%] py-2">Name</td>
-            <td className="w-[20%] py-2">class</td>
-            <td className="w-[20%] py-2">amount</td>
-            <td className="w-[20%] py-2">status</td>
+            <td className="w-[40%] py-2">{t('module.dashboard.name')}</td>
+            <td className="w-[20%] py-2">{t('module.dashboard.class')}</td>
+            <td className="w-[20%] py-2">{t('module.dashboard.amount')}</td>
+            <td className="w-[20%] py-2">{t('module.dashboard.status')}</td>
           </tr>
         </thead>
       </table>

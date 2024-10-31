@@ -1,22 +1,24 @@
 import { FaUserEdit } from "react-icons/fa";
 import profileImg from "/images/profile.jpg";
+import { useTranslation } from "react-i18next";
 
 export default function ProfileInfo() {
+  const {t} = useTranslation();
   const profile = [
     {
-      title: "Reg No",
+      title: `${t('module.dashboard.reg_no')}`,
       data: "1234667",
     },
     {
-      title: "User Type",
+      title: `${t('module.dashboard.user_type')}`,
       data: "Admin",
     },
     {
-      title: "Designation",
+      title: `${t('module.dashboard.designation')}`,
       data: "Principal",
     },
     {
-      title: "Mobile No",
+      title: `${t('module.dashboard.mobile_no')}`,
       data: "01234567891",
     },
   ];

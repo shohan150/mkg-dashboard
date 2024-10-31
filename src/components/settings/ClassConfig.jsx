@@ -1,3 +1,4 @@
+import { classConfig } from "../../data/classConfig";
 import ClassConfigForm from "./class-config/ClassConfigForm";
 import ClassConfigTable from "./class-config/ClassConfigTable";
 
@@ -7,7 +8,7 @@ export default function ClassConfig() {
 
             <ClassConfigForm />
 
-            <ClassConfigTable />
+            <ClassConfigTable classConfig={classConfig} />
       </div>
     );
 }

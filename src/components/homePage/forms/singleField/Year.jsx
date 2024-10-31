@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next";
+
 export default function Year({ style }) {
+  const {t} = useTranslation();
   return (
     <div className={`space-y-1 ${style}`}>
-      <h5 className="font-bold ">Year</h5>
+      <h5 className="font-bold ">{t('module.dashboard.year')}</h5>
       <select
         id="year"
         name="year"

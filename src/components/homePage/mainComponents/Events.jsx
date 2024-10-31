@@ -1,7 +1,9 @@
 import SingleNotice from "../cards/SingleNotice";
 import SectionHeader from "../common/SectionHeader";
+import { useTranslation } from "react-i18next";
 
 export default function Events() {
+  const { t } = useTranslation();
   const notices = [
     {
       id: "01",
@@ -28,9 +30,10 @@ export default function Events() {
       content: "Lorem ipsum dolor sit amet consect, adipisicing elit.",
     },
   ];
+  
   return (
     <div className="rounded-md text-sm bg-white relative">
-      <SectionHeader title="Events" />
+      <SectionHeader title={t("module.dashboard.events")} />
 
       {/* notices */}
       <div className="divide-y-2 p-2">
@@ -39,10 +42,10 @@ export default function Events() {
         ))}
       </div>
 
-      {/* view more botton */}
+      {/* view more button */}
       <div className="flex justify-end p-2 mt-4">
         <button className="bg-tertiary text-white text-sm font-medium shadow py-1 px-4 rounded absolute bottom-4 right-4">
-          View All
+          {t("module.dashboard.view_all")}
         </button>
       </div>
     </div>

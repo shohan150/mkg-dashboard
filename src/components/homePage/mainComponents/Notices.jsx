@@ -1,6 +1,9 @@
+import { useTranslation } from "react-i18next";
 import SingleNotice from "../cards/SingleNotice";
 
 export default function Notices() {
+  const {t} = useTranslation();
+
   const notices = [
     {
       id: "01",
@@ -21,11 +24,12 @@ export default function Notices() {
       content: "Lorem ipsum dolor sit amet consect, adipisicing elit.",
     },
   ];
+
   return (
     <div className="bg-white col-span-1 order-3 sm:order-2 lg:order-3 rounded-md relative">
       {/* component heading */}
       <h3 className="bg-primary text-white text-xl p-4 leading-[33px] rounded-t-md shadow-md">
-        Notices & Events
+        {t('module.dashboard.notices_events')}
       </h3>
 
       {/* notices */}
@@ -38,7 +42,7 @@ export default function Notices() {
       {/* view more botton */}
       <div className="flex justify-end p-2 mt-4">
         <button className="bg-tertiary text-white text-sm font-medium shadow py-1 px-4 rounded absolute bottom-3 right-3">
-          View All
+        {t('module.dashboard.view_all')}
         </button>
       </div>
     </div>

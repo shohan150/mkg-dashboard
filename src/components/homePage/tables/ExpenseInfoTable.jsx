@@ -1,4 +1,8 @@
+import { useTranslation } from "react-i18next";
+
 export default function ExpenseInfoTable() {
+  const { t } = useTranslation();
+
   const expenses = [
     {
       type: "Salary",
@@ -8,7 +12,7 @@ export default function ExpenseInfoTable() {
     {
       type: "Utility",
       amount: 12340,
-      description: "Electrcity bill paid.",
+      description: "Electricity bill paid.",
     },
     {
       type: "Salary",
@@ -41,17 +45,18 @@ export default function ExpenseInfoTable() {
       description: "Monthly salary paid to Haidar.",
     },
   ];
+  
   return (
     <div className="mt-4">
       <h5 className="text-textGray text-end text-xs mb-2">
-        Total Expense: <span className="text-red">2,50,000</span>
+        {t("module.dashboard.total_expense")}: <span className="text-red">2,50,000</span>
       </h5>
       <table className="w-full text-center">
         <thead>
-          <tr className="bg-bgGreen text-textGray font-bold ">
-            <td className="w-[25%] py-2">Type</td>
-            <td className="w-[25%] py-2">Amount</td>
-            <td className="w-[50%] py-2">description</td>
+          <tr className="bg-bgGreen text-textGray font-bold">
+            <td className="w-[25%] py-2">{t("module.dashboard.type")}</td>
+            <td className="w-[25%] py-2">{t("module.dashboard.amount")}</td>
+            <td className="w-[50%] py-2">{t("module.dashboard.description")}</td>
           </tr>
         </thead>
       </table>

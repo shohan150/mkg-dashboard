@@ -1,11 +1,15 @@
+import { useTranslation } from "react-i18next";
+
 export default function AcademicSetupForm() {
+  const { t } = useTranslation();
+
   return (
     <div className="bg-white rounded-md px-4 py-2 my-2 sm:my-4">
       <form className="md:flex gap-7 items-center justify-between">
         {/* select what type of data to entry */}
         {/* select field */}
         <div className="flex items-center gap-2 md:w-5/12 my-2">
-          <label className="w-28 md:max-lg:w-32">Select Type</label>
+          <label className="w-28 md:max-lg:w-32">{t('module.settings.select_type')}</label>
           <select
             id=""
             name=""
@@ -21,31 +25,8 @@ export default function AcademicSetupForm() {
           </select>
         </div>
 
-        {/* select field with floating label*/}
-        {/* <div className="relative md:w-5/12 my-2">
-          <select
-            name="type name"
-            className="peer bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none placeholder-transparent"
-          >
-            <option value="Class">Class</option>
-            <option value="Subject">Subject</option>
-            <option value="Section">Section</option>
-            <option value="Shift">Shift</option>
-            <option value="Period">Period</option>
-            <option value="Session">Session</option>
-          </select>
-          <label
-            htmlFor="type name"
-            className="absolute left-2 -top-3 text-sm transition-all duration-200 bg-white px-1 peer-focus:-top-3 peer-focus:bg-white peer-focus:text-sm
-            peer-placeholder-shown:text-base peer-placeholder-shown:top-[10px] peer-placeholder-shown:bg-transparent"
-          >
-            Type Name
-          </label>
-        </div> */}
-
-
         <div className="flex items-center gap-2 md:w-5/12 my-2">
-          <label className="w-28 md:max-lg:w-32">Type Name</label>
+          <label className="w-28 md:max-lg:w-32">{t('module.settings.type_name')}</label>
           <input
             type="text"
             placeholder="Enter Item Name"
@@ -53,30 +34,13 @@ export default function AcademicSetupForm() {
           />
         </div>
 
-        {/* input field with floating label*/}
-        {/* <div className="relative md:w-5/12 my-4">
-          <input
-            type="text"
-            name="type name"
-            className="peer bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none placeholder-transparent"
-            placeholder="Type Name"
-          />
-          <label
-            htmlFor="type name"
-            className="absolute left-2 -top-3 text-sm transition-all duration-200 bg-white px-1 peer-focus:-top-3 peer-focus:bg-white peer-focus:text-sm
-            peer-placeholder-shown:text-base peer-placeholder-shown:top-[10px] peer-placeholder-shown:bg-transparent"
-          >
-            Type Name
-          </label>
-        </div> */}
-
         {/* create button */}
         <div className="flex items-center gap-2 md:w-2/12 justify-end my-4">
           <button
             type="submit"
-            className="rounded w-full p-3 bg-primary hover:bg-buttonHover text-white shadow-md  hover:-translate-y-[2px] duration-200"
+            className="rounded w-full p-3 bg-primary hover:bg-buttonHover text-white shadow-md hover:-translate-y-[2px] duration-200"
           >
-            Create
+            {t('module.settings.create')}
           </button>
         </div>
       </form>

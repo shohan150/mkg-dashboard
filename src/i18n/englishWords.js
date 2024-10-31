@@ -1,12 +1,14 @@
-import dashboard from "./modules/dashboard";
+import { dashboardEn } from "./modules/dashboard";
 import generalEn from "./modules/generalEn";
 import { insInfoEn } from "./modules/instituteInfo";
+import { settingsEn } from "./modules/settings";
 
 const englishWords = {
   "general": generalEn,
   "module": {
     "instituteInfo" : insInfoEn,
-    "dashboard": dashboard
+    "dashboard": dashboardEn,
+    "settings": settingsEn,
   },
   "sidebarSingle": {
     "profile": "Profiles",

@@ -1,12 +1,14 @@
-import dashboard from "./modules/dashboard";
+import { dashboardBn } from "./modules/dashboard";
 import generalBn from "./modules/generalBn";
 import { insInfoBn } from "./modules/instituteInfo";
+import { settingsBn } from "./modules/settings";
 
 const banglaWords = {
   "general": generalBn,
   "module": {
     "instituteInfo" : insInfoBn,
-    "dashboard": dashboard
+    "dashboard": dashboardBn,
+    "settings": settingsBn,
   },
   "sidebarSingle": {
     "dashboard": "ড্যাশবোর্ড",

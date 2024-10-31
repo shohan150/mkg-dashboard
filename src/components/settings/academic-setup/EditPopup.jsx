@@ -1,13 +1,16 @@
+import { useTranslation } from "react-i18next";
 import Modal from "../../common/Modal";
 
 export default function EditPopup({ editContent, setEditContent, isEdit, onClose }) {
 
+  const {t} = useTranslation();
+
   return (
     <Modal isOpen={isEdit} onClose={onClose} width="w-2/3 md:w-1/2">
       {/* modal content */}
-      <h2 className="text-2xl">Edit {editContent.title}</h2>
+      <h2 className="text-2xl"> {t('module.settings.edit')} {editContent.title}</h2>
       <div className="my-8 space-y-2">
-        <h5 className="text-center text-lg">{editContent.title} Name</h5>
+        <h5 className="text-center text-lg">{editContent.title}</h5>
         <input
           type="text"
           value={editContent.row.info}

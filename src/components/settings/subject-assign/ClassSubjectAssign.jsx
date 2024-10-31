@@ -1,11 +1,14 @@
+import { useTranslation } from "react-i18next";
 import academicSetupList from "../../../data/academicSetupList";
 
 export default function ClassSubjectAssign() {
+  const { t } = useTranslation();
+
   return (
     <div className="bg-white px-4 py-6 rounded mt-4">
       {/* select a particular class */}
       <div className="flex items-center">
-        <label className="w-24 sm:w-28 md:w-32">Class Name: </label>
+        <label className="w-24 sm:w-28 md:w-32">{t("module.settings.class_name")}: </label>
         <select
           id=""
           name=""
@@ -37,7 +40,7 @@ export default function ClassSubjectAssign() {
 
       {/* save button */}
       <button className="bg-primary hover:bg-buttonHover px-6 py-2 rounded shadow text-white hover:-translate-y-[2px] duration-200">
-        Save
+        {t("module.settings.save")}
       </button>
     </div>
   );

@@ -1,4 +1,5 @@
-import { classConfig } from "../components/settings/class-config/ClassConfigTable.jsx";
+import { classConfig } from "../data/classConfig";
+
 
 export default async function getSection({params}) {
    

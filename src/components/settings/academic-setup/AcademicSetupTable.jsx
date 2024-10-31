@@ -1,16 +1,18 @@
 import SectionHeader from "../../common/SectionHeader";
+import { useTranslation } from "react-i18next";
 
 export default function AcademicSetupTable({ title, content, handleEdit, handleDelete }) {
+  const { t } = useTranslation();
 
   return (
-    <SectionHeader title={`${title} List`} headerStyle="text-center">
+    <SectionHeader title={`${title}`} headerStyle="text-center">
       {/* section content */}
       <table className="w-full text-textGray text-lg leading-10 mt-2">
         <thead className="border-b-2">
           <tr>
-            <th className="w-2/12">ID</th>
-            <th className="w-6/12">{title} Name</th>
-            <th className="w-4/12">Actions</th>
+            <th className="w-2/12">{t('module.settings.id')}</th>
+            <th className="w-6/12">{`${t('module.settings.name')}`}</th>
+            <th className="w-4/12">{t('module.settings.actions')}</th>
           </tr>
         </thead>
         <tbody className="divide-y-2">
@@ -23,13 +25,13 @@ export default function AcademicSetupTable({ title, content, handleEdit, handleD
                   className="bg-blue px-3 py-1 rounded shadow text-white hover:-translate-y-[2px] duration-200 text-sm m-1"
                   onClick={() => handleEdit(row, title)}
                 >
-                  Edit
+                  {t('module.settings.edit')}
                 </button>
                 <button
                   className="bg-red px-3 py-1 rounded shadow text-white hover:-translate-y-[2px] duration-200 text-sm m-1"
-                  onClick={()=>handleDelete(title)}
+                  onClick={() => handleDelete(title)}
                 >
-                  Delete
+                  {t('module.settings.delete')}
                 </button>
               </td>
             </tr>

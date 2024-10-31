@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next";
+
 export default function Fund({ style }) {
+  const { t } = useTranslation();
   return (
     <div className={`space-y-1 ${style}`}>
-      <h5 className="font-bold ">Fund</h5>
+      <h5 className="font-bold ">{t("module.dashboard.fund")}</h5>
       <select
         id="month"
         name="month"
