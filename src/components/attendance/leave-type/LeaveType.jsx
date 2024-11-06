@@ -4,6 +4,7 @@ import AddLTypeModal from "./AddLTypeModal";
 import AddLeaveType from "./AddLeaveType";
 import LTypeModal from "./LTypeModal";
 import LTypeTable from "./LTypeTable";
+import { useTranslation } from "react-i18next";
 
 export default function LeaveType() {
    const [isAdd, setIsAdd] = useState(false);
@@ -21,6 +22,8 @@ export default function LeaveType() {
      setIsDelete(true);
      setToDelete(title);
    }
+   
+  const {t} = useTranslation();
 
     return (
       <div className="bg-white rounded-md p-4 md:p-6  my-4">

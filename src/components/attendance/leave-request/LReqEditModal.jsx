@@ -1,14 +1,16 @@
+import { useTranslation } from "react-i18next";
 import Modal from "../../common/Modal";
 
 export default function LReqEditModal({ editContent, setEditContent, isEdit, onClose }) {
 
+   const {t} = useTranslation();
     return (
    <Modal isOpen={isEdit} onClose={onClose} width="w-2/3 md:w-1/2">
       {/* modal content */}
-      <h2 className="text-2xl">Edit Leave Type</h2>
+      <h2 className="text-2xl">{t('module.communication.leave_type')}{t('module.communication.edit')}</h2>
       <div className="my-8 space-y-2">
          <div className="space-y-2">
-            <label className="">Employee Name</label>
+            <label className="">{t('module.communication.employee_name')}</label>
             <input
                type="text"
                value={editContent.name}
@@ -18,7 +20,7 @@ export default function LReqEditModal({ editContent, setEditContent, isEdit, onC
          </div>
 
          <div className="space-y-2">
-            <label className="">Leave Type</label>
+            <label className="">{t('module.communication.leave_type')}</label>
             <select
             id=""
             name=""
@@ -34,7 +36,7 @@ export default function LReqEditModal({ editContent, setEditContent, isEdit, onC
          </div>
 
          <div className="space-y-2">
-            <label className="">Start Time</label>
+            <label className="">{t('module.communication.start_time')}</label>
             <input
                type="date"
                value={editContent.start}
@@ -44,7 +46,7 @@ export default function LReqEditModal({ editContent, setEditContent, isEdit, onC
          </div>
 
          <div className="space-y-2">
-            <label className="">End Time</label>
+            <label className="">{t('module.communication.end_time')}</label>
             <input
                type="date"
                value={editContent.end}

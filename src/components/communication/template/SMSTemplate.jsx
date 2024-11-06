@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import DeleteModal from "../../common/DeleleModal";
+import { useTranslation } from "react-i18next";
 
 export default function SMSTemplate() {
   const [isDelete, setIsDelete] = useState(false);
@@ -22,9 +23,12 @@ export default function SMSTemplate() {
     }
   ]
 
+  
+  const {t} = useTranslation();
     return (
       <div className="bg-white p-4 md:p-6 rounded-md my-4">
-        <h3 className="text-lg md:text-xl font-medium">SMS Template List</h3>
+        <h3 className="text-lg md:text-xl font-medium">
+        {t('module.communication.submit')}</h3>
 
         <div className="flex justify-end mt-2 mb-4">
           <Link to="/communication/add-sms-template">
@@ -32,7 +36,8 @@ export default function SMSTemplate() {
             type="submit"
             className="rounded w-52 p-2 bg-primary hover:bg-buttonHover text-white shadow-md  hover:-translate-y-[2px] duration-200"
             >
-            Add New Template
+            
+            {t('module.communication.add_new_template')}
             </button> 
           </Link>
         </div>
@@ -40,10 +45,14 @@ export default function SMSTemplate() {
          <table className="w-full text-textGray leading-10 mb-4">
           <thead className="bg-bgBlue">
             <tr>
-              <th className="w-2/12">ID</th>
-              <th className="w-3/12">Title</th>
-              <th className="w-5/12">Template</th>
-              <th className="w-2/12">Actions</th>
+              <th className="w-2/12">
+              {t('module.communication.id')}</th>
+              <th className="w-3/12">
+              {t('module.communication.title')}</th>
+              <th className="w-5/12">
+              {t('module.communication.template')}</th>
+              <th className="w-2/12">
+              {t('module.communication.actions')}</th>
             </tr>
           </thead>
           <tbody>
@@ -57,7 +66,8 @@ export default function SMSTemplate() {
                     className="bg-red px-3 py-1 rounded shadow text-white hover:-translate-y-[2px] duration-200 text-sm m-1"
                     onClick={handleDelete}
                   >
-                    Delete
+                    
+            {t('module.communication.delete')}
                   </button>
                 </td>
               </tr>

@@ -1,4 +1,8 @@
+import { useTranslation } from "react-i18next";
+
 const AssignedFees = () => {
+  const { t } = useTranslation();
+
   const data = [
     {
       fee_title: "January - Coaching Fee",
@@ -13,11 +17,12 @@ const AssignedFees = () => {
       end_date: "2024-09-19",
     },
   ];
+
   return (
     <div className="bg-white shadow rounded-md">
       {/* component title */}
       <h3 className="bg-primary text-white text-lg text-center p-4 leading-[20px] rounded-t-md shadow-md">
-        Already Assigned Fees
+        {t("feeModule.assigned_fees_title")}
       </h3>
 
       <div className="p-5">
@@ -25,10 +30,10 @@ const AssignedFees = () => {
           <table className="w-full text-textGray text-sm leading-6 sm:leading-8">
             <thead className="border-b-2 bg-bgBlue">
               <tr>
-                <th className="w-4/12 whitespace-nowrap px-2">Fees Title</th>
-                <th className="w-2/12 whitespace-nowrap px-2">Class</th>
-                <th className="w-3/12 whitespace-nowrap px-2">Start Date</th>
-                <th className="w-3/12 whitespace-nowrap px-2">End Date</th>
+                <th className="w-4/12 whitespace-nowrap px-2">{t("feeModule.fees_title")}</th>
+                <th className="w-2/12 whitespace-nowrap px-2">{t("feeModule.class")}</th>
+                <th className="w-3/12 whitespace-nowrap px-2">{t("feeModule.start_date")}</th>
+                <th className="w-3/12 whitespace-nowrap px-2">{t("feeModule.end_date")}</th>
               </tr>
             </thead>
             <tbody className="divide-y-2 font-medium">

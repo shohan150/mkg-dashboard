@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import TableDataFeatures from "../../common/TableDataFeatures";
 
 
@@ -59,10 +60,10 @@ export default function TabHeading() {
         documentValues : [ "id", "name", "age", "grade", "email", "address" ],
         fileName : "kaboom"
      }
-
+const {t} = useTranslation();
     return (
    <div className="flex items-center justify-between mt-4 mb-6">
-      <h3 className="text-2xl font-medium">Tabulation Sheet</h3>
+      <h3 className="text-2xl font-medium">{t('module.result.tabulation_sheet')}</h3>
 
       <TableDataFeatures data={students} pdfProps={pdfProps} excelProps={excelProps} printProps={printProps}/>
 

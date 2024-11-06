@@ -1,10 +1,14 @@
+import { useTranslation } from "react-i18next";
+
 export default function AdditionalField({notificationType}) {
+   const {t} = useTranslation();
     return (
    <>
    {
       notificationType === "Exam Result" &&
       <div className="space-y-2">
-         <label className="">Status</label>
+         <label className="">
+         {t('module.communication.status')}</label>
          <select
          id=""
          name=""
@@ -21,7 +25,8 @@ export default function AdditionalField({notificationType}) {
    {
       notificationType === "Pay Slip Info" &&
       <div className="space-y-2">
-      <label className="">Select Fee Type</label>
+      <label className="">
+      {t('module.communication.select_fee_type')}</label>
       <select
       id=""
       name=""

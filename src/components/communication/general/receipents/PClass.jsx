@@ -1,7 +1,11 @@
+import { useTranslation } from "react-i18next";
+
 export default function PClass() {
+  const {t} = useTranslation();
     return (
       <div className="space-y-2">
-         <label className="w-28 md:max-lg:w-32">Select Class</label>
+         <label className="w-28 md:max-lg:w-32">
+         {t('module.communication.select_class')}</label>
          <input
          type="text"
          placeholder="Enter Class"

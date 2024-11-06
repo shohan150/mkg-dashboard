@@ -1,12 +1,15 @@
+import { useTranslation } from "react-i18next";
 import Modal from "../../common/Modal";
 
 export default function AddLTypeModal({ isAdd, onClose }) {
-    return (
+  
+  const {t} = useTranslation();  
+  return (
     <Modal isOpen={isAdd} onClose={onClose} width="w-2/3 md:w-1/2">
       {/* modal content */}
-      <h2 className="text-2xl">Add Leave Type</h2>
+      <h2 className="text-2xl">{t('module.communication.add_leave_type')}</h2>
       <div className="my-8 space-y-2">
-        <h5 className="">New Leave Name :</h5>
+        <h5 className="">{t('module.communication.new_leave_name')} :</h5>
         <input
           type="text"
           placeholder="Please type a name"

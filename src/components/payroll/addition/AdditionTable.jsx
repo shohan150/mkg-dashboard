@@ -1,4 +1,8 @@
+import { useTranslation } from "react-i18next";
+
 export default function AdditionTable({ handleEdit, handleDelete }) {
+  const { t } = useTranslation();
+
   const data = [
     {
       name: "Provident Fund",
@@ -13,9 +17,9 @@ export default function AdditionTable({ handleEdit, handleDelete }) {
       <table className="w-full text-textGray text-sm leading-6 sm:leading-8">
         <thead className="border-b-2 bg-bgBlue">
           <tr>
-            <th className="w-2/12">Serial</th>
-            <th className="w-5/12">Addition Name</th>
-            <th className="w-5/12">Actions</th>
+            <th className="w-2/12">{t("module.payroll.serial")}</th>
+            <th className="w-5/12">{t("module.payroll.addition_name")}</th>
+            <th className="w-5/12">{t("module.payroll.actions")}</th>
           </tr>
         </thead>
         <tbody className="divide-y-2 font-medium">
@@ -28,13 +32,13 @@ export default function AdditionTable({ handleEdit, handleDelete }) {
                   className="bg-blue px-3 py-1 rounded shadow text-white hover:-translate-y-[2px] duration-200 text-sm m-1"
                   onClick={() => handleEdit(item)}
                 >
-                  Edit
+                  {t("module.payroll.edit")}
                 </button>
                 <button
                   className="bg-red px-3 py-1 rounded shadow text-white hover:-translate-y-[2px] duration-200 text-sm m-1"
                   onClick={() => handleDelete(item.name)}
                 >
-                  Delete
+                  {t("module.payroll.delete")}
                 </button>
               </td>
             </tr>

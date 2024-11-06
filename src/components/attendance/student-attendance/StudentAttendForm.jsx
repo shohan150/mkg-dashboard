@@ -1,10 +1,14 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function StudentAttendForm({setIsSubmit}) {
    const [chosenClass, setChosenClass] = useState("");
+
+   
+  const {t} = useTranslation();
     return (
    <div className="space-y-2 my-4">
-      <label className="">Select Class</label>
+      <label className="">{t('module.communication.select_class')}</label>
       <div className="flex gap-4">
          <select
          id=""
@@ -24,7 +28,7 @@ export default function StudentAttendForm({setIsSubmit}) {
             className="rounded w-36 p-2 bg-primary hover:bg-buttonHover text-white shadow-md  hover:-translate-y-[2px] duration-200"
             onClick={()=> chosenClass && setIsSubmit(true)}
             >
-            Submit
+            {t('module.communication.submit')}
          </button>
       </div>
    </div>

@@ -1,200 +1,320 @@
+import { communicationEn } from "./modules/communication";
 import { dashboardEn } from "./modules/dashboard";
+import { examEn } from "./modules/exam";
+import { expenseEn } from "./modules/expense";
 import generalEn from "./modules/generalEn";
+import { incomeEn } from "./modules/income";
 import { insInfoEn } from "./modules/instituteInfo";
+import { payrollEn } from "./modules/payroll";
+import { reportEn } from "./modules/report";
+import { resultEn } from "./modules/result";
+import { routineEn } from "./modules/routine";
+import { serviceEn } from "./modules/service";
 import { settingsEn } from "./modules/settings";
+import { teacherEn } from "./modules/teacher";
 
 const englishWords = {
-  "general": generalEn,
-  "module": {
-    "instituteInfo" : insInfoEn,
-    "dashboard": dashboardEn,
-    "settings": settingsEn,
+  general: generalEn,
+  module: {
+    instituteInfo: insInfoEn,
+    dashboard: dashboardEn,
+    settings: settingsEn,
+    communication: communicationEn,
+    teacher: teacherEn,
+    exam: examEn,
+    result: resultEn,
+    routine: routineEn,
+    payroll: payrollEn,
+    service: serviceEn,
+    income: incomeEn,
+    expense: expenseEn,
+    report: reportEn
   },
-  "sidebarSingle": {
-    "profile": "Profiles",
-    "dashboard": "Dashboard",
-    "insProfile": "Institute Profile",
-    "appsAndPages": "Apps & Pages",
-    "reports": "Reports",
+  feeModule: {
+    search_here: "Search Here...",
+    load: "Load",
+    name: "Name",
+    serial: "Serial",
+    fee_name: "Fee Name",
+    amount: "Amount",
+    discount: "Discount",
+    final_amount: "Final Amount",
+    status: "Status",
+    action: "Action",
+    delete: "Delete",
+    select_invoice: "Select Invoice",
+    select_invoice_option: "Select Invoice",
+    bulk: "Bulk",
+    individual: "Individual",
+    fee_month: "Fee Month",
+    select_fee_month: "Select Fee Month",
+    select_student: "Select Student",
+    select_admission: "Select Admission",
+    description: "Description",
+    submit: "Submit",
+    create_fee: "Create Fee",
+    list_fee: "List Fee",
+    add_fee_amount: "Add Fee Amount",
+    class: "Class",
+    fee_type: "Fee Type",
+    admission_year: "Admission Year",
+    select_fee_type: "Select Fee Type",
+    one: "One",
+    two: "Two",
+    annually: "Annually",
+    bi_annually: "Bi-Annually",
+    tri_annually: "Tri-Annually",
+    quarterly: "Quarterly",
+    two_monthly: "Two-Monthly",
+    monthly: "Monthly",
+    edit_fee_amount: "Edit Fee Amount",
+    actions: "Actions",
+    edit: "Edit",
+    assigned_fees_title: "Already Assigned Fees",
+    fees_title: "Fees Title",
+    start_date: "Start Date",
+    end_date: "End Date",
+    select_fee: "Select Fee",
+    select_month: "Select Month",
+    fee_collection_start_date: "Fee Collection Start Date",
+    fee_collection_end_date: "Fee Collection End Date",
+
+    select_one: "Select One",
+    coaching_fee: "Coaching Fee",
+    transport_fee: "Transport Fee",
+    hostel_fee: "Hostel Fee",
+    monthly_fee: "Monthly Fee",
+    test_exam: "Test Exam",
+    semester_exam: "Semester Exam",
+    admission_fee: "Admission Fee",
+    stationary_fee: "Stationary Fee",
+    select_class: "Select Class",
+    three: "Three",
+    add_fee_type: "Add Fee Type",
+    late_fee: "Late Fee (%)",
+    late_fee_placeholder: "Late Fee (%)",
+    active: "Active",
+    inactive: "InActive",
+    edit_fee_type: "Edit Fee Type",
+    type_name: "Type Name",
+    schedule_type: "Schedule Type",
+    confirm_unpaid: "Are you sure to unpaid ",
+    confirm: "Confirm",
+    cancel: "Cancel",
+    mark_as_unpaid: "Mark as Unpaid",
   },
-  "settings": {
-    "title": "Settings",
-    "academicSetup" : "Academic Setup",
-    "classConfig": "Class Config",
-    "classSubjectAssign": "Class Subject Assign",
-    "teacherSubjectAssign": "Teacher Subject Assign",
-    "markConfig": "Mark Config",
-    "markDivide": "Mark Divide",
-    "chooseableSubject": "Chooseable Subject",
+  study_material: {
+    add_new_item: "Add New Item",
+    title: "Add Downloadable Document",
+    title_label: "Title",
+    class_label: "Class",
+    document_type_label: "Document Type",
+    upload_file_label: "Upload File",
+    serial: "Serial",
+    class: "Class",
+    type: "Type",
+    file: "File",
+    actions: "Actions",
+    edit: "Edit",
+    delete: "Delete",
   },
-  "communication" :{
-    "title" : "Communication",
-    "generalSms": "General SMS",
-    "notifications": "Notifications",
-    "smsTemplate": "SMS Template",
+  events: {
+    add_new_event: "Add New Event",
+    add_event: "Add Event",
+    title: "Title",
+    start: "Start",
+    end: "End",
+    edit_event: "Edit Event",
+    serial: "Serial",
+    edit: "Edit",
+    delete: "Delete",
+    actions: "Actions",
   },
-  "attendance" : {
-    "title": "Attendance",
-    "studentAttendance": "Student Attendance",
-    "teacherAttendance": "Teacher Attendance",
-    "stuffAttendance": "Stuff Attendance",
-    "leaveType": "Leave Type",
-    "leaveRequest": "Leave Request",
-    "holiday": "Holiday",
+  sidebarSingle: {
+    profile: "Profiles",
+    dashboard: "Dashboard",
+    insProfile: "Institute Profile",
+    appsAndPages: "Apps & Pages",
+    reports: "Reports",
   },
-  "studentInfo" :{
-    "title": "Student Info",
-    "addStudent": "Add Student",
-    "studentList": "Student List",
-    "studentTestimonial": "Student Testimonial",
-    "studentWaiver": "Student Waiver",
-    "studentIdCard": "Student ID Card",
-    "rfidUpdate": "RFID Update",
-    "studentMigration": "Student Migration",
+  settings: {
+    title: "Settings",
+    academicSetup: "Academic Setup",
+    classConfig: "Class Config",
+    classSubjectAssign: "Class Subject Assign",
+    teacherSubjectAssign: "Teacher Subject Assign",
+    markConfig: "Mark Config",
+    markDivide: "Mark Divide",
+    chooseableSubject: "Chooseable Subject",
   },
-  "stpInfo": {
-    "addParent": "Add Parent",
-    "parentList": "Parent List",
-    "addTeacher": "Add Teacher",
-    "teacherList": "Teacher List",
-    "teacherIdCard": "Teacher ID Card",
-    "addStaff": "Add Staff",
-    "staffList": "Staff List",
-    "staffIdCard": "Staff ID Card",
+  communication: {
+    title: "Communication",
+    generalSms: "General SMS",
+    notifications: "Notifications",
+    smsTemplate: "SMS Template",
   },
-  "exam": {
-    "title": "Exam",
-    "examName": "Exam Name",
-    "examSyllabus": "Exam Syllabus",
-    "examSchedule": "Exam Schedule",
-    "scheduleDownload": "Schedule Download",
-    "admitCard": "Admit Card",
-    "seatPlan": "Seat Plan",
-    "gradeRule": "Grade Rule",
-    "markBlankSheet": "Mark Blank Sheet",
-    "examSignatureSheet": "Exam Signature Sheet",
-    "examFeeSheet": "Exam Fee Sheet"
+  attendance: {
+    title: "Attendance",
+    studentAttendance: "Student Attendance",
+    teacherAttendance: "Teacher Attendance",
+    stuffAttendance: "Stuff Attendance",
+    leaveType: "Leave Type",
+    leaveRequest: "Leave Request",
+    holiday: "Holiday",
   },
-  "result": {
-    "title": "Result",
-    "markInput": "Mark Input",
-    "tabulationSheet": "Tabulation Sheet",
-    "progressReport": "Progress Report",
-    "meritList": "Merit List"
+  studentInfo: {
+    title: "Student Info",
+    addStudent: "Add Student",
+    studentList: "Student List",
+    studentTestimonial: "Student Testimonial",
+    studentWaiver: "Student Waiver",
+    studentIdCard: "Student ID Card",
+    rfidUpdate: "RFID Update",
+    studentMigration: "Student Migration",
   },
-  "routine": {
-    "title": "Routine",
-    "routines": "Routines",
-    "classRoutine": "Class Routine",
-    "teacherSchedule": "Teacher Schedule"
+  stpInfo: {
+    addParent: "Add Parent",
+    parentList: "Parent List",
+    addTeacher: "Add Teacher",
+    teacherList: "Teacher List",
+    teacherIdCard: "Teacher ID Card",
+    addStaff: "Add Staff",
+    staffList: "Staff List",
+    staffIdCard: "Staff ID Card",
   },
-  "studyMaterial": {
-    "title": "Study Material"
+  exam: {
+    title: "Exam",
+    examName: "Exam Name",
+    examSyllabus: "Exam Syllabus",
+    examSchedule: "Exam Schedule",
+    scheduleDownload: "Schedule Download",
+    admitCard: "Admit Card",
+    seatPlan: "Seat Plan",
+    gradeRule: "Grade Rule",
+    markBlankSheet: "Mark Blank Sheet",
+    examSignatureSheet: "Exam Signature Sheet",
+    examFeeSheet: "Exam Fee Sheet",
   },
-  "event": {
-    "title": "Event",
-    "eventList": "Event List"
+  result: {
+    title: "Result",
+    markInput: "Mark Input",
+    tabulationSheet: "Tabulation Sheet",
+    progressReport: "Progress Report",
+    meritList: "Merit List",
   },
-  "fees": {
-    "title": "Fees",
-    "feesType": "Fees Type",
-    "feesAmount": "Fees Amount",
-    "feesMaster": "Fees Master",
-    "feesAllocation": "Fees Allocation",
-    "returnFee": "Return Fee",
-    "deleteFee": "Delete Fee"
+  routine: {
+    title: "Routine",
+    routines: "Routines",
+    classRoutine: "Class Routine",
+    teacherSchedule: "Teacher Schedule",
   },
-  "payroll": {
-    "title": "Payroll",
-    "addition": "Addition",
-    "deduction": "Deduction",
-    "salaryAssign": "Salary Assign",
+  studyMaterial: {
+    title: "Study Material",
   },
-  "services": {
-    "title": "Services",
-    "hostel": {
-      "title": "Hostel",
-      "hostelPackage": "Hostel Package",
-      "hostelAllocation": "Hostel Allocation"
+  event: {
+    title: "Event",
+    eventList: "Event List",
+  },
+  fees: {
+    title: "Fees",
+    feesType: "Fees Type",
+    feesAmount: "Fees Amount",
+    feesMaster: "Fees Master",
+    feesAllocation: "Fees Allocation",
+    returnFee: "Return Fee",
+    deleteFee: "Delete Fee",
+  },
+  payroll: {
+    title: "Payroll",
+    addition: "Addition",
+    deduction: "Deduction",
+    salaryAssign: "Salary Assign",
+  },
+  services: {
+    title: "Services",
+    hostel: {
+      title: "Hostel",
+      hostelPackage: "Hostel Package",
+      hostelAllocation: "Hostel Allocation",
     },
-    "coaching": {
-      "title": "Coaching",
-      "coachingPackage": "Coaching Package",
-      "coachingAllocation": "Coaching Allocation"
+    coaching: {
+      title: "Coaching",
+      coachingPackage: "Coaching Package",
+      coachingAllocation: "Coaching Allocation",
     },
-    "transport": {
-      "title": "Transport",
-      "transportPackage": "Transport Package",
-      "transportAllocation": "Transport Allocation"
-    }
-  },
-  "income": {
-    "title": "Income",
-    "income": "Income",
-    "entryDateSearch": "Entry Date Search",
-    "incomeHead": "Income Head"
-  },
-  "expense": {
-    "title": "Expense",
-    "expense": "Expense",
-    "entryDateSearch": "Entry Date Search",
-    "expenseHead": "Expense Head"
-  },
-  "withdraw": {
-    "title": "Withdraw",
-    "withdraw": "Withdraw"
-  },
-  "accountingReport": {
-    "title": "Accounting Report",
-    "accountStatement": "Account Statement",
-    "dateWiseIncome": "Date Wise Income",
-    "headWiseIncome": "Head Wise Income",
-    "dateWiseExpense": "Date Wise Expense",
-    "headWiseExpense": "Head Wise Expense",
-    "dateWiseWithdraw": "Date Wise Withdraw"
-  },
-  "feesReport": {
-    "title": "Fees Report",
-    "dateWisePaidFee": "Date Wise Paid Fee",
-    "studentWisePaidFee": "Student Wise Paid Fee",
-    "dueFee": "Due Fee"
-  },
-  "attendanceReport": {
-    "title": "Attendance Report",
-    "studentReport": {
-      "title": "Student Report",
-      "monthWiseReport": "Month Wise Report",
-      "dayViewReport": "Day View Report",
-      "timeWiseReport": "Time Wise Report"
+    transport: {
+      title: "Transport",
+      transportPackage: "Transport Package",
+      transportAllocation: "Transport Allocation",
     },
-    "teacherReport": {
-      "title": "Teacher Report",
-      "monthWiseReport": "Month Wise Report",
-      "timeWiseReport": "Time Wise Report"
+  },
+  income: {
+    title: "Income",
+    income: "Income",
+    entryDateSearch: "Entry Date Search",
+    incomeHead: "Income Head",
+  },
+  expense: {
+    title: "Expense",
+    expense: "Expense",
+    entryDateSearch: "Entry Date Search",
+    expenseHead: "Expense Head",
+  },
+  withdraw: {
+    title: "Withdraw",
+    withdraw: "Withdraw",
+  },
+  accountingReport: {
+    title: "Accounting Report",
+    accountStatement: "Account Statement",
+    dateWiseIncome: "Date Wise Income",
+    headWiseIncome: "Head Wise Income",
+    dateWiseExpense: "Date Wise Expense",
+    headWiseExpense: "Head Wise Expense",
+    dateWiseWithdraw: "Date Wise Withdraw",
+  },
+  feesReport: {
+    title: "Fees Report",
+    dateWisePaidFee: "Date Wise Paid Fee",
+    studentWisePaidFee: "Student Wise Paid Fee",
+    dueFee: "Due Fee",
+  },
+  attendanceReport: {
+    title: "Attendance Report",
+    studentReport: {
+      title: "Student Report",
+      monthWiseReport: "Month Wise Report",
+      dayViewReport: "Day View Report",
+      timeWiseReport: "Time Wise Report",
     },
-    "staffReport": {
-      "title": "Staff Report",
-      "monthWiseReport": "Month Wise Report",
-      "timeWiseReport": "Time Wise Report"
-    }
+    teacherReport: {
+      title: "Teacher Report",
+      monthWiseReport: "Month Wise Report",
+      timeWiseReport: "Time Wise Report",
+    },
+    staffReport: {
+      title: "Staff Report",
+      monthWiseReport: "Month Wise Report",
+      timeWiseReport: "Time Wise Report",
+    },
   },
-  "smsReport": {
-    "title": "SMS Report",
-    "purchaseHistory": "Purchase History",
-    "smsSendSummary": "SMS Send Summary",
-    "smsDelivery": "SMS Delivery"
+  smsReport: {
+    title: "SMS Report",
+    purchaseHistory: "Purchase History",
+    smsSendSummary: "SMS Send Summary",
+    smsDelivery: "SMS Delivery",
   },
-  "siteSettings": {
-    "title": "Site Settings",
-    "banner": "Banner",
-    "notice": "Notice",
-    "schoolService": "School Service",
-    "pageContent": "Page Content",
-    "pictureGallery": "Picture Gallery",
-    "videoGallery": "Video Gallery",
-    "testimonial": "Testimonial",
-    "contact": "Contact"
-  }
- }
+  siteSettings: {
+    title: "Site Settings",
+    banner: "Banner",
+    notice: "Notice",
+    schoolService: "School Service",
+    pageContent: "Page Content",
+    pictureGallery: "Picture Gallery",
+    videoGallery: "Video Gallery",
+    testimonial: "Testimonial",
+    contact: "Contact",
+  },
+};
 
 export default englishWords;

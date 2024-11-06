@@ -1,4 +1,8 @@
+import { useTranslation } from "react-i18next";
+
 export default function FeeAmountTable({ handleEdit, handleDelete }) {
+  const { t } = useTranslation();
+
   const data = [
     {
       class: "Six",
@@ -17,11 +21,11 @@ export default function FeeAmountTable({ handleEdit, handleDelete }) {
       <table className="w-full text-textGray text-sm leading-6 sm:leading-8">
         <thead className="border-b-2 bg-bgBlue">
           <tr>
-            <th className="w-1/12">Serial</th>
-            <th className="w-3/12">Class</th>
-            <th className="w-3/12">Fee Type</th>
-            <th className="w-2/12">Amount</th>
-            <th className="w-3/12">Actions</th>
+            <th className="w-1/12">{t("feeModule.serial")}</th>
+            <th className="w-3/12">{t("feeModule.class")}</th>
+            <th className="w-3/12">{t("feeModule.fee_type")}</th>
+            <th className="w-2/12">{t("feeModule.amount")}</th>
+            <th className="w-3/12">{t("feeModule.actions")}</th>
           </tr>
         </thead>
         <tbody className="divide-y-2 font-medium">
@@ -36,13 +40,13 @@ export default function FeeAmountTable({ handleEdit, handleDelete }) {
                   className="bg-blue px-3 py-1 rounded shadow text-white hover:-translate-y-[2px] duration-200 text-sm m-1"
                   onClick={() => handleEdit(item)}
                 >
-                  Edit
+                  {t("feeModule.edit")}
                 </button>
                 <button
                   className="bg-red px-3 py-1 rounded shadow text-white hover:-translate-y-[2px] duration-200 text-sm m-1"
                   onClick={() => handleDelete(item.fee_type)}
                 >
-                  Delete
+                  {t("feeModule.delete")}
                 </button>
               </td>
             </tr>

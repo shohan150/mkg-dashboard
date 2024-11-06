@@ -1,12 +1,16 @@
 import { useState } from "react";
 import ClassOrSection from "./ClassOrSection";
+import { useTranslation } from "react-i18next";
 
 export default function SelectClassSection() {
    const [classOrSection, setClassOrSection] = useState("Select Class/Section")
-    return (
+   
+   const {t} = useTranslation(); 
+   return (
    <>
       <div className="space-y-2">
-         <label className="w-28 md:max-lg:w-32">Select Class/Section </label>
+         <label className="w-28 md:max-lg:w-32">
+         {t('module.communication.select_class_section')} </label>
          <select
          id=""
          name=""

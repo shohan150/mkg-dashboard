@@ -1,201 +1,319 @@
+import { communicationBn } from "./modules/communication";
 import { dashboardBn } from "./modules/dashboard";
+import { examBn } from "./modules/exam";
+import { expenseBn } from "./modules/expense";
 import generalBn from "./modules/generalBn";
+import { incomeBn } from "./modules/income";
 import { insInfoBn } from "./modules/instituteInfo";
+import { payrollBn } from "./modules/payroll";
+import { reportBn } from "./modules/report";
+import { resultBn } from "./modules/result";
+import { routineBn } from "./modules/routine";
+import { serviceBn } from "./modules/service";
 import { settingsBn } from "./modules/settings";
+import { teacherBn } from "./modules/teacher";
 
 const banglaWords = {
-  "general": generalBn,
-  "module": {
-    "instituteInfo" : insInfoBn,
-    "dashboard": dashboardBn,
-    "settings": settingsBn,
+  general: generalBn,
+  module: {
+    instituteInfo: insInfoBn,
+    dashboard: dashboardBn,
+    settings: settingsBn,
+    communication: communicationBn,
+    teacher: teacherBn,
+    exam: examBn,
+    result: resultBn,
+    routine: routineBn,
+    payroll: payrollBn,
+    service: serviceBn,
+    income: incomeBn,
+    expense: expenseBn,
+    report: reportBn
   },
-  "sidebarSingle": {
-    "dashboard": "ড্যাশবোর্ড",
-    "profile": "প্রোফাইল",
-    "insProfile": "প্রতিষ্ঠানের তথ্য",
-    "appsAndPages": "অ্যাপস এবং পেজ",
-    "reports": "রিপোর্ট",
+  study_material: {
+    add_new_item: "নতুন আইটেম যোগ করুন",
+    title: "ডাউনলোডযোগ্য নথি যোগ করুন",
+    title_label: "শিরোনাম",
+    class_label: "ক্লাস",
+    document_type_label: "নথির প্রকার",
+    upload_file_label: "ফাইল আপলোড করুন",
+    serial: "ক্রমিক",
+    class: "ক্লাস",
+    type: "প্রকার",
+    file: "ফাইল",
+    actions: "ক্রিয়াকলাপ",
+    edit: "সম্পাদনা করুন",
+    delete: "মুছুন",
   },
-  "settings": {
-    "title": "সেটিংস",
-    "academicSetup": "একাডেমিক সেটআপ",
-    "classConfig": "ক্লাস কনফিগারেশন",
-    "classSubjectAssign" : "ক্লাস বিষয় বরাদ্দ",
-    "teacherSubjectAssign": "শিক্ষক বিষয় বরাদ্দ",
-    "markConfig": "মার্ক কনফিগারেশন",
-    "markDivide": "মার্ক বিভাজন",
-    "chooseableSubject": "পছন্দনীয় বিষয়",
+  feeModule: {
+    search_here: "এখানে অনুসন্ধান করুন...",
+    load: "লোড করুন",
+    name: "নাম",
+    serial: "ক্রম",
+    fee_name: "ফি নাম",
+    amount: "পরিমাণ",
+    discount: "ছাড়",
+    final_amount: "চূড়ান্ত পরিমাণ",
+    status: "অবস্থা",
+    action: "কর্ম",
+    delete: "মুছুন",
+    select_invoice: "চালান নির্বাচন করুন",
+    select_invoice_option: "চালান নির্বাচন করুন",
+    bulk: "বাল্ক",
+    individual: "ব্যক্তিগত",
+    fee_month: "ফি মাস",
+    select_fee_month: "ফি মাস নির্বাচন করুন",
+    select_student: "শিক্ষার্থী নির্বাচন করুন",
+    select_admission: "ভর্তি নির্বাচন করুন",
+    description: "বিবরণ",
+    submit: "জমা দিন",
+    create_fee: "ফি তৈরি করুন",
+    list_fee: "ফি তালিকা",
+    add_fee_amount: "ফি পরিমাণ যোগ করুন",
+    class: "শ্রেণী",
+    fee_type: "ফি ধরণ",
+    admission_year: "ভর্তি বছর",
+    select_fee_type: "ফি ধরণ নির্বাচন করুন",
+    one: "এক",
+    two: "দুই",
+    annually: "বার্ষিক",
+    bi_annually: "দ্বিবার্ষিক",
+    tri_annually: "ত্রৈমাসিক",
+    quarterly: "প্রতি ত্রৈমাসিক",
+    two_monthly: "দ্বিমাসিক",
+    monthly: "মাসিক",
+    edit_fee_amount: "ফি পরিমাণ সম্পাদনা করুন",
+    actions: "কর্ম",
+    edit: "সম্পাদনা",
+    assigned_fees_title: "এখনই নির্ধারিত ফি",
+    fees_title: "ফি শিরোনাম",
+    start_date: "শুরুর তারিখ",
+    end_date: "শেষ তারিখ",
+    select_fee: "ফি নির্বাচন করুন",
+    select_month: "মাস নির্বাচন করুন",
+    fee_collection_start_date: "ফি সংগ্রহ শুরুর তারিখ",
+    fee_collection_end_date: "ফি সংগ্রহ শেষের তারিখ",
+    select_one: "একটি নির্বাচন করুন",
+    coaching_fee: "কোচিং ফি",
+    transport_fee: "পরিবহন ফি",
+    hostel_fee: "হোস্টেল ফি",
+    monthly_fee: "মাসিক ফি",
+    test_exam: "পরীক্ষা পরীক্ষা",
+    semester_exam: "সেমিস্টার পরীক্ষা",
+    admission_fee: "ভর্তি ফি",
+    stationary_fee: "স্টেশনারি ফি",
+    select_class: "ক্লাস নির্বাচন করুন",
+    three: "তিন",
+    add_fee_type: "ফি প্রকার যোগ করুন",
+    late_fee: "লেট ফি (%)",
+    late_fee_placeholder: "লেট ফি (%)",
+    active: "সক্রিয়",
+    inactive: "নিষ্ক্রিয়",
+    edit_fee_type: "ফি প্রকার সম্পাদনা করুন",
+    type_name: "প্রকারের নাম",
+    schedule_type: "সময়সূচি প্রকার",
+    confirm_unpaid: "আপনি কি নিশ্চিত যে অনাদায়ী",
+    confirm: "নিশ্চিত করুন",
+    cancel: "বাতিল",
+    mark_as_unpaid: "অনাদায়ী হিসাবে চিহ্নিত করুন",
   },
-  "communication" :{
-    "title": "যোগাযোগ",
-    "generalSms": "সাধারণ এসএমএস",
-    "notifications": "বিজ্ঞপ্তি",
-    "smsTemplate": "এসএমএস টেমপ্লেট",
+  events: {
+    add_new_event: "নতুন ইভেন্ট যোগ করুন",
+    add_event: "ইভেন্ট যোগ করুন",
+    title: "শিরোনাম",
+    start: "শুরুর সময়",
+    end: "শেষের সময়",
+    edit_event: "ইভেন্ট সম্পাদনা করুন",
+    serial: "ক্রমিক",
+    edit: "সম্পাদনা",
+    delete: "মুছুন",
+    actions: "ক্রিয়াকলাপ",
   },
-  "attendance" : {
-    "title": "উপস্থিতি",
-    "studentAttendance": "ছাত্র উপস্থিতি",
-    "teacherAttendance": "শিক্ষক উপস্থিতি",
-    "stuffAttendance": "স্টাফ উপস্থিতি",
-    "leaveType": "ছুটির ধরন",
-    "leaveRequest": "ছুটির অনুরোধ",
-    "holiday": "ছুটি",
+  sidebarSingle: {
+    dashboard: "ড্যাশবোর্ড",
+    profile: "প্রোফাইল",
+    insProfile: "প্রতিষ্ঠানের তথ্য",
+    appsAndPages: "অ্যাপস এবং পেজ",
+    reports: "রিপোর্ট",
   },
-  "studentInfo" :{
-    "title": "ছাত্র তথ্য",
-    "addStudent": "ছাত্র যোগ করুন",
-    "studentList": "ছাত্র তালিকা",
-    "studentTestimonial": "ছাত্র প্রশংসাপত্র",
-    "studentWaiver": "ছাত্র মওকুফ",
-    "studentIdCard": "ছাত্র আইডি কার্ড",
-    "rfidUpdate": "RFID আপডেট",
-    "studentMigration": "ছাত্র স্থানান্তর",
+  settings: {
+    title: "সেটিংস",
+    academicSetup: "একাডেমিক সেটআপ",
+    classConfig: "ক্লাস কনফিগারেশন",
+    classSubjectAssign: "ক্লাস বিষয় বরাদ্দ",
+    teacherSubjectAssign: "শিক্ষক বিষয় বরাদ্দ",
+    markConfig: "মার্ক কনফিগারেশন",
+    markDivide: "মার্ক বিভাজন",
+    chooseableSubject: "পছন্দনীয় বিষয়",
   },
-  "stpInfo": {
-    "addParent": "অভিভাবক যোগ করুন",
-    "parentList": "অভিভাবক তালিকা",
-    "addTeacher": "শিক্ষক যোগ করুন",
-    "teacherList": "শিক্ষক তালিকা",
-    "teacherIdCard": "শিক্ষক আইডি কার্ড",
-    "addStaff": "স্টাফ যোগ করুন",
-    "staffList": "স্টাফ তালিকা",
-    "staffIdCard": "স্টাফ আইডি কার্ড",
+  communication: {
+    title: "যোগাযোগ",
+    generalSms: "সাধারণ এসএমএস",
+    notifications: "বিজ্ঞপ্তি",
+    smsTemplate: "এসএমএস টেমপ্লেট",
   },
-  "exam": {
-    "title": "পরীক্ষা",
-    "examName": "পরীক্ষার নাম",
-    "examSyllabus": "পরীক্ষার সিলেবাস",
-    "examSchedule": "পরীক্ষার সময়সূচী",
-    "scheduleDownload": "সময়সূচী ডাউনলোড",
-    "admitCard": "অ্যাডমিট কার্ড",
-    "seatPlan": "আসন পরিকল্পনা",
-    "gradeRule": "গ্রেড নিয়ম",
-    "markBlankSheet": "মার্ক ফাঁকা শীট",
-    "examSignatureSheet": "পরীক্ষার স্বাক্ষর শীট",
-    "examFeeSheet": "পরীক্ষার ফি শীট"
+  attendance: {
+    title: "উপস্থিতি",
+    studentAttendance: "ছাত্র উপস্থিতি",
+    teacherAttendance: "শিক্ষক উপস্থিতি",
+    stuffAttendance: "স্টাফ উপস্থিতি",
+    leaveType: "ছুটির ধরন",
+    leaveRequest: "ছুটির অনুরোধ",
+    holiday: "ছুটি",
   },
-  "result": {
-    "title": "ফলাফল",
-    "markInput": "মার্ক ইনপুট",
-    "tabulationSheet": "ট্যাবুলেশন শীট",
-    "progressReport": "প্রগতি প্রতিবেদন",
-    "meritList": "মেধা তালিকা"
+  studentInfo: {
+    title: "ছাত্র তথ্য",
+    addStudent: "ছাত্র যোগ করুন",
+    studentList: "ছাত্র তালিকা",
+    studentTestimonial: "ছাত্র প্রশংসাপত্র",
+    studentWaiver: "ছাত্র মওকুফ",
+    studentIdCard: "ছাত্র আইডি কার্ড",
+    rfidUpdate: "RFID আপডেট",
+    studentMigration: "ছাত্র স্থানান্তর",
   },
-  "routine": {
-    "title": "রুটিন",
-    "routines": "রুটিনসমূহ",
-    "classRoutine": "ক্লাস রুটিন",
-    "teacherSchedule": "শিক্ষক সময়সূচী"
+  stpInfo: {
+    addParent: "অভিভাবক যোগ করুন",
+    parentList: "অভিভাবক তালিকা",
+    addTeacher: "শিক্ষক যোগ করুন",
+    teacherList: "শিক্ষক তালিকা",
+    teacherIdCard: "শিক্ষক আইডি কার্ড",
+    addStaff: "স্টাফ যোগ করুন",
+    staffList: "স্টাফ তালিকা",
+    staffIdCard: "স্টাফ আইডি কার্ড",
   },
-  "studyMaterial": {
-    "title": "পাঠ্য সামগ্রী"
+  exam: {
+    title: "পরীক্ষা",
+    examName: "পরীক্ষার নাম",
+    examSyllabus: "পরীক্ষার সিলেবাস",
+    examSchedule: "পরীক্ষার সময়সূচী",
+    scheduleDownload: "সময়সূচী ডাউনলোড",
+    admitCard: "অ্যাডমিট কার্ড",
+    seatPlan: "আসন পরিকল্পনা",
+    gradeRule: "গ্রেড নিয়ম",
+    markBlankSheet: "মার্ক ফাঁকা শীট",
+    examSignatureSheet: "পরীক্ষার স্বাক্ষর শীট",
+    examFeeSheet: "পরীক্ষার ফি শীট",
   },
-  "event": {
-    "title": "ইভেন্ট",
-    "eventList": "ইভেন্ট তালিকা"
+  result: {
+    title: "ফলাফল",
+    markInput: "মার্ক ইনপুট",
+    tabulationSheet: "ট্যাবুলেশন শীট",
+    progressReport: "প্রগতি প্রতিবেদন",
+    meritList: "মেধা তালিকা",
   },
-  "fees": {
-    "title": "ফি",
-    "feesType": "ফি প্রকার",
-    "feesAmount": "ফি পরিমাণ",
-    "feesMaster": "ফি মাস্টার",
-    "feesAllocation": "ফি বরাদ্দ",
-    "returnFee": "ফি ফেরত",
-    "deleteFee": "ফি মুছুন"
+  routine: {
+    title: "রুটিন",
+    routines: "রুটিনসমূহ",
+    classRoutine: "ক্লাস রুটিন",
+    teacherSchedule: "শিক্ষক সময়সূচী",
   },
-  "payroll": {
-    "title": "বেতন",
-    "addition": "বেতন সংযোজন",
-    "deduction": "বেতন কর্তন",
-    "salaryAssign": "বেতন বরাদ্দ",
+  studyMaterial: {
+    title: "পাঠ্য সামগ্রী",
   },
-  "services": {
-    "title": "সেবা",
-    "hostel": {
-      "title": "হোস্টেল",
-      "hostelPackage": "হোস্টেল প্যাকেজ",
-      "hostelAllocation": "হোস্টেল বরাদ্দ"
+  event: {
+    title: "ইভেন্ট",
+    eventList: "ইভেন্ট তালিকা",
+  },
+  fees: {
+    title: "ফি",
+    feesType: "ফি প্রকার",
+    feesAmount: "ফি পরিমাণ",
+    feesMaster: "ফি মাস্টার",
+    feesAllocation: "ফি বরাদ্দ",
+    returnFee: "ফি ফেরত",
+    deleteFee: "ফি মুছুন",
+  },
+  payroll: {
+    title: "বেতন",
+    addition: "বেতন সংযোজন",
+    deduction: "বেতন কর্তন",
+    salaryAssign: "বেতন বরাদ্দ",
+  },
+  services: {
+    title: "সেবা",
+    hostel: {
+      title: "হোস্টেল",
+      hostelPackage: "হোস্টেল প্যাকেজ",
+      hostelAllocation: "হোস্টেল বরাদ্দ",
     },
-    "coaching": {
-      "title": "কোচিং",
-      "coachingPackage": "কোচিং প্যাকেজ",
-      "coachingAllocation": "কোচিং বরাদ্দ"
+    coaching: {
+      title: "কোচিং",
+      coachingPackage: "কোচিং প্যাকেজ",
+      coachingAllocation: "কোচিং বরাদ্দ",
     },
-    "transport": {
-      "title": "পরিবহন",
-      "transportPackage": "পরিবহন প্যাকেজ",
-      "transportAllocation": "পরিবহন বরাদ্দ"
-    }
-  },
-  "income": {
-    "title": "আয়",
-    "income": "আয়",
-    "entryDateSearch": "এন্ট্রি তারিখ অনুসন্ধান",
-    "incomeHead": "আয় শিরোনাম"
-  },
-  "expense": {
-    "title": "ব্যয়",
-    "expense": "ব্যয়",
-    "entryDateSearch": "এন্ট্রি তারিখ অনুসন্ধান",
-    "expenseHead": "ব্যয় শিরোনাম"
-  },
-  "withdraw": {
-    "title": "প্রত্যাহার",
-    "withdraw": "প্রত্যাহার"
-  },
-  "accountingReport": {
-    "title": "হিসাব রিপোর্ট",
-    "accountStatement": "অ্যাকাউন্ট বিবৃতি",
-    "dateWiseIncome": "তারিখ অনুযায়ী আয়",
-    "headWiseIncome": "শিরোনাম অনুযায়ী আয়",
-    "dateWiseExpense": "তারিখ অনুযায়ী ব্যয়",
-    "headWiseExpense": "শিরোনাম অনুযায়ী ব্যয়",
-    "dateWiseWithdraw": "তারিখ অনুযায়ী প্রত্যাহার"
-  },
-  "feesReport": {
-    "title": "ফি রিপোর্ট",
-    "dateWisePaidFee": "তারিখ অনুযায়ী প্রদত্ত ফি",
-    "studentWisePaidFee": "ছাত্র অনুযায়ী প্রদত্ত ফি",
-    "dueFee": "বকেয়া ফি"
-  },
-  "attendanceReport": {
-    "title": "উপস্থিতি রিপোর্ট",
-    "studentReport": {
-      "title": "ছাত্র রিপোর্ট",
-      "monthWiseReport": "মাস ভিত্তিক রিপোর্ট",
-      "dayViewReport": "দিনের ভিউ রিপোর্ট",
-      "timeWiseReport": "সময় ভিত্তিক রিপোর্ট"
+    transport: {
+      title: "পরিবহন",
+      transportPackage: "পরিবহন প্যাকেজ",
+      transportAllocation: "পরিবহন বরাদ্দ",
     },
-    "teacherReport": {
-      "title": "শিক্ষক রিপোর্ট",
-      "monthWiseReport": "মাস ভিত্তিক রিপোর্ট",
-      "timeWiseReport": "সময় ভিত্তিক রিপোর্ট"
+  },
+  income: {
+    title: "আয়",
+    income: "আয়",
+    entryDateSearch: "এন্ট্রি তারিখ অনুসন্ধান",
+    incomeHead: "আয় শিরোনাম",
+  },
+  expense: {
+    title: "ব্যয়",
+    expense: "ব্যয়",
+    entryDateSearch: "এন্ট্রি তারিখ অনুসন্ধান",
+    expenseHead: "ব্যয় শিরোনাম",
+  },
+  withdraw: {
+    title: "প্রত্যাহার",
+    withdraw: "প্রত্যাহার",
+  },
+  accountingReport: {
+    title: "হিসাব রিপোর্ট",
+    accountStatement: "অ্যাকাউন্ট বিবৃতি",
+    dateWiseIncome: "তারিখ অনুযায়ী আয়",
+    headWiseIncome: "শিরোনাম অনুযায়ী আয়",
+    dateWiseExpense: "তারিখ অনুযায়ী ব্যয়",
+    headWiseExpense: "শিরোনাম অনুযায়ী ব্যয়",
+    dateWiseWithdraw: "তারিখ অনুযায়ী প্রত্যাহার",
+  },
+  feesReport: {
+    title: "ফি রিপোর্ট",
+    dateWisePaidFee: "তারিখ অনুযায়ী প্রদত্ত ফি",
+    studentWisePaidFee: "ছাত্র অনুযায়ী প্রদত্ত ফি",
+    dueFee: "বকেয়া ফি",
+  },
+  attendanceReport: {
+    title: "উপস্থিতি রিপোর্ট",
+    studentReport: {
+      title: "ছাত্র রিপোর্ট",
+      monthWiseReport: "মাস ভিত্তিক রিপোর্ট",
+      dayViewReport: "দিনের ভিউ রিপোর্ট",
+      timeWiseReport: "সময় ভিত্তিক রিপোর্ট",
     },
-    "staffReport": {
-      "title": "স্টাফ রিপোর্ট",
-      "monthWiseReport": "মাস ভিত্তিক রিপোর্ট",
-      "timeWiseReport": "সময় ভিত্তিক রিপোর্ট"
-    }
+    teacherReport: {
+      title: "শিক্ষক রিপোর্ট",
+      monthWiseReport: "মাস ভিত্তিক রিপোর্ট",
+      timeWiseReport: "সময় ভিত্তিক রিপোর্ট",
+    },
+    staffReport: {
+      title: "স্টাফ রিপোর্ট",
+      monthWiseReport: "মাস ভিত্তিক রিপোর্ট",
+      timeWiseReport: "সময় ভিত্তিক রিপোর্ট",
+    },
   },
-  "smsReport": {
-    "title": "এসএমএস রিপোর্ট",
-    "purchaseHistory": "ক্রয় ইতিহাস",
-    "smsSendSummary": "এসএমএস পাঠানোর সারাংশ",
-    "smsDelivery": "এসএমএস ডেলিভারি"
+  smsReport: {
+    title: "এসএমএস রিপোর্ট",
+    purchaseHistory: "ক্রয় ইতিহাস",
+    smsSendSummary: "এসএমএস পাঠানোর সারাংশ",
+    smsDelivery: "এসএমএস ডেলিভারি",
   },
-  "siteSettings": {
-    "title": "সাইট সেটিংস",
-    "banner": "ব্যানার",
-    "notice": "নোটিশ",
-    "schoolService": "স্কুল সার্ভিস",
-    "pageContent": "পৃষ্ঠার বিষয়বস্তু",
-    "pictureGallery": "ছবির গ্যালারি",
-    "videoGallery": "ভিডিও গ্যালারি",
-    "testimonial": "প্রশংসাপত্র",
-    "contact": "যোগাযোগ"
-  }
- }
+  siteSettings: {
+    title: "সাইট সেটিংস",
+    banner: "ব্যানার",
+    notice: "নোটিশ",
+    schoolService: "স্কুল সার্ভিস",
+    pageContent: "পৃষ্ঠার বিষয়বস্তু",
+    pictureGallery: "ছবির গ্যালারি",
+    videoGallery: "ভিডিও গ্যালারি",
+    testimonial: "প্রশংসাপত্র",
+    contact: "যোগাযোগ",
+  },
+};
 
 export default banglaWords;
-

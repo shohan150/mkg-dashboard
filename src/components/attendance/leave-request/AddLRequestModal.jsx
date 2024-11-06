@@ -1,13 +1,15 @@
+import { useTranslation } from "react-i18next";
 import Modal from "../../common/Modal";
 
 export default function AddLRequestModal({isAdd, onClose}) {
-    return (
+   const {t} = useTranslation(); 
+   return (
    <Modal isOpen={isAdd} onClose={onClose} width="w-2/3 md:w-1/2">
       {/* modal content */}
-      <h2 className="text-2xl">New Leave Request</h2>
+      <h2 className="text-2xl">{t('module.communication.new_leave_request')}</h2>
       <div className="my-8 space-y-3">
          <div className="space-y-2">
-            <label className="">Employee Name</label>
+            <label className="">{t('module.communication.employee_name')}</label>
             <input
                type="text"
                placeholder="Employee Name"
@@ -16,7 +18,7 @@ export default function AddLRequestModal({isAdd, onClose}) {
          </div>
 
          <div className="space-y-2">
-            <label className="">Leave Type</label>
+            <label className="">{t('module.communication.leave_type')}</label>
             <select
             id=""
             name=""
@@ -30,7 +32,7 @@ export default function AddLRequestModal({isAdd, onClose}) {
          </div>
 
          <div className="space-y-2">
-            <label className="">Start Date</label>
+            <label className="">{t('module.communication.start_date')}</label>
             <input
                type="date"
                className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
@@ -38,7 +40,7 @@ export default function AddLRequestModal({isAdd, onClose}) {
          </div>
 
          <div className="space-y-2">
-            <label className="">End Date</label>
+            <label className="">{t('module.communication.end_date')}</label>
             <input
                type="date"
                className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"

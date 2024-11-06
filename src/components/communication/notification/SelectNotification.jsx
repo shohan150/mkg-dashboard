@@ -1,8 +1,13 @@
+import { useTranslation } from "react-i18next";
+
 export default function SelectNotification({notificationType, setNotificationType}) {
-    return (
+  
+  const {t} = useTranslation();  
+  return (
   <>
    <div className="space-y-2">
-      <label className="">Select Notification </label>
+      <label className="">
+      {t('module.communication.select_notification')} </label>
       <select
         id=""
         name=""

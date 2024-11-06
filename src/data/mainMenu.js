@@ -165,7 +165,7 @@ const mainMenu = [
     ],
   },
   {
-    "parentInfo": {
+      "id": "09",
       "title": "stpInfo.title",
       "icon": "RiParentFill",
       "children": [
@@ -181,7 +181,8 @@ const mainMenu = [
         }
       ]
     },
-    "teacherInfo": {
+    {
+      "id": "10",
       "title": "stpInfo.title",
       "icon": "PiChalkboardTeacherFill",
       "children": [
@@ -202,7 +203,8 @@ const mainMenu = [
         }
       ]
     },
-    "staffInfo": {
+    {
+      "id": "11",
       "title": "stpInfo.title",
       "icon": "FaPeopleGroup",
       "children": [
@@ -223,7 +225,7 @@ const mainMenu = [
         }
       ]
     }
-  },  
+  ,
   {
     "id": "12",
     "title": "exam.title",

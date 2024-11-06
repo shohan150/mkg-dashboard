@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { IoPrintOutline } from "react-icons/io5";
 import { MdOutlineQrCodeScanner } from "react-icons/md";
 import { useReactToPrint } from "react-to-print";
@@ -7,11 +8,13 @@ export default function StudentIdHeader({idCardsRef}) {
         content: () => idCardsRef.current,
       });
 
+      const {t} = useTranslation();
+
   return (
     <div className="flex justify-end items-center">
       <div className="btns flex gap-2">
           <button className="rounded p-2 bg-primary hover:bg-buttonHover text-white shadow-md  hover:-translate-y-[2px] duration-200">
-            View Id Card
+            {t('module.teacher.view_id_card')}
           </button>
           <button className="rounded p-2 bg-primary hover:bg-buttonHover text-white shadow-md  hover:-translate-y-[2px] duration-200">
             <MdOutlineQrCodeScanner size={22} />

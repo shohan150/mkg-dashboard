@@ -1,50 +1,50 @@
-import Modal from "../../common/Modal";
+import { useTranslation } from "react-i18next";
 
-export default function AddAdditionModal({ isAdd, onClose }) {
-    return (
-      <Modal isOpen={isAdd} onClose={onClose} width="w-2/3 md:w-1/2">
-      {/* modal content */}
-      <h2 className="text-2xl">Add Addition</h2>
-      <div className="my-8 space-y-3">
-      <div className="space-y-2">
-            <label className="">Name</label>
-            <input
-               type="text"
-               placeholder="Name"
-               className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
-            />
-         </div>
-         {/* <div className="space-y-2">
-            <label className="">Fee Type</label>
-            <select className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none appearance-none" defaultValue="0" name="fee_type" id="fee_type">
-                <option value="0">Select Fee Type</option>
-                <option value="12">Annually</option>
-                <option value="6">Bi-Annually</option>
-                <option value="4">Tri-Annually</option>
-                <option value="3">Quarterly</option>
-                <option value="2">Two-Monthly</option>
-                <option value="1">Monthly</option>
-            </select>
-         </div>
-         
-         
+export default function AdditionTable({ handleEdit, handleDelete }) {
+  const { t } = useTranslation();
 
-         <div className="space-y-2">
-            <label className="">Status</label>
-            <select className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none appearance-none" defaultValue="1" name="status" id="status">
-                <option value="1">Active</option>
-                <option value="0">InActive</option>
-            </select>
-         </div>
-         <div className="space-y-2">
-            <label className="">Admission Year</label>
-            <select className="bg-bgGray w-full appearance-none rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none" defaultValue="2024" name="admission_year" id="admission_year">
-                <option value="2024">2024</option>
-                <option value="2023">2023</option>
-            </select>
-         </div> */}
-      </div>
+  const data = [
+    {
+      name: "Provident Fund",
+    },
+    {
+      name: "Home Rent",
+    },
+  ];
 
-   </Modal>
-    );
+  return (
+    <div className="border my-6 rounded shadow-md">
+      <table className="w-full text-textGray text-sm leading-6 sm:leading-8">
+        <thead className="border-b-2 bg-bgBlue">
+          <tr>
+            <th className="w-2/12">{t("module.payroll.serial")}</th>
+            <th className="w-5/12">{t("module.payroll.addition_name")}</th>
+            <th className="w-5/12">{t("module.payroll.actions")}</th>
+          </tr>
+        </thead>
+        <tbody className="divide-y-2 font-medium">
+          {data.map((item, index) => (
+            <tr key={index} className="text-center">
+              <td className="w-2/12">{index + 1}</td>
+              <td className="w-5/12">{item.name}</td>
+              <td className="w-5/12 pb-1">
+                <button
+                  className="bg-blue px-3 py-1 rounded shadow text-white hover:-translate-y-[2px] duration-200 text-sm m-1"
+                  onClick={() => handleEdit(item)}
+                >
+                  {t("module.payroll.edit")}
+                </button>
+                <button
+                  className="bg-red px-3 py-1 rounded shadow text-white hover:-translate-y-[2px] duration-200 text-sm m-1"
+                  onClick={() => handleDelete(item.name)}
+                >
+                  {t("module.payroll.delete")}
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
 }

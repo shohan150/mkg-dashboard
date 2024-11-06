@@ -1,5 +1,6 @@
 import React from "react";
 import "../create-routine/style.css";
+import { useTranslation } from "react-i18next";
 
 export default function TeacherScheduleTable() {
    const days = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"];
@@ -164,14 +165,14 @@ export default function TeacherScheduleTable() {
 
    ]
 
-
+const {t} = useTranslation();
     return (
       <div id="schedule-container">
         <div id="schedule" style={{ gridTemplateColumns: `100px repeat(${savedRoutine.length}, 1fr)`}} >
           {/* Header row */}
           <div className="header"></div>
           {Array.from({ length: savedRoutine.length }, (_, i) => (
-            <div key={i} className="header">Period {i + 1}</div>
+            <div key={i} className="header">{t("module.routine.period")} {i + 1}</div>
           ))}
 
           {/* Days and Periods */}

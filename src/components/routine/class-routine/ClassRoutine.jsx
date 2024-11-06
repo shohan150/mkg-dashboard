@@ -1,10 +1,13 @@
 import ClassRoutineTable from "./ClassRoutineTable";
+import { useTranslation } from "react-i18next";
 
 export default function ClassRoutine() {
-    return (
+   const { t } = useTranslation();
+
+   return (
       <div className="bg-white rounded-md px-4 py-2 my-2 sm:my-4">
          <div className="flex items-center my-4 gap-2 md:gap-4">
-            <label className="w-24">Select Class</label>
+            <label className="w-24">{t("module.routine.select_class")}</label>
             <select
             id=""
             name=""
@@ -18,7 +21,7 @@ export default function ClassRoutine() {
             </select>
 
             <button className="bg-primary hover:bg-buttonHover w-20 sm:w-28 md:w-32 ml-1 py-2 rounded shadow text-white hover:-translate-y-[2px] duration-200">
-               Submit
+            {t("module.routine.submit")}
             </button>
          </div>
 

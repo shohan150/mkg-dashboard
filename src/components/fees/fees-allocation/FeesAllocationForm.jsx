@@ -1,16 +1,17 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { months } from "../../../data/months";
 
 const FeesAllocationForm = () => {
+  const { t } = useTranslation();
   const [activeSearch, setActiveSearch] = useState(false);
   const [selectedStudent, setSelectedStudent] = useState("");
-  
 
   return (
     <div>
       <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-4">
         <div className="space-y-2 flex flex-col">
-          <label className="">Select Invoice</label>
+          <label>{t("feeModule.select_invoice")}</label>
 
           <div className="inline-block relative">
             <select
@@ -19,9 +20,9 @@ const FeesAllocationForm = () => {
               name="fee_type"
               id="fee_type"
             >
-              <option value="0">Select Invoice</option>
-              <option value="12">Bulk</option>
-              <option value="12">Indvidual</option>
+              <option value="0">{t("feeModule.select_invoice_option")}</option>
+              <option value="12">{t("feeModule.bulk")}</option>
+              <option value="12">{t("feeModule.individual")}</option>
             </select>
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
               <svg
@@ -35,20 +36,18 @@ const FeesAllocationForm = () => {
           </div>
         </div>
         <div className="space-y-2 flex flex-col">
-          <label className="">Fee Month</label>
+          <label>{t("feeModule.fee_month")}</label>
 
           <div className="inline-block relative">
             <select
               className="bg-bgGray appearance-none w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
               defaultValue="0"
-              name="fee_type"
-              id="fee_type"
+              name="fee_month"
+              id="fee_month"
             >
-              <option value="0">Select Fee Month</option>
+              <option value="0">{t("feeModule.select_fee_month")}</option>
               {months?.map((month) => (
-                <>
-                  <option value={month}>{month}</option>
-                </>
+                <option key={month} value={month}>{month}</option>
               ))}
             </select>
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
@@ -63,7 +62,7 @@ const FeesAllocationForm = () => {
           </div>
         </div>
         <div className="space-y-2 flex flex-col">
-          <label className="">Select Student</label>
+          <label>{t("feeModule.select_student")}</label>
 
           <div className="inline-block relative">
             <input
@@ -73,7 +72,7 @@ const FeesAllocationForm = () => {
                   setActiveSearch(false);
                 }, 300)
               }
-              placeholder="Search Here..."
+              placeholder={t("feeModule.search_here")}
               type="text"
               onChange={(e) => setSelectedStudent(e.target.value)}
               value={selectedStudent}
@@ -92,13 +91,13 @@ const FeesAllocationForm = () => {
               <div className="search_results absolute shadow border w-full z-10 bg-white">
                 <ul>
                   <li
-                    onClick={() => setSelectedStudent("Md. Nazmus Sakib")}
+                    onClick={() => setSelectedStudent("feeModule.Md. Nazmus Sakib")}
                     className="p-2 cursor-pointer hover:bg-slate-400"
                   >
                     Md. Nazmus Sakib
                   </li>
                   <li
-                    onClick={() => setSelectedStudent("Hosne Ara Khatun")}
+                    onClick={() => setSelectedStudent("feeModule.Hosne Ara Khatun")}
                     className="p-2 cursor-pointer hover:bg-slate-400"
                   >
                     Hosne Ara Khatun
@@ -110,7 +109,7 @@ const FeesAllocationForm = () => {
         </div>
 
         <div className="space-y-2">
-          <label htmlFor="">Select Admission</label>
+          <label htmlFor="">{t("feeModule.select_admission")}</label>
           <input
             type="number"
             defaultValue={new Date().getFullYear()}
@@ -118,9 +117,9 @@ const FeesAllocationForm = () => {
           />
         </div>
         <div className="space-y-2 col-span-2">
-          <label htmlFor="">Description</label>
+          <label htmlFor="">{t("feeModule.description")}</label>
           <input
-            placeholder="Description"
+            placeholder={t("feeModule.description")}
             type="text"
             className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-3 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
           />
@@ -129,9 +128,9 @@ const FeesAllocationForm = () => {
 
       <button
         type="submit"
-        className="rounded mt-4 w-20 p-2 bg-primary hover:bg-buttonHover text-white shadow-md  hover:-translate-y-[2px] duration-200 flex items-center justify-center gap-2"
+        className="rounded mt-4 w-20 p-2 bg-primary hover:bg-buttonHover text-white shadow-md hover:-translate-y-[2px] duration-200 flex items-center justify-center gap-2"
       >
-        Submit
+        {t("feeModule.submit")}
       </button>
     </div>
   );

@@ -1,8 +1,11 @@
+import { useTranslation } from "react-i18next";
 
 export default function SelectWise({selectedValue, handleChange}) {
+    const {t} = useTranslation();
     return (
       <div className="space-y-2">
-         <label className="w-28 md:max-lg:w-32">Select Wise</label>
+         <label className="w-28 md:max-lg:w-32">
+         {t('module.communication.select_wise')}</label>
          <select
          id=""
          name=""

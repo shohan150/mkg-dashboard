@@ -1,8 +1,12 @@
+import { useTranslation } from "react-i18next";
+
 export default function TemplateAndBody({setCharacterCount}) {
+    const {t} = useTranslation();
     return (
         <>
          <div className="space-y-2">
-            <label className="">Select Template</label>
+            <label className="">
+            {t('module.communication.select_template')}</label>
             <select
             id=""
             name=""
@@ -16,7 +20,8 @@ export default function TemplateAndBody({setCharacterCount}) {
          </div>
 
          <div className="space-y-2">
-            <label className="">SMS Body</label>
+            <label className="">
+            {t('module.communication.sms_body')}</label>
             <textarea 
             rows="4"
             className="bg-bgGray w-full rounded px-1 py-2 border-2 border-transparent focus:border-primary focus:outline-none"
