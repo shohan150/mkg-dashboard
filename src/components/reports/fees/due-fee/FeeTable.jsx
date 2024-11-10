@@ -1,5 +1,8 @@
+import { useTranslation } from "react-i18next";
 
 export default function FeeTable() {
+   const { t } = useTranslation();
+
    const dummyData = [
       {
          id: 1,
@@ -25,7 +28,7 @@ export default function FeeTable() {
          dueAmount: "3000",
          dueDetails: "lorem ipsum dolor",
       }
-   ]
+   ];
 
   return (
    <div className="border my-6 rounded shadow-md overflow-x-scroll">
@@ -33,11 +36,11 @@ export default function FeeTable() {
          <thead className="bg-bgBlue border-b-2 border-bgGray leading-10">
          <tr>
             <th className="w-1/12">#</th>
-            <th className="w-3/12">Name</th>
-            <th className="w-1/12 min-w-32">Roll</th>
-            <th className="w-2/12">Class</th>
-            <th className="w-2/12 min-w-20">Due Amount</th>
-            <th className="w-3/12 min-w-20">Due Details</th>
+            <th className="w-3/12">{t("module.report.name")}</th>
+            <th className="w-1/12 min-w-32">{t("module.report.roll")}</th>
+            <th className="w-2/12">{t("module.report.class")}</th>
+            <th className="w-2/12 min-w-20">{t("module.report.dueAmount")}</th>
+            <th className="w-3/12 min-w-20">{t("module.report.dueDetails")}</th>
          </tr>
          </thead>
          <tbody className="divide-y font-medium">
@@ -52,7 +55,7 @@ export default function FeeTable() {
             </tr>
          ))}
          </tbody>
-    </table>
+      </table>
    </div>
-  )
+  );
 }
