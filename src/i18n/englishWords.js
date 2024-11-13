@@ -173,6 +173,9 @@ const englishWords = {
     studentMigration: "Student Migration",
   },
   stpInfo: {
+    parent: "Parent Info",
+    teacher: "Teacher Info",
+    staff: "Staff Info",
     addParent: "Add Parent",
     parentList: "Parent List",
     addTeacher: "Add Teacher",

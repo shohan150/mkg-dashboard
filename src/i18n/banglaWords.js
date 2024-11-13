@@ -172,6 +172,9 @@ const banglaWords = {
     studentMigration: "ছাত্র স্থানান্তর",
   },
   stpInfo: {
+    parent: "অভিভাবক তথ্য",
+    teacher: "শিক্ষক তথ্য",
+    staff: "স্টাফ তথ্য",
     addParent: "অভিভাবক যোগ করুন",
     parentList: "অভিভাবক তালিকা",
     addTeacher: "শিক্ষক যোগ করুন",

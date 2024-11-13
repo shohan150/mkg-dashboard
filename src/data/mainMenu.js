@@ -166,7 +166,7 @@ const mainMenu = [
   },
   {
       "id": "09",
-      "title": "stpInfo.title",
+      "title": "stpInfo.parent",
       "icon": "RiParentFill",
       "children": [
         {
@@ -183,7 +183,7 @@ const mainMenu = [
     },
     {
       "id": "10",
-      "title": "stpInfo.title",
+      "title": "stpInfo.teacher",
       "icon": "PiChalkboardTeacherFill",
       "children": [
         {
@@ -205,7 +205,7 @@ const mainMenu = [
     },
     {
       "id": "11",
-      "title": "stpInfo.title",
+      "title": "stpInfo.staff",
       "icon": "FaPeopleGroup",
       "children": [
         {
