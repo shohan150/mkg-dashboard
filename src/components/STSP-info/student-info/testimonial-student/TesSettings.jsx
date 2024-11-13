@@ -10,7 +10,7 @@ export default function TesSettings() {
         footer: "He is elgible for the application",
         signature: "Headmaster"
      })
-     
+     //ekhon jeta hobe, save button e click korle template ta backend e store kore rakhbe. tarpor backend theke pathanor somoy string na pathiye pathabe templte literal. tahole testimonial view korle ei templete literal er sturucture e student er value bosai dile e hocche. ba testimonial dekhar somoy e backend e student id patiye dilam. sekhan theke data fill kore shei data tai pathalo. tahole jhamela shes. (which will be a bit of more for backend to do. to seta jodi backend e na kore tahole backend theke string e pathabe. shei string theke regex er maddhome oi variable k replace kore value bosano jete pare. the example is given at the end of this component. manually handle kora holo ei r ki. j pore kono variable add hle abar manually regex add korte hobe. etai. )
     function handleChange(val, property) {
         setTesFormat({...tesFormat, [property]: val});
     }
@@ -106,3 +106,13 @@ export default function TesSettings() {
 
     );
 }
+
+
+// exmaple :
+// const name = "John Doe"; // Example name
+// const backendString = "I testify that ${name} is a good student";
+
+// // Replace `${name}` with the actual value of `name`
+// const result = backendString.replace(/\$\{name\}/g, name);
+
+// console.log(result);  // Output: "I testify that John Doe is a good student"
