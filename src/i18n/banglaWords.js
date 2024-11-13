@@ -225,6 +225,11 @@ const banglaWords = {
     feesAllocation: "ফি বরাদ্দ",
     returnFee: "ফি ফেরত",
     deleteFee: "ফি মুছুন",
+    collection: {
+      title: "ফি সংযোজন",
+      quickCollection: "ফি সংযোজন",
+      classWiseCollection: "ক্লাস ফি সংযোজন",
+    },
   },
   payroll: {
     title: "বেতন",

@@ -226,6 +226,11 @@ const englishWords = {
     feesAllocation: "Fees Allocation",
     returnFee: "Return Fee",
     deleteFee: "Delete Fee",
+    collection : {
+      title: "Fees Collection",
+      quickCollection: "Quick Collection",
+      classWiseCollection: "Class Wise Collection",
+    }
   },
   payroll: {
     title: "Payroll",

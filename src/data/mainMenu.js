@@ -356,6 +356,22 @@ const mainMenu = [
     "icon": "CiDollar",
     "children": [
       {
+        id: "17/07",
+        title: "fees.collection.title",
+        children: [
+          {
+            id: "17/07/01",
+            title: "fees.collection.quickCollection",
+            link: "fees/collection/quick-collection",
+          },
+          {
+            id: "17/07/02",
+            title: "fees.collection.classWiseCollection",
+            link: "fees/collection/class-wise-collection",
+          },
+        ],
+      },
+      {
         "id": "17/01",
         "title": "fees.feesType",
         "link": "fees/fees-type"

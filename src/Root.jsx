@@ -25,12 +25,7 @@ import {
 } from "./components/exam/exam-index";
 import AddExamRoutine from "./components/exam/exam-schedule/AddExamRoutine";
 import { AddExpense, Expense, ExpenseEntryDate, ExpenseHead } from "./components/expense/expense-index";
-import DeleteFee from "./components/fees/DeleteFee";
-import FeesAllocation from "./components/fees/FeesAllocation";
-import FeesAmount from "./components/fees/FeesAmount";
-import FeesMaster from "./components/fees/FeesMaster";
-import FeesType from "./components/fees/FeesType";
-import ReturnFee from "./components/fees/ReturnFee";
+import { ClassWiseCollection, DeleteFee, FeesAllocation, FeesAmount, FeesMaster, FeesType, QuickCollection, ReturnFee } from "./components/fees/fees-index.js";
 import Home from "./components/homePage/Home";
 import { AddIncome, Income, IncomeEntryDate, IncomeHead } from "./components/income/income-index";
 import EditInstituteInfo from "./components/instituteProfile/EditInstituteInfo";
@@ -447,6 +442,14 @@ function Root() {
               path: "return-fee",
               element: <ReturnFee />,
             },
+            {
+              path: "collection/quick-collection/",
+              element: <QuickCollection />,
+            },
+            {
+              path: "collection/class-wise-collection/",
+              element: <ClassWiseCollection />,
+            }
           ],
         },
         {
