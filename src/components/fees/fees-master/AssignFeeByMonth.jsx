@@ -1,6 +1,6 @@
+import { useTranslation } from "react-i18next";
 import Select from "react-select";
 import { months } from "../../../data/months";
-import { useTranslation } from "react-i18next";
 
 const AssignFeeByMonth = () => {
   const { t } = useTranslation();
@@ -13,17 +13,17 @@ const AssignFeeByMonth = () => {
     <div className="bg-white shadow rounded-md">
       {/* component title */}
       <h3 className="bg-primary text-white text-lg text-center p-4 leading-[20px] rounded-t-md shadow-md">
-        {t("feeModule.select_fee")}
+        {t("module.fees.select_fee")}
       </h3>
 
       <div className="p-4 space-y-2">
         <div className="space-y-2">
-          <label htmlFor="">{t("feeModule.select_month")}</label>
+          <label htmlFor="">{t("module.fees.select_month")}</label>
           <Select closeMenuOnSelect={false} isMulti options={monthOptions} />
         </div>
 
         <div className="space-y-2">
-          <label htmlFor="">{t("feeModule.fee_collection_start_date")}</label>
+          <label htmlFor="">{t("module.fees.fee_collection_start_date")}</label>
           <div className="relative">
             <select
               className="border-gray-300 appearance-none w-full rounded p-2 border focus:border-primary focus:outline-none"
@@ -50,7 +50,7 @@ const AssignFeeByMonth = () => {
         </div>
         
         <div className="space-y-2">
-          <label htmlFor="">{t("feeModule.fee_collection_end_date")}</label>
+          <label htmlFor="">{t("module.fees.fee_collection_end_date")}</label>
           <div className="relative">
             <select
               className="border-gray-300 appearance-none w-full rounded p-2 border focus:border-primary focus:outline-none"

@@ -23,13 +23,13 @@ export default function ReturnFeeTable({ handleDelete }) {
             <table className="w-full text-textGray text-sm leading-6 sm:leading-8">
                 <thead className="border-b-2 bg-bgBlue">
                     <tr>
-                        <th className="w-1/12">{t("feeModule.serial")}</th>
-                        <th className="w-2/12">{t("feeModule.fee_name")}</th>
-                        <th className="w-2/12">{t("feeModule.amount")}</th>
-                        <th className="w-2/12">{t("feeModule.discount")}</th>
-                        <th className="w-2/12">{t("feeModule.final_amount")}</th>
-                        <th className="w-1/12">{t("feeModule.status")}</th>
-                        <th className="w-2/12">{t("feeModule.action")}</th>
+                        <th className="w-1/12">{t("module.fees.serial")}</th>
+                        <th className="w-2/12">{t("module.fees.fee_name")}</th>
+                        <th className="w-2/12">{t("module.fees.amount")}</th>
+                        <th className="w-2/12">{t("module.fees.discount")}</th>
+                        <th className="w-2/12">{t("module.fees.final_amount")}</th>
+                        <th className="w-1/12">{t("module.fees.status")}</th>
+                        <th className="w-2/12">{t("module.fees.action")}</th>
                     </tr>
                 </thead>
                 <tbody className="divide-y-2 font-medium">
@@ -46,7 +46,7 @@ export default function ReturnFeeTable({ handleDelete }) {
                                     className="bg-white border-red px-3 py-1 rounded shadow text-red border hover:-translate-y-[2px] duration-200 text-sm m-1"
                                     onClick={() => handleDelete(item.fee_name)}
                                 >
-                                    {t("feeModule.mark_as_unpaid")}
+                                    {t("module.fees.mark_as_unpaid")}
                                 </button>
                             </td>
                         </tr>

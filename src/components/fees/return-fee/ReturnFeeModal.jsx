@@ -27,7 +27,7 @@ export default function ReturnFeeModal({ title = "this entry", isOpen, onClose, 
             <div ref={modalRef} className={`bg-white rounded-lg shadow-lg p-4 w-2/3 sm:w-1/2 lg:w-1/3`}>
                 {/* Modal content */}
                 <h5 className="text-lg leading-9 mb-6">
-                    {t("feeModule.confirm_unpaid")} { title }?
+                    {t("module.fees.confirm_unpaid")} { title }?
                 </h5>
 
                 {/* Action buttons */}
@@ -36,13 +36,13 @@ export default function ReturnFeeModal({ title = "this entry", isOpen, onClose, 
                         className="bg-blue px-4 py-2 rounded shadow text-white hover:-translate-y-[2px] duration-200"
                         onClick={handleConfirmDlt}
                     >
-                        {t("feeModule.confirm")}
+                        {t("module.fees.confirm")}
                     </button>
                     <button
                         className="bg-red px-4 py-2 rounded shadow text-white hover:-translate-y-[2px] duration-200"
                         onClick={onClose}
                     >
-                        {t("feeModule.cancel")}
+                        {t("module.fees.cancel")}
                     </button>
                 </div>
             </div>

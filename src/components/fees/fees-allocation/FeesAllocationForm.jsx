@@ -11,7 +11,7 @@ const FeesAllocationForm = () => {
     <div>
       <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-4">
         <div className="space-y-2 flex flex-col">
-          <label>{t("feeModule.select_invoice")}</label>
+          <label>{t("module.fees.select_invoice")}</label>
 
           <div className="inline-block relative">
             <select
@@ -20,9 +20,9 @@ const FeesAllocationForm = () => {
               name="fee_type"
               id="fee_type"
             >
-              <option value="0">{t("feeModule.select_invoice_option")}</option>
-              <option value="12">{t("feeModule.bulk")}</option>
-              <option value="12">{t("feeModule.individual")}</option>
+              <option value="0">{t("module.fees.select_invoice_option")}</option>
+              <option value="12">{t("module.fees.bulk")}</option>
+              <option value="12">{t("module.fees.individual")}</option>
             </select>
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
               <svg
@@ -36,7 +36,7 @@ const FeesAllocationForm = () => {
           </div>
         </div>
         <div className="space-y-2 flex flex-col">
-          <label>{t("feeModule.fee_month")}</label>
+          <label>{t("module.fees.fee_month")}</label>
 
           <div className="inline-block relative">
             <select
@@ -45,7 +45,7 @@ const FeesAllocationForm = () => {
               name="fee_month"
               id="fee_month"
             >
-              <option value="0">{t("feeModule.select_fee_month")}</option>
+              <option value="0">{t("module.fees.select_fee_month")}</option>
               {months?.map((month) => (
                 <option key={month} value={month}>{month}</option>
               ))}
@@ -62,7 +62,7 @@ const FeesAllocationForm = () => {
           </div>
         </div>
         <div className="space-y-2 flex flex-col">
-          <label>{t("feeModule.select_student")}</label>
+          <label>{t("module.fees.select_student")}</label>
 
           <div className="inline-block relative">
             <input
@@ -72,7 +72,7 @@ const FeesAllocationForm = () => {
                   setActiveSearch(false);
                 }, 300)
               }
-              placeholder={t("feeModule.search_here")}
+              placeholder={t("module.fees.search_here")}
               type="text"
               onChange={(e) => setSelectedStudent(e.target.value)}
               value={selectedStudent}
@@ -91,13 +91,13 @@ const FeesAllocationForm = () => {
               <div className="search_results absolute shadow border w-full z-10 bg-white">
                 <ul>
                   <li
-                    onClick={() => setSelectedStudent("feeModule.Md. Nazmus Sakib")}
+                    onClick={() => setSelectedStudent("module.fees.Md. Nazmus Sakib")}
                     className="p-2 cursor-pointer hover:bg-slate-400"
                   >
                     Md. Nazmus Sakib
                   </li>
                   <li
-                    onClick={() => setSelectedStudent("feeModule.Hosne Ara Khatun")}
+                    onClick={() => setSelectedStudent("module.fees.Hosne Ara Khatun")}
                     className="p-2 cursor-pointer hover:bg-slate-400"
                   >
                     Hosne Ara Khatun
@@ -109,7 +109,7 @@ const FeesAllocationForm = () => {
         </div>
 
         <div className="space-y-2">
-          <label htmlFor="">{t("feeModule.select_admission")}</label>
+          <label htmlFor="">{t("module.fees.select_admission")}</label>
           <input
             type="number"
             defaultValue={new Date().getFullYear()}
@@ -117,9 +117,9 @@ const FeesAllocationForm = () => {
           />
         </div>
         <div className="space-y-2 col-span-2">
-          <label htmlFor="">{t("feeModule.description")}</label>
+          <label htmlFor="">{t("module.fees.description")}</label>
           <input
-            placeholder={t("feeModule.description")}
+            placeholder={t("module.fees.description")}
             type="text"
             className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-3 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
           />
@@ -130,7 +130,7 @@ const FeesAllocationForm = () => {
         type="submit"
         className="rounded mt-4 w-20 p-2 bg-primary hover:bg-buttonHover text-white shadow-md hover:-translate-y-[2px] duration-200 flex items-center justify-center gap-2"
       >
-        {t("feeModule.submit")}
+        {t("module.fees.submit")}
       </button>
     </div>
   );

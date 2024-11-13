@@ -15,7 +15,7 @@ export default function LoadFee() {
           <input
             onFocus={() => setActiveSearch(true)}
             onBlur={() => setTimeout(() => { setActiveSearch(false) }, 300)}
-            placeholder={t("feeModule.search_here")} // Use translation key
+            placeholder={t("module.fees.search_here")} // Use translation key
             type="text"
             onChange={(e) => setSelectedStudent(e.target.value)}
             value={selectedStudent}
@@ -44,7 +44,7 @@ export default function LoadFee() {
           type="submit"
           className="rounded w-20 p-2 bg-primary hover:bg-buttonHover text-white shadow-md hover:-translate-y-[2px] duration-200 flex items-center justify-center gap-2"
         >
-          {t("feeModule.load")} {/* Use translation key */}
+          {t("module.fees.load")} {/* Use translation key */}
         </button>
       </div>
 
@@ -52,7 +52,7 @@ export default function LoadFee() {
       {isSelected && selectedStudent && (
         <div className="selected_student_fee">
           <h4>
-            <b>{t("feeModule.name")}:</b> {selectedStudent} {/* Use translation key */}
+            <b>{t("module.fees.name")}:</b> {selectedStudent} {/* Use translation key */}
           </h4>
         </div>
       )}
