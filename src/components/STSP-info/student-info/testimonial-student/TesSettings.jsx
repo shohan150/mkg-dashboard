@@ -5,8 +5,8 @@ export default function TesSettings() {
 
     const [tesFormat, setTesFormat] = useState({
         header : "Testimonial",
-        body: "I testify that he is a good student",
-        subBody: "He is a good boy",
+        body: "I testify that ${name} is a good student",
+        subBody: "${name}, child of ${father_name} is a good boy",
         footer: "He is elgible for the application",
         signature: "Headmaster"
      })
