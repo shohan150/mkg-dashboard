@@ -86,6 +86,8 @@ export const feesEn = {
    payable_amount: "Payable Amount",
    paid_now: "Paid Now",
    due_amount: "Due Amount",
+   payment_type: "Payment Type",
+   note: "Note"
  }
 
  export const feesBn = {
@@ -175,5 +177,6 @@ export const feesEn = {
    payable_amount: "প্রদেয় পরিমাণ",
    paid_now: "এখন অর্থ প্রদান",
    due_amount: "বকেয়া পরিমাণ",
-
+   payment_type: "পেমেন্ট টাইপ",
+   note: "নোট"
  }
