@@ -72,6 +72,12 @@ export const feesEn = {
    mark_as_unpaid: "Mark as Unpaid",
 
    class_wise_collection: "Class Wise Collection",
+   select_session: "Select Session",
+   select_section: "Select Section",
+   up_to_month: "Up to Month",
+   select_roll: "Select Roll",
+   payment_date: "Payment Date",
+   get_student_data: "Get Student Data",
  }
 
  export const feesBn = {
@@ -147,4 +153,10 @@ export const feesEn = {
    mark_as_unpaid: "অনাদায়ী হিসাবে চিহ্নিত করুন",
 
    class_wise_collection: "ক্লাস বিশেষ সংগ্রহ",
+   select_session: "সেশন নির্বাচন করুন",
+   select_section: "সেকশন নির্বাচন করুন",
+   up_to_month: "মাস পর্যন্ত",
+   select_roll: "রোল নির্বাচন করুন",
+   payment_date: "পেমেন্ট তারিখ",
+   get_student_data: "ছাত্র তথ্য সংগ্রহ করুন",
  }
