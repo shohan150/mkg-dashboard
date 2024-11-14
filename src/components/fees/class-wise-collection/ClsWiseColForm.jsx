@@ -23,36 +23,6 @@ const ClsWiseColForm = () => {
         </div>
         
         <div className="space-y-2">
-          <label>{t("module.fees.select_group")}</label>
-
-         <select
-            className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
-            defaultValue="0"
-            name="select_group"
-            id="select_group"
-         >
-            <option value="">{t("module.fees.select_group")}</option>
-            <option value="Jaba">Jaba</option>
-            <option value="Golap">Golap</option>
-         </select>
-        </div>
-        
-        <div className="space-y-2">
-          <label>{t("module.fees.select_section")}</label>
-
-         <select
-            className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
-            defaultValue="0"
-            name="select_section"
-            id="select_section"
-         >
-            <option value="">{t("module.fees.select_section")}</option>
-            <option value="Jaba">Jaba</option>
-            <option value="Golap">Golap</option>
-         </select>
-        </div>
-        
-        <div className="space-y-2">
           <label>{t("module.fees.select_roll")}</label>
           <select
             className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
