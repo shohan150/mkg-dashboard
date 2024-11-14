@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import ClsWiseColForm from "./class-wise-collection/ClsWiseColForm";
+import ClsWiseTable from "./class-wise-collection/ClsWiseTable";
 import StudentShowcase from "./class-wise-collection/StudentInfo";
 
 
@@ -11,6 +12,17 @@ const ClassWiseCollection = () => {
       <h3 className="text-2xl font-medium">{t("module.fees.class_wise_collection")}</h3>
       <ClsWiseColForm />
       <StudentShowcase />
+      <ClsWiseTable />
+
+      <div className="flex justify-end items-center gap-4 my-4">
+         <button className="bg-blue w-24 py-2 rounded shadow text-white hover:-translate-y-[2px] duration-200">
+            Save
+         </button>
+
+         <button className="bg-red w-24 py-2 rounded shadow text-white hover:-translate-y-[2px] duration-200">
+            Close
+         </button>
+      </div>
     </div>
   );
 };

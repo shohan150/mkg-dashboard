@@ -73,11 +73,19 @@ export const feesEn = {
 
    class_wise_collection: "Class Wise Collection",
    select_session: "Select Session",
+   select_group: "Select Group",
    select_section: "Select Section",
    up_to_month: "Up to Month",
    select_roll: "Select Roll",
    payment_date: "Payment Date",
    get_student_data: "Get Student Data",
+   fee_head_sub_head: "Fee Head/Sub Head",
+   actual_amount: "Actual Amount",
+   fine_amount: "Fine Amount",
+   waiver_amount: "Waiver Amount",
+   payable_amount: "Payable Amount",
+   paid_now: "Paid Now",
+   due_amount: "Due Amount",
  }
 
  export const feesBn = {
@@ -154,9 +162,18 @@ export const feesEn = {
 
    class_wise_collection: "ক্লাস বিশেষ সংগ্রহ",
    select_session: "সেশন নির্বাচন করুন",
+   select_group: "গ্রুপ নির্বাচন করুন",
    select_section: "সেকশন নির্বাচন করুন",
    up_to_month: "মাস পর্যন্ত",
    select_roll: "রোল নির্বাচন করুন",
    payment_date: "পেমেন্ট তারিখ",
    get_student_data: "ছাত্র তথ্য সংগ্রহ করুন",
+   fee_head_sub_head: "ফি হেড/সাব হেড",
+   actual_amount: "প্রকৃত পরিমাণ",
+   fine_amount: "জরিমানা পরিমাণ",
+   waiver_amount: "মওকুফ পরিমাণ",
+   payable_amount: "প্রদেয় পরিমাণ",
+   paid_now: "এখন অর্থ প্রদান",
+   due_amount: "বকেয়া পরিমাণ",
+
  }

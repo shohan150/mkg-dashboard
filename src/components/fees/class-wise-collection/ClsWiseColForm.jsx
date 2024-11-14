@@ -5,7 +5,7 @@ const ClsWiseColForm = () => {
   const { t } = useTranslation();
 
   return (
-    <div>
+    <form>
       <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-4">
         <div className="space-y-2">
           <label>{t("module.fees.select_session")}</label>
@@ -19,6 +19,21 @@ const ClsWiseColForm = () => {
             <option value="">{t("module.fees.select_session")}</option>
             <option value="2024">2024</option>
             <option value="2025">2025</option>
+         </select>
+        </div>
+        
+        <div className="space-y-2">
+          <label>{t("module.fees.select_group")}</label>
+
+         <select
+            className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
+            defaultValue="0"
+            name="select_group"
+            id="select_group"
+         >
+            <option value="">{t("module.fees.select_group")}</option>
+            <option value="Jaba">Jaba</option>
+            <option value="Golap">Golap</option>
          </select>
         </div>
         
@@ -75,13 +90,15 @@ const ClsWiseColForm = () => {
 
       </div>
 
-      <button
-        type="submit"
-        className="rounded mt-4 w-44 p-2 bg-primary hover:bg-buttonHover text-white shadow-md hover:-translate-y-[2px] duration-200 flex items-center justify-center gap-2"
-      >
-        {t("module.fees.get_student_data")}
-      </button>
-    </div>
+      <div className="flex justify-end">
+        <button
+          type="submit"
+          className="rounded mt-4 w-44 p-2 bg-primary hover:bg-buttonHover text-white shadow-md hover:-translate-y-[2px] duration-200 flex items-center justify-center gap-2"
+        >
+          {t("module.fees.get_student_data")}
+        </button>
+      </div>
+    </form>
   );
 };
 
