@@ -77,6 +77,7 @@ export const feesEn = {
    select_section: "Select Section",
    up_to_month: "Up to Month",
    select_roll: "Select Roll",
+   select_id: "Select ID",
    payment_date: "Payment Date",
    get_student_data: "Get Student Data",
    fee_head_sub_head: "Fee Head/Sub Head",
@@ -87,7 +88,8 @@ export const feesEn = {
    paid_now: "Paid Now",
    due_amount: "Due Amount",
    payment_type: "Payment Type",
-   note: "Note"
+   note: "Note",
+   quick_collection: "Quick Collection"
  }
 
  export const feesBn = {
@@ -168,6 +170,7 @@ export const feesEn = {
    select_section: "সেকশন নির্বাচন করুন",
    up_to_month: "মাস পর্যন্ত",
    select_roll: "রোল নির্বাচন করুন",
+   select_id: "আইডি নির্বাচন করুন",
    payment_date: "পেমেন্ট তারিখ",
    get_student_data: "ছাত্র তথ্য সংগ্রহ করুন",
    fee_head_sub_head: "ফি হেড/সাব হেড",
@@ -178,5 +181,6 @@ export const feesEn = {
    paid_now: "এখন অর্থ প্রদান",
    due_amount: "বকেয়া পরিমাণ",
    payment_type: "পেমেন্ট টাইপ",
-   note: "নোট"
+   note: "নোট",
+   quick_collection: "দ্রুত সংগ্রহ"
  }

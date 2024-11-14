@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { months } from "../../../data/months";
 
-const ClsWiseColForm = () => {
+const QuickColForm = () => {
   const { t } = useTranslation();
 
   return (
@@ -23,44 +23,14 @@ const ClsWiseColForm = () => {
         </div>
         
         <div className="space-y-2">
-          <label>{t("module.fees.select_group")}</label>
-
-         <select
-            className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
-            defaultValue="0"
-            name="select_group"
-            id="select_group"
-         >
-            <option value="">{t("module.fees.select_group")}</option>
-            <option value="Jaba">Jaba</option>
-            <option value="Golap">Golap</option>
-         </select>
-        </div>
-        
-        <div className="space-y-2">
-          <label>{t("module.fees.select_section")}</label>
-
-         <select
-            className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
-            defaultValue="0"
-            name="select_section"
-            id="select_section"
-         >
-            <option value="">{t("module.fees.select_section")}</option>
-            <option value="Jaba">Jaba</option>
-            <option value="Golap">Golap</option>
-         </select>
-        </div>
-        
-        <div className="space-y-2">
-          <label>{t("module.fees.select_roll")}</label>
+          <label>{t("module.fees.select_id")}</label>
           <select
             className="bg-bgGray w-full rounded p-2 border-2 border-transparent focus:border-primary focus:outline-none"
             defaultValue=""
-            name="select_roll"
-            id="select_roll"
+            name="select_id"
+            id="select_id"
          >
-            <option value="" disabled>{t("module.fees.select_roll")}</option>
+            <option value="" disabled>{t("module.fees.select_id")}</option>
             <option value="01">01</option>
             <option value="02">02</option>
             <option value="03">03</option>
@@ -102,4 +72,4 @@ const ClsWiseColForm = () => {
   );
 };
 
-export default ClsWiseColForm;
+export default QuickColForm;
