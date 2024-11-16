@@ -125,7 +125,7 @@ export default function MultiFeeConfigTable() {
                   value={row.amount}
                   onChange={(e) => handleChange(e, row.id, "paidNow")}
                   disabled={!checkedState[row.id]}
-                  className="bg-bgGray w-[60px] rounded px-2 my-1 border-2 leading-7 border-gray-600 disabled:border-gray-300 focus:outline-none"
+                  className="bg-bgGray w-[60px] rounded px-2 my-1 border-2 leading-7 border-gray-600 disabled:border-none disabled:bg-transparent focus:outline-none"
                 />
               </td>
               <td className="min-w-[200px] py-3">
@@ -151,7 +151,7 @@ export default function MultiFeeConfigTable() {
                   value={row.fine_amount}
                   onChange={(e) => handleChange(e, row.id, "paidNow")}
                   disabled={!checkedState[row.id]}
-                  className="bg-bgGray w-[60px] rounded px-2 my-1 border-2 leading-7 border-gray-600 disabled:border-gray-300 focus:outline-none"
+                  className="bg-bgGray w-[60px] rounded px-2 my-1 border-2 leading-7 border-gray-600 disabled:border-none disabled:bg-transparent focus:outline-none"
                 />
               </td>
             </tr>

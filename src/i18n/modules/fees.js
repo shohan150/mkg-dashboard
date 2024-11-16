@@ -96,7 +96,8 @@ export const feesEn = {
    fee_head: "Fee Head",
    sub_head: "Sub Head",
    sub_head_list: "Sub Head List",
-   ledger: "Ledger"
+   ledger: "Ledger",
+   save: "Save",
  }
 
  export const feesBn = {
