@@ -2,17 +2,12 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import Select from "react-select";
 
-export const colourOptions = [
-  { value: "ocean", label: "Ocean", color: "#00B8D9", isFixed: true },
-  { value: "blue", label: "Blue", color: "#0052CC", isDisabled: true },
+const colourOptions = [
   { value: "purple", label: "Purple", color: "#5243AA" },
-  { value: "red", label: "Red", color: "#FF5630", isFixed: true },
   { value: "orange", label: "Orange", color: "#FF8B00" },
   { value: "yellow", label: "Yellow", color: "#FFC400" },
   { value: "green", label: "Green", color: "#36B37E" },
   { value: "forest", label: "Forest", color: "#00875A" },
-  { value: "slate", label: "Slate", color: "#253858" },
-  { value: "silver", label: "Silver", color: "#666666" },
 ];
 
 export default function MultiFeeConfigTable() {
@@ -24,7 +19,7 @@ export default function MultiFeeConfigTable() {
       ledger: "Default Ledger",
       fee_head: "Admission Fee",
       amount: 600,
-      sub_head_list: "January, February, March",
+      sub_head_list: "January, February",
       fine_amount: 400,
     },
     {
@@ -32,7 +27,7 @@ export default function MultiFeeConfigTable() {
       ledger: "Default Ledger",
       fee_head: "Admission Fee",
       amount: 600,
-      sub_head_list: "January, February, March",
+      sub_head_list: "January, February",
       fine_amount: 400,
     },
     {
@@ -40,7 +35,7 @@ export default function MultiFeeConfigTable() {
       ledger: "Default Ledger",
       fee_head: "Admission Fee",
       amount: 600,
-      sub_head_list: "January, February, March",
+      sub_head_list: "January, February",
       fine_amount: 400,
     },
   ]);
@@ -83,7 +78,7 @@ export default function MultiFeeConfigTable() {
   return (
     <div
       style={{ overflowX: "auto", overflowY: "visible" }}
-      className="border max-h-[500px] border-gray-400 my-6 rounded"
+      className="border max-h-[500px] border-gray-400 my-6 rounded scrollbar-table"
     >
       <table className="w-full text-sm leading-8">
         <thead className="border-b-2 bg-bgBlue">
@@ -107,7 +102,7 @@ export default function MultiFeeConfigTable() {
         </thead>
         <tbody className="divide-y-2 font-medium">
           {students.map((row) => (
-            <tr key={row.id} className="text-center">
+            <tr key={row.id} className="text-center even:bg-bgGreen">
               <td className="w-1/12 px-2">
                 {/* if this id does not exist in the checkedState object then give a value of false.*/}
                 <input
