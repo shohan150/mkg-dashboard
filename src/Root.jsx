@@ -82,6 +82,7 @@ import {
   getStudent,
   getTeacher,
 } from "./loaders";
+import MultiFeeConfig from "./components/fees/MultiFeeConfig";
 
 function Root() {
   const router = createBrowserRouter([
@@ -449,7 +450,11 @@ function Root() {
             {
               path: "collection/class-wise-collection/",
               element: <ClassWiseCollection />,
-            }
+            },
+            {
+              path: "collection/mult-fee-configuration/",
+              element: <MultiFeeConfig />,
+            },
           ],
         },
         {

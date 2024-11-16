@@ -159,6 +159,7 @@ const banglaWords = {
       title: "ফি সংযোজন",
       quickCollection: "ফি সংযোজন",
       classWiseCollection: "ক্লাস ফি সংযোজন",
+      multiFeeConfig: "মাল্টি ফি কনফিগ"
     },
   },
   payroll: {
