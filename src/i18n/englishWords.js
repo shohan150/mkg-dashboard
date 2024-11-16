@@ -159,6 +159,7 @@ const englishWords = {
       title: "Fees Collection",
       quickCollection: "Quick Collection",
       classWiseCollection: "Class Wise Collection",
+      multiFeeConfig: "Multi Fee Configuration",
     }
   },
   payroll: {

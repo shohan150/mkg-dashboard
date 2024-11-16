@@ -1,5 +1,7 @@
 export const feesEn = {
    search_here: "Search Here...",
+   select_year: "Select Year",
+   select_category: "Select Category",
    load: "Load",
    name: "Name",
    serial: "Serial",
@@ -87,11 +89,25 @@ export const feesEn = {
    paid_now: "Paid Now",
    due_amount: "Due Amount",
    payment_type: "Payment Type",
-   note: "Note"
+   note: "Note",
+   save: "Save",
+   multiFeeConfig: "Multi Fee Configuration",
+   fee_head: "Fee Head",
+   sub_head: "Sub Head",
+   sub_head_list: "Sub Head List",
+   ledger: "Ledger"
  }
 
  export const feesBn = {
    search_here: "এখানে অনুসন্ধান করুন...",
+   fee_head: "ফি টাইপ",
+   sub_head: "উপ টাইপ",
+   sub_head_list: "উপ টাইপ লিস্ট",
+   ledger: "লেজার",
+   save: "সংরক্ষণ করুন",
+      multiFeeConfig: "মাল্টি ফি কনফিগ",
+   select_year: "বছর নির্বাচন করুন",
+   select_category: "ক্যাটাগরি নির্বাচন করুন",
    load: "লোড করুন",
    name: "নাম",
    serial: "ক্রম",

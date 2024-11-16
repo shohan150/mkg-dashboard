@@ -369,6 +369,11 @@ const mainMenu = [
             title: "fees.collection.classWiseCollection",
             link: "fees/collection/class-wise-collection",
           },
+          {
+            id: "17/07/02",
+            title: "fees.collection.multiFeeConfig",
+            link: "fees/collection/mult-fee-configuration",
+          },
         ],
       },
       {
