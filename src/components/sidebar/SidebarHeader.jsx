@@ -2,8 +2,10 @@ import { useState } from "react";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import sidebarCover from "/images/sidebar-cover.jpg";
 
-export default function SidebarHeader() {
+export default function SidebarHeader({searchTerm, setSearchTerm}) {
   const [showSearchBar, setShowSearchBar] = useState(false);
+
+  if (!showSearchBar) { setSearchTerm(""); }
 
   return (
     <div className="text-center">
@@ -14,6 +16,8 @@ export default function SidebarHeader() {
           <input
             type="text"
             placeholder="Search term"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
             className="flex-1 bg-transparent text-white text-sm outline-none focus:text-sm"
           />
           <FaAngleUp
