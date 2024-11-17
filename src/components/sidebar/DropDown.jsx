@@ -3,19 +3,21 @@ import { useTranslation } from "react-i18next";
 import { FaAngleDown } from "react-icons/fa6";
 import { Link, useLocation } from "react-router-dom";
 
-export default function DropDown({ data, ddId, setDDId }) {
-  const [isOpen, setIsOpen] = useState(false);
+export default function DropDown({ data, searchTerm }) {
+  const [isOpen, setIsOpen] = useState(true);
 
   const {t} = useTranslation();
 
-  isOpen && data.id !== ddId && setIsOpen(false);
 
   function handleMenuClick() {
     setIsOpen((state) => !state);
-    setDDId(data.id);
   }
 
   const currentPath = useLocation();
+
+
+
+
   return (
     <li
       className={`text-[#ffffffab] group/dd  deuration-200 relative ${

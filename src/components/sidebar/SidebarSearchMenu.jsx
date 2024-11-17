@@ -3,10 +3,10 @@ import { useTranslation } from "react-i18next";
 import mainMenu from "../../data/mainMenu";
 import SidebarSearchMenuItem from "./SidebarSearchMenuItem";
 
-export default function SidebarSearchMenu() {
+export default function SidebarSearchMenu({ searchTerm }) {
   const [itemId, setItemId] = useState([]);
 
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <ul className="text-white py-6">
@@ -19,6 +19,7 @@ export default function SidebarSearchMenu() {
               item={item}
               itemId={itemId}
               setItemId={setItemId}
+              searchTerm={searchTerm}
             />
           )}
         </>
