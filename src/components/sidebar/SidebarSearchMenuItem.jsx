@@ -2,12 +2,11 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FaAngleDown } from "react-icons/fa6";
 import { Link, useLocation } from "react-router-dom";
-import DropDown from "./DropDown";
+import DropDownSearch from "./DropDownSearch";
 import Icons from "./Icons";
 
 export default function SidebarSearchMenuItem({ item, searchTerm }) {
   const [isOpen, setIsOpen] = useState(true);
-  const [ddId, setDDId] = useState(null);
 
   const {t} = useTranslation();
 
@@ -20,6 +19,7 @@ export default function SidebarSearchMenuItem({ item, searchTerm }) {
 
   //here starts the searching code
   let show = item;
+
   //if in title, show the item fully.
   const existInTitle = t(item.title).toLowerCase().includes(searchTerm.toLowerCase());
 
@@ -28,27 +28,34 @@ export default function SidebarSearchMenuItem({ item, searchTerm }) {
 
     //Case 1: if item has no children, check on it directly.
     if (!item.children) return null;
+    // console.log(item);
 
     //Case 2 : if item has children (1st level), show as opened
     if (item.children) {
       const existing = item.children.filter((child, i) => {
+
         const doesExist = t(child.title).toLowerCase().includes(searchTerm.toLowerCase());
+
         if (doesExist) return child;
-        
-        // Case 3: if item has children (2nd level), search on that
-        if(child.children) {
-          const existing2 = child.children?.filter((childL2) => {
-            const doesExist2 = t(childL2.title).toLowerCase().includes(searchTerm.toLowerCase());
-            console.log(t(childL2.title));
+        // console.log(item);
 
-            if (doesExist2) return childL2;
-          })
+        // // Case 3: if item has children (2nd level), search on that
+        // if(child.children) {
+        //   // console.log(item);
 
-          if (existing2.length > 0) { 
-            show.children[i] = existing2;
+        //   const existing2 = child.children?.filter((childL2) => {
+        //     const doesExist2 = t(childL2.title).toLowerCase().includes(searchTerm.toLowerCase());
+        //     // console.log(doesExist, doesExist2, t(child.title), t(childL2.title), searchTerm, child, childL2, item);
+
+        //     if (doesExist2){  
+        //       return childL2;}
+        //   })
+
+        //   if (existing2.length > 0) { 
+        //     show.children[i] = existing2;
             
-          } else { return null; }
-        }
+        //   } else { return null; }
+        // }
         return null;
       });
 
@@ -86,11 +93,9 @@ export default function SidebarSearchMenuItem({ item, searchTerm }) {
         {isOpen && show?.children && (
           <ul className="py-2 before:content-[''] before:block before:absolute before:z-1 before:left-[30px] before:top-10 before:bottom-0 before:border-l before:border-solid before:border-[#ffffff35]">
             {item.children.map((dropdown) => (
-              <DropDown
+              <DropDownSearch
                 key={dropdown.id}
                 data={dropdown}
-                ddId={ddId}
-                setDDId={setDDId}
                 searchTerm={searchTerm}
               />
             ))}
