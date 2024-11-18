@@ -28,11 +28,10 @@ export default function SidebarSearchMenuItem({ item, searchTerm }) {
 
     //Case 1: if item has no children, check on it directly.
     if (!item.children) return null;
-    // console.log(item);
 
     //Case 2 : if item has children (1st level), show as opened
     if (item.children) {
-      const existing = item.children.filter((child, i) => {
+      const existing = item.children.filter((child) => {
 
         const doesExist = t(child.title).toLowerCase().includes(searchTerm.toLowerCase());
 
