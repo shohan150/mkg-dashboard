@@ -31,29 +31,25 @@ export default function SidebarSearchMenuItem({ item, searchTerm }) {
 
     //Case 2 : if item has children (1st level), show as opened
     if (item.children) {
-      const existing = item.children.filter((child, i) => {
+      const existing = item.children.filter((child) => {
         const doesExist = t(child.title).toLowerCase().includes(searchTerm.toLowerCase());
 
-        if (doesExist) return child;
+        if (doesExist) return true;
 
-        // // Case 3: if item has children (2nd level), search on that
-        // if(child.children) {
-        //   // console.log(item);
+        // Case 3: if item has children (2nd level), search on that
+        if(child.children) {
+          const existing2 = child.children?.filter((childL2) => {
+            const doesExist2 = t(childL2.title).toLowerCase().includes(searchTerm.toLowerCase());
 
-        //   const existing2 = child.children?.filter((childL2) => {
-        //     const doesExist2 = t(childL2.title).toLowerCase().includes(searchTerm.toLowerCase());
-        //     // console.log(doesExist, doesExist2, t(child.title), t(childL2.title), searchTerm, child, childL2, item);
+             if (doesExist2) return true;
+          })
 
-        //     if (doesExist2){  
-        //       return childL2;}
-        //   })
+          // i can only detect if the 2nd nested layer contains that word or not. But can not change the show variable. Because using filter we return only true of false. If true that whole child is taken. So, by checking the nested layer we can just indicate that whether to keep the nested layer or not. But which one to show out the options of that nested layer is to be decided at the second layer component. 
+          if (existing2.length > 0)  return true; 
+        }
 
-        //   if (existing2.length > 0) { 
-        //     show.children[i].children = existing2;
-            
-        //   } else { return null; }
-        // }
-        return null;
+        // if not found, even at nested level 2, return false.
+        return false;
       });
       
       if (existing.length > 0) {
