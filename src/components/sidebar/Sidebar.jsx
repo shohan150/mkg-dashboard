@@ -23,11 +23,11 @@ export default function Sidebar({ showSidebar, setShowSidebar }) {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [setShowSidebar]);
 
-  if (searchTerm) {
-    console.log("searchTerm: ", searchTerm);
-  } else {
-    console.log("no searchTerm: ", searchTerm);
-  }
+  // if (searchTerm) {
+  //   console.log("searchTerm: ", searchTerm);
+  // } else {
+  //   console.log("no searchTerm: ", searchTerm);
+  // }
 
   return (
       <nav

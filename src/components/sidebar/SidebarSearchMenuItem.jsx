@@ -20,10 +20,10 @@ export default function SidebarSearchMenuItem({ item, searchTerm }) {
   //here starts the searching code
   let show = structuredClone(item);
 
-  //if in title, show the item fully.
-  const existInTitle = t(item.title).toLowerCase().includes(searchTerm.toLowerCase());
+  //if in title, show the item fully. Means keep the variable show as it is. 
+  const existInTitle = t(item.title).toLowerCase().includes(searchTerm.toLowerCase());  
 
-  // if not in title, check children/
+  // if not in title, check children.
   if(!existInTitle) {
 
     //Case 1: if item has no children, check on it directly.
@@ -32,33 +32,32 @@ export default function SidebarSearchMenuItem({ item, searchTerm }) {
     //Case 2 : if item has children (1st level), show as opened
     if (item.children) {
       const existing = item.children.filter((child, i) => {
-
         const doesExist = t(child.title).toLowerCase().includes(searchTerm.toLowerCase());
 
         if (doesExist) return child;
 
-        // Case 3: if item has children (2nd level), search on that
-        if(child.children) {
-          // console.log(item);
+        // // Case 3: if item has children (2nd level), search on that
+        // if(child.children) {
+        //   // console.log(item);
 
-          const existing2 = child.children?.filter((childL2) => {
-            const doesExist2 = t(childL2.title).toLowerCase().includes(searchTerm.toLowerCase());
-            // console.log(doesExist, doesExist2, t(child.title), t(childL2.title), searchTerm, child, childL2, item);
+        //   const existing2 = child.children?.filter((childL2) => {
+        //     const doesExist2 = t(childL2.title).toLowerCase().includes(searchTerm.toLowerCase());
+        //     // console.log(doesExist, doesExist2, t(child.title), t(childL2.title), searchTerm, child, childL2, item);
 
-            if (doesExist2){  
-              return childL2;}
-          })
+        //     if (doesExist2){  
+        //       return childL2;}
+        //   })
 
-          if (existing2.length > 0) { 
-            show.children[i] = existing2;
+        //   if (existing2.length > 0) { 
+        //     show.children[i].children = existing2;
             
-          } else { return null; }
-        }
+        //   } else { return null; }
+        // }
         return null;
       });
-
+      
       if (existing.length > 0) {
-        show.children = existing;
+        show.children = existing; 
       } else { return null; }
     }
   }
@@ -90,7 +89,7 @@ export default function SidebarSearchMenuItem({ item, searchTerm }) {
         </div>
         {isOpen && show?.children && (
           <ul className="py-2 before:content-[''] before:block before:absolute before:z-1 before:left-[30px] before:top-10 before:bottom-0 before:border-l before:border-solid before:border-[#ffffff35]">
-            {item.children.map((dropdown) => (
+            {show.children.map((dropdown) => (
               <DropDownSearch
                 key={dropdown.id}
                 data={dropdown}

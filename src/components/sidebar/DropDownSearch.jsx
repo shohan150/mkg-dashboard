@@ -15,30 +15,6 @@ export default function DropDownSearch({ data, searchTerm }) {
 
   const currentPath = useLocation();
 
-  //here starts the searching code
-  let show = data;
-  //if in title, show the item fully.
-  const existInTitle = t(data.title).toLowerCase().includes(searchTerm.toLowerCase());
-
-  // if not in title, check children/
-  if(!existInTitle) {
-
-    //Case 1: if item has no children, check on it directly.
-    if (!data.children) return null;
-
-    //Case 2 : if item has children (1st level), show as opened
-    if (data.children) {
-      const existing = data.children.filter((child) => {
-        const doesExist = t(data.title).toLowerCase().includes(searchTerm.toLowerCase());
-        if (doesExist) return child;
-        return null;
-      });
-
-      if (existing.length > 0) {
-        show.children = existing;
-      } else { return null; }
-    }
-  }
 
 
   return (

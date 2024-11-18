@@ -2,7 +2,7 @@ import mainMenu from "../../data/mainMenu";
 import SidebarSearchMenuItem from "./SidebarSearchMenuItem";
 
 export default function SidebarSearchMenu({ searchTerm }) {
-  console.log("2");
+  // console.log("2");
 
   return (
     <ul className="text-white py-6">

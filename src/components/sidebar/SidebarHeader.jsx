@@ -2,10 +2,11 @@ import { useState } from "react";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 import sidebarCover from "/images/sidebar-cover.jpg";
 
+
 export default function SidebarHeader({searchTerm, setSearchTerm}) {
   const [showSearchBar, setShowSearchBar] = useState(false);
 
-  if (!showSearchBar) { setSearchTerm(""); }
+  if (!showSearchBar) { setSearchTerm(""); }  
 
   return (
     <div className="text-center">

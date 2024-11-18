@@ -7,7 +7,7 @@ export default function SidebarMenu() {
   //make sure only one dropdown is open at a time
   const [itemId, setItemId] = useState(null);
 
-  console.log("1");
+  // console.log("1");
 
   const {t} = useTranslation();
 
