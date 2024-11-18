@@ -18,7 +18,7 @@ export default function SidebarSearchMenuItem({ item, searchTerm }) {
   const currentPath = useLocation();
 
   //here starts the searching code
-  let show = item;
+  let show = structuredClone(item);
 
   //if in title, show the item fully.
   const existInTitle = t(item.title).toLowerCase().includes(searchTerm.toLowerCase());
@@ -31,30 +31,29 @@ export default function SidebarSearchMenuItem({ item, searchTerm }) {
 
     //Case 2 : if item has children (1st level), show as opened
     if (item.children) {
-      const existing = item.children.filter((child) => {
+      const existing = item.children.filter((child, i) => {
 
         const doesExist = t(child.title).toLowerCase().includes(searchTerm.toLowerCase());
 
         if (doesExist) return child;
-        // console.log(item);
 
-        // // Case 3: if item has children (2nd level), search on that
-        // if(child.children) {
-        //   // console.log(item);
+        // Case 3: if item has children (2nd level), search on that
+        if(child.children) {
+          // console.log(item);
 
-        //   const existing2 = child.children?.filter((childL2) => {
-        //     const doesExist2 = t(childL2.title).toLowerCase().includes(searchTerm.toLowerCase());
-        //     // console.log(doesExist, doesExist2, t(child.title), t(childL2.title), searchTerm, child, childL2, item);
+          const existing2 = child.children?.filter((childL2) => {
+            const doesExist2 = t(childL2.title).toLowerCase().includes(searchTerm.toLowerCase());
+            // console.log(doesExist, doesExist2, t(child.title), t(childL2.title), searchTerm, child, childL2, item);
 
-        //     if (doesExist2){  
-        //       return childL2;}
-        //   })
+            if (doesExist2){  
+              return childL2;}
+          })
 
-        //   if (existing2.length > 0) { 
-        //     show.children[i] = existing2;
+          if (existing2.length > 0) { 
+            show.children[i] = existing2;
             
-        //   } else { return null; }
-        // }
+          } else { return null; }
+        }
         return null;
       });
 
