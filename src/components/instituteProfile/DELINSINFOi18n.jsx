@@ -1,9 +1,14 @@
 import { useTranslation } from "react-i18next";
 import { GoDotFill } from "react-icons/go";
-
+import { useGetInstituteInfoQuery } from "../../redux/api/dashboardSlice.js";
 
 export default function InstituteInfo() {
    const {t} = useTranslation();
+
+   const { data, error, isLoading } = useGetInstituteInfoQuery();
+
+   console.log(data);
+   
 
     return (
       <div className="md:w-1/2 p-6 bg-white rounded-md text-textGray">
