@@ -9,11 +9,19 @@ export const dashboardSlice = createApi({
     //define all the api endpoints. Follows the builder pattern. 
    endpoints: (builder) => ({
         getInstituteInfo: builder.query({
-            query: () => "/institute",
-        })
+            query: () => "/institute/",
+        }),
+        editInstituteInfo: builder.mutation({
+            query: ({ data }) => ({
+               url: "/institute/",
+               method: "POST",
+               body: JSON.stringify(data),
+            }),
+         }),
     }),
 });
 
 export const {
-   useGetInstituteInfoQuery
+   useGetInstituteInfoQuery,
+   useEditInstituteInfoMutation
 } = dashboardSlice;

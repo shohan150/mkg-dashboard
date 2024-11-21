@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import InstInfoForm from "./InstInfoForm";
 
 export default function EditInstituteInfo() {
@@ -11,20 +10,6 @@ export default function EditInstituteInfo() {
          {/* main form */}
          <InstInfoForm />
 
-         {/* action buttons */}
-         <div className="flex justify-end items-center gap-4">
-            <Link to="/institute-profile">
-               <button className="bg-blue w-24 py-2 rounded shadow text-white hover:-translate-y-[2px] duration-200">
-                  {t("general.save")}
-                </button>
-            </Link>
-
-            <Link to="/institute-profile">
-               <button className="bg-red w-24 py-2 rounded shadow text-white hover:-translate-y-[2px] duration-200">
-                  {t("general.cancel")}
-               </button>
-            </Link>
-         </div>
         </div>
     );
 }
