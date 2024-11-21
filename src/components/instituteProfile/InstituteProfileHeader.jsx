@@ -5,7 +5,7 @@ import { MdOutlineLocationOn } from "react-icons/md";
 import instituteCover from "/images/institute-cover.png";
 import instituteLogo from "/images/Urban School.png";
 
-export default function InstituteProfileHeader() {
+export default function InstituteProfileHeader({data}) {
    const { t } = useTranslation();
     return (
       <div className="my-4 shadow-lg">
@@ -19,17 +19,17 @@ export default function InstituteProfileHeader() {
             {/* header info */}
             <div className="flex-1 md:flex items-end justify-between">
                <div className="space-y-2 md:space-y-4">
-                  <h4 className="text-xl md:text-2xl text-primary font-medium">{t("module.instituteInfo.schoolName")}</h4>
+                  <h4 className="text-xl md:text-2xl text-primary font-medium">{data?.institute_name}</h4>
                   <div className="flex gap-4">
                      <div className="text-secondary flex items-center gap-1">
                      <IoPersonCircleOutline/>
-                     <h6 className="pt-[2px]">{t("module.instituteInfo.combined")} {t("general.school")}</h6>
+                     <h6 className="pt-[2px]">{data?.institute_gender_type} {t("general.school")}</h6>
                      </div>
                      <div className="text-secondary flex items-center gap-1">
                      <MdOutlineLocationOn /> 
-                     <h6 className="pt-[2px]">{t("module.instituteInfo.address")}</h6>
+                     <h6 className="pt-[2px]">{data?.institute_address}</h6>
                      </div>
-                  </div>
+                  </div> 
                </div>
                
                <button className="bg-primary hover:bg-buttonHover w-24 md:w-28 h-10 md:h-11 rounded shadow text-white hover:-translate-y-[2px] duration-200 mt-4">

@@ -21,10 +21,10 @@ export default function InstituteProfile() {
     return (
       <>
       {/* institute profile header */}
-      <InstituteProfileHeader />
+      <InstituteProfileHeader data={data[0]} />
       <div className="md:flex gap-4">
-         <InstituteContact data={data} />
-         <InstituteInfo data={data} />
+         <InstituteContact data={data[0]} />
+         <InstituteInfo data={data[0]} />
       </div>
       <Link to="./edit-info">
          <button className="bg-primary hover:bg-buttonHover w-full py-2 rounded shadow text-white hover:-translate-y-[2px] duration-200 my-4 tracking-wide">
