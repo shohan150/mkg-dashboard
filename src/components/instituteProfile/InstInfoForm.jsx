@@ -304,7 +304,7 @@ export default function InstInfoForm() {
                </Link>
             </div>
 
-            {editError && <p>Error: {editError.message}</p>}
+            {/* {editError && <p>Error: {editError.message}</p>} */}
 
          </form>
         </div>
