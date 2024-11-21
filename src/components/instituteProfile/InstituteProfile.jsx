@@ -13,8 +13,11 @@ export default function InstituteProfile() {
    const { data, error, isLoading } = useGetInstituteInfoQuery();
 
    console.log(data);
+
+   console.log(error);
    
-   if(error) return <Error errorMessage={error.data.message}/>;
+   
+   if(error) return <Error code={error.originalStatus} errorMessage={error.status}/>;
 
    if(isLoading) return <Loading />;
    
