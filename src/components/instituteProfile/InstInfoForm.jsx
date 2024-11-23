@@ -27,7 +27,7 @@ export default function InstInfoForm() {
       editInstituteInfo(formData);
    }
 
-    editError && console.error(editError.data);
+    editError && console.error("eeee", editError.originalStatus, editError.status);
 
    if (isLoading) return <Loading />
 
