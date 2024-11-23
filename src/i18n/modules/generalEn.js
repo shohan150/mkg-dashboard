@@ -43,6 +43,7 @@ const generalEn = {
    active: "Active",
    inactive: "Inactive",
    link: "Link",
+   "signature": "Signature",
  };
 
 export default generalEn;

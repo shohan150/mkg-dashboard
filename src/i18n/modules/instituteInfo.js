@@ -13,7 +13,8 @@ const insInfoEn = {
    genderType: "Gender Type",
    facebook: "Facebook",
    youtube: "YouTube",
-   ict: "ICT"
+   ict: "ICT",
+   chooseGender: "Choose Gender"
 };
 
 const insInfoBn = {
@@ -31,7 +32,8 @@ const insInfoBn = {
    "genderType": "ধরণ",
    facebook: "ফেসবুক",
    youtube: "ইউটিউব",
-   ict: "আইসিটি"
+   ict: "আইসিটি",
+   "chooseGender": "ধরণ নির্বাচন করুন"
 };
 
 
