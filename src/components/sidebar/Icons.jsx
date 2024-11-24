@@ -1,6 +1,6 @@
 import { CgCommunity } from "react-icons/cg";
 import { CiDollar } from "react-icons/ci";
-import { FaCloudDownloadAlt, FaMoneyCheckAlt, FaRegCheckSquare } from "react-icons/fa";
+import { FaCloudDownloadAlt, FaFileInvoiceDollar, FaMoneyCheckAlt, FaRegCheckSquare } from "react-icons/fa";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { GiPayMoney, GiReceiveMoney, GiTakeMyMoney } from "react-icons/gi";
 import { GrTableAdd } from "react-icons/gr";
@@ -27,6 +27,9 @@ export default function Icons({ name }) {
 
     case "CgCommunity":
       return <CgCommunity />;
+    
+    case "FaFileInvoiceDollar":
+      return <FaFileInvoiceDollar />;
 
     case "IoMdSettings":
       return <IoMdSettings />;

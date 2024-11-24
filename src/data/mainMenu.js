@@ -20,7 +20,7 @@ const mainMenu = [
     id: "04",
     title: "sidebarSingle.appsAndPages",
     icon: false,
-  },  
+  },
   {
     id: "05",
     title: "settings.title",
@@ -62,29 +62,29 @@ const mainMenu = [
         link: "settings/chooseable-subject",
       },
     ],
-  },  
+  },
   {
-    "id": "06",
-    "title": "communication.title",
-    "icon": "LiaSmsSolid",
-    "children": [
+    id: "06",
+    title: "communication.title",
+    icon: "LiaSmsSolid",
+    children: [
       {
-        "id": "06/01",
-        "title": "communication.generalSms",
-        "link": "communication/general-sms"
+        id: "06/01",
+        title: "communication.generalSms",
+        link: "communication/general-sms",
       },
       {
-        "id": "06/02",
-        "title": "communication.notifications",
-        "link": "communication/notifications"
+        id: "06/02",
+        title: "communication.notifications",
+        link: "communication/notifications",
       },
       {
-        "id": "06/03",
-        "title": "communication.smsTemplate",
-        "link": "communication/sms-template"
-      }
-    ]
-  },  
+        id: "06/03",
+        title: "communication.smsTemplate",
+        link: "communication/sms-template",
+      },
+    ],
+  },
   {
     id: "07",
     title: "attendance.title",
@@ -165,196 +165,195 @@ const mainMenu = [
     ],
   },
   {
-      "id": "09",
-      "title": "stpInfo.parent",
-      "icon": "RiParentFill",
-      "children": [
-        {
-          "id": "09/01",
-          "title": "stpInfo.addParent",
-          "link": "parent-info/add-parent"
-        },
-        {
-          "id": "09/02",
-          "title": "stpInfo.parentList",
-          "link": "parent-info/parent-list"
-        }
-      ]
-    },
-    {
-      "id": "10",
-      "title": "stpInfo.teacher",
-      "icon": "PiChalkboardTeacherFill",
-      "children": [
-        {
-          "id": "10/01",
-          "title": "stpInfo.addTeacher",
-          "link": "teacher-info/add-teacher"
-        },
-        {
-          "id": "10/02",
-          "title": "stpInfo.teacherList",
-          "link": "teacher-info/teacher-list"
-        },
-        {
-          "id": "10/03",
-          "title": "stpInfo.teacherIdCard",
-          "link": "teacher-info/teacher-id-card"
-        }
-      ]
-    },
-    {
-      "id": "11",
-      "title": "stpInfo.staff",
-      "icon": "FaPeopleGroup",
-      "children": [
-        {
-          "id": "11/01",
-          "title": "stpInfo.addStaff",
-          "link": "staff-info/add-staff"
-        },
-        {
-          "id": "11/02",
-          "title": "stpInfo.staffList",
-          "link": "staff-info/staff-list"
-        },
-        {
-          "id": "11/03",
-          "title": "stpInfo.staffIdCard",
-          "link": "staff-info/staff-id-card"
-        }
-      ]
-    }
-  ,
-  {
-    "id": "12",
-    "title": "exam.title",
-    "icon": "LuFileText",
-    "children": [
+    id: "09",
+    title: "stpInfo.parent",
+    icon: "RiParentFill",
+    children: [
       {
-        "id": "12/01",
-        "title": "exam.examName",
-        "link": "exam/exam-name"
+        id: "09/01",
+        title: "stpInfo.addParent",
+        link: "parent-info/add-parent",
       },
       {
-        "id": "12/02",
-        "title": "exam.examSyllabus",
-        "link": "exam/exam-syllabus"
+        id: "09/02",
+        title: "stpInfo.parentList",
+        link: "parent-info/parent-list",
       },
-      {
-        "id": "12/03",
-        "title": "exam.examSchedule",
-        "link": "exam/exam-schedule"
-      },
-      {
-        "id": "12/04",
-        "title": "exam.scheduleDownload",
-        "link": "exam/schedule-download"
-      },
-      {
-        "id": "12/05",
-        "title": "exam.admitCard",
-        "link": "exam/admit-card"
-      },
-      {
-        "id": "12/06",
-        "title": "exam.seatPlan",
-        "link": "exam/seat-plan"
-      },
-      {
-        "id": "12/07",
-        "title": "exam.gradeRule",
-        "link": "exam/grade-rule"
-      },
-      {
-        "id": "12/08",
-        "title": "exam.markBlankSheet",
-        "link": "exam/mark-blank-sheet"
-      },
-      {
-        "id": "12/09",
-        "title": "exam.examSignatureSheet",
-        "link": "exam/exam-signature-sheet"
-      },
-      {
-        "id": "12/10",
-        "title": "exam.examFeeSheet",
-        "link": "exam/exam-fee-sheet"
-      }
-    ]
-  },  
-  {
-    "id": "13",
-    "title": "result.title",
-    "icon": "PiExamBold",
-    "children": [
-      {
-        "id": "13/01",
-        "title": "result.markInput",
-        "link": "result/mark-input"
-      },
-      {
-        "id": "13/02",
-        "title": "result.tabulationSheet",
-        "link": "result/tabulation-sheet"
-      },
-      {
-        "id": "13/03",
-        "title": "result.progressReport",
-        "link": "result/progress-report"
-      },
-      {
-        "id": "13/04",
-        "title": "result.meritList",
-        "link": "result/merit-list"
-      }
-    ]
-  },  
-  {
-    "id": "14",
-    "title": "routine.title",
-    "icon": "HiOutlineTableCells",
-    "children": [
-      {
-        "id": "14/01",
-        "title": "routine.routines",
-        "link": "routine/routine-list"
-      },
-      {
-        "id": "14/02",
-        "title": "routine.classRoutine",
-        "link": "routine/class-routine"
-      },
-      {
-        "id": "14/03",
-        "title": "routine.teacherSchedule",
-        "link": "routine/teacher-schedule"
-      }
-    ]
-  },  
-  {
-    "id": "15",
-    "title": "studyMaterial.title",
-    "icon": "FaCloudDownloadAlt",
-    "link": "/study-material"
+    ],
   },
   {
-    "id": "16",
-    "title": "event.title",
-    "icon": "GrTableAdd",
-    "children": [
+    id: "10",
+    title: "stpInfo.teacher",
+    icon: "PiChalkboardTeacherFill",
+    children: [
       {
-        "id": "16/01",
-        "title": "event.eventList",
-        "link": "event/event-list"
-      }
-    ]
-  },  
+        id: "10/01",
+        title: "stpInfo.addTeacher",
+        link: "teacher-info/add-teacher",
+      },
+      {
+        id: "10/02",
+        title: "stpInfo.teacherList",
+        link: "teacher-info/teacher-list",
+      },
+      {
+        id: "10/03",
+        title: "stpInfo.teacherIdCard",
+        link: "teacher-info/teacher-id-card",
+      },
+    ],
+  },
   {
-    "id": "17",
-    "title": "fees.title",
-    "icon": "CiDollar",
-    "children": [
+    id: "11",
+    title: "stpInfo.staff",
+    icon: "FaPeopleGroup",
+    children: [
+      {
+        id: "11/01",
+        title: "stpInfo.addStaff",
+        link: "staff-info/add-staff",
+      },
+      {
+        id: "11/02",
+        title: "stpInfo.staffList",
+        link: "staff-info/staff-list",
+      },
+      {
+        id: "11/03",
+        title: "stpInfo.staffIdCard",
+        link: "staff-info/staff-id-card",
+      },
+    ],
+  },
+  {
+    id: "12",
+    title: "exam.title",
+    icon: "LuFileText",
+    children: [
+      {
+        id: "12/01",
+        title: "exam.examName",
+        link: "exam/exam-name",
+      },
+      {
+        id: "12/02",
+        title: "exam.examSyllabus",
+        link: "exam/exam-syllabus",
+      },
+      {
+        id: "12/03",
+        title: "exam.examSchedule",
+        link: "exam/exam-schedule",
+      },
+      {
+        id: "12/04",
+        title: "exam.scheduleDownload",
+        link: "exam/schedule-download",
+      },
+      {
+        id: "12/05",
+        title: "exam.admitCard",
+        link: "exam/admit-card",
+      },
+      {
+        id: "12/06",
+        title: "exam.seatPlan",
+        link: "exam/seat-plan",
+      },
+      {
+        id: "12/07",
+        title: "exam.gradeRule",
+        link: "exam/grade-rule",
+      },
+      {
+        id: "12/08",
+        title: "exam.markBlankSheet",
+        link: "exam/mark-blank-sheet",
+      },
+      {
+        id: "12/09",
+        title: "exam.examSignatureSheet",
+        link: "exam/exam-signature-sheet",
+      },
+      {
+        id: "12/10",
+        title: "exam.examFeeSheet",
+        link: "exam/exam-fee-sheet",
+      },
+    ],
+  },
+  {
+    id: "13",
+    title: "result.title",
+    icon: "PiExamBold",
+    children: [
+      {
+        id: "13/01",
+        title: "result.markInput",
+        link: "result/mark-input",
+      },
+      {
+        id: "13/02",
+        title: "result.tabulationSheet",
+        link: "result/tabulation-sheet",
+      },
+      {
+        id: "13/03",
+        title: "result.progressReport",
+        link: "result/progress-report",
+      },
+      {
+        id: "13/04",
+        title: "result.meritList",
+        link: "result/merit-list",
+      },
+    ],
+  },
+  {
+    id: "14",
+    title: "routine.title",
+    icon: "HiOutlineTableCells",
+    children: [
+      {
+        id: "14/01",
+        title: "routine.routines",
+        link: "routine/routine-list",
+      },
+      {
+        id: "14/02",
+        title: "routine.classRoutine",
+        link: "routine/class-routine",
+      },
+      {
+        id: "14/03",
+        title: "routine.teacherSchedule",
+        link: "routine/teacher-schedule",
+      },
+    ],
+  },
+  {
+    id: "15",
+    title: "studyMaterial.title",
+    icon: "FaCloudDownloadAlt",
+    link: "/study-material",
+  },
+  {
+    id: "16",
+    title: "event.title",
+    icon: "GrTableAdd",
+    children: [
+      {
+        id: "16/01",
+        title: "event.eventList",
+        link: "event/event-list",
+      },
+    ],
+  },
+  {
+    id: "17",
+    title: "fees.title",
+    icon: "CiDollar",
+    children: [
       {
         id: "17/07",
         title: "fees.collection.title",
@@ -377,59 +376,59 @@ const mainMenu = [
         ],
       },
       {
-        "id": "17/01",
-        "title": "fees.feesType",
-        "link": "fees/fees-type"
+        id: "17/01",
+        title: "fees.feesType",
+        link: "fees/fees-type",
       },
       {
-        "id": "17/02",
-        "title": "fees.feesAmount",
-        "link": "fees/fees-amount"
+        id: "17/02",
+        title: "fees.feesAmount",
+        link: "fees/fees-amount",
       },
       {
-        "id": "17/03",
-        "title": "fees.feesMaster",
-        "link": "fees/fees-master"
+        id: "17/03",
+        title: "fees.feesMaster",
+        link: "fees/fees-master",
       },
       {
-        "id": "17/04",
-        "title": "fees.feesAllocation",
-        "link": "fees/fees-allocation"
+        id: "17/04",
+        title: "fees.feesAllocation",
+        link: "fees/fees-allocation",
       },
       {
-        "id": "17/05",
-        "title": "fees.returnFee",
-        "link": "fees/return-fee"
+        id: "17/05",
+        title: "fees.returnFee",
+        link: "fees/return-fee",
       },
       {
-        "id": "17/06",
-        "title": "fees.deleteFee",
-        "link": "fees/delete-fee"
-      }
-    ]
+        id: "17/06",
+        title: "fees.deleteFee",
+        link: "fees/delete-fee",
+      },
+    ],
   },
   {
-    "id": "18",
-    "title": "payroll.title",
-    "icon": "FaMoneyCheckAlt",
-    "children": [
+    id: "18",
+    title: "payroll.title",
+    icon: "FaMoneyCheckAlt",
+    children: [
       {
-        "id": "18/01",
-        "title": "payroll.addition",
-        "link": "payroll/addition"
+        id: "18/01",
+        title: "payroll.addition",
+        link: "payroll/addition",
       },
       {
-        "id": "18/02",
-        "title": "payroll.deduction",
-        "link": "payroll/deduction"
+        id: "18/02",
+        title: "payroll.deduction",
+        link: "payroll/deduction",
       },
       {
-        "id": "18/03",
-        "title": "payroll.salaryAssign",
-        "link": "payroll/salary-assign"
-      }
-    ]
-  },  
+        id: "18/03",
+        title: "payroll.salaryAssign",
+        link: "payroll/salary-assign",
+      },
+    ],
+  },
   {
     id: "19",
     title: "services.title",
@@ -484,7 +483,7 @@ const mainMenu = [
         ],
       },
     ],
-  },  
+  },
   {
     id: "20",
     title: "income.title",
@@ -540,130 +539,240 @@ const mainMenu = [
         link: "withdraw/withdraw",
       },
     ],
-  },  
+  },
+  {
+    id: "22",
+    title: "General Accounts",
+    icon: "FaFileInvoiceDollar",
+    children: [
+      {
+        id: "22/01",
+        title: "Ledger Create",
+        link: "accounts/ledger-create",
+      },
+      {
+        id: "22/02",
+        title: "Transaction",
+        children: [
+          {
+            id: "22/02/01",
+            title: "Recieve Transaction",
+            link: "accounts/transaction-recieve",
+          },
+          {
+            id: "22/02/02",
+            title: "Payment Transaction",
+            link: "accounts/transaction-payment",
+          },
+          {
+            id: "22/02/03",
+            title: "Contra Transaction",
+            link: "accounts/transaction-contra",
+          },
+          {
+            id: "22/02/03",
+            title: "Journal Transaction",
+            link: "accounts/transaction-journal",
+          },
+        ],
+      },
+      {
+        id: "22/03",
+        title: "Reports",
+        children: [
+          {
+            id: "22/03/01",
+            title: "Cash Summary",
+            link: "accounts/cash-summary",
+          },
+          {
+            id: "22/03/02",
+            title: "Trial Balance",
+            link: "accounts/trial-balance",
+          },
+          {
+            id: "22/03/03",
+            title: "Balance Sheet",
+            link: "accounts/balance-sheet",
+          },
+          {
+            id: "22/03/04",
+            title: "Income Statement",
+            link: "accounts/income-statement",
+          },
+          {
+            id: "22/03/05",
+            title: "Voucher List",
+            link: "accounts/voucher-list",
+          },
+          {
+            id: "22/03/06",
+            title: "Funds Flow",
+            link: "accounts/funds-flow",
+          },
+          {
+            id: "22/03/07",
+            title: "Journal Report List",
+            link: "accounts/journal-report-list",
+          },
+          {
+            id: "22/03/08",
+            title: "Cash Book",
+            link: "accounts/cash-book",
+          },
+          {
+            id: "22/03/08",
+            title: "Date Wise Ledger",
+            link: "accounts/date-wise-ledger",
+          },
+          {
+            id: "22/03/08",
+            title: "Ledger Summary",
+            link: "accounts/ledger-summary",
+          },
+          {
+            id: "22/03/08",
+            title: "Category Wise Summary",
+            link: "accounts/category-wise-summary",
+          },
+          {
+            id: "22/03/08",
+            title: "User Wise Summary",
+            link: "accounts/user-wise-summary",
+          },
+        ],
+      },
+
+      {
+        id: "22/04",
+        title: "Voucher Delete",
+        link: "accounts/voucher-delete",
+      },
+    ],
+  },
   {
     id: "23",
     title: "sidebarSingle.reports",
     icon: false,
   },
   {
-    "id": "24",
-    "title": "accountingReport.title",
-    "icon": "MdAccountBalance",
-    "children": [
+    id: "24",
+    title: "accountingReport.title",
+    icon: "MdAccountBalance",
+    children: [
       {
-        "id": "24/01",
-        "title": "accountingReport.accountStatement",
-        "link": "accounting-report/account-statement"
+        id: "24/01",
+        title: "accountingReport.accountStatement",
+        link: "accounting-report/account-statement",
       },
       {
-        "id": "24/02",
-        "title": "accountingReport.dateWiseIncome",
-        "link": "accounting-report/date-wise-income"
+        id: "24/02",
+        title: "accountingReport.dateWiseIncome",
+        link: "accounting-report/date-wise-income",
       },
       {
-        "id": "24/03",
-        "title": "accountingReport.headWiseIncome",
-        "link": "accounting-report/head-wise-income"
+        id: "24/03",
+        title: "accountingReport.headWiseIncome",
+        link: "accounting-report/head-wise-income",
       },
       {
-        "id": "24/04",
-        "title": "accountingReport.dateWiseExpense",
-        "link": "accounting-report/date-wise-expense"
+        id: "24/04",
+        title: "accountingReport.dateWiseExpense",
+        link: "accounting-report/date-wise-expense",
       },
       {
-        "id": "24/05",
-        "title": "accountingReport.headWiseExpense",
-        "link": "accounting-report/head-wise-expense"
+        id: "24/05",
+        title: "accountingReport.headWiseExpense",
+        link: "accounting-report/head-wise-expense",
       },
       {
-        "id": "24/06",
-        "title": "accountingReport.dateWiseWithdraw",
-        "link": "accounting-report/date-wise-withdraw"
-      }
-    ]
+        id: "24/06",
+        title: "accountingReport.dateWiseWithdraw",
+        link: "accounting-report/date-wise-withdraw",
+      },
+    ],
   },
   {
-    "id": "25",
-    "title": "feesReport.title",
-    "icon": "TbReportMoney",
-    "children": [
+    id: "25",
+    title: "feesReport.title",
+    icon: "TbReportMoney",
+    children: [
       {
-        "id": "25/01",
-        "title": "feesReport.dateWisePaidFee",
-        "link": "fees-report/date-wise-paid-fee"
+        id: "25/01",
+        title: "feesReport.dateWisePaidFee",
+        link: "fees-report/date-wise-paid-fee",
       },
       {
-        "id": "25/02",
-        "title": "feesReport.studentWisePaidFee",
-        "link": "fees-report/student-wise-paid-fee"
+        id: "25/02",
+        title: "feesReport.studentWisePaidFee",
+        link: "fees-report/student-wise-paid-fee",
       },
       {
-        "id": "25/03",
-        "title": "feesReport.dueFee",
-        "link": "fees-report/due-fee"
-      }
-    ]
-  },  
+        id: "25/03",
+        title: "feesReport.dueFee",
+        link: "fees-report/due-fee",
+      },
+    ],
+  },
   {
-    "id": "26",
-    "title": "attendanceReport.title",
-    "icon": "PiPresentationChartBold",
-    "children": [
+    id: "26",
+    title: "attendanceReport.title",
+    icon: "PiPresentationChartBold",
+    children: [
       {
-        "id": "26/01",
-        "title": "attendanceReport.studentReport.title",
-        "children": [
+        id: "26/01",
+        title: "attendanceReport.studentReport.title",
+        children: [
           {
-            "id": "26/01/01",
-            "title": "attendanceReport.studentReport.monthWiseReport",
-            "link": "attendance-report/student-report/month-wise-report"
+            id: "26/01/01",
+            title: "attendanceReport.studentReport.monthWiseReport",
+            link: "attendance-report/student-report/month-wise-report",
           },
           {
-            "id": "26/01/02",
-            "title": "attendanceReport.studentReport.dayViewReport",
-            "link": "attendance-report/student-report/day-wise-report"
+            id: "26/01/02",
+            title: "attendanceReport.studentReport.dayViewReport",
+            link: "attendance-report/student-report/day-wise-report",
           },
           {
-            "id": "26/01/03",
-            "title": "attendanceReport.studentReport.timeWiseReport",
-            "link": "attendance-report/student-report/time-wise-report"
-          }
-        ]
+            id: "26/01/03",
+            title: "attendanceReport.studentReport.timeWiseReport",
+            link: "attendance-report/student-report/time-wise-report",
+          },
+        ],
       },
       {
-        "id": "26/02",
-        "title": "attendanceReport.teacherReport.title",
-        "children": [
+        id: "26/02",
+        title: "attendanceReport.teacherReport.title",
+        children: [
           {
-            "id": "26/02/01",
-            "title": "attendanceReport.teacherReport.monthWiseReport",
-            "link": "attendance-report/teacher-report/month-wise-report"
+            id: "26/02/01",
+            title: "attendanceReport.teacherReport.monthWiseReport",
+            link: "attendance-report/teacher-report/month-wise-report",
           },
           {
-            "id": "26/02/03",
-            "title": "attendanceReport.teacherReport.timeWiseReport",
-            "link": "attendance-report/teacher-report/time-wise-report"
-          }
-        ]
+            id: "26/02/03",
+            title: "attendanceReport.teacherReport.timeWiseReport",
+            link: "attendance-report/teacher-report/time-wise-report",
+          },
+        ],
       },
       {
-        "id": "26/03",
-        "title": "attendanceReport.staffReport.title",
-        "children": [
+        id: "26/03",
+        title: "attendanceReport.staffReport.title",
+        children: [
           {
-            "id": "26/03/01",
-            "title": "attendanceReport.staffReport.monthWiseReport",
-            "link": "attendance-report/staff-report/month-wise-report"
+            id: "26/03/01",
+            title: "attendanceReport.staffReport.monthWiseReport",
+            link: "attendance-report/staff-report/month-wise-report",
           },
           {
-            "id": "26/03/02",
-            "title": "attendanceReport.staffReport.timeWiseReport",
-            "link": "attendance-report/staff-report/time-wise-report"
-          }
-        ]
-      }
-    ]
+            id: "26/03/02",
+            title: "attendanceReport.staffReport.timeWiseReport",
+            link: "attendance-report/staff-report/time-wise-report",
+          },
+        ],
+      },
+    ],
   },
   {
     id: "27",
@@ -686,7 +795,7 @@ const mainMenu = [
         link: "sms-report/sms-delivery",
       },
     ],
-  },  
+  },
   {
     id: "28",
     title: "siteSettings.title",
@@ -738,8 +847,7 @@ const mainMenu = [
         link: "site-settings/contact",
       },
     ],
-  }
-  
+  },
 
   //nested menu item pattern
   // {

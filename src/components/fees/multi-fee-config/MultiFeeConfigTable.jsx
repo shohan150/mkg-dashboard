@@ -123,8 +123,9 @@ export default function MultiFeeConfigTable() {
                   className="bg-bgGray w-[60px] rounded px-2 my-1 border-2 leading-7 border-gray-600 disabled:border-none disabled:bg-transparent focus:outline-none"
                 />
               </td>
-              <td className="min-w-[200px] py-3">
+              <td className="min-w-[240px] py-3">
                 <Select
+                  closeMenuOnSelect={false}
                   isMulti
                   isDisabled={!checkedState[row.id]}
                   name="colors"
