@@ -1,3 +1,4 @@
+import { accountsEn } from "./modules/accounts";
 import { communicationEn } from "./modules/communication";
 import { dashboardEn } from "./modules/dashboard";
 import { examEn } from "./modules/exam";
@@ -30,7 +31,8 @@ const englishWords = {
     income: incomeEn,
     expense: expenseEn,
     report: reportEn,
-    fees: feesEn
+    fees: feesEn,
+    accounts: accountsEn
   },
   study_material: {
     add_new_item: "Add New Item",

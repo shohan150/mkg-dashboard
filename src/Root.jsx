@@ -24,15 +24,54 @@ import {
   SeatPlan,
 } from "./components/exam/exam-index";
 import AddExamRoutine from "./components/exam/exam-schedule/AddExamRoutine";
-import { AddExpense, Expense, ExpenseEntryDate, ExpenseHead } from "./components/expense/expense-index";
-import { ClassWiseCollection, DeleteFee, FeesAllocation, FeesAmount, FeesMaster, FeesType, QuickCollection, ReturnFee } from "./components/fees/fees-index.js";
+import {
+  AddExpense,
+  Expense,
+  ExpenseEntryDate,
+  ExpenseHead,
+} from "./components/expense/expense-index";
+import {
+  ClassWiseCollection,
+  DeleteFee,
+  FeesAllocation,
+  FeesAmount,
+  FeesMaster,
+  FeesType,
+  QuickCollection,
+  ReturnFee,
+} from "./components/fees/fees-index.js";
 import Home from "./components/homePage/Home";
-import { AddIncome, Income, IncomeEntryDate, IncomeHead } from "./components/income/income-index";
+import {
+  AddIncome,
+  Income,
+  IncomeEntryDate,
+  IncomeHead,
+} from "./components/income/income-index";
 import EditInstituteInfo from "./components/instituteProfile/EditInstituteInfo";
 import InstituteProfile from "./components/instituteProfile/InstituteProfile";
 import Deduction from "./components/payroll/deduction/Deduction";
 import { Addition, SalaryAssign } from "./components/payroll/payroll-index";
-import { AccountingStatement, DateWisePaidFee, DueFee, ExpenseDateWise, ExpenseHeadWise, IncomeDateWise, IncomeHeadWise, SmsDelivery, SmsPurchaseHistory, SmsSendSummary, StaMonthReport, StaTimeReport, StuDateReport, StudentWisePaidFee, StuMonthReport, StuTimeReport, TMonthReport, TTimeReport, WithdrawDateWise } from "./components/reports/reports-index";
+import {
+  AccountingStatement,
+  DateWisePaidFee,
+  DueFee,
+  ExpenseDateWise,
+  ExpenseHeadWise,
+  IncomeDateWise,
+  IncomeHeadWise,
+  SmsDelivery,
+  SmsPurchaseHistory,
+  SmsSendSummary,
+  StaMonthReport,
+  StaTimeReport,
+  StuDateReport,
+  StudentWisePaidFee,
+  StuMonthReport,
+  StuTimeReport,
+  TMonthReport,
+  TTimeReport,
+  WithdrawDateWise,
+} from "./components/reports/reports-index";
 import {
   MarkInput,
   MeritList,
@@ -45,9 +84,36 @@ import {
   RoutineList,
   TeacherSchedule,
 } from "./components/routine/routine-index";
-import { CoachingAllocation, CoachingPackage, HostelAllocation, HostelPackage, TransportAllocation, TransportPackage } from "./components/services/services-index";
-import { AcademicSetup, ChooseableSubject, ClassConfig, ClassMarkConfig, ClassSubjectAssign, MarkConfig, MarkDivide, SectionConfig, SubjectMarkDivide, TeacherSubjectAssign } from "./components/settings/settings-index.js";
-import { Banner, Contact, Notice, PageContent, PictureGallery, SchoolService, SSTestimonial, VideoGallery } from "./components/site-settings/siteSettingsIndex";
+import {
+  CoachingAllocation,
+  CoachingPackage,
+  HostelAllocation,
+  HostelPackage,
+  TransportAllocation,
+  TransportPackage,
+} from "./components/services/services-index";
+import {
+  AcademicSetup,
+  ChooseableSubject,
+  ClassConfig,
+  ClassMarkConfig,
+  ClassSubjectAssign,
+  MarkConfig,
+  MarkDivide,
+  SectionConfig,
+  SubjectMarkDivide,
+  TeacherSubjectAssign,
+} from "./components/settings/settings-index.js";
+import {
+  Banner,
+  Contact,
+  Notice,
+  PageContent,
+  PictureGallery,
+  SchoolService,
+  SSTestimonial,
+  VideoGallery,
+} from "./components/site-settings/siteSettingsIndex";
 import StaffIdCard from "./components/STSP-info/staff-info/staff-id-card/StaffIdCard";
 import {
   AddParents,
@@ -68,7 +134,7 @@ import {
   TeacherList,
   TesData,
   TesSettings,
-  Testimonial
+  Testimonial,
 } from "./components/STSP-info/stsp-index";
 import TeacherIdCard from "./components/STSP-info/teacher-info/teacher-id-card/TeacherIdCard";
 import StudyMaterial from "./components/study-material/StudyMaterial";
@@ -83,6 +149,24 @@ import {
   getTeacher,
 } from "./loaders";
 import MultiFeeConfig from "./components/fees/MultiFeeConfig";
+import LedgerCreate from "./components/accounts/LedgerCreate";
+import RecieveTransaction from "./components/accounts/RecieveTransaction";
+import PaymentTransaction from "./components/accounts/PaymentTransaction";
+import ContraTransaction from "./components/accounts/ContraTransaction";
+import JournalTransaction from "./components/accounts/JournalTransaction";
+import CashSummary from "./components/accounts/CashSummary";
+import TrialBalance from "./components/accounts/TrialBalance";
+import BalanceSheet from "./components/accounts/BalanceSheet";
+import IncomeStatement from "./components/accounts/IncomeStatement";
+import VoucherList from "./components/accounts/VoucherList";
+import FundsFlow from "./components/accounts/FundsFlow";
+import JournalReport from "./components/accounts/JournalReport";
+import CashBook from "./components/accounts/CashBook";
+import DateWiseLedger from "./components/accounts/DateWiseLedger";
+import LedgerSummary from "./components/accounts/LedgerSummary";
+import CategoryWiseLedger from "./components/accounts/CategoryWiseSummary";
+import UserTransaction from "./components/accounts/UserWiseTransaction";
+import VoucherDelete from "./components/accounts/VoucherDelete";
 
 function Root() {
   const router = createBrowserRouter([
@@ -487,8 +571,8 @@ function Root() {
                 {
                   path: "hostel-allocation",
                   element: <HostelAllocation />,
-                }
-              ]
+                },
+              ],
             },
             {
               path: "coaching",
@@ -500,8 +584,8 @@ function Root() {
                 {
                   path: "coaching-allocation",
                   element: <CoachingAllocation />,
-                }
-              ]
+                },
+              ],
             },
 
             {
@@ -514,8 +598,8 @@ function Root() {
                 {
                   path: "transport-allocation",
                   element: <TransportAllocation />,
-                }
-              ]
+                },
+              ],
             },
           ],
         },
@@ -567,6 +651,83 @@ function Root() {
             {
               path: "withdraw",
               element: <Withdraw />,
+            },
+          ],
+        },
+        {
+          path: "accounts",
+          children: [
+            {
+              path: "ledger-create",
+              element: <LedgerCreate />,
+            },
+            {
+              path: "transaction-recieve",
+              element: <RecieveTransaction />,
+            },
+            {
+              path: "transaction-payment",
+              element: <PaymentTransaction />,
+            },
+            {
+              path: "transaction-contra",
+              element: <ContraTransaction />,
+            },
+            {
+              path: "transaction-journal",
+              element: <JournalTransaction />,
+            },
+            {
+              path: "cash-summary",
+              element: <CashSummary />,
+            },
+            {
+              path: "trial-balance",
+              element: <TrialBalance />,
+            },
+            {
+              path: "balance-sheet",
+              element: <BalanceSheet />,
+            },
+            {
+              path: "income-statement",
+              element: <IncomeStatement />,
+            },
+            {
+              path: "voucher-list",
+              element: <VoucherList />,
+            },
+            {
+              path: "funds-flow",
+              element: <FundsFlow />,
+            },
+            {
+              path: "journal-report-list",
+              element: <JournalReport />,
+            },
+            {
+              path: "cash-book",
+              element: <CashBook />,
+            },
+            {
+              path: "date-wise-ledger",
+              element: <DateWiseLedger />,
+            },
+            {
+              path: "ledger-summary",
+              element: <LedgerSummary />,
+            },
+            {
+              path: "category-wise-summary",
+              element: <CategoryWiseLedger />,
+            },
+            {
+              path: "user-wise-summary",
+              element: <UserTransaction />,
+            },
+            {
+              path: "voucher-delete",
+              element: <VoucherDelete />,
             },
           ],
         },
@@ -721,8 +882,8 @@ function Root() {
 
         {
           path: "test",
-          element: <Test />
-        }
+          element: <Test />,
+        },
       ],
     },
   ]);

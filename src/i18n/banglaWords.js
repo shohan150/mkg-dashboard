@@ -1,3 +1,4 @@
+import { accountsBn } from "./modules/accounts";
 import { communicationBn } from "./modules/communication";
 import { dashboardBn } from "./modules/dashboard";
 import { examBn } from "./modules/exam";
@@ -30,7 +31,8 @@ const banglaWords = {
     income: incomeBn,
     expense: expenseBn,
     report: reportBn,
-    fees: feesBn
+    fees: feesBn,
+    accounts: accountsBn
   },
   study_material: {
     add_new_item: "নতুন আইটেম যোগ করুন",
