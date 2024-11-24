@@ -19,10 +19,10 @@ export const dashboardSlice = createApi({
             providesTags: ["institute-info"],
         }),
         editInstituteInfo: builder.mutation({
-            query: ({ data }) => ({
+            query: ( data ) => ({
                url: "/institute/",
                method: "POST",
-               body: JSON.stringify(data),
+               body: data,
             }),
             invalidatesTags: ["institute-info"],
          }),

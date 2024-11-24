@@ -6,7 +6,7 @@ const Loading = ({ imageNo = 1 }) => {
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       <img src={image} alt="Error" className="w-full h-auto" />
-      <p className="text-xl font-bold primary">Loading ...</p>
+      <p className="text-xl font-bold text-primary my-6">Loading ...</p>
     </div>
   );
 };
