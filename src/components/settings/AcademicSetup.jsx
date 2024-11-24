@@ -3,6 +3,7 @@ import academicSetupList from "../../data/academicSetupList";
 import DeleteModal from "../common/DeleleModal";
 import AcademicSetupForm from "./academic-setup/AcademicSetupForm";
 import AcademicSetupTable from "./academic-setup/AcademicSetupTable";
+import ClassList from "./academic-setup/ClassList";
 import EditPopup from "./academic-setup/EditPopup";
 
 export default function AcademicSetup() {
@@ -26,6 +27,7 @@ export default function AcademicSetup() {
     <div className="relative">
       <AcademicSetupForm />
       <div className="space-y-4">
+        <ClassList />
         {academicSetupList.map((item, index) => (
           <AcademicSetupTable
             key={index}
