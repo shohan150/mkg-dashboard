@@ -15,8 +15,8 @@ export const settingsSlice = createApi({
     //define all the api endpoints. Follows the builder pattern. 
    endpoints: (builder) => ({
         getAcademicInfo: builder.query({
-            query: ({type}) => `/${type}/`,
-            providesTags: (result, error, arg) => [{ type: "academic-info", id: arg.type }],
+            query: (type) => `/${type}/`,
+            providesTags: (result, error, arg) => [{ type: "academic-info", id: arg }],
         }),
         addAcademicInfo: builder.mutation({
             query: ({ selectedType, typeValue }) => ({

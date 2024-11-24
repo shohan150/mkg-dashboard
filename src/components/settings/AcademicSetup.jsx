@@ -1,16 +1,24 @@
 import { useState } from "react";
-import academicSetupList from "../../data/academicSetupList";
 import DeleteModal from "../common/DeleleModal";
 import AcademicSetupForm from "./academic-setup/AcademicSetupForm";
-import AcademicSetupTable from "./academic-setup/AcademicSetupTable";
-import ClassList from "./academic-setup/ClassList";
 import EditPopup from "./academic-setup/EditPopup";
+import FieldList from "./academic-setup/FiledList";
 
 export default function AcademicSetup() {
   const [isEdit, setIsEdit] = useState(false);
   const [isDelete, setIsDelete] = useState(false);
   const [toDelete, setToDelete] = useState("");
   const [editContent, setEditContent] = useState({ title:"", row:{id:"", info: ""} });
+
+  const acSetupFields = [
+    { path: 'student-class', title: 'Class' },
+    { path: 'subject', title: 'Subject' },
+    { path: 'stu-group', title: 'Group' },
+    { path: 'student-section', title: 'Section' },
+    { path: 'student-shift', title: 'Shift' },
+    { path: 'period', title: 'Period' },
+    { path: 'admission-year', title: 'Admission Year' }
+  ];
 
   function handleEdit(row, title) {
     setIsEdit(true);
@@ -25,18 +33,15 @@ export default function AcademicSetup() {
   // console.log(isEdit, editContent);
   return (
     <div className="relative">
-      <AcademicSetupForm />
+      {/* the field entry form */}
+      <AcademicSetupForm acSetupFields={acSetupFields} />
+
+      {/* show the fields */}
       <div className="space-y-4">
-        <ClassList />
-        {academicSetupList.map((item, index) => (
-          <AcademicSetupTable
-            key={index}
-            title={item.title}
-            content={item.content}
-            handleEdit={handleEdit}
-            handleDelete = {handleDelete}
-          />
-        ))}
+        {
+          acSetupFields.map((field, i) =><FieldList key={i} field={field} handleEdit={handleEdit} handleDelete={handleDelete} />)
+        }
+
       </div>
 
       {/* show only when isEdit is true */}
