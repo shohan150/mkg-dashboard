@@ -37,8 +37,9 @@ import {
   FeesAmount,
   FeesMaster,
   FeesType,
+  MultiFeeConfig,
   QuickCollection,
-  ReturnFee,
+  ReturnFee
 } from "./components/fees/fees-index.js";
 import Home from "./components/homePage/Home";
 import {
@@ -148,25 +149,11 @@ import {
   getStudent,
   getTeacher,
 } from "./loaders";
-import MultiFeeConfig from "./components/fees/MultiFeeConfig";
-import LedgerCreate from "./components/accounts/LedgerCreate";
-import RecieveTransaction from "./components/accounts/RecieveTransaction";
-import PaymentTransaction from "./components/accounts/PaymentTransaction";
-import ContraTransaction from "./components/accounts/ContraTransaction";
-import JournalTransaction from "./components/accounts/JournalTransaction";
-import CashSummary from "./components/accounts/CashSummary";
-import TrialBalance from "./components/accounts/TrialBalance";
-import BalanceSheet from "./components/accounts/BalanceSheet";
-import IncomeStatement from "./components/accounts/IncomeStatement";
-import VoucherList from "./components/accounts/VoucherList";
-import FundsFlow from "./components/accounts/FundsFlow";
-import JournalReport from "./components/accounts/JournalReport";
-import CashBook from "./components/accounts/CashBook";
-import DateWiseLedger from "./components/accounts/DateWiseLedger";
-import LedgerSummary from "./components/accounts/LedgerSummary";
-import CategoryWiseLedger from "./components/accounts/CategoryWiseSummary";
-import UserTransaction from "./components/accounts/UserWiseTransaction";
-import VoucherDelete from "./components/accounts/VoucherDelete";
+
+import {
+  BalanceSheet, CashBook, CashSummary, CategoryWiseLedger, ContraTransaction, DateWiseLedger, FundsFlow, IncomeStatement, JournalReport, JournalTransaction, LedgerCreate, LedgerSummary, PaymentTransaction, RecieveTransaction, TrialBalance, UserTransaction,
+  VoucherDelete, VoucherList
+} from "./components/accounts/accounts-index.js";
 
 function Root() {
   const router = createBrowserRouter([
