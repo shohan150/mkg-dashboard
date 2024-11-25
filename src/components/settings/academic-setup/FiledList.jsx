@@ -32,13 +32,13 @@ export default function FieldList({field, handleEdit, handleDelete}) {
                <td className="w-4/12 pb-1">
                   <button
                      className="bg-blue px-3 py-1 rounded shadow text-white hover:-translate-y-[2px] duration-200 text-sm m-1"
-                     onClick={() => handleEdit(row, field.title)}
+                     onClick={() => handleEdit(row, field)}
                   >
                      {t('module.settings.edit')}
                   </button>
                   <button
                      className="bg-red px-3 py-1 rounded shadow text-white hover:-translate-y-[2px] duration-200 text-sm m-1"
-                     onClick={() => handleDelete(row?.id, row?.name, field)}
+                     onClick={() => handleDelete(row, field)}
                   >
                      {t('module.settings.delete')}
                   </button>

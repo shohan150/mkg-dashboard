@@ -26,6 +26,14 @@ export const settingsSlice = createApi({
             }),
             invalidatesTags: (result, error, arg) => [{ type: "academic-info", id: arg.selectedType }],
          }),
+        updateAcademicInfo: builder.mutation({
+            query: ({ selectedType, data }) => ({
+               url: `/${selectedType}/${data.id}/`,
+               method: "PUT",
+               body: data,
+            }),
+            invalidatesTags: (result, error, arg) => [{ type: "academic-info", id: arg.selectedType }],
+         }),
          deleteAcademicInfo: builder.mutation({
             query: ({selectedType, id}) => ({
                 url: `/${selectedType}/${id}/`,
@@ -39,5 +47,6 @@ export const settingsSlice = createApi({
 export const {
    useGetAcademicInfoQuery,
    useAddAcademicInfoMutation,
+   useUpdateAcademicInfoMutation,
    useDeleteAcademicInfoMutation,
 } = settingsSlice;

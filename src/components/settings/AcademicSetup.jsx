@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { useDeleteAcademicInfoMutation } from "../../redux/api/settingsSlice";
+import { useDeleteAcademicInfoMutation, useUpdateAcademicInfoMutation } from "../../redux/api/settingsSlice";
 import DeleteModal from "../common/DeleleModal";
 import AcademicSetupForm from "./academic-setup/AcademicSetupForm";
 import EditPopup from "./academic-setup/EditPopup";
@@ -11,9 +11,10 @@ export default function AcademicSetup() {
   const [isDelete, setIsDelete] = useState(false);
   const [toDelete, setToDelete] = useState("");
   const [deleteValues, setDeleteValues] = useState();
-  const [editContent, setEditContent] = useState({ title:"", row:{id:"", info: ""} });
+  const [editContent, setEditContent] = useState({});
 
-  const [deleteAcademicInfo, {isLoading, error, isSuccess}] = useDeleteAcademicInfoMutation();
+  const [deleteAcademicInfo, {isLoading : dltLoading, error : dltError, isSuccess : dltSuccess}] = useDeleteAcademicInfoMutation();
+  const [updateAcademicInfo, {isLoading: updateLoading, error : updateError, isSuccess : updateSuccess}] = useUpdateAcademicInfoMutation();
 
   const acSetupFields = [
     { path: 'student-class', title: 'Class' },
@@ -25,15 +26,36 @@ export default function AcademicSetup() {
     { path: 'admission-year', title: 'Admission Year' }
   ];
 
-  function handleEdit(row, title) {
+  // handle edit.
+  function handleEdit(item, field) {
     setIsEdit(true);
-    setEditContent({ title, row });
+    setEditContent({ item, field });
   }
 
-  function handleDelete(id, title, type) {
+  function handleConfirmEdit(){
+    updateAcademicInfo({selectedType: editContent?.field?.path, data: editContent?.item});
+    closeEdit();
+  }
+
+  function closeEdit(){
+    setIsEdit(false);
+    setEditContent({});
+  }
+  
+  useEffect(() => {
+    if (updateSuccess) {
+        toast.success('Updated Successfully!');
+    }
+    if (updateError) {
+        toast.error('Failed to Update!');
+    }
+  }, [updateSuccess, updateError]);
+
+  //handle delete
+  function handleDelete(item, field) {
     setIsDelete(true);
-    setToDelete(`${type.title} "${title}" `);
-    setDeleteValues({selectedType: type.path, id});
+    setToDelete(`${field.title} "${item.name}" `);
+    setDeleteValues({selectedType: field.path, id:item.id});
   }
 
   function handleConfirmDlt(){
@@ -48,13 +70,14 @@ export default function AcademicSetup() {
   }
 
   useEffect(() => {
-    if (isSuccess) {
+    if (dltSuccess) {
         toast.warn(`Deleted Successfully!`);
     }
-    if (error) {
+    if (dltError) {
         toast.error('Failed to Delete!');
     }
-  }, [isSuccess, error])
+  }, [dltSuccess, dltError]);
+
   
   return (
     <div className="relative">
@@ -74,7 +97,8 @@ export default function AcademicSetup() {
         editContent={editContent}
         setEditContent={setEditContent}
         isEdit={isEdit} 
-        onClose={()=>setIsEdit(false)}
+        handleConfirmEdit={handleConfirmEdit}
+        onClose={closeEdit}
       />
 
       {/* show only when isDelete is true */}
