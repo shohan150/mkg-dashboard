@@ -5,6 +5,8 @@ import Sidebar from "./components/sidebar/Sidebar";
 import Footer from "./components/topNavbar/Footer";
 import TopNavbar from "./components/topNavbar/TopNavbar";
 //to support multi-language
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./i18n/i18n.js";
 
 
@@ -41,6 +43,19 @@ export default function App() {
         </div>
         <Footer />
       </div>
+      <ToastContainer
+      position="bottom-right"
+      autoClose={5000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="colored"
+       />
+
     </div>
   );
 }

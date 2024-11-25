@@ -9,18 +9,22 @@ export const dashboardSlice = createApi({
          return headers;
        },
    }),
+   tagTypes: ["institute-info"],
+
 
     //define all the api endpoints. Follows the builder pattern. 
    endpoints: (builder) => ({
         getInstituteInfo: builder.query({
             query: () => "/institute/",
+            providesTags: ["institute-info"],
         }),
         editInstituteInfo: builder.mutation({
-            query: ({ data }) => ({
+            query: ( data ) => ({
                url: "/institute/",
                method: "POST",
-               body: JSON.stringify(data),
+               body: data,
             }),
+            invalidatesTags: ["institute-info"],
          }),
     }),
 });

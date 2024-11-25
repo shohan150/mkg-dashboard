@@ -9,25 +9,35 @@ export default function InstInfoForm() {
    const { t } = useTranslation();
    const [formData, setFormData] = useState({});
    const { data, error, isLoading } = useGetInstituteInfoQuery();
-   const [editInstituteInfo, { isLoading: editLoading, error: editError }] = useEditInstituteInfoMutation();
+   const [editInstituteInfo, { isLoading: editLoading, error: editError }] = useEditInstituteInfoMutation();   
 
 
    useEffect(() => {
       if(data) setFormData(data[0]);
    }, [data]);
 
-   function handleChange(data, field) {
-      setFormData({ ...formData, [field]: data.target.value });
+   function handleChange(e, field) {
+      const value =  e.target.type === "file" 
+      ? e.target.files[0] // For file inputs, store the `File` object
+      : e.target.value;   // For text inputs, store the text value
+      setFormData({ ...formData, [field]: value });
    }
 
    function handleSubmit(e) {
-      console.log(formData);
-      
       e.preventDefault();
-      editInstituteInfo(formData);
+      const formDataToSend = new FormData(); 
+      for (const key in formData) {
+          formDataToSend.append(key, formData[key]);
+      }
+
+// Debugging FormData contents
+for (let [key, value] of formDataToSend.entries()) {
+   console.log(key, value); // Logs each key-value pair in the FormData
+}
+      editInstituteInfo(formDataToSend);
    }
 
-    editError && console.error("eeee", editError.originalStatus, editError.status);
+    editError && console.error("Error: ", editError.originalStatus, editError.status);
 
    if (isLoading) return <Loading />
 
@@ -35,14 +45,16 @@ export default function InstInfoForm() {
 
     return (
         <div className="my-2">
-         <form className="my-4" action="" onSubmit={(e) => handleSubmit(e)}>
+         <form className="my-4" action="" encType="multipart/form-data" onSubmit={(e) => handleSubmit(e)}>
             {/* basic info form */}
             <h5 className="font-medium bg-bgBlue rounded py-1 px-2 text-xs tracking-wide inline text-blue">{t("module.instituteInfo.basic")} {t("general.information")}</h5>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3 mb-6">
                {/* institution logo */}
                <div className="space-y-1">
                   <label className="text-textGray" htmlFor="">{t("module.instituteInfo.logo")}</label>
-                  <input className="block w-full cursor-pointer rounded bg-gray-100 text-textGray border-transparent focus:border-primary focus:outline-none" aria-describedby="" id="" type="file"/>
+                  <input 
+                  onChange={(e) => handleChange(e, "institute_logo")}
+                  className="block w-full cursor-pointer rounded bg-gray-100 text-textGray border-transparent focus:border-primary focus:outline-none" aria-describedby="" id="" type="file"/>
                </div>
 
                {/* institute id */}
@@ -79,7 +91,7 @@ export default function InstInfoForm() {
                      onChange={(e) => handleChange(e, "institute_gender_type")}
                      className="bg-bgGray w-full rounded px-1 py-2 border-2 text-textGray border-transparent focus:border-primary focus:outline-none"
                   >
-                     <option value="">{t("choose_gender")}</option>
+                     <option value="">{t("module.instituteInfo.chooseGender")}</option>
                      <option value="Combined">{t("general.combined")}</option>
                      <option value="Boys">{t("general.boys")}</option>
                      <option value="Girls">{t("general.girls")}</option>
@@ -110,7 +122,7 @@ export default function InstInfoForm() {
                      className="bg-bgGray w-full rounded px-1 py-2 border-2 text-textGray border-transparent focus:border-primary focus:outline-none"
                   >
                      <option value="Active">{t("general.active")}</option>
-                     <option value="Deactive">{t("general.deactive")}</option>
+                     <option value="Deactive">{t("general.inactive")}</option>
                   </select>
                </div>
                               
@@ -235,6 +247,15 @@ export default function InstInfoForm() {
                      className="bg-bgGray text-textGray w-full rounded px-2 py-[6px] border-2 border-transparent focus:border-primary focus:outline-none"
                   />
                </div>
+
+               
+               {/* Signature */}
+               <div className="space-y-1">
+                  <label className="text-textGray">{t("general.signature")}</label>
+                  <input 
+                  onChange={(e) => handleChange(e, "signature")}
+                  className="block w-full cursor-pointer rounded bg-gray-100 text-textGray border-transparent focus:border-primary focus:outline-none" aria-describedby="" id="" type="file"/>
+               </div>
             </div>
 
 
@@ -304,7 +325,7 @@ export default function InstInfoForm() {
                </Link>
             </div>
 
-            {/* {editError && <p>Error: {editError.message}</p>} */}
+            {editError && <p className="text-red">Error: {editError.message}</p>}
 
          </form>
         </div>
