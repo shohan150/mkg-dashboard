@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { toast } from "react-toastify";
 import { useAddAcademicInfoMutation } from "../../../redux/api/settingsSlice";
@@ -11,15 +11,23 @@ export default function AcademicSetupForm({acSetupFields}) {
 
   const [selectedType, setSelectedType] = useState("student-class");
   const [typeValue, setTypeValue] = useState("");
-  const [editStudentClass, {isLoading, error}] = useAddAcademicInfoMutation();
+  const [editStudentClass, {isLoading, error, isSuccess}] = useAddAcademicInfoMutation();
 
   function handleSubmit(e) {
     e.preventDefault();
     setSelectedType("student-class");
     setTypeValue("");
     editStudentClass({selectedType, typeValue});
-    !isLoading && !error && toast.success('Added Successfully');
   }
+
+  useEffect(() => {
+    if (isSuccess) {
+        toast.success('Added Successfully');
+    }
+    if (error) {
+        toast.error('Failed to Add!');
+    }
+  }, [isSuccess, error]);
 
   return (
     <div className="bg-white rounded-md px-4 py-2 my-2 sm:my-4">

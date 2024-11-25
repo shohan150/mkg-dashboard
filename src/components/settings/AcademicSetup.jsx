@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
+import { useDeleteAcademicInfoMutation } from "../../redux/api/settingsSlice";
 import DeleteModal from "../common/DeleleModal";
 import AcademicSetupForm from "./academic-setup/AcademicSetupForm";
 import EditPopup from "./academic-setup/EditPopup";
@@ -8,7 +10,10 @@ export default function AcademicSetup() {
   const [isEdit, setIsEdit] = useState(false);
   const [isDelete, setIsDelete] = useState(false);
   const [toDelete, setToDelete] = useState("");
+  const [deleteValues, setDeleteValues] = useState();
   const [editContent, setEditContent] = useState({ title:"", row:{id:"", info: ""} });
+
+  const [deleteAcademicInfo, {isLoading, error, isSuccess}] = useDeleteAcademicInfoMutation();
 
   const acSetupFields = [
     { path: 'student-class', title: 'Class' },
@@ -25,12 +30,32 @@ export default function AcademicSetup() {
     setEditContent({ title, row });
   }
 
-  function handleDelete(section) {
+  function handleDelete(id, title, type) {
     setIsDelete(true);
-    setToDelete(section);
+    setToDelete(`${type.title} "${title}" `);
+    setDeleteValues({selectedType: type.path, id});
   }
+
+  function handleConfirmDlt(){
+    deleteAcademicInfo(deleteValues);
+    closeDelete();
+  }
+
+  function closeDelete(){
+    setDeleteValues();
+    setIsDelete(false);
+    setToDelete("");
+  }
+
+  useEffect(() => {
+    if (isSuccess) {
+        toast.warn(`Deleted Successfully!`);
+    }
+    if (error) {
+        toast.error('Failed to Delete!');
+    }
+  }, [isSuccess, error])
   
-  // console.log(isEdit, editContent);
   return (
     <div className="relative">
       {/* the field entry form */}
@@ -53,7 +78,7 @@ export default function AcademicSetup() {
       />
 
       {/* show only when isDelete is true */}
-      <DeleteModal title={toDelete.toLowerCase()} isOpen={isDelete} onClose={()=>setIsDelete(false)} />
+      <DeleteModal title={toDelete.toLowerCase()} isOpen={isDelete} onClose={closeDelete} handleConfirmDlt={handleConfirmDlt} />
 
     </div>
   );

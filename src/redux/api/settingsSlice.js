@@ -26,10 +26,18 @@ export const settingsSlice = createApi({
             }),
             invalidatesTags: (result, error, arg) => [{ type: "academic-info", id: arg.selectedType }],
          }),
+         deleteAcademicInfo: builder.mutation({
+            query: ({selectedType, id}) => ({
+                url: `/${selectedType}/${id}/`,
+                method: "DELETE",
+            }),
+            invalidatesTags: (result, error, arg) => [{ type: "academic-info", id: arg.selectedType }],
+        }),
     }),
 });
 
 export const {
    useGetAcademicInfoQuery,
-   useAddAcademicInfoMutation
+   useAddAcademicInfoMutation,
+   useDeleteAcademicInfoMutation,
 } = settingsSlice;

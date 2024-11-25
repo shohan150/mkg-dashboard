@@ -11,7 +11,7 @@ export default function FieldList({field, handleEdit, handleDelete}) {
 
    if(error) return <Error code={error.originalStatus} errorMessage={error.status}/>;
 
-   if(isLoading) return <Loading />;
+   if(isLoading) return <Loading />;   
 
   return (
    <SectionHeader title={field.title} headerStyle="text-center">
@@ -38,7 +38,7 @@ export default function FieldList({field, handleEdit, handleDelete}) {
                   </button>
                   <button
                      className="bg-red px-3 py-1 rounded shadow text-white hover:-translate-y-[2px] duration-200 text-sm m-1"
-                     onClick={() => handleDelete(field.title)}
+                     onClick={() => handleDelete(row?.id, row?.name, field)}
                   >
                      {t('module.settings.delete')}
                   </button>
